@@ -3,6 +3,7 @@ import { themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = localStorage.getItem("isDarkMode");
@@ -52,30 +53,7 @@ function App() {
             <div className="w-full text-amber-500">hey</div>
           </div>
         </div>
-        <footer className="footer bg-black text-white space-x-12 flex justify-center items-center h-12 w-full py-24 px-12">
-          <div className="logo">2022 © Crypto Sourcerers</div>
-          <div className="catchphrase">
-            The World's #1 Source for Blockchain Talent.
-          </div>
-          <div className="navs grid grid-cols-4 gap-x-4">
-            {[
-              "Salaries",
-              "Learning",
-              "About",
-              "Contact",
-              "Terms",
-              "Privacy",
-              "Help",
-              "FAQ",
-              "Blog",
-              "Careers",
-              "Press",
-              "API",
-            ].map((item) => (
-              <span className="hover:text-gray-400 transition">{item}</span>
-            ))}
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
