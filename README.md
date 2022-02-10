@@ -1,5 +1,10 @@
-# Fullstack Boilerplate V2
-This boilerplate is an improvement of my previous boilerplate with tool I use for Web3 projects.
+# CryptoSourcerers
+The world's #1 marketplace for blockchain talent.
+
+## Aspects
+- Multi chain platform that takes stablecoin payments from Polygon, Fantom, Avalanche, BSC.
+- From needing more blockchain sorcerers to having your A-Team.
+- Backed by Moralis
 
 ## Dependencies
 - TypeScript(React) > frontend
