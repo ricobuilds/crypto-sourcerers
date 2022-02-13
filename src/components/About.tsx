@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="about flex flex-col px-auto lg:px-72 py-12 space-y-4">
+    <div className="about flex flex-col px-auto lg:px-auto py-12 space-y-4">
       <div className="about-header mb-4 font-medium text-center">
         <div className="about-header-title text-4xl tracking-widest">
           Introducing CryptoSourcerers
