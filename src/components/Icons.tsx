@@ -400,7 +400,7 @@ export const techIcon = (
 
 export const warningIcon = (
   <svg
-    className="w-5 h-5"
+    className="w-4 h-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -417,7 +417,7 @@ export const warningIcon = (
 
 export const removeIcon = (
   <svg
-    className="w-5 h-5"
+    className="w-4 h-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"

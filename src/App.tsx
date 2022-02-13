@@ -1,30 +1,53 @@
-import { themeIcon, warningIcon, removeIcon } from "./components/Icons";
+import { themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
 import Careers from "./components/Careers";
 import Content from "./components/Content";
+import WarningBanner from "./components/WarningBanner";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
   let [isToggled, toggle] = useToggleHook(theme !== "true");
+
+  let [banner, setBanner] = useState<string>(
+    `${localStorage.getItem("isBannerHidden")}`
+  );
+  let hasBanner = localStorage.getItem("isBannerHidden");
+  // console.log(banner);
+
+  const handleBanner = (): void => {
+    localStorage.setItem("isBannerHidden", "true");
+    setBanner(`${localStorage.getItem("isBannerHidden")}`);
+  };
+
+  // getters
+  useEffect(() => {
+    if (!hasBanner) {
+      localStorage.setItem("isBannerHidden", "false");
+      let temp = localStorage.getItem("isBannerHidden");
+      setBanner(`${temp}`);
+    } else {
+      setBanner(`${localStorage.getItem("isBannerHidden")}`);
+      hasBanner = localStorage.getItem("isBannerHidden");
+      console.log(`${banner}`);
+    }
+  }, []);
+
+  // setters
+  useEffect(() => {
+    hasBanner = localStorage.getItem("isBannerHidden");
+  }, [banner]);
 
   return (
     <div className={`${isToggled ? "" : "dark transition transform"} `}>
       <div
         className={`w-full h-full overflow-hidden bg-[#f2f2f2] dark:bg-[#1f1f23] dark:text-white `}
       >
-        <div className="bg-green-300 h-full sm:h-6 text-gray-800 text-xs flex flex-col sm:flex-row whitespace justify-between items-center px-4">
-          <p className="flex items-center">
-            <span className="mr-2">{warningIcon}</span>Always make sure the URL
-            is{": "} <code className="mx-1">cryptosourcerers.co</code> -
-            bookmark it to be safe.
-          </p>
-          <p className="flex items-center">
-            For security purposes, disconnect your wallet manually when
-            terminating your session. <span className="ml-1">{removeIcon}</span>
-          </p>
-        </div>
+        {banner == "false" ? (
+          <WarningBanner handleBanner={handleBanner} />
+        ) : null}
         <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b shadow-sm border-gray-200 dark:border-gray-800">
           <div className="logo">CryptoSourcerers</div>
           <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
