@@ -6,7 +6,7 @@ const Footer = () => {
         The World's #1 Source for Blockchain Talent.
       </div>
       <div className="navs grid grid-cols-3 lg:grid-cols-4 gap-x-4">
-        <span className="hover:text-gray-400 transition">Insights</span>
+        <span className="hover:text-gray-400 transition">Careers</span>
         <span className="hover:text-gray-400 transition">About</span>
         <span className="hover:text-gray-400 transition">News</span>
         <a
@@ -17,7 +17,7 @@ const Footer = () => {
           Twitter
         </a>
 
-        <span className="hover:text-gray-400 transition">Careers</span>
+        <span className="hover:text-gray-400 transition">Insights</span>
         <span className="hover:text-gray-400 transition">Learning</span>
         <span className="hover:text-gray-400 transition">Terms</span>
         <a

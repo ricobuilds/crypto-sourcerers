@@ -1,11 +1,11 @@
-import { themeIcon } from "./components/Icons";
+import { menuIcon, themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
 import Content from "./components/Content";
 import WarningBanner from "./components/WarningBanner";
 import { useEffect, useState } from "react";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -31,7 +31,6 @@ const App = () => {
     } else {
       setBanner(`${localStorage.getItem("isBannerHidden")}`);
       hasBanner = localStorage.getItem("isBannerHidden");
-      console.log(`${banner}`);
     }
   }, []);
 
@@ -62,6 +61,9 @@ const App = () => {
               )
             )}
           </div>
+          <div className="inline-block md:hidden  text-indigo-500">
+            {menuIcon}
+          </div>
           <div className="ctaSection hidden md:flex items-center space-x-3">
             <div
               className="text-gray-400 transition hover:text-purple-600 dark:hover:text-amber-300"
@@ -70,15 +72,15 @@ const App = () => {
               {themeIcon}
             </div>
             <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-rose-500 to-pink-500 transition transform hover:scale-105 outline-none">
-              Roleseeker
+              Roleseekers
             </button>
             <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-indigo-500 to-purple-500 transition transform hover:scale-105 outline-none">
-              Post a role
+              Recruiters
             </button>
           </div>
         </header>
         <Content>
-          <Contact />
+          <HomePage />
         </Content>
         <Footer />
       </div>
