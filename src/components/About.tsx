@@ -2,8 +2,8 @@ const About = () => {
   return (
     <div className="about flex flex-col px-auto lg:px-auto py-12 space-y-4">
       <div className="about-header mb-4 font-medium text-center">
-        <div className="about-header-title text-4xl tracking-widest">
-          Introducing CryptoSourcerers
+        <div className="about-header-title text-4xl">
+          <span className="tracking-widest font-bold">CryptoSourcerers</span>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
           The world's #1 source for blockchain talent.

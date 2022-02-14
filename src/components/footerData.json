@@ -1,0 +1,51 @@
+
+ [
+    {
+      "title": "Insights",
+      "link": "insights"
+    },
+    {
+      "title": "Blog",
+      "link": "blog"
+    },
+    {
+      "title": "News",
+      "link": "news"
+    },
+    {
+      "title": "Twitter",
+      "link": "https://twitter.com/cryptosourcers"
+    },
+    {
+      "title": "Careers",
+      "link": "careers"
+    },
+    {
+      "title": "About",
+      "link": "/about"
+    },
+    {
+      "title": "Terms",
+      "link": "terms"
+    },
+    {
+      "title": "Moralis",
+      "link": "https://moralis.io/"
+    },
+    {
+      "title": "Newsletter",
+      "link": "newsletter"
+    },
+    {
+      "title": "Learning",
+      "link": "learning"
+    },
+    {
+      "title": "Privacy",
+      "link": "privacy"
+    },
+    {
+      "title": "Contact",
+      "link": "contactUs"
+    }
+  ]

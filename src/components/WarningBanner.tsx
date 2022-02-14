@@ -4,8 +4,6 @@ interface bannerProps {
   handleBanner: () => void;
 }
 
-//children
-
 const WarningBanner = (props: bannerProps) => {
   return (
     <div className="warningComp bg-green-300 h-6 text-gray-800 text-[11px] flex whitespace justify-between items-center px-4">

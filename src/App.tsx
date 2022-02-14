@@ -2,7 +2,7 @@ import { themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
-import Careers from "./components/Careers";
+import Contact from "./components/Contact";
 import Content from "./components/Content";
 import WarningBanner from "./components/WarningBanner";
 import { useEffect, useState } from "react";
@@ -43,19 +43,24 @@ const App = () => {
   return (
     <div className={`${isToggled ? "" : "dark transition transform"} `}>
       <div
-        className={`w-full h-full overflow-hidden bg-[#f2f2f2] dark:bg-[#1f1f23] dark:text-white `}
+        className={`w-full h-full overflow-hidden bg-[#F3F6F9] dark:bg-[#1f1f23] dark:text-white `}
       >
-        {banner == "false" ? (
+        {banner === "false" ? (
           <WarningBanner handleBanner={handleBanner} />
         ) : null}
-        <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b shadow-sm border-gray-200 dark:border-gray-800">
+        <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b shadow border-gray-200 dark:border-gray-800">
           <div className="logo">CryptoSourcerers</div>
           <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-            {["Roles", "Insights", "Learning", "News"].map((item) => (
-              <a className="hover:text-gray-400  transition hover:cursor-pointer">
-                {item}
-              </a>
-            ))}
+            {["Roles", "Careers", "Insights", "Learning", "News"].map(
+              (item) => (
+                <a
+                  className="hover:text-gray-400  transition hover:cursor-pointer"
+                  href="/"
+                >
+                  {item}
+                </a>
+              )
+            )}
           </div>
           <div className="ctaSection hidden md:flex items-center space-x-3">
             <div
@@ -73,7 +78,7 @@ const App = () => {
           </div>
         </header>
         <Content>
-          <Careers />
+          <Contact />
         </Content>
         <Footer />
       </div>
