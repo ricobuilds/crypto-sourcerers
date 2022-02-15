@@ -5,13 +5,17 @@ import Footer from "./components/Footer";
 import Content from "./components/Content";
 import WarningBanner from "./components/WarningBanner";
 import { useEffect, useState } from "react";
-import AboutPage from "./pages/AboutPage";
+import About from "./pages/About";
 
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
-import LiveRolesPage from "./pages/LiveRolesPage";
-import TestimonialPage from "./pages/TestimonialPage";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import LiveRoles from "./pages/LiveRoles";
+import News from "./pages/News";
+import Insights from "./pages/Insights";
+import Testimonials from "./pages/Testimonials";
+import Careers from "./pages/Careers";
+import { Helmet } from "react-helmet-async";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -54,16 +58,21 @@ const App = () => {
           {banner === "false" ? (
             <WarningBanner handleBanner={handleBanner} />
           ) : null}
-          <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b shadow border-gray-200 dark:border-gray-800">
+          <Helmet>
+            <title>
+              CryptoSourcerers - The World's #1 Source for Blockchain Talent.
+            </title>
+          </Helmet>
+          <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
-              <div className="logo">CryptoSourcerers</div>
+              <div className="logo">Crypto Sourcerers</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
               {["Roles", "Careers", "Insights", "Learning", "News"].map(
                 (item) => (
                   <a
                     className="hover:text-gray-400  transition hover:cursor-pointer"
-                    href="/"
+                    href={`${item.toLocaleLowerCase()}`}
                   >
                     {item}
                   </a>
@@ -90,17 +99,17 @@ const App = () => {
           </header>
           <Content>
             <Routes>
-              <Route path="/careers" />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/news" />
-              <Route path="/insights" />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/insights" element={<Insights />} />
               <Route path="/learning" />
               <Route path="/newsletter" />
-              <Route path="/live-roles" element={<LiveRolesPage />} />
-              <Route path="/testimonials" element={<TestimonialPage />} />
+              <Route path="/roles" element={<LiveRoles />} />
+              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/legal" />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/" element={<HomePage />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </Content>
           <Footer />

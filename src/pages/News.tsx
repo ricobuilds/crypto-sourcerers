@@ -1,6 +1,11 @@
-const TestimonialPage = () => {
+const News = () => {
   return (
     <>
+      <div className="">hey</div>
+      <div className="">hey</div>
+      <div className="">hey</div>
+      <div className="">hey</div>
+      <div className="">hey</div>
       <div className="">hey</div>
       <div className="">hey</div>
       <div className="">hey</div>
@@ -10,4 +15,4 @@ const TestimonialPage = () => {
     </>
   );
 };
-export default TestimonialPage;
+export default News;
