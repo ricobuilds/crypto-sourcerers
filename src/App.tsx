@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Content from "./components/Content";
 import WarningBanner from "./components/WarningBanner";
 import { useEffect, useState } from "react";
-import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -42,7 +42,7 @@ const App = () => {
   return (
     <div className={`${isToggled ? "" : "dark transition transform"} `}>
       <div
-        className={`w-full h-full overflow-hidden bg-[#F3F6F9] dark:bg-[#1f1f23] dark:text-white `}
+        className={`font-lato w-full h-full overflow-hidden bg-[#F3F6F9] dark:bg-[#1f1f23] dark:text-white `}
       >
         {banner === "false" ? (
           <WarningBanner handleBanner={handleBanner} />
@@ -80,7 +80,7 @@ const App = () => {
           </div>
         </header>
         <Content>
-          <HomePage />
+          <AboutPage />
         </Content>
         <Footer />
       </div>

@@ -19,13 +19,13 @@ const Careers = () => {
           "Marketing Specialist",
           "Metatect",
         ].map((item) => (
-          <div className="p-3 bg-white dark:bg-[#141419] flex rounded-md space-x-3">
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
             <img
               className="h-[100px] w-[150px] rounded-md"
               src={`${coverImg}`}
               alt="cover"
             />
-            <div className="right flex flex-col justify-between">
+            <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">{item}</h2>
                 <p className="text-xs">

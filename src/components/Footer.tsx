@@ -1,10 +1,11 @@
 const Footer = () => {
   return (
     <footer className="footer bg-black text-white text-center space-y-4 sm:space-y-0 sm:space-x-12 flex flex-col sm:flex-row justify-center items-center h-full w-full py-24 px-12">
-      <div className="logo">© 2022 Crypto Sourcerers</div>
+      <div className="logo">© 2022 Crypto Sourcerers, All rights reserved</div>
       <div className="catchphrase">
         The World's #1 Source for Blockchain Talent.
       </div>
+      <div className="bmakbw">BuyMeAKinderBuenoWhite</div>
       <div className="navs grid grid-cols-3 lg:grid-cols-4 gap-x-4">
         <span className="hover:text-gray-400 transition">Careers</span>
         <span className="hover:text-gray-400 transition">About</span>
