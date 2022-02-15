@@ -6,14 +6,14 @@ const About = () => {
           <h1 className="text-6xl tracking-widest font-bold">
             Crypto Sourcerers
           </h1>
-          <p className="subtitle">Last updated: Feb 9, 2022</p>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
           The world's #1 source for blockchain talent.
         </div>
+        <p className="subtitle text-left">Last updated: Feb 9, 2022</p>
       </div>
       <p className="aboutDev-intro">
-        <span className="text-sm italic">[clears throat in WAGMI]</span> Hey,
+        <span className="text-sm italic">[clears throat in WGMI]</span> Hey,
         this is
         <span className="text-indigo-800 dark:text-indigo-400 font-medium">
           {" "}
