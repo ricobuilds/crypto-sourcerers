@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import LiveRolesPage from "./pages/LiveRolesPage";
+import TestimonialPage from "./pages/TestimonialPage";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -96,7 +97,7 @@ const App = () => {
               <Route path="/learning" />
               <Route path="/newsletter" />
               <Route path="/live-roles" element={<LiveRolesPage />} />
-              <Route path="/testimonials" />
+              <Route path="/testimonials" element={<TestimonialPage />} />
               <Route path="/legal" />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/" element={<HomePage />} />
