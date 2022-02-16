@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { etherIcon, maticIcon } from "./Icons";
 
 const Footer = () => {
   return (
@@ -7,49 +8,77 @@ const Footer = () => {
       <div className="catchphrase">
         The World's #1 Source for Blockchain Talent.
       </div>
-      <div className="bmakbw">BuyMeAKinderBuenoWhite</div>
+      <p className="bmakbw flex items-center space-x-1">
+        <span className="fill-indigo-500 w-5 h-5 transform transition hover:scale-105">
+          {maticIcon}{" "}
+        </span>{" "}
+        <span className="text-sky-500 transform transition hover:scale-105">
+          {etherIcon}
+        </span>{" "}
+        BuyMeAKinderBuenoWhite
+      </p>
       <div className="navs grid grid-cols-3 lg:grid-cols-4 gap-x-4">
         <Link to={"/careers"}>
-          <span className="hover:text-gray-400 transition">Careers</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Careers
+          </span>
         </Link>
         <Link to={"about"}>
-          <span className="hover:text-gray-400 transition">About</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            About
+          </span>
         </Link>
         <Link to={"/news"}>
-          <span className="hover:text-gray-400 transition">News</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            News
+          </span>
         </Link>
         <a
           target={`_blank`}
           href="https://twitter.com/cryptosourcers"
-          className="hover:text-gray-400 transition"
+          className="hover:text-gray-400 transition outline-none"
         >
           Twitter
         </a>
 
         <Link to={"/insights"}>
-          <span className="hover:text-gray-400 transition">Insights</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Insights
+          </span>
         </Link>
-        <span className="hover:text-gray-400 transition">Learning</span>
-        <span className="hover:text-gray-400 transition">Terms</span>
+        <span className="hover:text-gray-400 transition outline-none">
+          Learning
+        </span>
+        <span className="hover:text-gray-400 transition outline-none">
+          Terms
+        </span>
         <a
           target={`_blank`}
           href="https://moralis.io/"
-          className="hover:text-gray-400 transition"
+          className="hover:text-gray-400 transition outline-none"
         >
           Moralis
         </a>
 
         <Link to={"/newsletter"}>
-          <span className="hover:text-gray-400 transition">Newsletter</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Newsletter
+          </span>
         </Link>
         <Link to={"/testimonials"}>
-          <span className="hover:text-gray-400 transition">Testimonials</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Testimonials
+          </span>
         </Link>
         <Link to={"/legal"}>
-          <span className="hover:text-gray-400 transition">Legal</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Legal
+          </span>
         </Link>
         <Link to={"/contact"}>
-          <span className="hover:text-gray-400 transition">Contact</span>
+          <span className="hover:text-gray-400 transition outline-none">
+            Contact
+          </span>
         </Link>
       </div>
     </footer>

@@ -53,7 +53,7 @@ const App = () => {
     <Router>
       <div className={`${isToggled ? "" : "dark transition transform"} `}>
         <div
-          className={`font-lato w-full h-full overflow-hidden bg-[#F3F6F9] dark:bg-[#1f1f23] dark:text-white `}
+          className={`font-lato w-full h-full overflow-hidden bg-[#F3F6F9] bg-gradient-to-tr dark:from-[#060508] dark:to-[#1a1a1c] dark:text-white `}
         >
           {banner === "false" ? (
             <WarningBanner handleBanner={handleBanner} />
@@ -89,10 +89,10 @@ const App = () => {
               >
                 {themeIcon}
               </div>
-              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-rose-500 to-pink-500 transition transform hover:scale-105 outline-none">
+              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500 transition transform hover:scale-105 outline-none">
                 Roleseekers
               </button>
-              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-indigo-500 to-purple-500 transition transform hover:scale-105 outline-none">
+              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500 transition transform hover:scale-105 outline-none">
                 Recruiters
               </button>
             </div>
