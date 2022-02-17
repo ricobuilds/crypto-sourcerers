@@ -11,11 +11,10 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import LiveRoles from "./pages/LiveRoles";
-import News from "./pages/News";
 import Insights from "./pages/Insights";
-import Testimonials from "./pages/Testimonials";
 import Careers from "./pages/Careers";
 import { Helmet } from "react-helmet-async";
+import Login from "./pages/Login";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -68,16 +67,20 @@ const App = () => {
               <div className="logo">Crypto Sourcerers</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              {["Roles", "Careers", "Insights", "Learning", "News"].map(
-                (item) => (
-                  <a
-                    className="hover:text-gray-400  transition hover:cursor-pointer"
-                    href={`${item.toLocaleLowerCase()}`}
-                  >
-                    {item}
-                  </a>
-                )
-              )}
+              {[
+                "Live Roles",
+                "Bounty Roles",
+                "Careers",
+                "Insights",
+                "Learning",
+              ].map((item) => (
+                <a
+                  className="hover:text-gray-400  transition hover:cursor-pointer"
+                  href={`${item.toLocaleLowerCase()}`}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
             <div className="inline-block md:hidden  text-indigo-500">
               {menuIcon}
@@ -89,9 +92,11 @@ const App = () => {
               >
                 {themeIcon}
               </div>
-              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500 transition transform hover:scale-105 outline-none">
-                Roleseekers
-              </button>
+              <Link to={"/login"}>
+                <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500 transition transform hover:scale-105 outline-none">
+                  Roleseekers
+                </button>
+              </Link>
               <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500 transition transform hover:scale-105 outline-none">
                 Recruiters
               </button>
@@ -100,18 +105,42 @@ const App = () => {
           <Content>
             <Routes>
               <Route path="/careers" element={<Careers />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
-              <Route path="/news" element={<News />} />
+              <Route path="/news" />
               <Route path="/insights" element={<Insights />} />
               <Route path="/learning" />
-              <Route path="/newsletter" />
               <Route path="/roles" element={<LiveRoles />} />
-              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/legal" />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
             </Routes>
           </Content>
+          <section className="newsletter text-white">
+            {/* newsletter */}
+            newsletter
+          </section>
+          <section className="hero relative h-screen bg-gradient-to-tr from-[#060508] to-[#1a1a1c] dark:from-gray-200 dark:to-gray-200">
+            {/* Hero */}
+            <div className="absolute -top-6 left-[50%] p-6 rounded-full bg-[#ed194a]"></div>
+            Hero
+          </section>
+          <section>
+            {/* Feature */}
+            Feature
+          </section>
+          <section>
+            {/* Stats */}
+            Stats
+          </section>
+          <section>
+            {/* Testimonials */}
+            Testimonials
+          </section>
+          <section>
+            {/* Contact */}
+            Contact
+          </section>
           <Footer />
         </div>
       </div>

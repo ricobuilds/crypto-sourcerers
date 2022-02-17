@@ -1,10 +1,11 @@
 const HomePage = () => {
   return (
     <>
-      <div className="home container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div className="home relative container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="absolute right-8 bottom-9 w-64 h-64 bg-[#ed194a] rounded-full blur-3xl "></div>
         <div className="text space-y-6">
           <h1 className="text-6xl xl:text-8xl">
-            Transferring your skills over to the cryptosphere?
+            Transferring your skills to the cryptosphere?
           </h1>
           <p>Tap into the new paradigm today.</p>
           <div className="flex justify-start space-x-4 font-medium">
@@ -22,26 +23,6 @@ const HomePage = () => {
           <p>IMG Tap into the new paradigm today. IMG</p>
         </div>
       </div>
-      <section>
-        {/* Hero */}
-        Hero
-      </section>
-      <section>
-        {/* Feature */}
-        Feature
-      </section>
-      <section>
-        {/* Stats */}
-        Stats
-      </section>
-      <section>
-        {/* Testimonials */}
-        Testimonials
-      </section>
-      <section>
-        {/* Contact */}
-        Contact
-      </section>
     </>
   );
 };

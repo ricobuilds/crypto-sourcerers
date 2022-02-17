@@ -53,7 +53,7 @@ const About = () => {
         companies & crypto-based startups alike, that are looking to move
         towards{" "}
         <span className=" dark:text-pink-500 font-medium">innovation</span> and{" "}
-        <span className="dark:text-pink -500 font-medium">change</span>.
+        <span className="dark:text-pink-500 font-medium">change</span>.
       </p>
       <p className="about-content">
         As we shift into a new paradigm, our goal is to help{" "}

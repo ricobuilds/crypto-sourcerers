@@ -17,7 +17,7 @@ const Footer = () => {
         </span>{" "}
         BuyMeAKinderBuenoWhite
       </p>
-      <div className="navs grid grid-cols-3 lg:grid-cols-4 gap-x-4">
+      <div className="navs grid grid-cols-3 gap-x-4">
         <Link to={"/careers"}>
           <span className="hover:text-gray-400 transition outline-none">
             Careers
@@ -26,11 +26,6 @@ const Footer = () => {
         <Link to={"about"}>
           <span className="hover:text-gray-400 transition outline-none">
             About
-          </span>
-        </Link>
-        <Link to={"/news"}>
-          <span className="hover:text-gray-400 transition outline-none">
-            News
           </span>
         </Link>
         <a
@@ -49,9 +44,6 @@ const Footer = () => {
         <span className="hover:text-gray-400 transition outline-none">
           Learning
         </span>
-        <span className="hover:text-gray-400 transition outline-none">
-          Terms
-        </span>
         <a
           target={`_blank`}
           href="https://moralis.io/"
@@ -63,11 +55,6 @@ const Footer = () => {
         <Link to={"/newsletter"}>
           <span className="hover:text-gray-400 transition outline-none">
             Newsletter
-          </span>
-        </Link>
-        <Link to={"/testimonials"}>
-          <span className="hover:text-gray-400 transition outline-none">
-            Testimonials
           </span>
         </Link>
         <Link to={"/legal"}>
