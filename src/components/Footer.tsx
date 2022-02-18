@@ -3,12 +3,12 @@ import { etherIcon, maticIcon } from "./Icons";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-black text-white text-center space-y-4 sm:space-y-0 sm:space-x-12 flex flex-col sm:flex-row justify-center items-center h-full w-full py-24 px-12">
+    <footer className="footer bg-black text-white text-center space-y-4 sm:space-y-0 space-x-3 flex flex-col sm:flex-row justify-center items-center h-full w-full py-24 px-4">
       <div className="logo">© 2022 Crypto Sourcerers, All rights reserved</div>
       <div className="catchphrase">
         The World's #1 Source for Blockchain Talent.
       </div>
-      <p className="bmakbw flex items-center space-x-1">
+      <div className="bmakbw flex items-center space-x-1">
         <span className="fill-indigo-500 w-5 h-5 transform transition hover:scale-105">
           {maticIcon}{" "}
         </span>{" "}
@@ -16,8 +16,8 @@ const Footer = () => {
           {etherIcon}
         </span>{" "}
         BuyMeAKinderBuenoWhite
-      </p>
-      <div className="navs grid grid-cols-3 gap-x-4">
+      </div>
+      <div className="navs grid grid-cols-2 lg:grid-cols-3 gap-x-4">
         <Link to={"/careers"}>
           <span className="hover:text-gray-400 transition outline-none">
             Careers

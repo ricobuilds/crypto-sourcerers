@@ -15,6 +15,7 @@ import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import { Helmet } from "react-helmet-async";
 import Login from "./pages/Login";
+import Bounties from "./pages/Bounties";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -62,18 +63,12 @@ const App = () => {
               CryptoSourcerers - The World's #1 Source for Blockchain Talent.
             </title>
           </Helmet>
-          <header className="flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
+          <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
               <div className="logo">Crypto Sourcerers</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              {[
-                "Live Roles",
-                "Bounty Roles",
-                "Careers",
-                "Insights",
-                "Learning",
-              ].map((item) => (
+              {["Roles", "Bounties", "Learning"].map((item) => (
                 <a
                   className="hover:text-gray-400  transition hover:cursor-pointer"
                   href={`${item.toLocaleLowerCase()}`}
@@ -82,7 +77,7 @@ const App = () => {
                 </a>
               ))}
             </div>
-            <div className="inline-block md:hidden  text-indigo-500">
+            <div className="inline-block md:hidden  text-[#ed194a]">
               {menuIcon}
             </div>
             <div className="ctaSection hidden md:flex items-center space-x-3">
@@ -111,36 +106,13 @@ const App = () => {
               <Route path="/insights" element={<Insights />} />
               <Route path="/learning" />
               <Route path="/roles" element={<LiveRoles />} />
+              <Route path="/bounties" element={<Bounties />} />
               <Route path="/legal" />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
             </Routes>
           </Content>
-          <section className="newsletter text-white">
-            {/* newsletter */}
-            newsletter
-          </section>
-          <section className="hero relative h-screen bg-gradient-to-tr from-[#060508] to-[#1a1a1c] dark:from-gray-200 dark:to-gray-200">
-            {/* Hero */}
-            <div className="absolute -top-6 left-[50%] p-6 rounded-full bg-[#ed194a]"></div>
-            Hero
-          </section>
-          <section>
-            {/* Feature */}
-            Feature
-          </section>
-          <section>
-            {/* Stats */}
-            Stats
-          </section>
-          <section>
-            {/* Testimonials */}
-            Testimonials
-          </section>
-          <section>
-            {/* Contact */}
-            Contact
-          </section>
+
           <Footer />
         </div>
       </div>

@@ -41,7 +41,7 @@ const Careers = () => {
             "Marketing Specialist",
             "Metatect",
           ].map((item) => (
-            <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3 transform transition hover:-translate-y-3">
+            <div className="p-3 bg-white/60 dark:bg-[#1d1d20]/60 backdrop-blur-lg flex rounded-md space-x-3 transform transition hover:-translate-y-3">
               <img
                 className="h-[100px] w-[150px] rounded-md"
                 src={`${coverImg}`}
