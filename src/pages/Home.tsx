@@ -410,9 +410,14 @@ const HomePage = () => {
         </div>
       </section>
       <section id="faq" className="py-12">
-        <h1 className="text-3xl font-bold flex justify-center items-center">
+        <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           FAQ
         </h1>
+        <p className="text-gray-600 flex justify-center">
+          Survey results after aggregating x,xxx submissions across Reddit,
+          Twitter, and Discord
+        </p>
+        <div className="results">results from survey</div>
       </section>
       <section
         id="contactRedirect"
