@@ -59,16 +59,14 @@ const App = () => {
             <WarningBanner handleBanner={handleBanner} />
           ) : null}
           <Helmet>
-            <title>
-              CryptoSourcerers - The World's #1 Source for Blockchain Talent.
-            </title>
+            <title>MVP - LP.</title>
           </Helmet>
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
-              <div className="logo">Crypto Sourcerers</div>
+              <div className="logo">Project Name</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              {["Roles", "Bounties", "Learning"].map((item) => (
+              {["Link", "Link", "Link"].map((item) => (
                 <a
                   className="hover:text-gray-400  transition hover:cursor-pointer"
                   href={`${item.toLocaleLowerCase()}`}
@@ -88,12 +86,12 @@ const App = () => {
                 {themeIcon}
               </div>
               <Link to={"/login"}>
-                <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500 transition transform hover:scale-105 outline-none">
-                  Roleseekers
+                <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500">
+                  CTA
                 </button>
               </Link>
-              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500 transition transform hover:scale-105 outline-none">
-                Recruiters
+              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500">
+                CTA
               </button>
             </div>
           </header>

@@ -401,6 +401,10 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           Pricing
         </h1>
+        <p className="text-gray-600 text-center mb-6">
+          Payments accepted will be done in crypto{" "}
+          {<span className="underline">only</span>}.
+        </p>
         <div className="pricingInfo flex flex-wrap justify-evenly items-center w-full gap-x-6 gap-y-4">
           <div className="cards gap-x-12 gap-y-4 flex flex-wrap justify-center sm:justify-start">
             <div className="w-72 h-[420px] p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
