@@ -246,19 +246,19 @@ const HomePage = () => {
                 "Those expericienced in tech at all levels, and are looking to transition",
             },
             {
-              title: "Web3 Dev",
+              title: "Web3 Devs",
               description:
-                "Those looking to tap into tech, with Web3 as their starting point",
+                "Those experienced in Web3, looking for their next Web3 role",
             },
             {
               title: "Web3 Enthusiasts",
               description:
-                "Those who have skills in other industries and want to make an impact",
+                "Those with skills in tech and other industries and want to make an impact",
             },
             {
               title: "Ecosystems/Companies/Startups",
               description:
-                "Web3 native teams, and `Web2` businesses looking at crypto",
+                "Web3 native teams, and 'Web2' businesses looking at crypto",
             },
           ].map((item) => (
             <AudienceCard title={item.title} description={item.description} />
