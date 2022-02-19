@@ -557,7 +557,7 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           FAQ
         </h1>
-        <p className="text-gray-600 flex justify-center">
+        <p className="text-gray-600 flex justify-center text-center">
           Survey results after aggregating x,xxx submissions across Reddit,
           Twitter, and Discord
         </p>
