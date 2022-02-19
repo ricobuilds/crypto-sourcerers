@@ -23,9 +23,9 @@ const HomePage = () => {
             <input
               type="text"
               placeholder="Enter your email"
-              className="p-2 pr-4 border border-gray-300 text-black"
+              className="p-2 pr-4 border border-gray-300 text-black rounded-l-md"
             />
-            <button className="cta text-md py-1 px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white">
+            <button className="cta text-md py-1 px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white rounded-r-md">
               Sign Up
             </button>
           </div>
@@ -37,7 +37,7 @@ const HomePage = () => {
       <section id="partners" className="py-12">
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
           <p className="absolute -top-4 left-1 text-xl font-bold ">
-            Trusted Partners
+            Trusted By
           </p>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
@@ -565,7 +565,21 @@ const HomePage = () => {
           Survey results after aggregating x,xxx submissions across Reddit,
           Twitter, and Discord
         </p>
-        <div className="results">results from survey</div>
+        <div className="results">
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-100 title-font mb-2">
+                Bitters hashtag waistcoat fashion axe chia unicorn
+              </h2>
+              <p className="leading-relaxed">
+                Glossier echo park pug, church-key sartorial biodiesel
+                vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon
+                party messenger bag selfies, poke vaporware kombucha
+                lumbersexual pork belly polaroid hoodie portland craft beer.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <section
         id="contactRedirect"

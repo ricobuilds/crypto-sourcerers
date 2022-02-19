@@ -63,7 +63,7 @@ const App = () => {
           </Helmet>
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
-              <div className="logo">Project Name</div>
+              <div className="logo">Project Name Deya</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
               {["Link", "Link", "Link"].map((item) => (
