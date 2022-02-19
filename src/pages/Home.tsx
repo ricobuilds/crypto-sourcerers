@@ -95,8 +95,8 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold title-font text-[#6387f1] mb-12 text-center tracking-widest">
           Sneak Preview👀
         </h1>
-        <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#19edb1] rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute right-0  w-52 h-52 bg-[#7f63f1] rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute right-0 bottom-1/4  w-52 h-52 bg-[#dbed19] rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute left-0 bottom-1/4  w-52 h-52 bg-[#f18263] rounded-full blur-3xl opacity-40"></div>
       </section>
       <section
         id="features"
