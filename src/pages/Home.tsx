@@ -576,8 +576,8 @@ const HomePage = () => {
               res: "Close your eyes and picture this - well, not really, because how else would you read this 😅, but imagine being aware of a movement at its very base, like Rolex, and you could buy a watch for $100. The team at Rolex shows drive and commitment to become a known luxury watch across the world. A few years go by, and that watch is now worth around 30K USD. That means that your original inve. Yes, Web3 may be volative as it is a new asset type to all of us, but Web3 provides with new investing opportunities that would not otherwise present itself in our current financial structure, unless you are in certain groups or have the capital.",
             },
             {
-              req: "Why should I invest in Web3",
-              res: "This is just one example out of many - you can become your own bank and do everything that the banks do - you can use DeFi platforms that allow the borrowing and lending of crypto assets. Say you have 1K in USDC, you can lend that thousand through the platform and earn interest upon it, then borrow against that (sometimes even up to 75%!). At this point you've got many options, you could either relend the borrowed amount to gain even more interest, invest it in a passive income generator, or even invest it in a riskier asset YOU feel convicted that will yield high returns. You would of course have to repay the borrowed amount plus its accrued interest, which can average at 3-10% YEARLY. Forgot to mention, for some of these crypto assets, you can even get paid through positive interest for borrowing them ;)",
+              req: "Why can I do with Web3",
+              res: "This is just one example out of many - you can become your own bank and do everything that the banks do, by using DeFi platforms that allow the borrowing and lending of crypto assets. Say you have 1K in USDC, you can lend that thousand through the platform and earn interest upon it, then borrow against that (sometimes even up to 75%!). At this point you've got many options, you could either relend the borrowed amount to gain even more interest, invest it in a passive income generator, or even invest it in a riskier asset YOU feel convicted that will yield high returns. You would of course have to repay the borrowed amount plus its accrued interest, which can average at 3-10% YEARLY. Forgot to mention, for some of these crypto assets, you can even get paid through positive interest for borrowing them ;)",
             },
             {
               req: "How do I get into Web3",
@@ -593,7 +593,7 @@ const HomePage = () => {
             },
             {
               req: "What technologies should I learn",
-              res: "We'd suggest learning Solidity first as it is more beginner-friendly if you are new, or come from a Javascripty background - the legend Nader Dabit has a series of fullstack courses which include industry standard tooling used alongside Solidity. Another popular and in great demand tool is Rust!",
+              res: "We'd suggest learning Solidity first as it is more beginner-friendly if you are new, or come from a Javascript-ish background - the legend Nader Dabit has a series of fullstack courses which include industry standard tooling used alongside Solidity. Another popular and in-great-demand tool is Rust!",
             },
             {
               req: "Where can I find web3 internships and remote work in general",
@@ -601,7 +601,7 @@ const HomePage = () => {
             },
             {
               req: "What is the salary of a Web3 developer",
-              res: "The range we have seen for a Web3 developer's salary is around 60K USD at minimum to +100K USD max. Heck, if you have got some good experience, you could even be reaching the 200K and 300K USD.",
+              res: "The range we have seen for a Web3 developer's salary is around 60K USD at minimum to +100K USD max. Heck, if you've got some good experience, you could even be reaching the 200K and 300K USD realms.",
             },
             {
               req: "Those salaries??",
@@ -609,7 +609,7 @@ const HomePage = () => {
             },
             {
               req: "I'm a recruiter/founder, why should I use Crypto Sourcerers",
-              res: "Well, we want to assist the Web3 transitioning period and beyond by connecting with roleseekers, blockchain ecosystems, and businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to become the world's #1 marketplace for blockchain talent - by using this gateway, you can easily scale and build your regional branches should you wish to do so :P",
+              res: "Well, we want to assist the Web3 transitioning period and beyond by connecting with roleseekers, blockchain ecosystems, and businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to become the world's #1 marketplace for blockchain talent - by using this gateway, you can easily scale and build your regional branches when you wish to do so :P",
             },
           ].map((item) => (
             <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
