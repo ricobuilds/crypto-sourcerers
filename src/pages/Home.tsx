@@ -12,10 +12,10 @@ const HomePage = () => {
         <div className="absolute right-8 bottom-9 w-64 h-64 bg-[#ed194a] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="absolute right-56 top-24 w-64 h-64 bg-[#6387f1] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="text space-y-6">
-          <h1 className="text-4xl md:text-7xl">
+          <h1 className="text-4xl md:text-7xl ">
             Transferring your skills to the cryptosphere?
           </h1>
-          <p>
+          <p className="tracking-widest">
             Tap into the new paradigm{" "}
             <span className="dark:text-indigo-500">today.🪄</span>
           </p>
@@ -23,7 +23,7 @@ const HomePage = () => {
             <input
               type="text"
               placeholder="Enter your email"
-              className="p-2 pr-4 border border-gray-300 text-black rounded-l-md"
+              className="p-2 pr-8 border border-gray-300 text-black rounded-l-md"
             />
             <button className="cta text-md py-1 px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white rounded-r-md">
               Sign Up
@@ -598,7 +598,7 @@ const HomePage = () => {
           ].map((item) => (
             <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
               <div className="md:flex-grow">
-                <h2 className="text-2xl font-medium text-gray-100 title-font mb-2">
+                <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                   {item.req}?
                 </h2>
                 <p className="leading-relaxed">{item.res}</p>
