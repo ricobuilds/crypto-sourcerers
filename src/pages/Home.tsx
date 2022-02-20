@@ -559,26 +559,52 @@ const HomePage = () => {
       </section>
       <section id="faq" className="py-12">
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
-          FAQ
+          FAQs
         </h1>
         <p className="text-gray-600 flex justify-center text-center">
-          Survey results after aggregating x,xxx submissions across Reddit,
-          Twitter, and Discord
+          Gathered from questions asked across platforms like Twitter and
+          Discord
         </p>
-        <div className="results">
-          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
-            <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-100 title-font mb-2">
-                Bitters hashtag waistcoat fashion axe chia unicorn
-              </h2>
-              <p className="leading-relaxed">
-                Glossier echo park pug, church-key sartorial biodiesel
-                vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon
-                party messenger bag selfies, poke vaporware kombucha
-                lumbersexual pork belly polaroid hoodie portland craft beer.
-              </p>
+        <div className="results divide-y-[1px] divide-slate-800">
+          {[
+            {
+              req: "How do I get into Web3",
+              res: "By learning and participating! Ask questions, connect with others and create your own applications. As a Buildspace alumni, joining the community was an element that helped when transferring my skills to blockchain as a frontend dev :)",
+            },
+            {
+              req: "Do I need to learn programming to get into Web3 and/or tech",
+              res: "Nope! This new phase of tech is where creativity is fully embraced, meaning that there is room for you to use your skills and find your niche. Learning how the tech works will for sure give you an advantage though.",
+            },
+            {
+              req: "I’m new to programming, what should I learn first",
+              res: "If you are looking to work more on UIs (user interfaces), we would recommend learning the basics (HTML, CSS, JS), which would provide you with the fundamentals to create applications. Else, you could start by learning Solidity - there are many resources online like SolidityByExample and Smart Contract Programmer.",
+            },
+            {
+              req: "What technologies should I learn",
+              res: "We'd suggest learning Solidity first as it is more beginner-friendly if you are new, or come from a Javascripty background - the legend Nader Dabit has a series of fullstack courses which include industry standard tooling used alongside Solidity. Another popular and in great demand tool is Rust!",
+            },
+            {
+              req: "Where can I find web3 internships and remote work in general",
+              res: "Well, you have come to the right place! Crypo Sourcerers aims to be such a platform that allows you, the roleseeker, to find roles across the GLOBE.",
+            },
+            {
+              req: "Those salaries??",
+              res: "Yep xD it signals the great demand for individuals with the knowledge and/or passion to learn Web3 roles. You can for sure earn that much if you can demonstrate how you can mesh your current skills with Web3 and provide value to the ecosystem ;)",
+            },
+            {
+              req: "I'm a recruiter/founder, why should I use Crypto Sourcerers",
+              res: "Well, we want to assist the Web3 transitioning period and beyond by connecting with roleseekers, blockchain ecosystems, and businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to become the world's #1 marketplace for blockchain talent - by using this gateway, you can easily scale and build your regional branches should you wish to do so :P",
+            },
+          ].map((item) => (
+            <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+              <div className="md:flex-grow">
+                <h2 className="text-2xl font-medium text-gray-100 title-font mb-2">
+                  {item.req}?
+                </h2>
+                <p className="leading-relaxed">{item.res}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
       <section
