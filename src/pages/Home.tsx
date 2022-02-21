@@ -416,17 +416,18 @@ const HomePage = () => {
           Pricing
         </h1>
         <p className="text-gray-600 text-center mb-6">
-          Payments accepted will be done in crypto{" "}
-          {<span className="underline">only</span>}.
+          Following the ethos of cryptocurrency, you can transparently see our
+          pricing below and what we offer. Payments accepted will be done in
+          crypto {<span className="underline">only</span>}.
         </p>
-        <div className="pricingInfo flex flex-wrap justify-center items-center w-full gap-x-6 gap-y-4">
+        <div className="pricingInfo flex flex-wrap justify-center items-center w-full gap-x-12 gap-y-4">
           <div className="cards gap-x-12 gap-y-4 flex flex-wrap justify-center sm:justify-start">
             <div className="w-72 h-[420px] p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
               <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
-                ROLES
+                VACANCY POSTS
               </h2>
               <h1 className="text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                $XXX
+                $250
               </h1>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -442,10 +443,10 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Global pool of roleseekers
+                Global pool of roleseekers and bountyseekers
               </p>
               <p className="flex items-center text-gray-600 mb-2">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -458,10 +459,11 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Tumeric plaid portland
+                Full/part time roles, contract, intership, and apprenticeship
+                gigs
               </p>
               <p className="flex items-center text-gray-600 mb-6">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -474,10 +476,10 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Mixtape chillwave tumeric
+                Get multiple views - but make it global
               </p>
               <button className="flex items-center mt-auto text-white bg-[#ed194a]/40 border-0 py-2 px-4 w-full focus:outline-none hover:bg-[#ed194a] rounded">
-                Button
+                Get Started
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -490,82 +492,6 @@ const HomePage = () => {
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </button>
-              <p className="text-xs text-gray-500 mt-3">
-                Literally you probably haven't heard of them jean shorts.
-              </p>
-            </div>
-            <div className="w-72 h-[420px] p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-              <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
-                BOUNTIES
-              </h2>
-              <h1 className="text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                $XX
-              </h1>
-              <p className="flex items-center text-gray-600 mb-2">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2.5"
-                    className="w-3 h-3"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 6L9 17l-5-5"></path>
-                  </svg>
-                </span>
-                Global pool of bountyseekers
-              </p>
-              <p className="flex items-center text-gray-600 mb-2">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2.5"
-                    className="w-3 h-3"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 6L9 17l-5-5"></path>
-                  </svg>
-                </span>
-                Tumeric plaid portland
-              </p>
-              <p className="flex items-center text-gray-600 mb-6">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2.5"
-                    className="w-3 h-3"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 6L9 17l-5-5"></path>
-                  </svg>
-                </span>
-                Mixtape chillwave tumeric
-              </p>
-              <button className="flex items-center mt-auto text-white bg-[#ed194a]/60 border-0 py-2 px-4 w-full focus:outline-none hover:bg-[#ed194a] rounded">
-                Button
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 ml-auto"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </button>
-              <p className="text-xs text-gray-500 mt-3">
-                Literally you probably haven't heard of them jean shorts.
-              </p>
             </div>
           </div>
           <div className="max-w-xs w-full h-[300px]">
@@ -573,7 +499,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section id="faq" className="py-12">
+      <section id="faq" className="py-12 mx-auto max-w-7xl">
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           FAQs
         </h1>
@@ -585,14 +511,14 @@ const HomePage = () => {
           {[
             {
               req: "What is Web3",
-              res: "Web3 is the term that describes the phase of technology that we are moving into. The DOT com era we've experienced, such as Google, Youtube, and Spotify, is considered to be 'Web2' - Web3 encompasses things like crypto, Decentralised Finance, DAOs, Metaverse, and Extended Reality, just to name a few. These are things that are changing how we interact with each other to another level as we write this.",
+              res: "Our reponse to this is that, Web3 is the term that describes the digital industrial revolution that we are moving into. The DOT com era we've experienced, such as Google, Youtube, and Spotify, is considered to be 'Web2' - Web3 encompasses themes like Blockchain, Decentralised Finance, DAOs, Metaverse, and Extended Reality, just to name a few. These are themes that are changing how we interact with each other to another level as we write this.",
             },
             {
               req: "Why should I invest in Web3",
-              res: "Close your eyes and picture this - well, not really, because how else would you read this 😅, but imagine being aware of a movement at its very base, like Rolex, and you could buy a watch for $100. The team at Rolex shows drive and commitment to become a known luxury watch across the world. A few years go by, and that watch is now worth around 30K USD. That means that your original inve. Yes, Web3 may be volative as it is a new asset type to all of us, but Web3 provides with new investing opportunities that would not otherwise present itself in our current financial structure, unless you are in certain groups or have the capital.",
+              res: "Web3 provides a lot of investment initiatives and angles, that allow you, or anyone else, to earn some good returns on your money, compared to what you get in the current financial structure - investment opportunities that we will highly likely never see in our lifetimes. The main incentive of investing in Web3 as you are ready this, is the opportunity to invest in this new phase of technology at its infancy, putting you in the best financial position before the point of mass global adoption. The banks and the big guys are even working towards introducing their own crypto, CBDCs, as a replacement of current cash, which should hint to you what is to come - why not invest in things now, that future YOU will have to use anyways, anon?",
             },
             {
-              req: "Why can I do with Web3",
+              req: "What can I do with Web3",
               res: "This is just one example out of many - you can become your own bank and do everything that the banks do, by using DeFi platforms that allow the borrowing and lending of crypto assets. Say you have 1K in USDC, you can lend that thousand through the platform and earn interest upon it, then borrow against that (sometimes even up to 75%!). At this point you've got many options, you could either relend the borrowed amount to gain even more interest, invest it in a passive income generator, or even invest it in a riskier asset YOU feel convicted that will yield high returns. You would of course have to repay the borrowed amount plus its accrued interest, which can average at 3-10% YEARLY. Forgot to mention, for some of these crypto assets, you can even get paid through positive interest for borrowing them ;)",
             },
             {
@@ -601,7 +527,7 @@ const HomePage = () => {
             },
             {
               req: "Do I need to learn programming to get into Web3 and/or tech",
-              res: "Nope! This new phase of tech is where creativity is fully embraced, meaning that there is room for you to use your skills and find your niche. Learning how the tech works will for sure give you an advantage though.",
+              res: "Nope! This new phase of tech is where creativity is fully embraced, meaning, that there is room for you to use your skills and find your niche. Learning how the tech works will for sure give you an advantage though.",
             },
             {
               req: "I’m new to programming, what should I learn first",
@@ -617,7 +543,7 @@ const HomePage = () => {
             },
             {
               req: "What is the salary of a Web3 developer",
-              res: "The range we have seen for a Web3 developer's salary is around 60K USD at minimum to +100K USD max. Heck, if you've got some good experience, you could even be reaching the 200K and 300K USD realms.",
+              res: "The range we have seen for a Web3 developer's salary is around 60K USD at minimum to +100K USD max. Heck, if you've got some good transferrable experience, you could even be reaching the 200K and 300K USD realms.",
             },
             {
               req: "Those salaries??",
