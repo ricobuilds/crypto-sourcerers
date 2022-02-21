@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 // import PricingCard from "../components/PricingCard";
 import AudienceCard from "../components/AudienceCard";
 import heroIcon from "../images/magic-trick-dynamic-color.png";
+import web2devs from "../images/computer-front-color.png";
+import web3devs from "../images/lab-dynamic-color.png";
+import web3enth from "../images/axe-dynamic-color.png";
+import biz from "../images/travel-front-color.png";
+import bankLocker from "../images/locker-dynamic-color.png";
 
 const HomePage = () => {
   return (
@@ -245,24 +250,32 @@ const HomePage = () => {
               title: "Web2 Devs",
               description:
                 "Those expericienced in tech at all levels, and are looking to transition",
+              logo: web2devs,
             },
             {
               title: "Web3 Devs",
               description:
                 "Those experienced in Web3, looking for their next Web3 role",
+              logo: web3devs,
             },
             {
               title: "Web3 Enthusiasts",
               description:
                 "Those with skills in tech and other industries and want to make an impact",
+              logo: web3enth,
             },
             {
               title: "Ecosystems/Companies/Startups",
               description:
                 "Web3 native teams, and 'Web2' businesses looking at crypto",
+              logo: biz,
             },
           ].map((item) => (
-            <AudienceCard title={item.title} description={item.description} />
+            <AudienceCard
+              title={item.title}
+              description={item.description}
+              logo={item.logo}
+            />
           ))}
         </div>
       </section>
@@ -406,14 +419,14 @@ const HomePage = () => {
           Payments accepted will be done in crypto{" "}
           {<span className="underline">only</span>}.
         </p>
-        <div className="pricingInfo flex flex-wrap justify-evenly items-center w-full gap-x-6 gap-y-4">
+        <div className="pricingInfo flex flex-wrap justify-center items-center w-full gap-x-6 gap-y-4">
           <div className="cards gap-x-12 gap-y-4 flex flex-wrap justify-center sm:justify-start">
             <div className="w-72 h-[420px] p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
               <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
                 ROLES
               </h2>
               <h1 className="text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                $250
+                $XXX
               </h1>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -486,7 +499,7 @@ const HomePage = () => {
                 BOUNTIES
               </h2>
               <h1 className="text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                $99
+                $XX
               </h1>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -555,7 +568,9 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className="max-w-xs w-full h-[300px] border">img</div>
+          <div className="max-w-xs w-full h-[300px]">
+            <img src={bankLocker} alt="prop" />
+          </div>
         </div>
       </section>
       <section id="faq" className="py-12">
