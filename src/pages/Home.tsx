@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import PricingCard from "../components/PricingCard";
 import AudienceCard from "../components/AudienceCard";
+import heroIcon from "../images/magic-trick-dynamic-color.png";
 
 const HomePage = () => {
   return (
@@ -30,8 +31,8 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 border dark:border-gray-800 border-gray-300  bg-white/20 dark:bg-black/30 backdrop-blur-lg h-[300px] flex justify-center items-center shadow-xl">
-          <p>IMG</p>
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[300px] flex justify-center items-center">
+          <img src={heroIcon} />
         </div>
       </section>
       <section id="partners" className="py-12">
@@ -428,7 +429,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Vexillologist pitchfork
+                Global pool of roleseekers
               </p>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
@@ -501,7 +502,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Vexillologist pitchfork
+                Global pool of bountyseekers
               </p>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">

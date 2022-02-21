@@ -89,11 +89,11 @@ const App = () => {
               </div>
               <Link to={"/login"}>
                 <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500">
-                  CTA
+                  Roleseekers
                 </button>
               </Link>
               <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500">
-                CTA
+                Recruiters
               </button>
             </div>
           </header>

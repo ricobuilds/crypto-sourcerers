@@ -8,14 +8,14 @@ const Contact = () => {
           Whether if you work in a not-so-known pathway and want it to be
           included under Careers, have noticed a bug, thought of a feature you
           would suggest, found any fraudulent behaviour, or simply just want to
-          reach out, we welcome any messages :)
+          reach out, we welcome any messages and will be seen by Enric :)
         </p>
 
         <p>
           You can reach out to us through{" "}
           <code className="font-semibold">
             <a href="mailto:dev@cryptosourcerers.co">
-              dev@<span className="text-transparent">cryptosourcerers</span>.co
+              dev@<span className="">cryptosourcerers</span>.co
             </a>
           </code>
         </p>
@@ -32,7 +32,9 @@ const Contact = () => {
         <div className="flex flex-wrap -m-2">
           <div className="p-2 w-1/2">
             <div className="relative">
-              <label className="leading-7 text-sm text-gray-600">Name</label>
+              <label className="leading-7 text-sm text-gray-600 dark:text-gray-300">
+                Name
+              </label>
               <input
                 type="text"
                 id="name"
@@ -43,7 +45,9 @@ const Contact = () => {
           </div>
           <div className="p-2 w-1/2">
             <div className="relative">
-              <label className="leading-7 text-sm text-gray-600">Email</label>
+              <label className="leading-7 text-sm text-gray-600 dark:text-gray-300">
+                Email
+              </label>
               <input
                 type="email"
                 id="email"
@@ -54,7 +58,9 @@ const Contact = () => {
           </div>
           <div className="p-2 w-full">
             <div className="relative">
-              <label className="leading-7 text-sm text-gray-600">Message</label>
+              <label className="leading-7 text-sm text-gray-600 dark:text-gray-300">
+                Message
+              </label>
               <textarea
                 id="message"
                 name="message"
@@ -64,7 +70,7 @@ const Contact = () => {
           </div>
           <div className="p-2 w-full">
             <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              CTA
+              Contact
             </button>
           </div>
         </div>

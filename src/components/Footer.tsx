@@ -44,24 +44,15 @@ const Footer = () => {
         <span className="hover:text-gray-400 transition outline-none">
           Learning
         </span>
-        <a
-          target={`_blank`}
-          href="https://moralis.io/"
-          className="hover:text-gray-400 transition outline-none"
-        >
-          Moralis
-        </a>
 
         <Link to={"/newsletter"}>
           <span className="hover:text-gray-400 transition outline-none">
             Newsletter
           </span>
         </Link>
-        <Link to={"/legal"}>
-          <span className="hover:text-gray-400 transition outline-none">
-            Legal
-          </span>
-        </Link>
+        <span className="hover:text-gray-400 transition outline-none">
+          Legal
+        </span>
         <Link to={"/contact"}>
           <span className="hover:text-gray-400 transition outline-none">
             Contact
