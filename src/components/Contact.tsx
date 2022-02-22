@@ -3,12 +3,12 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center space-y-6 py-12 px-6">
       <div className="contactir max-w-lg space-y-6 mx-auto text-center">
         <h1 className="text-6xl font-bold">Contact Us</h1>
-        <p className=" text-lg text-left">
+        <p className=" text-lg text-center">
           {" "}
-          Whether if you work in a not-so-known pathway and want it to be
-          included under Careers, have noticed a bug, thought of a feature you
-          would suggest, found any fraudulent behaviour, or simply just want to
-          reach out, we welcome any messages and will be seen by Enric :)
+          Maybe you work in a not-so-known pathway and want it to be included
+          under Careers, have noticed a bug, thought of a suggestable feature,
+          found any fraudulent behaviour, or simply just want to reach out - we
+          welcome any messages and all will be seen by Enric :)
         </p>
 
         <p>

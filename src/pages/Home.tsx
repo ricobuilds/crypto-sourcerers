@@ -22,49 +22,68 @@ const HomePage = () => {
             Transferring your skills to the cryptosphere?
           </h1>
           <p className="tracking-widest">
+            <span className="tracking-normal">
+              Get notified when we're live.{" "}
+            </span>
             Tap into the new paradigm{" "}
             <span className="dark:text-indigo-500">today.🪄</span>
           </p>
-          <div className="flex justify-center md:justify-start font-medium">
-            <input
-              type="text"
-              placeholder="Enter your email"
-              className="p-2 pr-8 border border-gray-300 text-black rounded-l-md"
-            />
-            <button className="cta text-md py-1 px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white rounded-r-md">
-              Sign Up
-            </button>
+          <div className="flex flex-col justify-center md:justify-start font-medium">
+            <div id="revue-embed">
+              <form
+                action="https://www.getrevue.co/profile/cryptosourcerers/add_subscriber"
+                method="post"
+                id="revue-form"
+                name="revue-form"
+                target="_blank"
+              >
+                <div className="flex mb-3">
+                  <div className="revue-form-group">
+                    <input
+                      className="revue-form-field p-2 pr-8 border border-gray-300 text-black rounded-l-md"
+                      placeholder="Your email address..."
+                      type="email"
+                      name="member[email]"
+                      id="member_email"
+                    />
+                    <input
+                      className="cta text-md h-full px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white rounded-r-md"
+                      type="submit"
+                      value="Subscribe"
+                      name="member[subscribe]"
+                      id="member_submit"
+                    />
+                  </div>
+                </div>
+                <div className="revue-form-footer text-sm">
+                  By subscribing, you agree with to receive job updates only,
+                  and Revue’s{" "}
+                  <a
+                    target="_blank"
+                    href="https://www.getrevue.co/terms"
+                    className="text-gray-600 underline dark:text-[#6387f1]"
+                  >
+                    Terms of Service
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    target="_blank"
+                    href="https://www.getrevue.co/privacy"
+                    className="text-gray-600 underline dark:text-[#6387f1]"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[300px] flex justify-center items-center">
-          <img src={heroIcon} />
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[150px] flex justify-center items-center">
+          <img src={heroIcon} className="h-96" />
         </div>
       </section>
-      <section id="partners" className="py-12">
-        <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
-          <p className="absolute -top-4 left-1 text-xl font-bold ">
-            Trusted By
-          </p>
-          <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              2.7K
-            </h2>
-            <p className="leading-relaxed">Roleseekers</p>
-          </div>
-          <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              1.8K
-            </h2>
-            <p className="leading-relaxed">Companies</p>
-          </div>
-          <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              35
-            </h2>
-            <p className="leading-relaxed">Live Roles</p>
-          </div>
-        </div>
-      </section>
+
       <section className="stats">
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
           <p className="absolute -top-4 left-1 text-xl font-bold">Live Stats</p>
@@ -95,22 +114,12 @@ const HomePage = () => {
         </div>
       </section>
       <section
-        id="sneakPreview"
-        className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
-      >
-        <h1 className="text-3xl font-bold title-font text-[#6387f1] mb-12 text-center tracking-widest">
-          Sneak Preview👀
-        </h1>
-        <div className="absolute right-0 bottom-1/4  w-52 h-52 bg-[#dbed19] rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute left-0 bottom-1/4  w-52 h-52 bg-[#f18263] rounded-full blur-3xl opacity-40"></div>
-      </section>
-      <section
         id="features"
         className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
       >
-        <h1 className="text-3xl font-bold title-font text-[#6387f1] mb-12 text-center tracking-widest">
+        {/* <h1 className="text-3xl font-bold title-font text-[#6387f1] mb-12 text-center tracking-widest">
           Features
-        </h1>
+        </h1> */}
         <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
@@ -124,62 +133,31 @@ const HomePage = () => {
               className="sm:w-16 sm:h-16 w-10 h-10"
               viewBox="0 0 24 24"
             >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
-              Shooting Stars
+              Borderless Access
             </h2>
             <p className="leading-relaxed text-base">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine.
+              Tap in and access a global pool of talented roleseekers and
+              bountyseekers, that are actively looking to contribute in Web3.
             </p>
-            <a
-              className="mt-3 text-[#6387f1] inline-flex items-center"
-              href="#features"
-            >
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col ">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
-              The Catalyzer
+              Wide Audience
             </h2>
             <p className="leading-relaxed text-base">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine.
+              Have an intership available htmlFor new graduates? Looking htmlFor
+              a community manager? Want to launch your blockchain initiative and
+              in urgent need of a Blockchain Engineer? With Crypto Sourcerers,
+              you can reach your target audience on the global stage.
             </p>
-            <a
-              className="mt-3 text-[#6387f1] inline-flex items-center"
-              href="#features"
-            >
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
           <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#6387f1] flex-shrink-0">
             <svg
@@ -208,35 +186,18 @@ const HomePage = () => {
               className="sm:w-16 sm:h-16 w-10 h-10"
               viewBox="0 0 24 24"
             >
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
             </svg>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
-              The 400 Blows
+              Insta-Marketing
             </h2>
             <p className="leading-relaxed text-base">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine.
+              Your vacancy posts will be posted instantly upon payment
+              confirmation across our social profiles and newsletter. Get your
+              vacancies viewed by thousands of eyes across the world.
             </p>
-            <a
-              className="mt-3 text-[#6387f1] inline-flex items-center"
-              href="#features"
-            >
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </section>
@@ -255,7 +216,7 @@ const HomePage = () => {
             {
               title: "Web3 Devs",
               description:
-                "Those experienced in Web3, looking for their next Web3 role",
+                "Those experienced in Web3, looking htmlFor their next Web3 role",
               logo: web3devs,
             },
             {
@@ -279,138 +240,7 @@ const HomePage = () => {
           ))}
         </div>
       </section>
-      <section id="socialProof" className="py-24 mx-auto">
-        {/* Testimonials */}
-        <h1 className="text-3xl title-font font-bold text-[#ed194a] mb-12 text-center tracking-widest">
-          Testimonials
-        </h1>
-        <div className="flex flex-wrap m-0 w-full">
-          <div className="p-4 md:w-1/2 w-full">
-            <div className="h-full bg-white p-8 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="block w-5 h-5 text-gray-400 mb-4"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-              </svg>
-              <p className="leading-relaxed mb-6 dark:text-gray-800">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
-              </p>
-              <a className="inline-flex items-center" href="#socialProof">
-                <img
-                  alt="testimonial"
-                  src="https://dummyimage.com/106x106"
-                  className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                />
-                <span className="flex-grow flex flex-col pl-4">
-                  <span className="title-font font-medium text-gray-900">
-                    Holden Caulfield
-                  </span>
-                  <span className="text-gray-500 text-sm">UI DEVELOPER</span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="p-4 md:w-1/2 w-full">
-            <div className="h-full bg-white p-8 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="block w-5 h-5 text-gray-400 mb-4"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-              </svg>
-              <p className="leading-relaxed mb-6 dark:text-gray-800">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
-              </p>
-              <a className="inline-flex items-center" href="#socialProof">
-                <img
-                  alt="testimonial"
-                  src="https://dummyimage.com/107x107"
-                  className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                />
-                <span className="flex-grow flex flex-col pl-4">
-                  <span className="title-font font-medium text-gray-900">
-                    Alper Kamu
-                  </span>
-                  <span className="text-gray-500 text-sm">DESIGNER</span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="p-4 md:w-1/2 w-full">
-            <div className="h-full bg-white p-8 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="block w-5 h-5 text-gray-400 mb-4"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-              </svg>
-              <p className="leading-relaxed mb-6 dark:text-gray-800">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
-              </p>
-              <a className="inline-flex items-center" href="#socialProof">
-                <img
-                  alt="testimonial"
-                  src="https://dummyimage.com/107x107"
-                  className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                />
-                <span className="flex-grow flex flex-col pl-4">
-                  <span className="title-font font-medium text-gray-900">
-                    Alper Kamu
-                  </span>
-                  <span className="text-gray-500 text-sm">DESIGNER</span>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="p-4 md:w-1/2 w-full">
-            <div className="h-full bg-white backdrop-blur-lg p-8 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="block w-5 h-5 text-gray-400 mb-4"
-                viewBox="0 0 975.036 975.036"
-              >
-                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
-              </svg>
-              <p className="leading-relaxed mb-6 dark:text-gray-800">
-                Synth chartreuse iPhone lomo cray raw denim brunch everyday
-                carry neutra before they sold out fixie 90's microdosing. Tacos
-                pinterest fanny pack venmo, post-ironic heirloom try-hard pabst
-                authentic iceland.
-              </p>
-              <a className="inline-flex items-center" href="#socialProof">
-                <img
-                  alt="testimonial"
-                  src="https://dummyimage.com/107x107"
-                  className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                />
-                <span className="flex-grow flex flex-col pl-4">
-                  <span className="title-font font-medium text-gray-900">
-                    Alper Kamu
-                  </span>
-                  <span className="text-gray-500 text-sm">DESIGNER</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section id="pricing" className="px-5 py-12">
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           Pricing
@@ -418,7 +248,7 @@ const HomePage = () => {
         <p className="text-gray-600 text-center mb-6">
           Following the ethos of cryptocurrency, you can transparently see our
           pricing below and what we offer. Payments accepted will be done in
-          crypto {<span className="underline">only</span>}.
+          crypto <span className="underline">only</span> .
         </p>
         <div className="pricingInfo flex flex-wrap justify-center items-center w-full gap-x-12 gap-y-4">
           <div className="cards gap-x-12 gap-y-4 flex flex-wrap justify-center sm:justify-start">
@@ -426,8 +256,29 @@ const HomePage = () => {
               <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
                 VACANCY POSTS
               </h2>
-              <h1 className="text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                $250
+              <h1 className="flex text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
+                250
+                <span>
+                  <svg
+                    data-name="86977684-12db-4850-8f30-233a7c267d11"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    viewBox="0 0 2000 2000"
+                  >
+                    <path
+                      d="M1000 2000c554.17 0 1000-445.83 1000-1000S1554.17 0 1000 0 0 445.83 0 1000s445.83 1000 1000 1000z"
+                      fill="#2775ca"
+                    />
+                    <path
+                      d="M1275 1158.33c0-145.83-87.5-195.83-262.5-216.66-125-16.67-150-50-150-108.34s41.67-95.83 125-95.83c75 0 116.67 25 137.5 87.5 4.17 12.5 16.67 20.83 29.17 20.83h66.66c16.67 0 29.17-12.5 29.17-29.16v-4.17c-16.67-91.67-91.67-162.5-187.5-170.83v-100c0-16.67-12.5-29.17-33.33-33.34h-62.5c-16.67 0-29.17 12.5-33.34 33.34v95.83c-125 16.67-204.16 100-204.16 204.17 0 137.5 83.33 191.66 258.33 212.5 116.67 20.83 154.17 45.83 154.17 112.5s-58.34 112.5-137.5 112.5c-108.34 0-145.84-45.84-158.34-108.34-4.16-16.66-16.66-25-29.16-25h-70.84c-16.66 0-29.16 12.5-29.16 29.17v4.17c16.66 104.16 83.33 179.16 220.83 200v100c0 16.66 12.5 29.16 33.33 33.33h62.5c16.67 0 29.17-12.5 33.34-33.33v-100c125-20.84 208.33-108.34 208.33-220.84z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M787.5 1595.83c-325-116.66-491.67-479.16-370.83-800 62.5-175 200-308.33 370.83-370.83 16.67-8.33 25-20.83 25-41.67V325c0-16.67-8.33-29.17-25-33.33-4.17 0-12.5 0-16.67 4.16-395.83 125-612.5 545.84-487.5 941.67 75 233.33 254.17 412.5 487.5 487.5 16.67 8.33 33.34 0 37.5-16.67 4.17-4.16 4.17-8.33 4.17-16.66v-58.34c0-12.5-12.5-29.16-25-37.5zM1229.17 295.83c-16.67-8.33-33.34 0-37.5 16.67-4.17 4.17-4.17 8.33-4.17 16.67v58.33c0 16.67 12.5 33.33 25 41.67 325 116.66 491.67 479.16 370.83 800-62.5 175-200 308.33-370.83 370.83-16.67 8.33-25 20.83-25 41.67V1700c0 16.67 8.33 29.17 25 33.33 4.17 0 12.5 0 16.67-4.16 395.83-125 612.5-545.84 487.5-941.67-75-237.5-258.34-416.67-487.5-491.67z"
+                      fill="#fff"
+                    />
+                  </svg>
+                </span>
               </h1>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -494,7 +345,7 @@ const HomePage = () => {
                 Get multiple views - but make it global
               </p>
               <button className="flex items-center mt-auto text-white bg-[#ed194a]/40 border-0 py-2 px-4 w-full focus:outline-none hover:bg-[#ed194a] rounded">
-                Get Started
+                Coming Soon
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -522,62 +373,179 @@ const HomePage = () => {
           Gathered from questions asked across platforms like Twitter and
           Discord
         </p>
-        <div className="results divide-y-[1px] divide-slate-800">
-          {[
-            {
-              req: "What is Web3",
-              res: "Our reponse to this is that, Web3 is the term that describes the digital industrial revolution that we are moving into. The DOT com era we've experienced, such as Google, Youtube, and Spotify, is considered to be 'Web2' - Web3 encompasses themes like Blockchain, Decentralised Finance, DAOs, Metaverse, and Extended Reality, just to name a few. These are themes that are changing how we interact with each other to another level as we write this.",
-            },
-            {
-              req: "Why should I invest in Web3",
-              res: "Web3 provides a lot of investment initiatives and angles, that allow you, or anyone else, to earn some good returns on your money, compared to what you get in the current financial structure - investment opportunities that we will highly likely never see in our lifetimes. The main incentive of investing in Web3 as you are ready this, is the opportunity to invest in this new phase of technology at its infancy, putting you in the best financial position before the point of mass global adoption. The banks and the big guys are even working towards introducing their own crypto, CBDCs, as a replacement of current cash, which should hint to you what is to come - why not invest in things now, that future YOU will have to use anyways, anon?",
-            },
-            {
-              req: "What can I do with Web3",
-              res: "This is just one example out of many - you can become your own bank and do everything that the banks do, by using DeFi platforms that allow the borrowing and lending of crypto assets. Say you have 1K in USDC, you can lend that thousand through the platform and earn interest upon it, then borrow against that (sometimes even up to 75%!). At this point you've got many options, you could either relend the borrowed amount to gain even more interest, invest it in a passive income generator, or even invest it in a riskier asset YOU feel convicted that will yield high returns. You would of course have to repay the borrowed amount plus its accrued interest, which can average at 3-10% YEARLY. Forgot to mention, for some of these crypto assets, you can even get paid through positive interest for borrowing them ;)",
-            },
-            {
-              req: "How do I get into Web3",
-              res: "By learning and participating! Ask questions, connect with others and create your own applications. As a Buildspace alumni, joining the community was an element that helped when transferring my skills to blockchain as a frontend dev :)",
-            },
-            {
-              req: "Do I need to learn programming to get into Web3 and/or tech",
-              res: "Nope! This new phase of tech is where creativity is fully embraced, meaning, that there is room for you to use your skills and find your niche. Learning how the tech works will for sure give you an advantage though.",
-            },
-            {
-              req: "I’m new to programming, what should I learn first",
-              res: "If you are looking to work more on UIs (user interfaces), we would recommend learning the basics (HTML, CSS, JS), which would provide you with the fundamentals to create applications. Else, you could start by learning Solidity - there are many resources online like SolidityByExample and Smart Contract Programmer.",
-            },
-            {
-              req: "What technologies should I learn",
-              res: "We'd suggest learning Solidity first as it is more beginner-friendly if you are new, or come from a Javascript-ish background - the legend Nader Dabit has a series of fullstack courses which include industry standard tooling used alongside Solidity. Another popular and in-great-demand tool is Rust!",
-            },
-            {
-              req: "Where can I find web3 internships and remote work in general",
-              res: "Well, you have come to the right place! Crypo Sourcerers aims to be such a platform that allows you, the roleseeker, to find roles across the GLOBE.",
-            },
-            {
-              req: "What is the salary of a Web3 developer",
-              res: "The range we have seen for a Web3 developer's salary is around 60K USD at minimum to +100K USD max. Heck, if you've got some good transferrable experience, you could even be reaching the 200K and 300K USD realms.",
-            },
-            {
-              req: "Those salaries??",
-              res: "Yep xD it signals the great demand for individuals with the knowledge and/or passion to learn Web3 roles. You can for sure earn that much if you can demonstrate how you can mesh your current skills with Web3 and provide value to the ecosystem ;)",
-            },
-            {
-              req: "I'm a recruiter/founder, why should I use Crypto Sourcerers",
-              res: "Well, we want to assist the Web3 transitioning period and beyond by connecting with roleseekers, blockchain ecosystems, and businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to become the world's #1 marketplace for blockchain talent - by using this gateway, you can easily scale and build your regional branches when you wish to do so :P",
-            },
-          ].map((item) => (
-            <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
-              <div className="md:flex-grow">
-                <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
-                  {item.req}?
-                </h2>
-                <p className="leading-relaxed">{item.res}</p>
-              </div>
+        <div className="surveyResults divide-y-[1px] divide-slate-800">
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                What is Web3?
+              </h2>
+              <p className="leading-relaxed">
+                Our reponse to this is that, Web3 is the term that describes the
+                digital industrial revolution that we are moving into. The DOT
+                com era we've experienced, such as Google, Youtube, and Spotify,
+                is considered to be 'Web2' - Web3 encompasses themes like
+                Blockchain, Decentralised Finance, DAOs, Metaverse, and Extended
+                Reality, just to name a few. These are themes that are changing
+                how we interact with each other to another level as we write
+                this.
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Why should I invest in Web3?
+              </h2>
+              <p className="leading-relaxed">
+                Web3 provides a lot of investment initiatives and angles, that
+                allow you, or anyone else, to earn some good returns on your
+                money, compared to what you get in the current financial
+                structure - investment opportunities that we will highly likely
+                never see in our lifetimes. The main incentive of investing in
+                Web3, is the opportunity to invest in this new phase of
+                technology at its infancy, putting you in the best financial
+                position before the point of mass global adoption. The banks and
+                the big guys are even working towards introducing their own
+                crypto, CBDCs, as a replacement of current cash, which should
+                hint to you what is to come - why not invest in things now, that
+                future you WILL HAVE to use anyways, anon?
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                What can I do with Web3?
+              </h2>
+              <p className="leading-relaxed">
+                This is just one example out of many - you can become your own
+                bank and do everything that the banks do, by using DeFi
+                platforms that allow the borrowing and lending of crypto assets.
+                Say you have 1K in USDC, you can lend that thousand through the
+                platform and earn interest upon it, then borrow against that
+                (sometimes even up to 75%!). At this point you've got many
+                options; you could either relend the borrowed amount to gain
+                even more interest, invest it in a passive income generator, or
+                even invest it in a riskier asset that YOU feel convicted about
+                and will yield high returns. You would of course have to repay
+                the borrowed amount plus its accrued interest, which can average
+                at 3-10% YEARLY. Forgot to mention, htmlFor some of these crypto
+                assets, you can even get paid through positive interest htmlFor
+                borrowing them ;)
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                How do I get into Web3?
+              </h2>
+              <p className="leading-relaxed">
+                By learning and participating! Ask questions, connect with
+                others and create your own applications. As a Buildspace alumni,
+                joining the community was an element that helped me when
+                transferring my skills to blockchain as a frontend dev :)
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Do I need to learn programming to get into Web3 and/or tech?
+              </h2>
+              <p className="leading-relaxed">
+                Nope! This new phase of tech is where creativity is fully
+                embraced, meaning, that there is room htmlFor you to use your
+                skills and find your niche. Learning how the tech works will
+                htmlFor sure give you an advantage though.
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                I’m new to programming, what should I learn first?
+              </h2>
+              <p className="leading-relaxed">
+                If you are looking to work more on UIs (user interfaces), we
+                would recommend learning the basics (HTML, CSS, JS), which would
+                provide you with the fundamentals to create applications. Else,
+                you could start by learning Solidity - there are many resources
+                online like SolidityByExample and Smart Contract Programmer.
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                What technologies should I learn?
+              </h2>
+              <p className="leading-relaxed">
+                We'd suggest learning Solidity first as it is more
+                beginner-friendly if you are new, or come from a Javascript-ish
+                background - the legend{" "}
+                <a href="https://www.twitter.com/dabit3" target={"_blank"}>
+                  Nader Dabit
+                </a>{" "}
+                has a series of fullstack courses which include industry
+                standard tooling used alongside Solidity. Another popular and
+                in-great-demand tool is Rust!
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Where can I find web3 internships and remote work in general?
+              </h2>
+              <p className="leading-relaxed">
+                Well, you have come to the right place! Crypo Sourcerers aims to
+                be such a platform that allows you, the roleseeker, to find
+                roles across the GLOBE.
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                What is the salary of a Web3 developer?
+              </h2>
+              <p className="leading-relaxed">
+                The range we have seen htmlFor a Web3 developer's salary is
+                around 60K USD at minimum to +100K USD max. Heck, if you've got
+                some good transferrable experience, you could even be reaching
+                the 200K and 300K USD realms.
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Those salaries???
+              </h2>
+              <p className="leading-relaxed">
+                Yep xD it signals the great demand htmlFor individuals with the
+                knowledge and/or passion to learn Web3 roles. You can htmlFor
+                sure earn that much if you can demonstrate how you can mesh your
+                current skills with Web3 and provide value to the ecosystem ;)
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                I'm a recruiter/founder, why should I use Crypto Sourcerers?
+              </h2>
+              <p className="leading-relaxed">
+                Well, we want to assist the Web3 transitioning period and beyond
+                by connecting with roleseekers, blockchain ecosystems, and
+                businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to
+                become the world's #1 marketplace htmlFor blockchain talent - by
+                using this gateway, you can easily scale and build your regional
+                branches when you wish to do so :P
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section

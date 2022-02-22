@@ -68,7 +68,7 @@ const App = () => {
               <div className="logo">Crypto Sourcerers</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              {["Roles", "Bounties", "Learning"].map((item) => (
+              {["Careers", "Learning", "About"].map((item) => (
                 <a
                   className="hover:text-gray-400  transition hover:cursor-pointer"
                   href={`${item.toLocaleLowerCase()}`}
@@ -87,14 +87,86 @@ const App = () => {
               >
                 {themeIcon}
               </div>
-              <Link to={"/login"}>
+              {/* change the local language */}
+              <div className="relative inline-block text-left">
+                <div>
+                  <button
+                    type="button"
+                    className=" border border-gray-300 bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center w-full rounded-md  px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-50 hover:bg-gray-50 dark:hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500"
+                    id="options-menu"
+                  >
+                    Lengua
+                    <svg
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      viewBox="0 0 1792 1792"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="origin-top-right z-10 absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5">
+                  <div
+                    className="py-1 "
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        <span>Español </span>
+                        <span>
+                          <img
+                            alt="Spain"
+                            className="w-5 h-5"
+                            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/ES.svg"
+                          />
+                        </span>
+                      </span>
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        <span>English</span>
+                        <img
+                          alt="England"
+                          className="w-5 h-5"
+                          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"
+                        />
+                      </span>
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        <span>Portugues</span>
+                        <img
+                          alt="Brazil"
+                          className="w-5 h-5"
+                          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/BR.svg"
+                        />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <Link to={"/"}>
                 <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#ed194a] to-pink-500">
-                  Roleseekers
+                  LIVE SOON
                 </button>
               </Link>
-              <button className="cta py-1 px-3 rounded text-white bg-gradient-to-tr from-[#6387f1] to-purple-500">
-                Recruiters
-              </button>
             </div>
           </header>
           <Content>

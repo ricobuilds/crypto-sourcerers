@@ -5041,6 +5041,11 @@ cosmiconfig@^7.0.0, cosmiconfig@^7.0.1:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+country-flag-icons@^1.4.21:
+  version "1.4.21"
+  resolved "https://registry.yarnpkg.com/country-flag-icons/-/country-flag-icons-1.4.21.tgz#0c00f57894890f5f41c8b632bcf5293cce80af02"
+  integrity sha512-bA9jDr+T5li7EsKdDx0xVnO0bdMdoT8IA3BNbeT2XSWUygR1okhiZ2+eYiC1EKLrFZhI4aEHni2w03lUlOjogg==
+
 crc-32@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/crc-32/-/crc-32-1.2.0.tgz#cb2db6e29b88508e32d9dd0ec1693e7b41a18208"

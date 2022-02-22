@@ -17,7 +17,7 @@ const Footer = () => {
         </span>{" "}
         BuyMeAKinderBuenoWhite
       </div>
-      <div className="navs grid grid-cols-2 lg:grid-cols-3 gap-x-4">
+      <div className="navs grid grid-cols-2 lg:grid-cols-2 gap-x-4">
         <Link to={"/careers"}>
           <span className="hover:text-gray-400 transition outline-none">
             Careers
@@ -36,7 +36,7 @@ const Footer = () => {
           Twitter
         </a>
 
-        <Link to={"/insights"}>
+        <Link to={"/#"}>
           <span className="hover:text-gray-400 transition outline-none">
             Insights
           </span>
@@ -45,7 +45,7 @@ const Footer = () => {
           Learning
         </span>
 
-        <Link to={"/newsletter"}>
+        <Link to={"/#"}>
           <span className="hover:text-gray-400 transition outline-none">
             Newsletter
           </span>
