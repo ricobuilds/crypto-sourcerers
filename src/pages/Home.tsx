@@ -89,28 +89,57 @@ const HomePage = () => {
           <p className="absolute -top-4 left-1 text-xl font-bold">Live Stats</p>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
-              2.7K
+              #.#K
             </h2>
             <p className="leading-relaxed">Roleseekers</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
-              1.8K
+              #.#K
             </h2>
             <p className="leading-relaxed">Companies</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
-              35
+              ##
             </h2>
             <p className="leading-relaxed">Live Roles</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
-              96.8K
+              ##.#K
             </h2>
             <p className="leading-relaxed">Avg. Salary ($)</p>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="mission"
+        className="container mx-auto flex flex-col items-center justify-center py-24"
+      >
+        <h1 className="text-3xl font-bold mb-3">Mission</h1>
+        <div className="text-center max-w-xl space-y-6">
+          <p>
+            It’s obvious - we have gone through a shift in the last 2 years due
+            to global events that have exposed the current paradigm; supply
+            chain and financial markets being primary examples. This has
+            invigorated efforts to solve these orchestrated problems through
+            digital alternatives - cryptocurrency. The migration to this new
+            digital era means that becoming acquainted with technology will help
+            one stay current and be in the best position possible, as everything
+            we do will undergo a digital reform - an important factor to
+            consider as the labour market and competition shifts from regional
+            to global, through remote opportunities.
+          </p>
+          <p>
+            We have dedicated this platform to help roleseekers find lucrative
+            opportunities with Web3 startups, and for ‘Web2’ and Web3 teams to
+            find talent that is already in Web3, or looking to transition to
+            Web3. The essence of our mission is to assist the Web3 ecosystem
+            through the ongoing transitionary period to the point of mass global
+            adoption, and beyond.
+          </p>
         </div>
       </section>
       <section
@@ -142,7 +171,7 @@ const HomePage = () => {
               Borderless Access
             </h2>
             <p className="leading-relaxed text-base">
-              Tap in and access a global pool of talented roleseekers and
+              Tap in, and access a global pool of talented roleseekers and
               bountyseekers, that are actively looking to contribute in Web3.
             </p>
           </div>
@@ -153,8 +182,8 @@ const HomePage = () => {
               Wide Audience
             </h2>
             <p className="leading-relaxed text-base">
-              Have an intership available htmlFor new graduates? Looking htmlFor
-              a community manager? Want to launch your blockchain initiative and
+              Have an intership available for new graduates? Looking for a
+              community manager? Want to launch your blockchain initiative and
               in urgent need of a Blockchain Engineer? With Crypto Sourcerers,
               you can reach your target audience on the global stage.
             </p>
@@ -216,7 +245,7 @@ const HomePage = () => {
             {
               title: "Web3 Devs",
               description:
-                "Those experienced in Web3, looking htmlFor their next Web3 role",
+                "Those experienced in Web3, looking for their next Web3 role",
               logo: web3devs,
             },
             {
@@ -429,8 +458,8 @@ const HomePage = () => {
                 even invest it in a riskier asset that YOU feel convicted about
                 and will yield high returns. You would of course have to repay
                 the borrowed amount plus its accrued interest, which can average
-                at 3-10% YEARLY. Forgot to mention, htmlFor some of these crypto
-                assets, you can even get paid through positive interest htmlFor
+                at 3-10% YEARLY. Forgot to mention, for some of these crypto
+                assets, you can even get paid through positive interest for
                 borrowing them ;)
               </p>
             </div>
@@ -455,9 +484,9 @@ const HomePage = () => {
               </h2>
               <p className="leading-relaxed">
                 Nope! This new phase of tech is where creativity is fully
-                embraced, meaning, that there is room htmlFor you to use your
-                skills and find your niche. Learning how the tech works will
-                htmlFor sure give you an advantage though.
+                embraced, meaning, that there is room for you to use your skills
+                and find your niche. Learning how the tech works will for sure
+                give you an advantage though.
               </p>
             </div>
           </div>
@@ -511,10 +540,10 @@ const HomePage = () => {
                 What is the salary of a Web3 developer?
               </h2>
               <p className="leading-relaxed">
-                The range we have seen htmlFor a Web3 developer's salary is
-                around 60K USD at minimum to +100K USD max. Heck, if you've got
-                some good transferrable experience, you could even be reaching
-                the 200K and 300K USD realms.
+                The range we have seen for a Web3 developer's salary is around
+                60K USD at minimum to +100K USD max. Heck, if you've got some
+                good transferrable experience, you could even be reaching the
+                200K and 300K USD realms.
               </p>
             </div>
           </div>
@@ -524,9 +553,9 @@ const HomePage = () => {
                 Those salaries???
               </h2>
               <p className="leading-relaxed">
-                Yep xD it signals the great demand htmlFor individuals with the
-                knowledge and/or passion to learn Web3 roles. You can htmlFor
-                sure earn that much if you can demonstrate how you can mesh your
+                Yep xD it signals the great demand for individuals with the
+                knowledge and/or passion to learn Web3 roles. You can for sure
+                earn that much if you can demonstrate how you can mesh your
                 current skills with Web3 and provide value to the ecosystem ;)
               </p>
             </div>
@@ -540,7 +569,7 @@ const HomePage = () => {
                 Well, we want to assist the Web3 transitioning period and beyond
                 by connecting with roleseekers, blockchain ecosystems, and
                 businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to
-                become the world's #1 marketplace htmlFor blockchain talent - by
+                become the world's #1 marketplace for blockchain talent - by
                 using this gateway, you can easily scale and build your regional
                 branches when you wish to do so :P
               </p>
