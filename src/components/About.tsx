@@ -17,10 +17,7 @@ const About = () => {
         <p className="aboutDev-intro">
           <span className="text-sm italic">[clears throat in WGMI]</span> Hey,
           this is
-          <span className="dark:text-indigo-400 font-medium">
-            {" "}
-            Enrique T.
-          </span>{" "}
+          <span className="dark:text-indigo-400 font-medium"> Enric</span>{" "}
           typing here, a Fullstack Web3 Developer, and I have produced Crypto
           Sourcerers - sorcerers🔮 get it? ;)
         </p>
@@ -80,7 +77,7 @@ const About = () => {
               />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-100">
-                  Enrique T.
+                  Enric
                 </h2>
                 <h3 className="text-gray-500 mb-3">CTO</h3>
                 <p className="mb-4">Building cool sh*t.</p>
