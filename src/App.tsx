@@ -158,6 +158,34 @@ const App = () => {
                         />
                       </span>
                     </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        <span>Italian</span>
+                        <img
+                          alt="Italian"
+                          className="w-5 h-5"
+                          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/IT.svg"
+                        />
+                      </span>
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                      role="menuitem"
+                    >
+                      <span className="flex items-center gap-x-1">
+                        <span>German</span>
+                        <img
+                          alt="Italian"
+                          className="w-5 h-5"
+                          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/DE.svg"
+                        />
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>
