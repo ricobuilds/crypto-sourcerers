@@ -16,6 +16,7 @@ import Careers from "./pages/Careers";
 import { Helmet } from "react-helmet-async";
 import Login from "./pages/Login";
 import Bounties from "./pages/Bounties";
+import Learning from "./components/Learning";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -101,7 +102,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/news" />
               <Route path="/insights" element={<Insights />} />
-              <Route path="/learning" />
+              <Route path="/learning" element={<Learning />} />
               <Route path="/roles" element={<LiveRoles />} />
               <Route path="/bounties" element={<Bounties />} />
               <Route path="/legal" />
