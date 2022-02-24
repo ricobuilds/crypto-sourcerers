@@ -80,7 +80,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[150px] flex justify-center items-center">
-          <img src={heroIcon} className="aspect-video" />
+          <img src={heroIcon} className="h-40 w-40" />
         </div>
       </section>
 
