@@ -9,7 +9,12 @@ const AudienceCard = (props: IAudienceCard) => {
     <div className="audienceCard">
       <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
         <div className="card-title font-semibold">{props.title}</div>
-        <img src={`${props.logo}`} alt="prop" className="h-40 w-40 mx-auto" />
+        <img
+          src={`${props.logo}`}
+          alt="prop"
+          className="mx-auto"
+          srcSet={`${props.logo}-xl, `}
+        />
         <div className="card-content text-justify">{props.description}.</div>
       </div>
     </div>

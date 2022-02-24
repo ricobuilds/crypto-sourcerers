@@ -80,7 +80,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[150px] flex justify-center items-center">
-          <img src={heroIcon} className="h-40 w-40" />
+          <img src={heroIcon} className="h-28 w-28" />
         </div>
       </section>
 
@@ -389,7 +389,7 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="max-w-xs w-full h-[300px]">
+          <div className="max-w-xs w-28 h-28">
             <img src={bankLocker} alt="prop" />
           </div>
         </div>
