@@ -70,14 +70,24 @@ const App = () => {
               <div className="logo">Crypto Sourcerers</div>
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              {["Careers", "Learning", "About"].map((item) => (
-                <a
-                  className="hover:text-gray-400  transition hover:cursor-pointer"
-                  href={`${item.toLocaleLowerCase()}`}
-                >
-                  {item}
-                </a>
-              ))}
+              <a
+                className="hover:text-gray-400  transition hover:cursor-pointer"
+                href={`/careers`}
+              >
+                Careers
+              </a>
+              <a
+                className="hover:text-gray-400  transition hover:cursor-pointer"
+                href={``}
+              >
+                Learning
+              </a>
+              <a
+                className="hover:text-gray-400  transition hover:cursor-pointer"
+                href={`/about`}
+              >
+                About
+              </a>
             </div>
             <div className="inline-block md:hidden  text-[#ed194a]">
               {menuIcon}
