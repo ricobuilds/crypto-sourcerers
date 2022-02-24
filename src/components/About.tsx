@@ -81,10 +81,10 @@ const About = () => {
                 src={punk}
               />
               <div className="w-full">
-                <h2 className="title-font font-medium text-lg text-gray-100">
+                <h2 className="title-font font-medium text-lg tracking-widest text-black dark:text-gray-100">
                   Enric
                 </h2>
-                <h3 className="text-gray-500 mb-3">CTO</h3>
+                <h3 className="dark:text-gray-500 mb-3">CTO</h3>
                 <p className="mb-4">Building cool sh*t.</p>
                 <span className="inline-flex space-x-4">
                   <a
