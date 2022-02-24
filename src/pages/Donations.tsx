@@ -4,7 +4,9 @@ import maticIcon from "../images/polygon-matic-logo.png";
 const Donations = () => {
   return (
     <div className="donations flex flex-col items-center">
-      <h1 className="text-lg mb-2 pt-12">BuyMeAKinderBuenoWhite :)</h1>
+      <h1 className="text-lg font-bold mb-2 pt-12">
+        BuyMeAKinderBuenoWhite :)
+      </h1>
       <p className="text-gray-600 mb-6">
         Buy Me A Coffee... but make it BuyMeAKinderBuenoWhite
       </p>
@@ -32,7 +34,7 @@ const Donations = () => {
               />
             </svg>
           </span>{" "}
-          to the addresses below.
+          to the addresses below:
         </p>
         <p className="flex items-center py-3 ">
           EVM Address (

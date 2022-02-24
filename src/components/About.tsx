@@ -36,16 +36,19 @@ const About = () => {
           paradigm.
         </p>
         <p className="">
-          When I looked around to transfer my creative and development
-          experience over to blockchain, there weren’t many easy-to-find sources
-          for getting a role, so I took the steps to develop this platform,
-          Crypto Sourcerers, a platform that people all around the world can use
-          to tap into this budding industry and its many offerings. The same can
-          be said for many "Web2.0" companies & crypto-based startups alike,
-          that are looking to move towards{" "}
+          Over the past 2 years, the global events we have experienced have
+          shown us the deficiencies in our instrastructure, changing the
+          workforce, and bringing forth digital solutions to solve them i.e.
+          blockchain.
+          <br />
+          This has kicked the migration to a new digital era to full throttle,
+          meaning that going digital will be a <b>must</b> for everyone to
+          adapt. So, I took the steps to develop this platform, Crypto
+          Sourcerers, a platform that people all around the world can use to tap
+          into this budding industry. The same can be said for "Web2.0"
+          companies & crypto-based startups that are looking to move towards{" "}
           <span className=" dark:text-pink-500 font-medium">innovation</span>{" "}
-          and <span className="dark:text-pink-500 font-medium">change</span> and
-          want to build out their teams.
+          and <span className="dark:text-pink-500 font-medium">change</span>.
         </p>
         <p className="about-content">
           As we shift into a new paradigm, our goal is to help{" "}
