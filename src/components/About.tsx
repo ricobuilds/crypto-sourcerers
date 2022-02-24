@@ -38,7 +38,7 @@ const About = () => {
         </p>
         <p className="">
           Over the past 2 years, the global events we have experienced have
-          shown us the deficiencies in our instrastructure, changing the
+          shown us the deficiencies in our infrastructure, changing the
           workforce, and bringing forth digital solutions to solve them i.e.
           blockchain.
           <br />

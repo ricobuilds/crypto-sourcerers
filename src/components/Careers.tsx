@@ -12,12 +12,15 @@ const Careers = () => {
       </div>
       <div className="grid sm:grid-cols-2 gap-6 ">
         {[
-          "Blockchain Developer",
-          "Blockchain Engineer",
-          "Security Auditor",
-          "Community Manager",
-          "Marketing Specialist",
-          "Metatect",
+          {
+            title: "Blockchain Developer",
+            desc: "As a Blockchain Developer, you will be responsible for developing applications on a network, spanning from developing Web3 dApps, to Solidity smart contracts for example.",
+          },
+          { title: "Blockchain Engineer", desc: "" },
+          { title: "Security Auditor", desc: "" },
+          { title: "Community Manager", desc: "" },
+          { title: "Marketing Specialist", desc: "" },
+          { title: "Metatect", desc: "" },
         ].map((item) => (
           <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
             <img
@@ -27,10 +30,8 @@ const Careers = () => {
             />
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
-                <h2 className="text-xl font-bold">{item}</h2>
-                <p className="text-xs">
-                  This role pertains to the use of {item} to work on...
-                </p>
+                <h2 className="text-xl font-bold">{item.title}</h2>
+                <p className="text-xs">{item.desc}</p>
               </div>
               <div className="right-bottom flex justify-end">
                 <button className="text-xs border rounded p-1">
