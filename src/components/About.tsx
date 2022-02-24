@@ -15,8 +15,9 @@ const About = () => {
       <div className="content flex flex-col justify-center items-center mx-auto max-w-4xl space-y-4">
         <p className="subtitle text-left">Last updated: Feb 9, 2022</p>
         <p className="aboutDev-intro">
-          <span className="text-sm italic">[clears throat in WGMI]</span> Hey,
-          this is
+          <span className="text-sm italic">[clears throat in WGMI]</span>
+          <br />
+          Hey, this is
           <span className="dark:text-indigo-400 font-medium"> Enric</span>{" "}
           typing here, a Fullstack Web3 Developer, and I have produced Crypto
           Sourcerers - sorcerers🔮 get it? ;)
@@ -58,6 +59,7 @@ const About = () => {
           and is ready to get the 🏀 rolling, or you are simply looking to build
           your blockchain-driven team, we aim to assist the ecosystem to the
           fullest.
+          <br />
           <span className="text-sm italic">
             {" "}
             Welcome, to the cryptosphere. [drops mic]
