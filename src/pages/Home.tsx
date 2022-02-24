@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 // import PricingCard from "../components/PricingCard";
 import AudienceCard from "../components/AudienceCard";
-import heroIcon from "../images/magic-trick-dynamic-color.png";
-import web2devs from "../images/computer-front-color.png";
-import web3devs from "../images/lab-dynamic-color.png";
-import web3enth from "../images/axe-dynamic-color.png";
-import biz from "../images/travel-front-color.png";
-import bankLocker from "../images/locker-dynamic-color.png";
+import heroIcon from "../images/magic-trick-dynamic-color.webp";
+import web2devs from "../images/computer-front-color.webp";
+import web3devs from "../images/lab-dynamic-color.webp";
+import web3enth from "../images/axe-dynamic-color.webp";
+import biz from "../images/travel-front-color.webp";
+import bankLocker from "../images/locker-dynamic-color.webp";
 
 const HomePage = () => {
   return (
@@ -80,7 +80,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[150px] flex justify-center items-center">
-          <img src={heroIcon} className="h-96" />
+          <img src={heroIcon} className="aspect-video" />
         </div>
       </section>
 

@@ -8,15 +8,15 @@ const Careers = () => {
         <title>Careers - The World's #1 Source for Blockchain Talent.</title>
         <meta
           name="copyright"
-          content="CryptoSourcerers / CryptoSourcerers is a registered trademark of XXX, LTD"
+          content="Crypto Sourcerers, All rights reserved."
         />
         <meta
           name="description"
-          content="All the possible pathway within the cryptosphere"
+          content="Choose your pathway within the cryptosphere"
         />
         <meta
           name="keywords"
-          content="blockchain job, crypto job, metaverse job, NFT job, "
+          content="blockchain job, crypto job, metaverse job, NFT job, web3 jobs"
         />
         <meta name="author" content="0xreeko" />
         <meta
