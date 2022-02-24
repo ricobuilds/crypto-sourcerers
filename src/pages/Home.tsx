@@ -471,9 +471,10 @@ const HomePage = () => {
               </h2>
               <p className="leading-relaxed">
                 By learning and participating! Ask questions, connect with
-                others and create your own applications. As a Buildspace alumni,
-                joining the community was an element that helped me when
-                transferring my skills to blockchain as a frontend dev :)
+                others and create your own applications. If you don't have a
+                role in mind, we'd recommend you to research the various roles
+                within the industry that interest you. Hone in your interests,
+                think about what you want to do, and execute.
               </p>
             </div>
           </div>
