@@ -245,51 +245,66 @@ const HomePage = () => {
           Audience
         </h1>
         <div className="cards gap-x-6 gap-y-4 flex flex-wrap justify-center sm:justify-around">
-          {[
-            {
-              title: "Web2 Devs",
-              description:
-                "Those expericienced in tech at all levels, and are looking to transition",
-              logo: web2devs,
-              logoSM: web2devsSM,
-            },
-            {
-              title: "Web3 Devs",
-              description:
-                "Those experienced in Web3, looking for their next Web3 role",
-              logo: web3devs,
-              logoSM: web3devsSM,
-            },
-            {
-              title: "Web3 Enthusiasts",
-              description:
-                "Those with skills in tech and other industries and want to make an impact",
-              logo: web3enth,
-              logoSM: web3enthSM,
-            },
-            {
-              title: "Ecosystems/Companies/Startups",
-              description:
-                "Web3 native teams, and 'Web2' businesses looking at crypto",
-              logo: biz,
-              logoSM: bizSM,
-            },
-          ].map((item) => (
-            <div className="audienceCard">
-              <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
-                <div className="card-title font-semibold">{item.title}</div>
-                <img
-                  src={`${item.logoSM}`}
-                  alt="prop"
-                  className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                  srcSet={`${item.logoSM} 300w, ${item.logo} 768w`}
-                />
-                <div className="card-content text-justify">
-                  {item.description}.
-                </div>
+          <div className="audienceCard">
+            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
+              <div className="card-title font-semibold">Web2 Devs</div>
+              <img
+                src={`${web2devsSM}`}
+                alt="prop"
+                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
+                srcSet={`${web2devsSM} 300w, ${web2devs} 768w`}
+              />
+              <div className="card-content text-justify">
+                Those expericienced in tech at all levels, and are looking to
+                transition.
               </div>
             </div>
-          ))}
+          </div>
+          <div className="audienceCard">
+            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
+              <div className="card-title font-semibold">Web3 Devs</div>
+              <img
+                src={`${web3devsSM}`}
+                alt="prop"
+                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
+                srcSet={`${web3devsSM} 300w, ${web3devs} 768w`}
+              />
+              <div className="card-content text-justify">
+                Those experienced in Web3, looking for their next Web3 role.
+              </div>
+            </div>
+          </div>
+          <div className="audienceCard">
+            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
+              <div className="card-title font-semibold">Web3 Enthusiasts</div>
+              <img
+                src={`${web3enthSM}`}
+                alt="prop"
+                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
+                srcSet={`${web3enthSM} 300w, ${web3enth} 768w`}
+              />
+              <div className="card-content text-justify">
+                Those with skills in tech and other industries and want to make
+                an impact.
+              </div>
+            </div>
+          </div>
+          <div className="audienceCard">
+            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
+              <div className="card-title font-semibold">
+                Ecosystems/Companies/Startups
+              </div>
+              <img
+                src={`${bizSM}`}
+                alt="prop"
+                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
+                srcSet={`${bizSM} 300w, ${biz} 768w`}
+              />
+              <div className="card-content text-justify">
+                Web3 native teams, and 'Web2' businesses looking at crypto.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -412,7 +427,7 @@ const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="max-w-xs w-28 h-28">
+          <div className="max-w-xs ">
             <img
               src={bankLockerSM}
               alt="prop"
