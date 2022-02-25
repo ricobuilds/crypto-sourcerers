@@ -86,7 +86,10 @@ const HomePage = () => {
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full flex justify-center items-center">
-          <img src={heroIcon} srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`} />
+          <img
+            src={heroIconSM}
+            srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`}
+          />
         </div>
       </section>
 
@@ -275,7 +278,7 @@ const HomePage = () => {
               <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
                 <div className="card-title font-semibold">{item.title}</div>
                 <img
-                  src={`${item.logo}`}
+                  src={`${item.logoSM}`}
                   alt="prop"
                   className="mx-auto"
                   srcSet={`${item.logoSM} 300w, ${item.logo} 768w`}
@@ -410,7 +413,7 @@ const HomePage = () => {
           </div>
           <div className="max-w-xs w-28 h-28">
             <img
-              src={bankLocker}
+              src={bankLockerSM}
               alt="prop"
               srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
             />
