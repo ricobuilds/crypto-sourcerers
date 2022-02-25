@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 // import PricingCard from "../components/PricingCard";
-import AudienceCard from "../components/AudienceCard";
-import heroIcon from "../images/magic-trick-dynamic-color.webp";
-import web2devs from "../images/computer-front-color.webp";
-import web3devs from "../images/lab-dynamic-color.webp";
-import web3enth from "../images/axe-dynamic-color.webp";
-import biz from "../images/travel-front-color.webp";
-import bankLocker from "../images/locker-dynamic-color.webp";
+// import AudienceCard from "../components/AudienceCard";
+import heroIconSM from "../images/magic-trick-dynamic-color-sm.webp";
+import heroIcon from "../images/magic-trick-dynamic-color-xl.webp";
+import web2devsSM from "../images/computer-front-color-sm.webp";
+import web2devs from "../images/computer-front-color-xl.webp";
+import web3devsSM from "../images/lab-dynamic-color-sm.webp";
+import web3devs from "../images/lab-dynamic-color-xl.webp";
+import web3enthSM from "../images/axe-dynamic-color-sm.webp";
+import web3enth from "../images/axe-dynamic-color-xl.webp";
+import bizSM from "../images/travel-front-color-sm.webp";
+import biz from "../images/travel-front-color-xl.webp";
+import bankLockerSM from "../images/locker-dynamic-color-sm.webp";
+import bankLocker from "../images/locker-dynamic-color-xl.webp";
 
 const HomePage = () => {
   return (
@@ -79,8 +85,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 h-[150px] flex justify-center items-center">
-          <img src={heroIcon} className="h-28 w-28" />
+        <div className="lg:max-w-lg lg:w-full flex justify-center items-center">
+          <img src={heroIcon} srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`} />
         </div>
       </section>
 
@@ -241,31 +247,44 @@ const HomePage = () => {
               description:
                 "Those expericienced in tech at all levels, and are looking to transition",
               logo: web2devs,
+              logoSM: web2devsSM,
             },
             {
               title: "Web3 Devs",
               description:
                 "Those experienced in Web3, looking for their next Web3 role",
               logo: web3devs,
+              logoSM: web3devsSM,
             },
             {
               title: "Web3 Enthusiasts",
               description:
                 "Those with skills in tech and other industries and want to make an impact",
               logo: web3enth,
+              logoSM: web3enthSM,
             },
             {
               title: "Ecosystems/Companies/Startups",
               description:
                 "Web3 native teams, and 'Web2' businesses looking at crypto",
               logo: biz,
+              logoSM: bizSM,
             },
           ].map((item) => (
-            <AudienceCard
-              title={item.title}
-              description={item.description}
-              logo={item.logo}
-            />
+            <div className="audienceCard">
+              <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
+                <div className="card-title font-semibold">{item.title}</div>
+                <img
+                  src={`${item.logo}`}
+                  alt="prop"
+                  className="mx-auto"
+                  srcSet={`${item.logoSM} 300w, ${item.logo} 768w`}
+                />
+                <div className="card-content text-justify">
+                  {item.description}.
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -390,7 +409,11 @@ const HomePage = () => {
             </div>
           </div>
           <div className="max-w-xs w-28 h-28">
-            <img src={bankLocker} alt="prop" />
+            <img
+              src={bankLocker}
+              alt="prop"
+              srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
+            />
           </div>
         </div>
       </section>
