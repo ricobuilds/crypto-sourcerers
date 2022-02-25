@@ -89,6 +89,7 @@ const HomePage = () => {
           <img
             src={heroIconSM}
             srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`}
+            className="h-40 sm:h-72 w-40 sm:w-72"
           />
         </div>
       </section>
@@ -280,7 +281,7 @@ const HomePage = () => {
                 <img
                   src={`${item.logoSM}`}
                   alt="prop"
-                  className="mx-auto"
+                  className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
                   srcSet={`${item.logoSM} 300w, ${item.logo} 768w`}
                 />
                 <div className="card-content text-justify">
@@ -416,6 +417,7 @@ const HomePage = () => {
               src={bankLockerSM}
               alt="prop"
               srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
+              className="h-40 sm:h-72 w-40 sm:w-72"
             />
           </div>
         </div>
