@@ -10,8 +10,10 @@ const WarningBanner = (props: bannerProps) => {
       <p className="flex items-center">
         <span className="mr-2">{warningIcon}</span>Always make sure the URL is
         {": "}
-        <code className="mx-0.5">cryptosourcerers.co</code> - bookmark it to be
-        safe.
+        <span className="mx-0.5 tracking-widest font-bold">
+          cryptosourcerers.co
+        </span>{" "}
+        - bookmark it to be safe.
       </p>
       <span className="ml-1 hover:cursor-wait" onClick={props.handleBanner}>
         {removeIcon}

@@ -256,7 +256,7 @@ const HomePage = () => {
                 // srcSet={`${web2devsSM} 300w, ${web2devs} 768w`}
               />
               <div className="card-content text-justify">
-                Those expericienced in tech at all levels, and are looking to
+                Those experienced in tech at all levels, and are looking to
                 transition.
               </div>
             </div>
