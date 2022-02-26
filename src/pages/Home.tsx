@@ -126,8 +126,7 @@ const HomePage = () => {
         </div>
         <p className="italic">
           * All data provided is current, and computed with active vacancy
-          postings (Avg Salary is calculated from all of the active roles right
-          now).
+          postings (Avg Salary is calculated from all active roles right now).
         </p>
       </section>
 
