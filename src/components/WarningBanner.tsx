@@ -8,7 +8,7 @@ const WarningBanner = (props: bannerProps) => {
   return (
     <div className="warningComp bg-green-300 h-6 text-gray-800 text-[11px] flex whitespace justify-between items-center px-4">
       <span className="mr-2">{warningIcon}</span>
-      <p className="leading-none">
+      <p className="text-left leading-none">
         Always make sure the URL is
         {": "}
         <span className="mx-0.5 tracking-widest font-bold">
