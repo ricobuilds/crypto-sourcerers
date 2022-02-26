@@ -13,13 +13,14 @@ import web3enth from "../images/axe-dynamic-color.webp";
 import biz from "../images/travel-front-color.webp";
 // import bankLockerSM from "../images/locker-dynamic-color-sm.webp";
 import bankLocker from "../images/locker-dynamic-color.webp";
+import missionIcon from "../images/rocket-dynamic-color.webp";
 
 const HomePage = () => {
   return (
     <>
       <section
         id="home"
-        className="relative container mx-auto flex py-24 lg:flex-row space-y-6 flex-col items-center"
+        className="relative container mx-auto flex py-12 lg:flex-row space-y-6 flex-col items-center"
       >
         <div className="absolute right-8 bottom-9 w-64 h-64 bg-[#ed194a] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="absolute right-56 top-24 w-64 h-64 bg-[#6387f1] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
@@ -132,32 +133,40 @@ const HomePage = () => {
 
       <section
         id="mission"
-        className="container mx-auto flex flex-col items-center justify-center py-24"
+        className="relative container mx-auto flex flex-col items-center justify-center py-24"
       >
         <h1 className="text-3xl font-bold mb-3">Mission</h1>
-        <div className="text-center max-w-xl space-y-6">
-          <p>
-            It’s obvious - the global events over the last two years have
-            exposed the inefficiencies of our current paradigm, having an impact
-            of the way we interact on so many levels; supply chain being a
-            primary example. This has invigorated efforts to solve these
-            orchestrated problems through digital alternatives - blockchain. The
-            migration to this new digital era means that, becoming acquainted
-            with technology will help one stay current and be in the best
-            position possible, as everything we do, will undergo a digital
-            reform - an important factor to consider as the labour market and
-            competition shifts from regional to global, through remote
-            opportunities.
-          </p>
-          <p>
-            We have dedicated this platform to help roleseekers find lucrative
-            opportunities with Web3 startups, and for ‘Web2’ and Web3 teams to
-            find talent that is already in Web3, or looking to transition to
-            Web3. The essence of our mission is to assist the Web3 ecosystem
-            through the ongoing transitionary period to the point of mass global
-            adoption, and beyond.
-          </p>
+        <div className="flex flex-col items-center">
+          <div className="text-center max-w-xl space-y-6">
+            <p>
+              It’s obvious - the global events over the last two years have
+              exposed the inefficiencies of our current paradigm, having an
+              impact of the way we interact on so many levels; supply chain
+              being a primary example. This has invigorated efforts to solve
+              these orchestrated problems through digital alternatives -
+              blockchain. The migration to this new digital era means that,
+              becoming acquainted with technology will help one stay current and
+              be in the best position possible, as everything we do, will
+              undergo a digital reform - an important factor to consider as the
+              labour market and competition shifts from regional to global,
+              through remote opportunities.
+            </p>
+            <p>
+              We have dedicated this platform to help roleseekers find lucrative
+              opportunities with Web3 startups, and for ‘Web2’ and Web3 teams to
+              find talent that is already in Web3, or looking to transition to
+              Web3. The essence of our mission is to assist the Web3 ecosystem
+              through the ongoing transitionary period to the point of mass
+              global adoption, and beyond.
+            </p>
+          </div>
+          <img
+            src={missionIcon}
+            alt="rocket"
+            className="h-40 sm:h-72 w-40 sm:w-72"
+          />
         </div>
+        <div className="absolute left-20 sm:left-60 lg:left-96 bottom-20 sm:bottom-32  w-52 h-52 bg-[#ed7119] rounded-full blur-3xl opacity-40"></div>
       </section>
       <section
         id="features"
