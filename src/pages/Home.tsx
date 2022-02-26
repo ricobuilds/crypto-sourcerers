@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 // import PricingCard from "../components/PricingCard";
 // import AudienceCard from "../components/AudienceCard";
-import heroIconSM from "../images/magic-trick-dynamic-color-sm.webp";
-import heroIcon from "../images/magic-trick-dynamic-color-xl.webp";
-import web2devsSM from "../images/computer-front-color-sm.webp";
-import web2devs from "../images/computer-front-color-xl.webp";
-import web3devsSM from "../images/lab-dynamic-color-sm.webp";
-import web3devs from "../images/lab-dynamic-color-xl.webp";
-import web3enthSM from "../images/axe-dynamic-color-sm.webp";
-import web3enth from "../images/axe-dynamic-color-xl.webp";
-import bizSM from "../images/travel-front-color-sm.webp";
-import biz from "../images/travel-front-color-xl.webp";
-import bankLockerSM from "../images/locker-dynamic-color-sm.webp";
-import bankLocker from "../images/locker-dynamic-color-xl.webp";
+// import heroIconSM from "../images/magic-trick-dynamic-color-sm.webp";
+import heroIcon from "../images/magic-trick-dynamic-color.webp";
+// import web2devsSM from "../images/computer-front-color-sm.webp";
+import web2devs from "../images/computer-front-color.webp";
+// import web3devsSM from "../images/lab-dynamic-color-sm.webp";
+import web3devs from "../images/lab-dynamic-color.webp";
+// import web3enthSM from "../images/axe-dynamic-color-sm.webp";
+import web3enth from "../images/axe-dynamic-color.webp";
+// import bizSM from "../images/travel-front-color-sm.webp";
+import biz from "../images/travel-front-color.webp";
+// import bankLockerSM from "../images/locker-dynamic-color-sm.webp";
+import bankLocker from "../images/locker-dynamic-color.webp";
 
 const HomePage = () => {
   return (
@@ -24,7 +24,7 @@ const HomePage = () => {
         <div className="absolute right-8 bottom-9 w-64 h-64 bg-[#ed194a] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="absolute right-56 top-24 w-64 h-64 bg-[#6387f1] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="text space-y-6">
-          <h1 className="text-4xl md:text-7xl ">
+          <h1 className="text-3xl md:text-6xl ">
             Transferring your skills to the cryptosphere?
           </h1>
           <p className="tracking-widest">
@@ -53,7 +53,7 @@ const HomePage = () => {
                       id="member_email"
                     />
                     <input
-                      className="cta text-md h-full px-3 bg-[#6387f1] dark:bg-[#ed194a] text-white rounded-r-md"
+                      className="cta text-md h-full px-3 bg-[#ed194a] text-white rounded-r-md"
                       type="submit"
                       value="Subscribe"
                       name="member[subscribe]"
@@ -67,7 +67,7 @@ const HomePage = () => {
                   <a
                     target="_blank"
                     href="https://www.getrevue.co/terms"
-                    className="text-gray-600 underline dark:text-[#6387f1]"
+                    className="text-gray-600 underline dark:text-[#ed194a]"
                   >
                     Terms of Service
                   </a>{" "}
@@ -75,7 +75,7 @@ const HomePage = () => {
                   <a
                     target="_blank"
                     href="https://www.getrevue.co/privacy"
-                    className="text-gray-600 underline dark:text-[#6387f1]"
+                    className="text-gray-600 underline dark:text-[#ed194a]"
                   >
                     Privacy Policy
                   </a>
@@ -87,8 +87,8 @@ const HomePage = () => {
         </div>
         <div className="lg:max-w-lg lg:w-full flex justify-center items-center">
           <img
-            src={heroIconSM}
-            srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`}
+            src={heroIcon}
+            // srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`}
             className="h-40 sm:h-72 w-40 sm:w-72"
           />
         </div>
@@ -98,25 +98,25 @@ const HomePage = () => {
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
           <p className="absolute -top-4 left-1 text-xl font-bold">Live Stats</p>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
               #.#K
             </h2>
             <p className="leading-relaxed">Roleseekers</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
               #.#K
             </h2>
             <p className="leading-relaxed">Companies</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
               ##
             </h2>
             <p className="leading-relaxed">Live Roles</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#6387f1]">
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
               ##.#K
             </h2>
             <p className="leading-relaxed">Avg. Salary ($)</p>
@@ -131,16 +131,17 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold mb-3">Mission</h1>
         <div className="text-center max-w-xl space-y-6">
           <p>
-            It’s obvious - we have gone through a shift in the last 2 years due
-            to global events that have exposed the current paradigm; supply
-            chain and financial markets being primary examples. This has
-            invigorated efforts to solve these orchestrated problems through
-            digital alternatives - cryptocurrency. The migration to this new
-            digital era means that becoming acquainted with technology will help
-            one stay current and be in the best position possible, as everything
-            we do will undergo a digital reform - an important factor to
-            consider as the labour market and competition shifts from regional
-            to global, through remote opportunities.
+            It’s obvious - the global events over the last two years have
+            exposed the inefficiencies of our current paradigm, having an impact
+            of the way we interact on so many levels; supply chain being a
+            primary example. This has invigorated efforts to solve these
+            orchestrated problems through digital alternatives - blockchain. The
+            migration to this new digital era means that, becoming acquainted
+            with technology will help one stay current and be in the best
+            position possible, as everything we do, will undergo a digital
+            reform - an important factor to consider as the labour market and
+            competition shifts from regional to global, through remote
+            opportunities.
           </p>
           <p>
             We have dedicated this platform to help roleseekers find lucrative
@@ -162,7 +163,7 @@ const HomePage = () => {
         <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
-          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#6387f1] flex-shrink-0">
+          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <svg
               fill="none"
               stroke="currentColor"
@@ -177,7 +178,7 @@ const HomePage = () => {
             </svg>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
+            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Borderless Access
             </h2>
             <p className="leading-relaxed text-base">
@@ -188,7 +189,7 @@ const HomePage = () => {
         </div>
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col ">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
+            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Wide Audience
             </h2>
             <p className="leading-relaxed text-base">
@@ -198,7 +199,7 @@ const HomePage = () => {
               you can reach your target audience on the global stage.
             </p>
           </div>
-          <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#6387f1] flex-shrink-0">
+          <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <svg
               fill="none"
               stroke="currentColor"
@@ -215,7 +216,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#6387f1] flex-shrink-0">
+          <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <svg
               fill="none"
               stroke="currentColor"
@@ -229,7 +230,7 @@ const HomePage = () => {
             </svg>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#6387f1] text-lg title-font font-medium mb-2">
+            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Insta-Marketing
             </h2>
             <p className="leading-relaxed text-base">
@@ -249,10 +250,10 @@ const HomePage = () => {
             <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
               <div className="card-title font-semibold">Web2 Devs</div>
               <img
-                src={`${web2devsSM}`}
+                src={`${web2devs}`}
                 alt="prop"
                 className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                srcSet={`${web2devsSM} 300w, ${web2devs} 768w`}
+                // srcSet={`${web2devsSM} 300w, ${web2devs} 768w`}
               />
               <div className="card-content text-justify">
                 Those expericienced in tech at all levels, and are looking to
@@ -264,10 +265,10 @@ const HomePage = () => {
             <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
               <div className="card-title font-semibold">Web3 Devs</div>
               <img
-                src={`${web3devsSM}`}
+                src={`${web3devs}`}
                 alt="prop"
                 className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                srcSet={`${web3devsSM} 300w, ${web3devs} 768w`}
+                // srcSet={`${web3devsSM} 300w, ${web3devs} 768w`}
               />
               <div className="card-content text-justify">
                 Those experienced in Web3, looking for their next Web3 role.
@@ -278,10 +279,10 @@ const HomePage = () => {
             <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
               <div className="card-title font-semibold">Web3 Enthusiasts</div>
               <img
-                src={`${web3enthSM}`}
+                src={`${web3enth}`}
                 alt="prop"
                 className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                srcSet={`${web3enthSM} 300w, ${web3enth} 768w`}
+                // srcSet={`${web3enthSM} 300w, ${web3enth} 768w`}
               />
               <div className="card-content text-justify">
                 Those with skills in tech and other industries and want to make
@@ -295,10 +296,10 @@ const HomePage = () => {
                 Ecosystems/Companies/Startups
               </div>
               <img
-                src={`${bizSM}`}
+                src={`${biz}`}
                 alt="prop"
                 className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                srcSet={`${bizSM} 300w, ${biz} 768w`}
+                // srcSet={`${bizSM} 300w, ${biz} 768w`}
               />
               <div className="card-content text-justify">
                 Web3 native teams, and 'Web2' businesses looking at crypto.
@@ -429,9 +430,9 @@ const HomePage = () => {
           </div>
           <div className="max-w-xs ">
             <img
-              src={bankLockerSM}
+              src={bankLocker}
               alt="prop"
-              srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
+              // srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
               className="h-40 sm:h-72 w-40 sm:w-72"
             />
           </div>
