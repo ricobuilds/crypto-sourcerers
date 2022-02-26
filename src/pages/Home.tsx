@@ -96,32 +96,39 @@ const HomePage = () => {
 
       <section className="stats">
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
-          <p className="absolute -top-4 left-1 text-xl font-bold">Live Stats</p>
+          <p className="absolute -top-4 left-1 text-xl font-bold">
+            Live Stats *
+          </p>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              #.#K
+              -
             </h2>
             <p className="leading-relaxed">Roleseekers</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              #.#K
+              -
             </h2>
-            <p className="leading-relaxed">Companies</p>
+            <p className="leading-relaxed">Applications</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              ##
+              -
             </h2>
             <p className="leading-relaxed">Live Roles</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              ##.#K
+              -
             </h2>
             <p className="leading-relaxed">Avg. Salary ($)</p>
           </div>
         </div>
+        <p className="italic">
+          * All data provided is current and computed with active vacancy
+          postings (Avg Salary is calculated from all of the active roles right
+          now).
+        </p>
       </section>
 
       <section
@@ -447,6 +454,23 @@ const HomePage = () => {
           Discord
         </p>
         <div className="surveyResults divide-y-[1px] divide-slate-800">
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                What are roleseekers and bountyseekers?
+              </h2>
+              <p className="leading-relaxed">
+                They're terms which we have dediced to go by, to differentiate
+                two types of employment an individual seeks for. A roleseeker
+                (alternative to jobseeker), is someone who tends to stick around
+                longer when looking for a role. A bountyseeker is someone who
+                operates as a freelancer, and this covers freelance, internship,
+                and apprenticeship gigs - it was inpired from the term 'bounty
+                hunters' and adopted to a term that we saw fit to match with
+                work.
+              </p>
+            </div>
+          </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
               <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
