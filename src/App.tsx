@@ -1,4 +1,4 @@
-import { menuIcon, themeIcon } from "./components/Icons";
+import { themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
@@ -18,6 +18,7 @@ import Login from "./pages/Login";
 import Bounties from "./pages/Bounties";
 import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
+import MyDropdown from "./components/DDM";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -90,7 +91,7 @@ const App = () => {
               </a>
             </div>
             <div className="inline-block md:hidden  text-[#ed194a]">
-              {menuIcon}
+              <MyDropdown toggle={toggle} />
             </div>
             <div className="ctaSection hidden md:flex items-center space-x-3">
               <div
