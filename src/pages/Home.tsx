@@ -22,8 +22,8 @@ const HomePage = () => {
         id="home"
         className="relative container mx-auto flex py-12 lg:flex-row space-y-6 flex-col items-center"
       >
-        <div className="absolute right-8 bottom-9 w-64 h-64 bg-[#ed194a] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
-        <div className="absolute right-56 top-24 w-64 h-64 bg-[#6387f1] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
+        <div className="absolute right-8 bottom-9 w-32 sm:w-64 h-32 sm:h-64 bg-[#ed194a] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
+        <div className="absolute right-56 bottom-9 sm:bottom-auto sm:top-24 w-32 sm:w-64 h-32 sm:h-64 bg-[#6387f1] rounded-full blur-3xl opacity-50 dark:opacity-70"></div>
         <div className="text space-y-6">
           <h1 className="text-3xl md:text-6xl ">
             Transferring your skills to the cryptosphere?
@@ -377,7 +377,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Global pool of roleseekers
+                Access a global pool of roleseekers
               </p>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -393,7 +393,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Full/part time, contract, intership, apprenticeship gigs
+                Source talent pronto
               </p>
               <p className="flex items-center text-gray-600 mb-6">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -409,7 +409,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Posts across our social profiles and newsletter
+                Marketed across our social profiles
               </p>
               <p className="flex items-center text-gray-600 mb-6">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
@@ -425,7 +425,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Get multiple views - but make it global
+                Get viewed on the global stage
               </p>
               <button className="flex items-center mt-auto text-white bg-[#ed194a]/40 border-0 py-2 px-4 w-full focus:outline-none hover:bg-[#ed194a] rounded">
                 Coming Soon
