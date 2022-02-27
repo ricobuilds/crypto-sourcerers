@@ -54,7 +54,7 @@ const HomePage = () => {
                       id="member_email"
                     />
                     <input
-                      className="cta text-md h-full px-3 bg-[#ed194a] text-white rounded-r-md"
+                      className="cta text-md h-full px-3 bg-[#ed194a] text-white rounded-r-md hover:cursor-pointer"
                       type="submit"
                       value="Subscribe"
                       name="member[subscribe]"
