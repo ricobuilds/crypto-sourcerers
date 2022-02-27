@@ -32,6 +32,46 @@ export const messageIcon = (
   </svg>
 );
 
+export const insightsIcon = (
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+    ></path>
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+    ></path>
+  </svg>
+);
+
+export const liveIcon = (
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"
+    ></path>
+  </svg>
+);
+
 export const workIcon = (
   <svg
     className="w-6 h-6"

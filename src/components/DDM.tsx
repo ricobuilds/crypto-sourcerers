@@ -1,6 +1,14 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import { menuIcon } from "./Icons";
+import { Link } from "react-router-dom";
+import {
+  menuIcon,
+  themeIcon,
+  schoolIcon,
+  workIcon,
+  insightsIcon,
+  liveIcon,
+} from "./Icons";
 
 interface IToggleProps {
   toggle: () => void;
@@ -28,26 +36,31 @@ function DDM({ toggle }: IToggleProps) {
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#ed194a] text-white" : "text-gray-300"
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                  >
-                    Home
-                  </button>
+                  <Link to={"/"}>
+                    <button
+                      className={`${
+                        active ? "bg-[#ed194a] text-white" : "text-gray-300"
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      Home
+                    </button>
+                  </Link>
                 )}
               </Menu.Item>
             </div>
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#ed194a] text-white" : "text-gray-300"
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                  >
-                    Careers
-                  </button>
+                  <Link to={"/careers"}>
+                    <button
+                      className={`${
+                        active ? "bg-[#ed194a] text-white" : "text-gray-300"
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      <span className="mr-2">{workIcon}</span>
+                      Careers
+                    </button>
+                  </Link>
                 )}
               </Menu.Item>
               <Menu.Item>
@@ -57,6 +70,7 @@ function DDM({ toggle }: IToggleProps) {
                       active ? "bg-[#ed194a] text-white" : "text-gray-300"
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
+                    <span className="mr-2">{schoolIcon}</span>
                     Learning
                   </button>
                 )}
@@ -68,6 +82,7 @@ function DDM({ toggle }: IToggleProps) {
                       active ? "bg-[#ed194a] text-white" : "text-gray-300"
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
+                    <span className="mr-2">{insightsIcon}</span>
                     Insights
                   </button>
                 )}
@@ -82,6 +97,7 @@ function DDM({ toggle }: IToggleProps) {
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                     onClick={toggle}
                   >
+                    <span className="mr-2">{themeIcon}</span>
                     Toggle Theme
                   </button>
                 )}
@@ -119,7 +135,8 @@ function DDM({ toggle }: IToggleProps) {
                       active ? "bg-[#ed194a] text-white" : "text-gray-300"
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                   >
-                    POST A ROLE
+                    <span className="mr-2">{liveIcon}</span>
+                    LIVE SOON
                   </button>
                 )}
               </Menu.Item>
