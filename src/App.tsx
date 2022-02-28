@@ -1,4 +1,4 @@
-import { themeIcon } from "./components/Icons";
+import { caraIcon, themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
@@ -19,7 +19,6 @@ import Bounties from "./pages/Bounties";
 import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
-import Logo from "./images/CSLogo3.png";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -69,8 +68,10 @@ const App = () => {
           </Helmet>
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
-              {/* <div className="logo">Crypto Sourcerers</div> */}
-              <img src={Logo} alt="logo" className="h-9" />
+              <div className="logo">
+                <span className="fill-[#ed194a]">{caraIcon}</span>
+              </div>
+              {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
               <a
