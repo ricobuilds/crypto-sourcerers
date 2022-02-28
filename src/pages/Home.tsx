@@ -395,7 +395,7 @@ const HomePage = () => {
                 </span>
                 Source talent pronto
               </p>
-              <p className="flex items-center text-gray-600 mb-6">
+              <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
                   <svg
                     fill="none"
