@@ -47,7 +47,7 @@ const Footer = () => {
           Learning
         </span>
 
-        <Link to={"/#"}>
+        <Link to={"/newsletter"}>
           <span className="hover:text-gray-400 transition outline-none">
             Newsletter
           </span>
