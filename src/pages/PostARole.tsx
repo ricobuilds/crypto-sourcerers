@@ -7,7 +7,7 @@
 
 const PostARole = () => {
   return (
-    <>
+    <div className="flex pb-12 justify-between w-full">
       <div className="post max-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="aboutRole">
@@ -29,9 +29,9 @@ const PostARole = () => {
           ></textarea>
           <p>
             Audience{" "}
-            <span className="text-sm">
+            <span className="ml-0.5 text-sm text-gray-600">
               We recommend Roleseeker for permanent roles, and Bountyseeker for
-              freelance/contract roles.
+              freelance/contract roles (e.g. interships, apprenticeships).
             </span>
           </p>
           <select className="rounded-md p-1 text-black">
@@ -135,7 +135,8 @@ const PostARole = () => {
           </button>
         </div>
       </div>
-    </>
+      <div className="preview border min-w-[40%]"> seccion de muestra</div>
+    </div>
   );
 };
 export default PostARole;
