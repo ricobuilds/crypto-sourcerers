@@ -1,13 +1,25 @@
 import { dollarIcon, locationIcon, workIcon } from "src/components/Icons";
 import punk from "../images/punk4596.png";
-// interface IRole {
-//   title: string; // role title
-//   salary: number; // di monies
-//   description: string; // role's JD
-//   tags: []; // skills for fast search
-// }
+/* interface IRole {
+  roleTitle: string; // role title
+  description: string; // role's JD
+  tags: []; // skills for fast search
+  audience: string;
+  type: string;
+  baseSalary: number;
+  maxSalary?: number;
+  location: string[];
+  twitteHandle: string;
+  startupName: string;
+  applyURI: string;
+  discountCode?: string;
+  brandLogo?: [];
+  survey: string;
+} */
 
 const PostARole = () => {
+  // const [post, setPost] = useState<IRole | null>(null);
+
   return (
     <div className="flex flex-col-reverse sm:gap-x-6 sm:flex-row pb-12 justify-between w-full">
       <div className="post w-full min-w-[33%]">
@@ -124,7 +136,7 @@ const PostARole = () => {
           </div>
           <div className="roleSocial">
             <p className="mb-2">
-              Company Twitter{" "}
+              Startup Twitter{" "}
               <span className="text-sm text-rose-500/90 ml-0.5">
                 Without the @ symbol
               </span>
@@ -135,19 +147,19 @@ const PostARole = () => {
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
-          <div className="roleCompany">
-            <p className="mb-2">Company Name</p>
+          <div className="roleStartup">
+            <p className="mb-2">Startup Name</p>
             <input
               type="text"
-              placeholder="Enter company name"
+              placeholder="Enter Startup name"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
           <div className="roleURI">
-            <p className="mb-2">Apply</p>
+            <p className="mb-2">Apply Link</p>
             <input
               type="text"
-              placeholder="Apply url/email"
+              placeholder="Apply externl url/email for resumes"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
@@ -159,6 +171,7 @@ const PostARole = () => {
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
+
           <div className="roleBranding">
             <p className="flex items-center mb-2">
               Upload Branding Logo (+40{" "}
@@ -185,7 +198,7 @@ const PostARole = () => {
               </span>
               )
             </p>
-            <input type="file" name="" id="" />
+            <input type="file" name="" id="" /> {/*File Upload */}
           </div>
           <div className="postSurvey">
             <p className="mb-2">How did you hear about Crypto Sourcerers?</p>
@@ -230,12 +243,12 @@ const PostARole = () => {
         <div className="flex justify-between">
           <div className="details">
             <h1 className="text-xl font-bold">Example title</h1>
-            <p>company name</p>
+            <p>Startup name</p>
           </div>
           <div className="flex">
             <img
               alt="team"
-              className="flex-shrink-0 rounded-full w-12 h-12 object-cover object-center  bg-gradient-to-tr from-[#ed194a] to-pink-500 border-2 border-white border-opacity-25"
+              className="flex-shrink-0 rounded-full w-12 h-12 object-cover object-center bg-gradient-to-tr from-[#ed194a] to-pink-500 border-2 border-white border-opacity-25"
               src={punk}
             />
           </div>
