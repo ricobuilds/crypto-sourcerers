@@ -9,12 +9,12 @@ import punk from "../images/punk4596.png";
 
 const PostARole = () => {
   return (
-    <div className="flex flex-col sm:flex-row pb-12 justify-around w-full">
-      <div className="post min-w-[33%]">
+    <div className="flex flex-col-reverse sm:gap-x-6 sm:flex-row pb-12 justify-between w-full">
+      <div className="post w-full min-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="formDetails space-y-4">
           <div className="roleTitle">
-            <p>Role Title</p>
+            <p className="mb-2">Role Title</p>
             <input
               type="text"
               placeholder="Enter role title"
@@ -22,7 +22,7 @@ const PostARole = () => {
             />
           </div>
           <div className="roleDescription">
-            <p>
+            <p className="mb-2">
               Role Description{" "}
               <span className="ml-0.5 text-sm text-gray-600">
                 Supports markdown format
@@ -38,7 +38,7 @@ const PostARole = () => {
             ></textarea>
           </div>
           <div className="roleAudience">
-            <p>
+            <p className="mb-2">
               Audience{" "}
               <span className="ml-0.5 text-sm text-gray-600">
                 We recommend [Roleseeker] for permanent roles, and
@@ -46,28 +46,54 @@ const PostARole = () => {
                 apprenticeships).
               </span>
             </p>
-            <select className="rounded-md p-1 text-black">
+            <select
+              className="rounded-md p-1 text-black audience"
+              id="audience"
+            >
               <optgroup label="Audience">
                 <option value="roleseekers">Roleseeker</option>
                 <option value="bountyseekers">Bountyseeker</option>
               </optgroup>
             </select>
           </div>
+          <div className="roleType">
+            <p className="mb-2">
+              Type{" "}
+              <span className="ml-0.5 text-sm text-gray-600">
+                We recommend [Roleseeker] for permanent roles, and
+                [Bountyseeker] for freelance/contract roles (e.g. interships,
+                apprenticeships).
+              </span>
+            </p>
+            <select className="rounded-md p-1 text-black " id="">
+              <optgroup label="Types">
+                <option value="Permanent">Permanent</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
+                <option value="Apprenticeship">Apprenticeship</option>
+              </optgroup>
+            </select>
+          </div>
           <div className="roleTags">
-            <p>Tags</p>
+            <p className="mb-2">
+              Tags{" "}
+              <span className="ml-0.5 text-sm text-gray-600">
+                Separate each tag by a comma.
+              </span>
+            </p>
             <input
               type="text"
               name=""
               id=""
               className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
-              placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One.."
+              placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One, Fantom.."
             />
           </div>
           <div className="roleSalary">
-            <p>
+            <p className="mb-2">
               Salary{" "}
               <span className="ml-0.5 text-gray-600 text-sm">
-                We suggest to be as trasnsparent as possible :)
+                We suggest to be as transparent as possible :)
               </span>
             </p>
             <div className="flex space-x-3">
@@ -84,7 +110,7 @@ const PostARole = () => {
             </div>
           </div>
           <div className="roleLocation">
-            <p>
+            <p className="mb-2">
               Location{" "}
               <span className="text-sm text-gray-600">
                 Format: Remote or/and City, Country
@@ -92,33 +118,33 @@ const PostARole = () => {
             </p>
             <input
               type="text"
-              placeholder="e.x. Remote, Remote/UK, London"
+              placeholder="e.x. Remote OR Remote/London, UK OR London, UK"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
           <div className="roleSocial">
-            <p>
+            <p className="mb-2">
               Company Twitter{" "}
-              <span className="text-sm text-gray-600 ml-0.5">
+              <span className="text-sm text-rose-500/90 ml-0.5">
                 Without the @ symbol
               </span>
             </p>
             <input
               type="text"
-              placeholder="Twitter username w/o @ symbol"
+              placeholder="Enter Twitter username"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
           <div className="roleCompany">
-            <p>Company Name</p>
+            <p className="mb-2">Company Name</p>
             <input
               type="text"
-              placeholder="Company name"
+              placeholder="Enter company name"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
           <div className="roleURI">
-            <p>Apply</p>
+            <p className="mb-2">Apply</p>
             <input
               type="text"
               placeholder="Apply url/email"
@@ -126,7 +152,7 @@ const PostARole = () => {
             />
           </div>
           <div className="postDiscount">
-            <p>Discount Code</p>
+            <p className="mb-2">Discount Code</p>
             <input
               type="text"
               placeholder="Enter code"
@@ -134,7 +160,7 @@ const PostARole = () => {
             />
           </div>
           <div className="roleBranding">
-            <p className="flex items-center">
+            <p className="flex items-center mb-2">
               Upload Branding Logo (+40{" "}
               <span className="mx-0.5">
                 <svg
@@ -162,7 +188,7 @@ const PostARole = () => {
             <input type="file" name="" id="" />
           </div>
           <div className="postSurvey">
-            <p>How did you hear about Crypto Sourcerers?</p>
+            <p className="mb-2">How did you hear about Crypto Sourcerers?</p>
             <input
               type="text"
               name=""
@@ -171,7 +197,7 @@ const PostARole = () => {
               placeholder="ex. recommended by X, through Discord/Twitter etc"
             />
           </div>
-          <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full">
+          <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full hover:bg-transparent border border-[#ed194a] hover:text-[#ed194a]">
             <p className="flex items-center">
               Post a role 250{" "}
               <span className="mx-0.5">
@@ -199,22 +225,13 @@ const PostARole = () => {
           </button>
         </div>
       </div>
-      <div className="preview border min-w-[40%] p-6 space-y-3">
+      <div className="preview w-full min-w-[33%] p-6 space-y-3 mb-12 sm:mb-0">
         seccion de muestra
-        <h1 className="text-xl font-bold">Example title</h1>
-        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
-        <div className="core-details flex flex-wrap items-center justify-between">
-          <p className="tracking-widest flex items-center text-sm">
-            <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
-            London, UK or Remote
-          </p>
-          <p className="tracking-widest flex items-center text-sm">
-            <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>$50,000
-          </p>
-          <p className="tracking-widest flex items-center text-sm">
-            <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> Pays in
-            Crypto
-          </p>
+        <div className="flex justify-between">
+          <div className="details">
+            <h1 className="text-xl font-bold">Example title</h1>
+            <p>company name</p>
+          </div>
           <div className="flex">
             <img
               alt="team"
@@ -222,6 +239,22 @@ const PostARole = () => {
               src={punk}
             />
           </div>
+        </div>
+        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
+        <div className="core-details flex flex-wrap gap-y-3 items-center justify-between">
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> Permanent
+          </p>
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>$50,000
+          </p>
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
+            London, UK or Remote
+          </p>
+          <button className="p-3 rounded-md bg-[#ed194a] hover:bg-transparent border border-[#ed194a] hover:text-[#ed194a] w-full">
+            Apply Now 🪄
+          </button>
         </div>
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg "></div>
         <p className="max-w-xl">
@@ -244,12 +277,6 @@ const PostARole = () => {
           <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">
             Metaverse
           </div>
-        </div>
-        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
-        <div className="cta">
-          <button className="p-3 rounded-md bg-[#ed194a]">
-            Apply for Role 🪄
-          </button>
         </div>
       </div>
     </div>
