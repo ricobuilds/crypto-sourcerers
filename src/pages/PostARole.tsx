@@ -48,6 +48,12 @@ const PostARole = () => {
             className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 rounded-md tracking-widest w-full"
             placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One.."
           />
+          <p>Company Name</p>
+          <input
+            type="text"
+            placeholder="Company name"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+          />
         </div>
       </div>
     </>
