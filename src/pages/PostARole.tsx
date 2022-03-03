@@ -34,6 +34,12 @@ const PostARole = () => {
               freelance/contract roles.
             </span>
           </p>
+          <select className="rounded-md p-1 text-black">
+            <optgroup label="Audience">
+              <option value="roleseekers">Roleseeker</option>
+              <option value="bountyseekers">Bountyseeker</option>
+            </optgroup>
+          </select>
         </div>
       </div>
     </>
