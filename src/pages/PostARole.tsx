@@ -98,6 +98,15 @@ const PostARole = () => {
             </span>
             )
           </p>
+          <input type="file" name="" id="" />
+          <p>How did you hear about Crypto Sourcerers?</p>
+          <input
+            type="text"
+            name=""
+            id=""
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 w-full"
+            placeholder="ex. recommended by X, through Discord/Twitter etc"
+          />
         </div>
       </div>
     </>
