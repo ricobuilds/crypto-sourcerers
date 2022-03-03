@@ -7,7 +7,7 @@
 
 const PostARole = () => {
   return (
-    <div className="flex pb-12 justify-between w-full">
+    <div className="flex pb-12 justify-around w-full">
       <div className="post max-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="aboutRole">
@@ -135,7 +135,23 @@ const PostARole = () => {
           </button>
         </div>
       </div>
-      <div className="preview border min-w-[40%]"> seccion de muestra</div>
+      <div className="preview border min-w-[40%] p-6 space-y-3">
+        seccion de muestra
+        <h1 className="text-xl font-bold">Example title</h1>
+        <div className="h-0.5 bg-gray-800/40 rounded-r-lg rounded-l-lg"></div>
+        <p className="max-w-xl">
+          this is the roles desc. this is the roles desc. this is the roles
+          desc. this is the roles desc. this is the roles desc. this is the
+          roles desc. this is the roles desc. this is the roles desc. this is
+          the roles desc. this is the roles desc. this is the roles desc. this
+          is the roles desc. this is the roles desc. this is the roles desc.
+          this is the roles desc. this is the roles desc. this is the roles
+          desc. this is the roles desc. this is the roles desc. this is the
+          roles desc. this is the roles desc. this is the roles desc. this is
+          the roles desc. this is the roles desc. this is the roles desc. this
+          is the roles desc. this is the roles desc.{" "}
+        </p>
+      </div>
     </div>
   );
 };
