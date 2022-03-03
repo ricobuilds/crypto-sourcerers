@@ -61,6 +61,12 @@ const PostARole = () => {
             className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
           />
           <input type="checkbox" name="" id="" /> <span>Remote</span>
+          <p>Apply</p>
+          <input
+            type="text"
+            placeholder="Apply url/email"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+          />
         </div>
       </div>
     </>
