@@ -16,7 +16,7 @@ const PostARole = () => {
           <input
             type="text"
             placeholder="Enter role title"
-            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 rounded-md tracking-widest w-full"
+            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] rounded-md tracking-widest w-full"
           />
           <p>Role Description</p>
           <textarea
@@ -25,7 +25,7 @@ const PostARole = () => {
             cols={30}
             rows={10}
             placeholder="Let roleseekers know what you're looking for!"
-            className="w-full rounded-md bg-black/20 focus:bg-black/60 ring-2 outline-none transition ring-gray-800 focus:ring-gray-600 p-3 tracking-widest"
+            className="w-full rounded-md bg-black/20 focus:bg-black/60 ring-2 outline-none transition ring-gray-800 focus:ring-[#ed194a] p-3 tracking-widest"
           ></textarea>
           <p>
             Audience{" "}
@@ -45,33 +45,33 @@ const PostARole = () => {
             type="text"
             name=""
             id=""
-            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 rounded-md tracking-widest w-full"
+            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] rounded-md tracking-widest w-full"
             placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One.."
           />
           <p>Company Name</p>
           <input
             type="text"
             placeholder="Company name"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
           />
           <p>Location</p>
           <input
             type="text"
             placeholder="Location e.x. Remote, Remote/UK, London"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
           />
           <input type="checkbox" name="" id="" /> <span>Remote</span>
           <p>Apply</p>
           <input
             type="text"
             placeholder="Apply url/email"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
           />
           <p>Discount Code</p>
           <input
             type="text"
             placeholder="Enter code"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
           />
           <p className="flex items-center">
             Upload Branding Logo (+40{" "}
@@ -104,10 +104,10 @@ const PostARole = () => {
             type="text"
             name=""
             id=""
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] w-full"
             placeholder="ex. recommended by X, through Discord/Twitter etc"
           />
-          <button className="bg-gray-600 flex justify-center p-3 rounded-md w-full">
+          <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full">
             <p className="flex items-center">
               Post a role 250{" "}
               <span className="mx-0.5">
