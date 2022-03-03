@@ -13,7 +13,6 @@ const PostARole = () => {
       <div className="post min-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="aboutRole">
-          <h2 className="text-lg">About the role</h2>
           <p>Role Title</p>
           <input
             type="text"
@@ -37,8 +36,8 @@ const PostARole = () => {
           <p>
             Audience{" "}
             <span className="ml-0.5 text-sm text-gray-600">
-              We recommend Roleseeker for permanent roles, and Bountyseeker for
-              freelance/contract roles (e.g. interships, apprenticeships).
+              We recommend [Roleseeker] for permanent roles, and [Bountyseeker]
+              for freelance/contract roles (e.g. interships, apprenticeships).
             </span>
           </p>
           <select className="rounded-md p-1 text-black">
@@ -55,12 +54,24 @@ const PostARole = () => {
             className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
             placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One.."
           />
-          <p>Company Name</p>
-          <input
-            type="text"
-            placeholder="Company name"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-          />
+          <p>
+            Salary{" "}
+            <span className="ml-0.5 text-gray-600 text-sm">
+              We suggest to be as trasnsparent as possible :)
+            </span>
+          </p>
+          <div className="flex space-x-3">
+            <input
+              type="text"
+              placeholder="Starting/min amount"
+              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+            />
+            <input
+              type="text"
+              placeholder="Max amount"
+              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+            />
+          </div>
           <p>Location</p>
           <input
             type="text"
@@ -68,6 +79,12 @@ const PostARole = () => {
             className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
           <input type="checkbox" name="" id="" /> <span>Remote</span>
+          <p>Company Name</p>
+          <input
+            type="text"
+            placeholder="Company name"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+          />
           <p>Apply</p>
           <input
             type="text"
@@ -148,14 +165,14 @@ const PostARole = () => {
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
         <div className="core-details flex flex-wrap items-center justify-between">
           <p className="tracking-widest flex items-center text-sm">
-            <span className="text-rose-500/100 mr-1">{locationIcon}</span>
+            <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
             London, UK or Remote
           </p>
           <p className="tracking-widest flex items-center text-sm">
-            <span className="text-rose-500/100 mr-1">{dollarIcon}</span>$50,000
+            <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>$50,000
           </p>
           <p className="tracking-widest flex items-center text-sm">
-            <span className="text-rose-500/100 mr-1">{workIcon}</span> Pays in
+            <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> Pays in
             Crypto
           </p>
           <div className="flex">
