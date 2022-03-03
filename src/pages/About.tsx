@@ -5,8 +5,7 @@ const About = () => {
     <>
       <Helmet>
         <title>
-          About - Crypto Sourcerers - Web3's #1 Gateway for Blockchain Jobs &
-          Talent.
+          About - Crypto Sourcerers - World's #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
       <MissionStatement />

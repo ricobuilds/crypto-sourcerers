@@ -10,7 +10,7 @@ import About from "./pages/About";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import LiveRoles from "./pages/LiveRoles";
+import Roles from "./pages/Roles";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import { Helmet } from "react-helmet-async";
@@ -123,7 +123,7 @@ const App = () => {
               <Route path="/donations" element={<Donations />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/learning" element={<Learning />} />
-              <Route path="/roles" element={<LiveRoles />} />
+              <Route path="/roles" element={<Roles />} />
               <Route path="/bounties" element={<Bounties />} />
               <Route path="/legal" />
               <Route path="/contact" element={<Contact />} />

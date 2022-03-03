@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet-async";
 
-const LiveRoles = () => {
+const Roles = () => {
   return (
     <>
       <Helmet>
-        <title>Live Roles - The World's #1 Source for Blockchain Talent.</title>
+        <title>
+          Roles - Crypto Sourcerers - World's #1 Gateway for Web3 Jobs & Talent.
+        </title>
       </Helmet>
       <div className="">
         <p>hye</p>
@@ -16,4 +18,4 @@ const LiveRoles = () => {
     </>
   );
 };
-export default LiveRoles;
+export default Roles;
