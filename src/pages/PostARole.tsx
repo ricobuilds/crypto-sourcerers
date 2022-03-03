@@ -18,7 +18,22 @@ const PostARole = () => {
             placeholder="Enter role title"
             className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-gray-600 rounded-md tracking-widest w-full"
           />
-          
+          <p>Role Description</p>
+          <textarea
+            name=""
+            id=""
+            cols={30}
+            rows={10}
+            placeholder="Let roleseekers know what you're looking for!"
+            className="w-full rounded-md bg-black/20 focus:bg-black/60 ring-2 outline-none transition ring-gray-800 focus:ring-gray-600 p-3 tracking-widest"
+          ></textarea>
+          <p>
+            Audience{" "}
+            <span className="text-sm">
+              We recommend Roleseeker for permanent roles, and Bountyseeker for
+              freelance/contract roles.
+            </span>
+          </p>
         </div>
       </div>
     </>
