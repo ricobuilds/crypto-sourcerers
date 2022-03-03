@@ -95,7 +95,6 @@ const PostARole = () => {
               placeholder="e.x. Remote, Remote/UK, London"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
-            <input type="checkbox" name="" id="" /> <span>Remote</span>
           </div>
           <div className="roleSocial">
             <p>
