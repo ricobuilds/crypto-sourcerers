@@ -19,6 +19,7 @@ import Bounties from "./pages/Bounties";
 import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
+import PostARole from "./pages/PostARole";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -116,6 +117,7 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
               <Route path="/news" />
+              <Route path="/postarole" element={<PostARole />} />
               <Route path="/donations" element={<Donations />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/learning" element={<Learning />} />

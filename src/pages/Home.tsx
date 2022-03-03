@@ -152,7 +152,7 @@ const HomePage = () => {
               through remote opportunities.
             </p>
             <p>
-              We have dedicated this platform to help roleseekers find lucrative
+              We have dedicated this gateway to help roleseekers find lucrative
               opportunities with Web3 startups, and for ‘Web2’ and Web3 teams to
               find talent that is already in Web3, or looking to transition to
               Web3. The essence of our mission is to assist the Web3 ecosystem

@@ -23,9 +23,10 @@ const About = () => {
           Sourcerers - sorcerers🔮 get it? ;)
         </p>
         <p className="missionIntro">
-          Crypto Sorcerers is the world’s #1 source for blockchain talent,
-          founded and developed by yours truly - we aim to provide the world
-          with a gateway for finding blockchain talent on a global scale.
+          Crypto Sorcerers is the world’s #1 Web3 gateway for blockchain talent.
+          Founded and developed by yours truly, with the intent to assist
+          startups in sourcing blockchain talent on a global scale, and for
+          talented roleseekers and bountyseekers to be found.
         </p>
         <p className="missionValues">
           <span className="dark:text-indigo-400 font-medium">Trust</span>,{" "}
@@ -85,7 +86,7 @@ const About = () => {
                   Enric
                 </h2>
                 <h3 className="dark:text-gray-500 mb-3">CTO</h3>
-                <p className="mb-4">Building cool sh*t.</p>
+                <p className="mb-4">Building cool sh*t in public!</p>
                 <span className="inline-flex space-x-4">
                   <a
                     className="ml-0 text-gray-700"
