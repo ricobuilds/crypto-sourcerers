@@ -132,14 +132,16 @@ function DDM({ toggle }: IToggleProps) {
             <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <button
-                    className={`${
-                      active ? "bg-[#ed194a] text-white" : "text-gray-300"
-                    } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                  >
-                    <span className="mr-2">{liveIcon}</span>
-                    LIVE SOON
-                  </button>
+                  <Link to="/postarole">
+                    <button
+                      className={`${
+                        active ? "bg-[#ed194a] text-white" : "text-gray-300"
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      <span className="mr-2">{liveIcon}</span>
+                      LIVE SOON
+                    </button>
+                  </Link>
                 )}
               </Menu.Item>
             </div>

@@ -1,3 +1,5 @@
+import { dollarIcon, locationIcon, workIcon } from "src/components/Icons";
+import punk from "../images/punk4596.png";
 // interface IRole {
 //   title: string; // role title
 //   salary: number; // di monies
@@ -7,8 +9,8 @@
 
 const PostARole = () => {
   return (
-    <div className="flex pb-12 justify-around w-full">
-      <div className="post max-w-[33%]">
+    <div className="flex flex-col sm:flex-row pb-12 justify-around w-full">
+      <div className="post min-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="aboutRole">
           <h2 className="text-lg">About the role</h2>
@@ -16,16 +18,21 @@ const PostARole = () => {
           <input
             type="text"
             placeholder="Enter role title"
-            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] rounded-md tracking-widest w-full"
+            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
           />
-          <p>Role Description</p>
+          <p>
+            Role Description{" "}
+            <span className="ml-0.5 text-sm text-gray-600">
+              Supports markdown format
+            </span>
+          </p>
           <textarea
             name=""
             id=""
             cols={30}
             rows={10}
             placeholder="Let roleseekers know what you're looking for!"
-            className="w-full rounded-md bg-black/20 focus:bg-black/60 ring-2 outline-none transition ring-gray-800 focus:ring-[#ed194a] p-3 tracking-widest"
+            className="w-full rounded-md bg-black/20 focus:bg-black/60 border-2 outline-none transition border-gray-800 focus:border-[#ed194a] p-3 tracking-widest"
           ></textarea>
           <p>
             Audience{" "}
@@ -45,33 +52,33 @@ const PostARole = () => {
             type="text"
             name=""
             id=""
-            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] rounded-md tracking-widest w-full"
+            className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
             placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One.."
           />
           <p>Company Name</p>
           <input
             type="text"
             placeholder="Company name"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
           <p>Location</p>
           <input
             type="text"
             placeholder="Location e.x. Remote, Remote/UK, London"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
           <input type="checkbox" name="" id="" /> <span>Remote</span>
           <p>Apply</p>
           <input
             type="text"
             placeholder="Apply url/email"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
           <p>Discount Code</p>
           <input
             type="text"
             placeholder="Enter code"
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] tracking-widest w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
           <p className="flex items-center">
             Upload Branding Logo (+40{" "}
@@ -104,7 +111,7 @@ const PostARole = () => {
             type="text"
             name=""
             id=""
-            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition ring-2 ring-gray-800 focus:ring-[#ed194a] w-full"
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] w-full"
             placeholder="ex. recommended by X, through Discord/Twitter etc"
           />
           <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full">
@@ -138,7 +145,28 @@ const PostARole = () => {
       <div className="preview border min-w-[40%] p-6 space-y-3">
         seccion de muestra
         <h1 className="text-xl font-bold">Example title</h1>
-        <div className="h-0.5 bg-gray-800/40 rounded-r-lg rounded-l-lg"></div>
+        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
+        <div className="core-details flex flex-wrap items-center justify-between">
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-rose-500/100 mr-1">{locationIcon}</span>
+            London, UK or Remote
+          </p>
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-rose-500/100 mr-1">{dollarIcon}</span>$50,000
+          </p>
+          <p className="tracking-widest flex items-center text-sm">
+            <span className="text-rose-500/100 mr-1">{workIcon}</span> Pays in
+            Crypto
+          </p>
+          <div className="flex">
+            <img
+              alt="team"
+              className="flex-shrink-0 rounded-full w-12 h-12 object-cover object-center  bg-gradient-to-tr from-[#ed194a] to-pink-500 border-2 border-white border-opacity-25"
+              src={punk}
+            />
+          </div>
+        </div>
+        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg "></div>
         <p className="max-w-xl">
           this is the roles desc. this is the roles desc. this is the roles
           desc. this is the roles desc. this is the roles desc. this is the
@@ -151,6 +179,21 @@ const PostARole = () => {
           the roles desc. this is the roles desc. this is the roles desc. this
           is the roles desc. this is the roles desc.{" "}
         </p>
+        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
+        <div className="tags flex gap-x-4">
+          <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">Solidity</div>
+          <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">DeFi</div>
+          <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">NFT</div>
+          <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">
+            Metaverse
+          </div>
+        </div>
+        <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
+        <div className="cta">
+          <button className="p-3 rounded-md bg-[#ed194a]">
+            Apply for Role 🪄
+          </button>
+        </div>
       </div>
     </div>
   );
