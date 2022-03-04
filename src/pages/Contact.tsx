@@ -4,7 +4,9 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - The World's #1 Source for Blockchain Talent.</title>
+        <title>
+          Contact Us • Web3Source • The #1 source for Web3 Jobs & Talent.
+        </title>
       </Helmet>
       <Contacti />
     </>

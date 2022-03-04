@@ -7,7 +7,7 @@ const About = () => {
           <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
-          The world's #1 source for Web3 jobs & talent.
+          The #1 source for Web3 Jobs & Talent.
         </div>
       </div>
       <div className="content flex flex-col mx-auto max-w-4xl space-y-4">
