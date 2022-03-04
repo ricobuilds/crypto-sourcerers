@@ -13,14 +13,6 @@ const Roles = () => {
         <div className="w-1/4">filtering system</div>
         <div className="grid gap-y-3 justify-items-center w-3/4">
           <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
         </div>
       </div>
     </>
