@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import RoleCard from "../components/RoleCard";
+import { SearchIcon } from "@heroicons/react/outline";
 
 const Roles = () => {
   return (
@@ -9,8 +10,60 @@ const Roles = () => {
           Roles • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
-      <div className="flex pb-12 md:py-12 w-full">
-        {/* <div className="w-1/4">filtering system</div> */}
+      <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
+        <div className="flex justify-between items-center w-full">
+          <div className="max-w-lg w-full p-3">
+            Filter results
+            <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
+              <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
+              <input
+                placeholder="ex. react hardhat london remote 60000 matic"
+                className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-300 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div>
+            <div className="mt-3">Fetched 256 results</div>
+          </div>
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
+            <span className="text-yellow-300">
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+            <p>
+              Keywords that match what you want, get results in a flash ex. rust
+              defi remote
+            </p>
+          </div>
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
+            <span className="text-amber-600">
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+            <p>
+              Narrow down by entering the ticker of an ecosystem - ex. ftm,
+              avax, matic 👀
+            </p>
+          </div>
+        </div>
         <div className="grid gap-y-3 justify-items-center w-full">
           <RoleCard />
           <RoleCard />

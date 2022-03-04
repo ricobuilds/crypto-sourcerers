@@ -5,7 +5,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>
-          Contact Us • Web3Source • The #1 source for Web3 Jobs & Talent.
+          Contact Us • Web3Source • The #1 gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
       <Contacti />

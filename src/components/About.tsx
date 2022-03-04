@@ -7,7 +7,7 @@ const About = () => {
           <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
-          The #1 source for Web3 Jobs & Talent.
+          The #1 gateway for Web3 Jobs & Talent.
         </div>
       </div>
       <div className="content flex flex-col mx-auto max-w-4xl space-y-4">
@@ -18,7 +18,7 @@ const About = () => {
           Hey, this is
           <span className="dark:text-indigo-400 font-medium"> Enric</span>{" "}
           typing here, a Fullstack Web3 Developer, and I have produced
-          Web3Source in 30 days.
+          Web3Source in under 30 days (Feb9 - Mar6, 2022).
         </p>
         <p className="missionIntro">
           Web3Source is the world’s #1 Web3 gateway for Web3 jobs & talent.
