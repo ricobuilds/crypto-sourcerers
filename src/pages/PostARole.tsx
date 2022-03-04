@@ -26,7 +26,6 @@ const PostARole = () => {
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="formDetails space-y-4">
           <div className="roleTitle">
-            <p className="mb-2">Role Title</p>
             <input
               type="text"
               placeholder="Enter role title"
@@ -34,12 +33,9 @@ const PostARole = () => {
             />
           </div>
           <div className="roleDescription">
-            <p className="mb-2">
-              Role Description{" "}
-              <span className="ml-0.5 text-sm text-gray-600">
-                Supports markdown format
-              </span>
-            </p>
+            <span className="ml-0.5 text-sm text-gray-600">
+              Supports markdown format
+            </span>
             <textarea
               name=""
               id=""
@@ -50,14 +46,10 @@ const PostARole = () => {
             ></textarea>
           </div>
           <div className="roleAudience">
-            <p className="mb-2">
-              Audience{" "}
-              <span className="ml-0.5 text-sm text-gray-600">
-                We recommend [Roleseeker] for permanent roles, and
-                [Bountyseeker] for freelance/contract roles (e.g. interships,
-                apprenticeships).
-              </span>
-            </p>
+            <span className="ml-0.5 text-sm text-gray-600">
+              We recommend [Roleseeker] for permanent roles, and [Bountyseeker]
+              for freelance/contract roles (e.g. interships, apprenticeships).
+            </span>
             <select
               className="rounded-md p-1 text-black audience"
               id="audience"
@@ -69,14 +61,10 @@ const PostARole = () => {
             </select>
           </div>
           <div className="roleType">
-            <p className="mb-2">
-              Type{" "}
-              <span className="ml-0.5 text-sm text-gray-600">
-                We recommend [Roleseeker] for permanent roles, and
-                [Bountyseeker] for freelance/contract roles (e.g. interships,
-                apprenticeships).
-              </span>
-            </p>
+            <span className="ml-0.5 text-sm text-gray-600">
+              We recommend [Roleseeker] for permanent roles, and [Bountyseeker]
+              for freelance/contract roles (e.g. interships, apprenticeships).
+            </span>
             <select className="rounded-md p-1 text-black " id="">
               <optgroup label="Types">
                 <option value="Permanent">Permanent</option>
@@ -87,27 +75,23 @@ const PostARole = () => {
             </select>
           </div>
           <div className="roleTags">
-            <p className="mb-2">
-              Tags{" "}
-              <span className="ml-0.5 text-sm text-gray-600">
-                Separate each tag by a comma.
-              </span>
-            </p>
+            <span className="ml-0.5 text-sm text-gray-600">
+              Skills, tools, ecosystems, Pay In Crypto (
+              <span className="font-bold">IF</span> you offer it) - separate
+              each tag by a comma.
+            </span>
             <input
               type="text"
               name=""
               id=""
               className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
-              placeholder="ex. DeFi, NFT, Solidity, Rust, Harmony One, Fantom.."
+              placeholder="ex. DeFi, NFT, Solidity, Rust, AVAX, FTM, Pay In Crypto.."
             />
           </div>
           <div className="roleSalary">
-            <p className="mb-2">
-              Salary{" "}
-              <span className="ml-0.5 text-gray-600 text-sm">
-                We suggest to be as transparent as possible :)
-              </span>
-            </p>
+            <span className="ml-0.5 text-gray-600 text-sm">
+              We suggest to be as transparent as possible :)
+            </span>
             <div className="flex space-x-3">
               <input
                 type="text"
@@ -122,12 +106,9 @@ const PostARole = () => {
             </div>
           </div>
           <div className="roleLocation">
-            <p className="mb-2">
-              Location{" "}
-              <span className="text-sm text-gray-600">
-                Format: Remote or/and City, Country
-              </span>
-            </p>
+            <span className="text-sm text-gray-600">
+              Format: Remote or/and City, Country
+            </span>
             <input
               type="text"
               placeholder="e.x. Remote OR Remote/London, UK OR London, UK"
@@ -135,12 +116,9 @@ const PostARole = () => {
             />
           </div>
           <div className="roleSocial">
-            <p className="mb-2">
-              Startup Twitter{" "}
-              <span className="text-sm text-rose-500/90 ml-0.5">
-                Without the @ symbol
-              </span>
-            </p>
+            <span className="text-sm text-rose-500/90 ml-0.5">
+              *Without the @ symbol
+            </span>
             <input
               type="text"
               placeholder="Enter Twitter username"
@@ -148,26 +126,23 @@ const PostARole = () => {
             />
           </div>
           <div className="roleStartup">
-            <p className="mb-2">Startup Name</p>
             <input
               type="text"
               placeholder="Enter Startup name"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
-          <div className="roleURI">
-            <p className="mb-2">Apply Link</p>
+          <div className="roleURL">
             <input
               type="text"
-              placeholder="Apply externl url/email for resumes"
+              placeholder="Enter external URL"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
           <div className="postDiscount">
-            <p className="mb-2">Discount Code</p>
             <input
               type="text"
-              placeholder="Enter code"
+              placeholder="Enter discount code"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>

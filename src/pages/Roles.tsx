@@ -11,7 +11,7 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full">
           <div className="max-w-lg w-full p-3">
             Filter results
             <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
@@ -23,8 +23,8 @@ const Roles = () => {
             </div>
             <div className="mt-3">Fetched 256 results</div>
           </div>
-          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
-            <span className="text-yellow-300">
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs shadow-md">
+            <span className="text-yellow-500">
               <svg
                 className="w-6 h-6"
                 fill="currentColor"
@@ -39,12 +39,32 @@ const Roles = () => {
               </svg>
             </span>
             <p>
-              Keywords that match what you want, get results in a flash ex. rust
-              defi remote
+              Keywords that match what you want - get results in a flash ex.
+              rust defi remote
             </p>
           </div>
-          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
-            <span className="text-amber-600">
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs shadow-md">
+            <span className="text-rose-500">
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+            <p>
+              Narrow down by entering the ticker of an ecosystem - ex. ftm,
+              avax, matic 👀
+            </p>
+          </div>
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs shadow-md">
+            <span className="text-sky-500">
               <svg
                 className="w-6 h-6"
                 fill="currentColor"

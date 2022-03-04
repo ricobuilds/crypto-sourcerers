@@ -37,8 +37,8 @@ const RoleCard = () => {
       </div>
       <div className="right flex flex-col space-y-2 items-center">
         <span className="text-gray-600 text-sm">Posted: 4h ago</span>
-        <button className="bg-transparent p-1 rounded-md text-[#ed194a] border border-[#ed194a] transition hover:bg-[#ed194a] hover:text-white">
-          Show More
+        <button className="bg-transparent p-1 rounded-md text-[#ed194a] border border-[#ed194a] transition hover:bg-[#ed194a] font-bold hover:text-white">
+          APPLY NOW
         </button>
       </div>
     </div>
