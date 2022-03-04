@@ -1,10 +1,14 @@
-const Tag = (asset: string, id: number) => {
+interface ITag {
+  skill: string;
+  id: number;
+}
+const Tag = (props: ITag) => {
   return (
     <div
       className="text-sm text-[#ed194a] bg-[#f8c1ce] font-bold p-1 rounded-sm"
-      key={id}
+      key={props.id}
     >
-      {asset}
+      {props.skill}
     </div>
   );
 };
