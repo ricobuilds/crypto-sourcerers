@@ -20,15 +20,15 @@ const RoleCard = () => {
           </div>
           <div className="coreDetails ">
             <div className="flex flex-wrap items-center gap-3 text-gray-800 dark:text-gray-300 text-sm">
-              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-600/5 ring-2 ring-gray-800 ring-opacity-60 ">
+              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-800/25 ">
                 <span className="mr-0.5 ">{locationIcon}</span>
                 {"Remote, Anywhere"}
               </p>{" "}
-              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-600/5 ring-2 ring-gray-800 ring-opacity-60 ">
+              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-800/25 ">
                 <span className="mr-0.5">{dollarIcon}</span>
                 {"50,000"}
               </p>{" "}
-              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-600/5 ring-2 ring-gray-800 ring-opacity-60 ">
+              <p className="flex items-center mr-1 p-1 rounded-md bg-gray-300 dark:bg-gray-800/25 ">
                 <span className="mr-0.5 ">{workIcon}</span>
                 {"Permanent"}
               </p>
