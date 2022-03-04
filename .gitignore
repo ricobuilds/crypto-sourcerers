@@ -6,6 +6,7 @@
 .pnp.js
 .githuby
 .firebase
+.firebaserc
 
 # testing
 /coverage

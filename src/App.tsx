@@ -88,6 +88,11 @@ const App = () => {
               >
                 Learning
               </a>
+              <Link to={"/roles"}>
+                <span className="hover:text-gray-400  transition hover:cursor-pointer">
+                  Roles
+                </span>
+              </Link>
               <a
                 className="hover:text-gray-400  transition hover:cursor-pointer"
                 href={`/about`}
