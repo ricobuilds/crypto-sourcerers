@@ -488,7 +488,6 @@ const HomePage = () => {
             <img
               src={bankLocker}
               alt="prop"
-              // srcSet={`${bankLockerSM} 300w, ${bankLocker} 768w`}
               className="h-40 sm:h-72 w-40 sm:w-72"
             />
             <p className="text-center tracking-wider">

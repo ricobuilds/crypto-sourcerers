@@ -15,13 +15,13 @@ const Contact = () => {
           You can reach out to us through{" "}
           <code className="font-semibold">
             <a href="mailto:dev@cryptosourcerers.co">
-              dev@<span className="">cryptosourcerers</span>.co
+              dev@<span className="">web3Source</span>.co
             </a>
           </code>
         </p>
         <p>
           Follow us on{" "}
-          <a href="https://www.twitter.com/cryptosourcers" target={"_blank"}>
+          <a href="https://www.twitter.com/web3Source" target={"_blank"}>
             <span className="text-sky-800 dark:text-sky-400 font-medium">
               Twitter
             </span>

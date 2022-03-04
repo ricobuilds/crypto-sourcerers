@@ -12,7 +12,7 @@ const WarningBanner = (props: bannerProps) => {
         Always make sure the URL is
         {": "}
         <span className="mx-0.5 tracking-widest font-bold">
-          cryptosourcerers.co
+          web3Source.co
         </span>{" "}
         - bookmark it to be safe.
       </p>

@@ -3,14 +3,14 @@ const About = () => {
   return (
     <div className="about flex flex-col px-auto lg:px-32 py-12 ">
       <div className="about-header mb-4 font-medium text-center">
-        <div className="about-header-title ">
+        <div className="about-header-title">
           <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
           The world's #1 source for Web3 jobs & talent.
         </div>
       </div>
-      <div className="content flex flex-col justify-center items-center mx-auto max-w-4xl space-y-4">
+      <div className="content flex flex-col mx-auto max-w-4xl space-y-4">
         <p className="subtitle text-left">Last updated: Feb 9, 2022</p>
         <p className="aboutDev-intro">
           <span className="text-sm italic">[clears throat in WGMI]</span>
@@ -22,7 +22,7 @@ const About = () => {
         </p>
         <p className="missionIntro">
           Web3Source is the world’s #1 Web3 gateway for Web3 jobs & talent.
-          Founded and developed by yours truly, with the intent to assist
+          Founded and bootstrapped by yours truly, with the intent to assist
           startups in sourcing Web3 talent on a global scale, and for talented
           roleseekers and bountyseekers to be found.
         </p>
