@@ -1,15 +1,13 @@
-import punk from "../images/punk4596.png";
+const punk = require("../images/punk4596.png");
 const About = () => {
   return (
     <div className="about flex flex-col px-auto lg:px-32 py-12 ">
       <div className="about-header mb-4 font-medium text-center">
         <div className="about-header-title ">
-          <h1 className="text-6xl tracking-widest font-bold">
-            Crypto Sourcerers
-          </h1>
+          <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
         </div>
         <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
-          The world's #1 source for blockchain talent.
+          The world's #1 source for Web3 jobs & talent.
         </div>
       </div>
       <div className="content flex flex-col justify-center items-center mx-auto max-w-4xl space-y-4">
@@ -19,14 +17,14 @@ const About = () => {
           <br />
           Hey, this is
           <span className="dark:text-indigo-400 font-medium"> Enric</span>{" "}
-          typing here, a Fullstack Web3 Developer, and I have produced Crypto
-          Sourcerers - sorcerers🔮 get it? ;)
+          typing here, a Fullstack Web3 Developer, and I have produced
+          Web3Source in 30 days.
         </p>
         <p className="missionIntro">
-          Crypto Sorcerers is the world’s #1 Web3 gateway for blockchain talent.
+          Web3Source is the world’s #1 Web3 gateway for Web3 jobs & talent.
           Founded and developed by yours truly, with the intent to assist
-          startups in sourcing blockchain talent on a global scale, and for
-          talented roleseekers and bountyseekers to be found.
+          startups in sourcing Web3 talent on a global scale, and for talented
+          roleseekers and bountyseekers to be found.
         </p>
         <p className="missionValues">
           <span className="dark:text-indigo-400 font-medium">Trust</span>,{" "}
@@ -45,10 +43,10 @@ const About = () => {
           <br />
           This has kicked the migration to a new digital era to full throttle,
           meaning that going digital will be a <b>must</b> for everyone to
-          adapt. So, I took the steps to develop this platform, Crypto
-          Sourcerers, a platform that people all around the world can use to tap
-          into this budding industry. The same can be said for "Web2.0"
-          companies & crypto-based startups that are looking to move towards{" "}
+          adapt. So, I took the steps to develop this platform, Web3Source, a
+          platform that people all around the world can use to tap into this
+          budding industry. The same can be said for "Web2.0" companies &
+          crypto-based startups that are looking to move towards{" "}
           <span className=" dark:text-pink-500 font-medium">innovation</span>{" "}
           and <span className="dark:text-pink-500 font-medium">change</span>.
         </p>

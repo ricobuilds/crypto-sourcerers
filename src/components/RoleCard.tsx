@@ -1,5 +1,5 @@
-import punk from "../images/punk4596.png";
 import Tag from "./Tag";
+const punk = require("../images/punk4596.png");
 
 // tis for mapping over every available job.
 const RoleCard = () => {

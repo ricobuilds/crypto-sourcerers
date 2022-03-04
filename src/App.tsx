@@ -1,4 +1,4 @@
-import { caraIcon, themeIcon } from "./components/Icons";
+import { themeIcon } from "./components/Icons";
 import "./index.css";
 import { useToggleHook } from "./hooks/useToggleHook";
 import Footer from "./components/Footer";
@@ -71,7 +71,7 @@ const App = () => {
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
               <div className="logo">
-                <span className="fill-[#ed194a]">{caraIcon}</span>
+                <span className="text-[#ed194a]">***</span>
               </div>
               {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>

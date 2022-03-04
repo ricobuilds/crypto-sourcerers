@@ -1,19 +1,11 @@
 import { Link } from "react-router-dom";
-// import PricingCard from "../components/PricingCard";
-// import AudienceCard from "../components/AudienceCard";
-// import heroIconSM from "../images/magic-trick-dynamic-color-sm.webp";
-import heroIcon from "../images/magic-trick-dynamic-color.webp";
-// import web2devsSM from "../images/computer-front-color-sm.webp";
-import web2devs from "../images/computer-front-color.webp";
-// import web3devsSM from "../images/lab-dynamic-color-sm.webp";
-import web3devs from "../images/lab-dynamic-color.webp";
-// import web3enthSM from "../images/axe-dynamic-color-sm.webp";
-import web3enth from "../images/axe-dynamic-color.webp";
-// import bizSM from "../images/travel-front-color-sm.webp";
-import biz from "../images/travel-front-color.webp";
-// import bankLockerSM from "../images/locker-dynamic-color-sm.webp";
-import bankLocker from "../images/locker-dynamic-color.webp";
-import missionIcon from "../images/rocket-dynamic-color.webp";
+const heroIcon = require("../images/magic-trick-dynamic-color.webp");
+const web2devs = require("../images/computer-front-color.webp");
+const web3devs = require("../images/lab-dynamic-color.webp");
+const web3enth = require("../images/axe-dynamic-color.webp");
+const biz = require("../images/travel-front-color.webp");
+const bankLocker = require("../images/locker-dynamic-color.webp");
+const missionIcon = require("../images/rocket-dynamic-color.webp");
 
 const HomePage = () => {
   return (
@@ -210,8 +202,8 @@ const HomePage = () => {
             <p className="leading-relaxed text-base">
               Have an intership available for new graduates? Looking for a
               community manager? Want to launch your blockchain initiative and
-              in urgent need of a Blockchain Engineer? With Crypto Sourcerers,
-              you can reach your target audience on the global stage.
+              in urgent need of a Blockchain Engineer? With Web3Source, you can
+              reach your target audience on the global stage.
             </p>
           </div>
           <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
@@ -695,15 +687,15 @@ const HomePage = () => {
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
               <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
-                I'm a recruiter/founder, why should I use Crypto Sourcerers?
+                I'm a recruiter/founder, why should I use Web3Source?
               </h2>
               <p className="leading-relaxed">
                 Well, we want to assist the Web3 transitioning period and beyond
                 by connecting with roleseekers, blockchain ecosystems, and
-                businesses (Web2 and Web3) worldwide. Crypto Sourcerers aims to
-                become the world's #1 marketplace for blockchain talent - by
-                using this gateway, you can easily scale and build your regional
-                branches when you wish to do so :P
+                businesses (Web2 and Web3) worldwide. Web3Source aims to become
+                the world's #1 marketplace for blockchain talent - by using this
+                gateway, you can easily scale and build your regional branches
+                when you wish to do so :P
               </p>
             </div>
           </div>

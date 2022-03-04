@@ -1,6 +1,6 @@
-import fantomIcon from "../images/fantom-ftm-logo.png";
-import solanaIcon from "../images/solana-sol-logo.png";
-import maticIcon from "../images/polygon-matic-logo.png";
+const fantomIcon = require("../images/fantom-ftm-logo.png");
+const solanaIcon = require("../images/solana-sol-logo.png");
+const maticIcon = require("../images/polygon-matic-logo.png");
 const Donations = () => {
   return (
     <div className="donations flex flex-col items-center">
@@ -12,7 +12,7 @@ const Donations = () => {
       </p>
       <div className="donationAddresses">
         <p className="flex items-center">
-          You can support Crypto Sourcerers by sending USDC{" "}
+          You can support Web3Source by sending USDC{" "}
           <span className="mx-1">
             <svg
               data-name="86977684-12db-4850-8f30-233a7c267d11"

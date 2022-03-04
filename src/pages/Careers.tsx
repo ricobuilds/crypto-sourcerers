@@ -1,22 +1,16 @@
-import coverImg from "../images/blockchainImg.jpeg";
 import { Helmet } from "react-helmet-async";
+const coverImg = require("../images/blockchainImg.jpeg");
 
 const Careers = () => {
   return (
     <>
       <Helmet>
-        <title>Careers - The World's #1 Source for Blockchain Talent.</title>
-        <meta
-          name="copyright"
-          content="Crypto Sourcerers, All rights reserved."
-        />
-        <meta
-          name="description"
-          content="Choose your pathway within the cryptosphere"
-        />
+        <title>Careers - The #1 Gateway for Web3 Jobs & Talent.</title>
+        <meta name="copyright" content="Web3Source, all rights reserved." />
+        <meta name="description" content="Find your niche in the Web3." />
         <meta
           name="keywords"
-          content="blockchain job, crypto job, metaverse job, NFT job, web3 jobs"
+          content="web3 jobs, NFT jobs, blockchain jobs, metaverse jobs, crypto jobs, augmented reality jobs, virtual reality jobs, marketing jobs, community manager jobs, DAO jobs, DeFi jobs"
         />
         <meta name="author" content="0xreeko" />
         <meta

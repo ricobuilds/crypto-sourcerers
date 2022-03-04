@@ -1,5 +1,5 @@
-import { dollarIcon, locationIcon, workIcon } from "src/components/Icons";
-import punk from "../images/punk4596.png";
+import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
+const punk = require("../images/punk4596.png");
 /* interface IRole {
   roleTitle: string; // role title
   description: string; // role's JD
@@ -201,7 +201,7 @@ const PostARole = () => {
             <input type="file" name="" id="" /> {/*File Upload */}
           </div>
           <div className="postSurvey">
-            <p className="mb-2">How did you hear about Crypto Sourcerers?</p>
+            <p className="mb-2">How did you hear about Web3Source?</p>
             <input
               type="text"
               name=""

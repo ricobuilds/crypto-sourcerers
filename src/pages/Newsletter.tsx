@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import mailIcon from "../images/mail-iso-color.png";
+const mailIcon = require("../images/mail-iso-color.png");
 const Newsletter = () => {
   return (
     <>
       <Helmet>
         <title>
-          Newsletter - Crypto Sourcerers - Web3's #1 Gateway for Blockchain Jobs
-          & Talent.
+          Newsletter - Web3Source - The #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
       <div className="newsletter my-auto w-full h-full flex flex-col mx-auto">
@@ -18,8 +17,8 @@ const Newsletter = () => {
                 We want to support you on your journey into Web3 and beyond,
                 whether you're attemping to get your foot through the door, or
                 looking to adopt Web3 with innovation and change in mind, we,
-                Crypto Sourcerers, will strive to do our best in lending out a
-                helping hand :)
+                Web3Source, will strive to do our best in lending out a helping
+                hand :)
               </p>
               <img src={mailIcon} alt="mail" className="w-64 h-auto" />
             </div>
