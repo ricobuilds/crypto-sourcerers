@@ -1,24 +1,34 @@
+import { useState } from "react";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 const punk = require("../images/punk4596.png");
-/* interface IRole {
-  roleTitle: string; // role title
-  description: string; // role's JD
-  tags: []; // skills for fast search
-  audience: string;
-  type: string;
-  baseSalary: number;
-  maxSalary?: number;
-  location: string[];
-  twitteHandle: string;
-  startupName: string;
-  applyURI: string;
-  discountCode?: string;
-  brandLogo?: [];
-  survey: string;
-} */
+// interface IRole {
+//   roleTitle: string; // role title
+//   description: string; // role's JD
+//   tags: []; // skills for fast search
+//   audience: string;
+//   type: string;
+//   baseSalary: number;
+//   maxSalary?: number;
+//   location: string[];
+//   twitteHandle: string;
+//   startupName: string;
+//   applyURI: string;
+//   discountCode?: string;
+//   brandLogo?: boolean;
+//   survey: string;
+// }
 
 const PostARole = () => {
-  // const [post, setPost] = useState<IRole | null>(null);
+  const [title, setTitle] = useState<string>("");
+  const [desc, setDesc] = useState<string>("");
+
+  const handleTitle = (param: string) => {
+    setTitle(param);
+  };
+  const handleDesc = (param: string) => {
+    setDesc(param);
+    console.log(param);
+  };
 
   return (
     <div className="flex flex-col-reverse sm:gap-x-6 sm:flex-row pb-12 justify-between w-full">
@@ -28,6 +38,8 @@ const PostARole = () => {
           <div className="roleTitle">
             <input
               type="text"
+              value={title}
+              onChange={(e) => handleTitle(e.target.value)}
               placeholder="Enter role title"
               className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
             />
@@ -39,13 +51,15 @@ const PostARole = () => {
             <textarea
               name=""
               id=""
-              cols={30}
-              rows={10}
+              value={desc}
+              onChange={(e) => handleDesc(e.target.value)}
+              cols={24}
+              rows={6}
               placeholder="In depth, let roleseekers know what you're looking for!"
               className="w-full rounded-md bg-black/20 focus:bg-black/60 border-2 outline-none transition border-gray-800 focus:border-[#ed194a] p-3 tracking-widest"
             ></textarea>
           </div>
-          <div className="roleAudience">
+          <div className="roleAudience flex flex-col">
             <span className="ml-0.5 text-sm text-gray-600">
               We recommend [Roleseeker] for permanent roles, and [Bountyseeker]
               for freelance/contract roles (e.g. interships, apprenticeships).
@@ -59,12 +73,6 @@ const PostARole = () => {
                 <option value="bountyseekers">Bountyseeker</option>
               </optgroup>
             </select>
-          </div>
-          <div className="roleType">
-            <span className="ml-0.5 text-sm text-gray-600">
-              We recommend [Roleseeker] for permanent roles, and [Bountyseeker]
-              for freelance/contract roles (e.g. interships, apprenticeships).
-            </span>
             <select className="rounded-md p-1 text-black " id="">
               <optgroup label="Types">
                 <option value="Permanent">Permanent</option>
@@ -217,7 +225,7 @@ const PostARole = () => {
         seccion de muestra
         <div className="flex justify-between">
           <div className="details">
-            <h1 className="text-xl font-bold">Example title</h1>
+            <h1 className="text-xl font-bold">{title}</h1>
             <p>Startup name</p>
           </div>
           <div className="flex">
@@ -245,18 +253,7 @@ const PostARole = () => {
           </button>
         </div>
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg "></div>
-        <p className="max-w-xl">
-          this is the roles desc. this is the roles desc. this is the roles
-          desc. this is the roles desc. this is the roles desc. this is the
-          roles desc. this is the roles desc. this is the roles desc. this is
-          the roles desc. this is the roles desc. this is the roles desc. this
-          is the roles desc. this is the roles desc. this is the roles desc.
-          this is the roles desc. this is the roles desc. this is the roles
-          desc. this is the roles desc. this is the roles desc. this is the
-          roles desc. this is the roles desc. this is the roles desc. this is
-          the roles desc. this is the roles desc. this is the roles desc. this
-          is the roles desc. this is the roles desc.{" "}
-        </p>
+        <p className="max-w-3xl w-full whitespace-pre-line">{desc}</p>
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
         <div className="tags flex gap-x-4">
           <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">Solidity</div>

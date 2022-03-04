@@ -19,7 +19,7 @@ const Footer = () => {
           Donations
         </div>
       </Link>
-      <div className="navs grid grid-cols-2 lg:grid-cols-2 gap-x-4">
+      <div className="navs grid grid-cols-3 gap-x-4">
         <Link to={"/careers"}>
           <span className="hover:text-gray-400 transition outline-none">
             Careers
@@ -47,14 +47,6 @@ const Footer = () => {
           Learning
         </span>
 
-        <Link to={"/newsletter"}>
-          <span className="hover:text-gray-400 transition outline-none">
-            Newsletter
-          </span>
-        </Link>
-        <span className="hover:text-gray-400 transition outline-none">
-          Legal
-        </span>
         <Link to={"/contact"}>
           <span className="hover:text-gray-400 transition outline-none">
             Contact
