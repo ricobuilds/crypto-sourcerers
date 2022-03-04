@@ -13,7 +13,6 @@ import Contact from "./pages/Contact";
 import Roles from "./pages/Roles";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
-import { Helmet } from "react-helmet-async";
 import Login from "./pages/Login";
 import Bounties from "./pages/Bounties";
 import Learning from "./components/Learning";
@@ -63,11 +62,6 @@ const App = () => {
           {banner === "false" ? (
             <WarningBanner handleBanner={handleBanner} />
           ) : null}
-          <Helmet>
-            <title>
-              CryptoSourcerers - The World's #1 Source for Blockchain Talent.
-            </title>
-          </Helmet>
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
               <div className="logo">

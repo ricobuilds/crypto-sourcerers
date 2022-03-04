@@ -86,7 +86,6 @@ const HomePage = () => {
           />
         </div>
       </section>
-
       <section className="stats">
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
           <p className="absolute -top-4 left-1 text-xl font-bold">
@@ -495,7 +494,7 @@ const HomePage = () => {
             <p className="text-center tracking-wider">
               Whether you are a Web3 startup, or a "Web2" company in the process
               of migration, tap in to the vast landscape of Web3 and let us help
-              you source your next talented sorcerers 🔮
+              you source your next batch of talented sorcerers 🔮
             </p>
           </div>
         </div>
