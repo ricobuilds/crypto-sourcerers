@@ -1,4 +1,3 @@
-import { dollarIcon, locationIcon, workIcon } from "./Icons";
 import punk from "../images/punk4596.png";
 import Tag from "./Tag";
 
@@ -17,20 +16,14 @@ const RoleCard = () => {
             <h2 className="font-bold">Role title @ startupName</h2>
           </div>
 
-          <div className="coreDetails ">
+          <div className="coreDetails">
             <div className="flex flex-wrap items-center gap-3 text-gray-600 text-sm">
-              <p className="flex items-center mr-1">
-                <span className="mr-0.5 ">{locationIcon}</span>
-                {"Remote, Anywhere"}
-              </p>{" "}
-              <p className="flex items-center mr-1">
-                <span className="mr-0.5">{dollarIcon}</span>
-                {"50,000"}
-              </p>{" "}
-              <p className="flex items-center mr-1">
-                <span className="mr-0.5 ">{workIcon}</span>
-                {"Permanent"}
-              </p>
+              <p>{"Remote, Anywhere"}</p>
+              {"· "}
+              {/* {maxSalary ? `~ ${maxSalary}` : ""} */}
+              <p>{"50,000"}</p>
+              {"· "}
+              <p>{"Permanent"}</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
