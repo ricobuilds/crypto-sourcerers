@@ -1,7 +1,5 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-export const useDarkMode = (
-  initialValue: string
-): [string, Dispatch<SetStateAction<string>>] => {
+export const useDarkMode = (): [string, Dispatch<SetStateAction<string>>] => {
   const [value, setValue] = useState(localStorage.theme);
 
   const valueTheme: string = value === "dark" ? "light" : "dark";
