@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
+const countries = require("../countries.json");
 const punk = require("../images/punk4596.png");
 // interface IRole {
 //   roleTitle: string; // role title
@@ -31,7 +32,7 @@ const PostARole = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse sm:gap-x-6 sm:flex-row pb-12 justify-between w-full">
+    <div className="flex flex-col-reverse sm:gap-x-12 sm:flex-row pb-12 justify-between w-full">
       <div className="post w-full min-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
         <div className="formDetails space-y-4">
@@ -117,19 +118,23 @@ const PostARole = () => {
             <span className="text-sm text-gray-600">
               Format: Remote or/and City, Country
             </span>
-            <input
+            {/* <input
               type="text"
               placeholder="e.x. Remote OR Remote/London, UK OR London, UK"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-            />
+            /> */}
+            <select name="" id="" className="rounded-md p-1 text-black">
+              <optgroup label="All countries">
+                {countries.map((item: { code: string; name: string }) => (
+                  <option value={item.code}>{item.name}</option>
+                ))}
+              </optgroup>
+            </select>
           </div>
           <div className="roleSocial">
-            <span className="text-sm text-rose-500/90 ml-0.5">
-              *Without the @ symbol
-            </span>
             <input
               type="text"
-              placeholder="Enter Twitter username"
+              placeholder="Enter Twitter username w/o the @ symbol"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
           </div>
@@ -221,8 +226,8 @@ const PostARole = () => {
           </button>
         </div>
       </div>
-      <div className="preview w-full min-w-[33%] p-6 space-y-3 mb-12 sm:mb-0">
-        seccion de muestra
+      <div className="preview w-full min-w-[33%] space-y-3 mb-12 sm:mb-0">
+        <h1 className="text-3xl font-bold mb-6">Post Preview</h1>
         <div className="flex justify-between">
           <div className="details">
             <h1 className="text-xl font-bold">{title}</h1>
