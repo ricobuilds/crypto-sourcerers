@@ -18,6 +18,7 @@ import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
 import PostARole from "./pages/PostARole";
+const logo = require("./images/w3s-full.png");
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
@@ -53,7 +54,11 @@ const App = () => {
 
   return (
     <Router>
-      <div className={`${isToggled ? "" : "dark transition transform"} `}>
+      <div
+        className={`${
+          isToggled ? "" : "dark transition transform"
+        } selection:bg-[#ed194a] selection:text-white`}
+      >
         <div
           className={`font-lato w-full h-full overflow-hidden bg-[#F3F6F9] bg-gradient-to-tr dark:from-[#060508] dark:to-[#1a1a1c] dark:text-white `}
         >
@@ -63,7 +68,8 @@ const App = () => {
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
               <div className="logo">
-                <span className="text-[#ed194a]">Web3Source</span>
+                {/* <span className="text-[#ed194a]">{logo}</span> */}
+                <img src={logo} alt="logo" className="h-5" />
               </div>
               {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>

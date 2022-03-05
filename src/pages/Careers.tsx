@@ -49,7 +49,7 @@ const Careers = () => {
           </div>
           <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
-              <h2 className="text-xl font-bold mb-3">Web3 Frontend Engineer</h2>
+              <h2 className="text-xl font-bold mb-3">Web3 Developer</h2>
               <p className="text-sm">
                 As a Web3 Frontend Engineer, you will be responsible for
                 developing the frontend aspect of a Web3 dApp.
@@ -58,10 +58,10 @@ const Careers = () => {
           </div>
           <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
-              <h2 className="text-xl font-bold mb-3">Web3 Backend Engineer</h2>
+              <h2 className="text-xl font-bold mb-3">Web3 Engineer</h2>
               <p className="text-sm">
                 As a Web3 Backend Engineer, you will be responsible for
-                developing the backend aspect of a Web3 dApp, i.e. smart
+                developing the backend aspect of a Web3 dApp, ex. smart
                 contracts, APIs, servers.
               </p>
             </div>
@@ -90,19 +90,18 @@ const Careers = () => {
               <h2 className="text-xl font-bold mb-3">Marketing Strategist</h2>
               <p className="text-sm">
                 As a Marketing Strategist, you will be responsible for
-                leveraging your knowlege and experience in the crypto ecosystem
-                to execute strategies and generating meaningful engagement that
-                drives growth.
+                leveraging your knowlege and experience to execute strategies
+                and generating meaningful engagement that drives growth.
               </p>
             </div>
           </div>
           <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
-              <h2 className="text-xl font-bold mb-3">Metatect</h2>
+              <h2 className="text-xl font-bold mb-3">"Metatect"</h2>
               <p className="text-sm">
-                A term I coined, but this refers to architects in the Metaverse.
-                You will be responsible for architecting assets for digital
-                experiences in these virtual worlds.
+                A term I came up with, that refers to archi(tects) in the
+                (Meta)verse. You will be responsible for architecting assets for
+                digital experiences in these virtual worlds.
               </p>
             </div>
           </div>

@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 const heroIcon = require("../images/magic-trick-dynamic-color.webp");
-const web2devs = require("../images/computer-front-color.webp");
-const web3devs = require("../images/lab-dynamic-color.webp");
-const web3enth = require("../images/axe-dynamic-color.webp");
-const biz = require("../images/travel-front-color.webp");
 const bankLocker = require("../images/locker-dynamic-color.webp");
 const missionIcon = require("../images/rocket-dynamic-color.webp");
 
@@ -251,63 +247,43 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
           Audience
         </h1>
-        <div className="cards gap-x-6 gap-y-4 flex flex-wrap justify-center sm:justify-around">
-          <div className="audienceCard">
-            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
-              <div className="card-title font-semibold">Web2 Devs</div>
-              <img
-                src={`${web2devs}`}
-                alt="prop"
-                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                // srcSet={`${web2devsSM} 300w, ${web2devs} 768w`}
-              />
-              <div className="card-content text-justify">
+        <div className="cards grid grid-cols-4">
+          <div className="audienceCard group">
+            <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
+              <div className="card-title font-semibold mb-3 hover:text-[#ed194a]">
+                Web2 Devs
+              </div>
+              <div className="card-content text-center mb-6">
                 Those experienced in tech at all levels, and are looking to
                 transition.
               </div>
             </div>
           </div>
-          <div className="audienceCard">
-            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
-              <div className="card-title font-semibold">Web3 Devs</div>
-              <img
-                src={`${web3devs}`}
-                alt="prop"
-                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                // srcSet={`${web3devsSM} 300w, ${web3devs} 768w`}
-              />
-              <div className="card-content text-justify">
+          <div className="audienceCard group">
+            <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
+              <div className="card-title font-semibold mb-3 hover:text-[#ed194a]">
+                Web3 Devs
+              </div>
+              <div className="card-content text-center mb-6">
                 Those experienced in Web3, looking for their next Web3 role.
               </div>
             </div>
           </div>
-          <div className="audienceCard">
-            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
-              <div className="card-title font-semibold">Web3 Enthusiasts</div>
-              <img
-                src={`${web3enth}`}
-                alt="prop"
-                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                // srcSet={`${web3enthSM} 300w, ${web3enth} 768w`}
-              />
-              <div className="card-content text-justify">
+          <div className="audienceCard ">
+            <div className="p-6 group hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
+              <div className="card-title font-semibold mb-3 group-focus:text-[#ed194a]">
+                Web3 Enthusiasts
+              </div>
+              <div className="card-content text-center mb-6 hover:text-[#ed194a]">
                 Those with skills in tech and other industries and want to make
                 an impact.
               </div>
             </div>
           </div>
-          <div className="audienceCard">
-            <div className="p-6 bg-white/20 border border-black rounded-md backdrop-blur-lg flex flex-col justify-between max-w-xs h-[420px]">
-              <div className="card-title font-semibold">
-                Ecosystems/Companies/Startups
-              </div>
-              <img
-                src={`${biz}`}
-                alt="prop"
-                className="mx-auto h-40 sm:h-72 w-40 sm:w-72"
-                // srcSet={`${bizSM} 300w, ${biz} 768w`}
-              />
-              <div className="card-content text-justify">
+          <div className="audienceCard group">
+            <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
+              <div className="card-title font-semibold mb-3">Startups</div>
+              <div className="card-content text-center mb-6">
                 Web3 native teams, and 'Web2' businesses looking at crypto.
               </div>
             </div>

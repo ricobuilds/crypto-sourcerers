@@ -8,7 +8,7 @@ const About = () => {
           About • Web3Source • The #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
-      <div className="about flex flex-col px-auto lg:px-32 py-12 ">
+      <div className="about flex flex-col px-auto py-12 ">
         <div className="about-header mb-4 font-medium text-center">
           <div className="about-header-title">
             <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
