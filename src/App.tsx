@@ -14,12 +14,10 @@ import Roles from "./pages/Roles";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
 import Login from "./pages/Login";
-import Bounties from "./pages/Bounties";
 import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
 import PostARole from "./pages/PostARole";
-import Newsletter from "./pages/Newsletter";
 
 const App = () => {
   const theme = localStorage.getItem("isDarkMode");
