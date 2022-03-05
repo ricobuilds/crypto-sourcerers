@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-const coverImg = require("../images/blockchainImg.jpeg");
 
 const Careers = () => {
   return (
@@ -18,7 +17,7 @@ const Careers = () => {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Helmet>
-      <div className="careers flex flex-col px-auto lg:px-auto py-4 space-y-4  mb-6">
+      <div className="careers flex flex-col max-w-7xl mx-auto lg:px-auto py-4 space-y-4  mb-6">
         <div className="header">
           <h1 className="text-4xl tracking-widest font-bold">Careers </h1>
           <p className="text-sm">
@@ -27,13 +26,8 @@ const Careers = () => {
             pave the way if you've found a niche.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+        <div className="grid sm:grid-cols-4 rounded-md overflow-hidden gap-0">
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Blockchain Developer</h2>
@@ -44,19 +38,9 @@ const Careers = () => {
                   example.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Blockchain Engineer</h2>
@@ -66,19 +50,9 @@ const Careers = () => {
                   its target audience.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Web3 Frontend Engineer</h2>
@@ -87,19 +61,9 @@ const Careers = () => {
                   developing the frontend aspect of a Web3 dApp.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Web3 Backend Engineer</h2>
@@ -109,19 +73,9 @@ const Careers = () => {
                   contracts, APIs, servers.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Security Auditor</h2>
@@ -131,19 +85,9 @@ const Careers = () => {
                   enough for deployment.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Community Manager</h2>
@@ -152,19 +96,9 @@ const Careers = () => {
                   the community and promoting growth and success.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Marketing Strategist</h2>
@@ -175,19 +109,9 @@ const Careers = () => {
                   engagement that drives growth.
                 </p>
               </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
-              </div>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex rounded-md space-x-3">
-            <img
-              className="h-full w-[150px] rounded-md"
-              src={`${coverImg}`}
-              alt="cover"
-            />
+          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
             <div className="right flex flex-col justify-between w-full">
               <div className="right-top">
                 <h2 className="text-xl font-bold">Metatect</h2>
@@ -196,11 +120,6 @@ const Careers = () => {
                   Metaverse. You will be responsible for architecting assets for
                   digital experiences in these virtual worlds.
                 </p>
-              </div>
-              <div className="right-bottom flex justify-end">
-                <button className="text-xs border rounded p-1">
-                  Read More
-                </button>
               </div>
             </div>
           </div>

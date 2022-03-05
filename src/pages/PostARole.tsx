@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 const countries = require("../countries.json");
-const punk = require("../images/punk4596.png");
+// type location = {
+//   remote: boolean;
+//   location: string;
+// }
 // interface IRole {
 //   roleTitle: string; // role title
 //   description: string; // role's JD
@@ -10,7 +13,7 @@ const punk = require("../images/punk4596.png");
 //   type: string;
 //   baseSalary: number;
 //   maxSalary?: number;
-//   location: string[];
+//   location: location;
 //   twitteHandle: string;
 //   startupName: string;
 //   applyURI: string;
@@ -22,14 +25,11 @@ const punk = require("../images/punk4596.png");
 const PostARole = () => {
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
-
-  const handleTitle = (param: string) => {
-    setTitle(param);
-  };
-  const handleDesc = (param: string) => {
-    setDesc(param);
-    console.log(param);
-  };
+  const [brand] = useState<string>(
+    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+  );
+  const [baseSalary, setBaseSalary] = useState(0);
+  const [maxSalary, setMaxSalary] = useState(0);
 
   return (
     <div className="flex flex-col-reverse sm:gap-x-12 sm:flex-row pb-12 justify-between w-full">
@@ -40,7 +40,8 @@ const PostARole = () => {
             <input
               type="text"
               value={title}
-              onChange={(e) => handleTitle(e.target.value)}
+              required
+              onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter role title"
               className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
             />
@@ -52,8 +53,9 @@ const PostARole = () => {
             <textarea
               name=""
               id=""
+              required
               value={desc}
-              onChange={(e) => handleDesc(e.target.value)}
+              onChange={(e) => setDesc(e.target.value)}
               cols={24}
               rows={6}
               placeholder="In depth, let roleseekers know what you're looking for!"
@@ -91,6 +93,7 @@ const PostARole = () => {
             </span>
             <input
               type="text"
+              required
               name=""
               id=""
               className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
@@ -99,16 +102,21 @@ const PostARole = () => {
           </div>
           <div className="roleSalary">
             <span className="ml-0.5 text-gray-600 text-sm">
-              We suggest to be as transparent as possible :)
+              In USD - We suggest to be as transparent as possible :)
             </span>
             <div className="flex space-x-3">
               <input
-                type="text"
+                type="number"
+                required
+                value={baseSalary}
+                onChange={(e) => setBaseSalary(Number(e.target.value))}
                 placeholder="Base/min amount"
                 className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
               />
               <input
-                type="text"
+                type="number"
+                value={maxSalary}
+                onChange={(e) => setMaxSalary(Number(e.target.value))}
                 placeholder="Max amount"
                 className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
               />
@@ -134,6 +142,7 @@ const PostARole = () => {
           <div className="roleSocial">
             <input
               type="text"
+              required
               placeholder="Enter Twitter username w/o the @ symbol"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
@@ -141,6 +150,7 @@ const PostARole = () => {
           <div className="roleStartup">
             <input
               type="text"
+              required
               placeholder="Enter Startup name"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
@@ -148,6 +158,7 @@ const PostARole = () => {
           <div className="roleURL">
             <input
               type="text"
+              required
               placeholder="Enter external URL"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
@@ -186,12 +197,20 @@ const PostARole = () => {
               </span>
               )
             </p>
-            <input type="file" name="" id="" /> {/*File Upload */}
+            <input
+              type="file"
+              accept="image/*"
+              name=""
+              id=""
+              // onChange={(e) => setBrand(URL.createObjectURL(e.target.files[0])}
+            />{" "}
+            {/*File Upload */}
           </div>
           <div className="postSurvey">
             <p className="mb-2">How did you hear about Web3Source?</p>
             <input
               type="text"
+              required
               name=""
               id=""
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] w-full"
@@ -235,9 +254,8 @@ const PostARole = () => {
           </div>
           <div className="flex">
             <img
-              alt="team"
-              className="flex-shrink-0 rounded-full w-12 h-12 object-cover object-center bg-gradient-to-tr from-[#ed194a] to-pink-500 border-2 border-white border-opacity-25"
-              src={punk}
+              className="flex-shrink-0 rounded-full w-12 h-12 object-cover object-center border-2 border-white border-opacity-25"
+              src={brand}
             />
           </div>
         </div>
@@ -247,7 +265,8 @@ const PostARole = () => {
             <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> Permanent
           </p>
           <p className="tracking-widest flex items-center text-sm">
-            <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>$50,000
+            <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>
+            {baseSalary} {maxSalary ? `~ ${maxSalary}` : ""}
           </p>
           <p className="tracking-widest flex items-center text-sm">
             <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
