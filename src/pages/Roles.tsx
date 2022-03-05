@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import RoleCard from "../components/RoleCard";
 import { SearchIcon } from "@heroicons/react/outline";
+import { useFilterSearch } from "src/hooks/useFilterSearch";
 
 const Roles = () => {
+  const [numba] = useFilterSearch();
   return (
     <>
       <Helmet>
@@ -17,11 +19,12 @@ const Roles = () => {
             <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
               <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
               <input
+                // onChange={(e) => useFilterSearch(e.target.value, res)}
                 placeholder="ex. react hardhat london remote 60000 matic"
                 className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-300 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div className="mt-3">Fetched 256 results</div>
+            <div className="mt-3">Fetched {numba} results</div>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs shadow-md">
             <span className="text-yellow-500">
