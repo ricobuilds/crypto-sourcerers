@@ -1,1 +1,0 @@
-// dir hosts component code for the dApp
