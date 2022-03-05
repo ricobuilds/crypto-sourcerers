@@ -17,7 +17,7 @@ const Careers = () => {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Helmet>
-      <div className="careers flex flex-col max-w-7xl mx-auto lg:px-auto py-4 space-y-4  mb-6">
+      <div className="careers flex flex-col max-w-7xl mx-auto lg:px-auto py-4 space-y-4">
         <div className="header">
           <h1 className="text-4xl tracking-widest font-bold">Careers </h1>
           <p className="text-sm">
@@ -26,101 +26,84 @@ const Careers = () => {
             pave the way if you've found a niche.
           </p>
         </div>
-        <div className="grid sm:grid-cols-4 rounded-md overflow-hidden gap-0">
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Blockchain Developer</h2>
-                <p className="text-xs">
-                  As a Blockchain Developer, you will be responsible for
-                  developing applications on a network, which spans from
-                  developing Web3 dApps, to Solidity smart contracts for
-                  example.
-                </p>
-              </div>
+        <div className="grid sm:grid-cols-4 gap-0">
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Blockchain Developer</h2>
+              <p className="text-sm">
+                As a Blockchain Developer, you will be responsible for
+                developing applications on a network, which spans from
+                developing Web3 dApps, to Solidity smart contracts for example.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Blockchain Engineer</h2>
-                <p className="text-xs">
-                  As a Blockchain Engineer, you will be responsible for
-                  engineering and/or architecting protocols that drive value to
-                  its target audience.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Blockchain Engineer</h2>
+              <p className="text-sm">
+                As a Blockchain Engineer, you will be responsible for
+                engineering and/or architecting protocols that drive value to
+                its target audience.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Web3 Frontend Engineer</h2>
-                <p className="text-xs">
-                  As a Web3 Frontend Engineer, you will be responsible for
-                  developing the frontend aspect of a Web3 dApp.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Web3 Frontend Engineer</h2>
+              <p className="text-sm">
+                As a Web3 Frontend Engineer, you will be responsible for
+                developing the frontend aspect of a Web3 dApp.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Web3 Backend Engineer</h2>
-                <p className="text-xs">
-                  As a Web3 Backend Engineer, you will be responsible for
-                  developing the backend aspect of a Web3 dApp, i.e. smart
-                  contracts, APIs, servers.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Web3 Backend Engineer</h2>
+              <p className="text-sm">
+                As a Web3 Backend Engineer, you will be responsible for
+                developing the backend aspect of a Web3 dApp, i.e. smart
+                contracts, APIs, servers.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Security Auditor</h2>
-                <p className="text-xs">
-                  As a Security Auditor, you will be responsible for auditing
-                  and testing smart contracts to ensure that they are secure
-                  enough for deployment.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Security Auditor</h2>
+              <p className="text-sm">
+                As a Security Auditor, you will be responsible for auditing and
+                testing smart contracts to ensure that they are secure enough
+                for deployment.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Community Manager</h2>
-                <p className="text-xs">
-                  As a Community Manager, you will be responsible for driving
-                  the community and promoting growth and success.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Community Manager</h2>
+              <p className="text-sm">
+                As a Community Manager, you will be responsible for driving the
+                community and promoting growth and success.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Marketing Strategist</h2>
-                <p className="text-xs">
-                  As a Marketing Strategist, you will be responsible for
-                  leveraging your knowlege and experience in the crypto
-                  ecosystem to execute strategies and generating meaningful
-                  engagement that drives growth.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Marketing Strategist</h2>
+              <p className="text-sm">
+                As a Marketing Strategist, you will be responsible for
+                leveraging your knowlege and experience in the crypto ecosystem
+                to execute strategies and generating meaningful engagement that
+                drives growth.
+              </p>
             </div>
           </div>
-          <div className="p-3 bg-white dark:bg-[#1d1d20] flex border border-gray-800/30 space-x-3">
-            <div className="right flex flex-col justify-between w-full">
-              <div className="right-top">
-                <h2 className="text-xl font-bold">Metatect</h2>
-                <p className="text-xs">
-                  A term I coined, but this refers to architects in the
-                  Metaverse. You will be responsible for architecting assets for
-                  digital experiences in these virtual worlds.
-                </p>
-              </div>
+          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+            <div className="right flex flex-col w-full">
+              <h2 className="text-xl font-bold mb-3">Metatect</h2>
+              <p className="text-sm">
+                A term I coined, but this refers to architects in the Metaverse.
+                You will be responsible for architecting assets for digital
+                experiences in these virtual worlds.
+              </p>
             </div>
           </div>
         </div>

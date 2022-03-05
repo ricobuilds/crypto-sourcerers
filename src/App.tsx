@@ -87,6 +87,12 @@ const App = () => {
               </Link>
               <a
                 className="hover:text-gray-400  transition hover:cursor-pointer"
+                href={``}
+              >
+                Startups
+              </a>
+              <a
+                className="hover:text-gray-400  transition hover:cursor-pointer"
                 href={`/about`}
               >
                 About
