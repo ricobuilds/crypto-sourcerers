@@ -94,23 +94,25 @@ const PostARole = () => {
                 [Bountyseeker] for freelance/contract roles (e.g. interships,
                 apprenticeships).
               </span>
-              <select
-                className="rounded-md p-1 text-black audience"
-                id="audience"
-              >
-                <optgroup label="Audience">
-                  <option value="roleseekers">Roleseeker</option>
-                  <option value="bountyseekers">Bountyseeker</option>
-                </optgroup>
-              </select>
-              <select className="rounded-md p-1 text-black " id="">
-                <optgroup label="Types">
-                  <option value="Permanent">Permanent</option>
-                  <option value="Contract">Contract</option>
-                  <option value="Internship">Internship</option>
-                  <option value="Apprenticeship">Apprenticeship</option>
-                </optgroup>
-              </select>
+              <div className="flex space-x-6">
+                <select
+                  className="rounded-md p-1 text-black audience"
+                  id="audience"
+                >
+                  <optgroup label="Audience">
+                    <option value="roleseekers">Roleseeker</option>
+                    <option value="bountyseekers">Bountyseeker</option>
+                  </optgroup>
+                </select>
+                <select className="rounded-md p-1 text-black " id="">
+                  <optgroup label="Types">
+                    <option value="Permanent">Permanent</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Apprenticeship">Apprenticeship</option>
+                  </optgroup>
+                </select>
+              </div>
             </div>
             <div className="roleTags">
               <span className="ml-0.5 text-sm text-gray-600">
@@ -135,17 +137,17 @@ const PostARole = () => {
                 <input
                   type="number"
                   required
-                  value={baseSalary}
+                  value={baseSalary ? baseSalary : ""}
                   onChange={(e) => setBaseSalary(Number(e.target.value))}
                   placeholder="Base/min amount"
-                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+                  className="p-1 pl-3 w-1/2 text-sm focus-within:text-base outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
                 />
                 <input
                   type="number"
-                  value={maxSalary}
+                  value={maxSalary ? maxSalary : ""}
                   onChange={(e) => setMaxSalary(Number(e.target.value))}
                   placeholder="Max amount"
-                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+                  className="p-1 pl-3 w-1/2 text-sm focus-within:text-base outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
                 />
               </div>
             </div>
@@ -158,7 +160,11 @@ const PostARole = () => {
               placeholder="e.x. Remote OR Remote/London, UK OR London, UK"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             /> */}
-              <select name="" id="" className="rounded-md p-1 text-black">
+              <select
+                name=""
+                id=""
+                className="w-full rounded-md p-1 text-black"
+              >
                 <optgroup label="All countries">
                   {countries.map((item: { code: string; name: string }) => (
                     <option value={item.code}>{item.name}</option>
