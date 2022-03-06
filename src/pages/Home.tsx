@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { GlobeIcon } from "@heroicons/react/solid";
 const heroIcon = require("../images/magic-trick-dynamic-color.webp");
 const bankLocker = require("../images/locker-dynamic-color.webp");
 const missionIcon = require("../images/rocket-dynamic-color.webp");
@@ -181,27 +182,19 @@ const HomePage = () => {
         id="features"
         className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
       >
+        <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
+          Why Web3Source?
+        </h2>
         <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
           <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="sm:w-16 sm:h-16 w-10 h-10"
-              viewBox="0 0 24 24"
-            >
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+            <GlobeIcon className="sm:w-16 sm:h-16 w-10 h-10"/>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
+            <h3 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Borderless Access
-            </h2>
+            </h3>
             <p className="leading-relaxed text-base">
               Tap in, and access a global pool of talented roleseekers and
               bountyseekers, that are actively looking to contribute in Web3.
@@ -210,9 +203,9 @@ const HomePage = () => {
         </div>
         <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col ">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
+            <h3 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Wide Audience
-            </h2>
+            </h3>
             <p className="leading-relaxed text-base">
               Have an intership available for new graduates? Looking for a
               community manager? Want to launch your blockchain initiative and
@@ -230,9 +223,8 @@ const HomePage = () => {
               className="sm:w-16 sm:h-16 w-10 h-10"
               viewBox="0 0 24 24"
             >
-              <circle cx="6" cy="6" r="3"></circle>
-              <circle cx="6" cy="18" r="3"></circle>
-              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
         </div>
