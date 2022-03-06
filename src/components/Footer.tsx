@@ -25,7 +25,7 @@ const Footer = () => {
             Careers
           </span>
         </Link>
-        <Link to={"about"}>
+        <Link to={"/about"}>
           <span className="hover:text-gray-400 transition outline-none">
             About
           </span>
@@ -37,11 +37,8 @@ const Footer = () => {
         >
           Twitter
         </a>
-
-        <Link to={"/#"}>
-          <span className="hover:text-gray-400 transition outline-none">
-            Insights
-          </span>
+        <Link to={"/startups"}>
+          <span>Startups</span>
         </Link>
         <span className="hover:text-gray-400 transition outline-none">
           Learning
