@@ -9,9 +9,9 @@ const Contact = () => {
         <meta name="canonical" content="https://web3source.co/contact" />
       </Helmet>
       <div className="flex flex-col items-center justify-center space-y-6 py-12 px-6">
-        <div className="contactir max-w-lg space-y-6 mx-auto text-center">
-          <h1 className="text-4xl sm:text-6xl font-bold">Contact Us</h1>
-          <p className=" text-lg text-center">
+        <div className="contactir max-w-lg space-y-6 mx-auto">
+          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <p className=" text-sm">
             {" "}
             Maybe you work in a not-so-known pathway and want it to be included
             under Careers, have noticed a bug, thought of a suggestable feature,
@@ -19,21 +19,32 @@ const Contact = () => {
             we welcome any messages and all will be seen by Enric :)
           </p>
 
-          <p>
+          <p className="text-sm">
             You can reach out to us through{" "}
             <code className="font-semibold">
-              <a href="mailto:dev@cryptosourcerers.co">
-                dev@<span className="">web3Source</span>.co
+              <a className="dark:text-[#ed194a]" href="mailto:dev@cryptosourcerers.co">
+                dev@<span className="text-[#ed194a]">web3Source</span>.co
               </a>
             </code>
           </p>
-          <p>
-            Follow us on{" "}
-            <a href="https://www.twitter.com/web3Source" target={"_blank"}>
+          <p className="flex space-x-0.5">
+            <div>Follow us on {" "}</div>
+            <div>
+            <a className="flex items-center" href="https://www.twitter.com/web3Source" target={"_blank"}>
               <span className="text-sky-800 dark:text-sky-400 font-medium">
-                Twitter
+                {" "}Twitter
               </span>
+                <svg
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        className="w-5 h-5 fill-sky-400 transition hover:fill-sky-500"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
             </a>
+            </div>
           </p>
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
