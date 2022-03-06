@@ -24,6 +24,14 @@ const Startups = () => {
           </p>
         </div>
       </div>
+      <div className="grid grid-cols-4 w-full">
+        <span>heya</span>
+        <span>heya</span>
+        <span>heya</span>
+        <span>heya</span>
+        <span>heya</span>
+        <span>heya</span>
+      </div>
       </div>
   )
 }; export default Startups;
