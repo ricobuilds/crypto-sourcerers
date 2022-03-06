@@ -257,7 +257,7 @@ const PostARole = () => {
                           }
                   ${
                     checked
-                      ? `bg-${network.bgStyle} bg-opacity-75 text-white`
+                      ? `bg-[#6387f1] bg-opacity-75 text-white`
                       : "bg-white"
                   }
                     relative rounded-lg shadow-md px-5 py-4 cursor-pointer flex focus:outline-none`
@@ -292,7 +292,7 @@ const PostARole = () => {
                 </div>
               </RadioGroup>
             </div>
-            <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full hover:bg-transparent border border-[#ed194a] hover:text-[#ed194a]">
+            <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full hover:bg-transparent border border-[#ed194a] text-white hover:text-[#ed194a]">
               <p className="flex items-center">
                 Post a role 250{" "}
                 <span className="mx-0.5">

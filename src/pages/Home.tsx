@@ -55,14 +55,14 @@ const HomePage = () => {
                 <div className="flex mb-3">
                   <div className="revue-form-group">
                     <input
-                      className="revue-form-field p-2 pr-8 border border-gray-300 text-black rounded-l-md"
+                      className="revue-form-field p-2 pr-8 border border-gray-300 text-black sm:rounded-l-md"
                       placeholder="Your email address..."
                       type="email"
                       name="member[email]"
                       id="member_email"
                     />
                     <input
-                      className="cta text-md h-full px-3 bg-[#ed194a] text-white rounded-r-md hover:cursor-pointer"
+                      className="cta text-md h-full px-3 bg-[#ed194a] text-white sm:rounded-r-md hover:cursor-pointer"
                       type="submit"
                       value="Subscribe"
                       name="member[subscribe]"
@@ -175,16 +175,12 @@ const HomePage = () => {
             className="h-40 sm:h-72 w-40 sm:w-72"
           />
         </div>
-        <div className="absolute left-20 sm:left-60 lg:left-96 bottom-20 sm:bottom-32  w-52 h-52 bg-[#ed7119] rounded-full blur-3xl opacity-40"></div>
       </section>
       {/* features */}
       <section
         id="features"
         className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
       >
-        {/* <h1 className="text-3xl font-bold title-font text-[#6387f1] mb-12 text-center tracking-widest">
-          Features
-        </h1> */}
         <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
