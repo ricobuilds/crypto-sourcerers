@@ -85,7 +85,7 @@ const About = () => {
             </h1>
           </div>
           <div className="flex flex-wrap -m-4 justify-center">
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+            <div className="p-4 w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
