@@ -271,10 +271,10 @@ const HomePage = () => {
         <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
           Audience
         </h2>
-        <div className="cards grid grid-cols-4">
+        <div className="cards grid sm:grid-cols-4">
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3">Web2 Devs</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Web2 Devs</div>
               <div className="card-content text-center mb-6">
                 Those experienced in tech at all levels, and are looking to
                 transition.
@@ -283,7 +283,7 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3">Web3 Devs</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Web3 Devs</div>
               <div className="card-content text-center mb-6">
                 Those experienced in Web3, looking for their next Web3 role.
               </div>
@@ -291,8 +291,8 @@ const HomePage = () => {
           </div>
           <div className="audienceCard ">
             <div className="p-6 group hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 group-focus:text-[#ed194a]">
-                Web3 Enthusiasts
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">
+                Web3ficionados
               </div>
               <div className="card-content text-center mb-6">
                 Those with skills in tech and other industries and want to make
@@ -302,9 +302,9 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3">Startups</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Startups</div>
               <div className="card-content text-center mb-6">
-                Web3 native teams, and 'Web2' businesses looking at crypto.
+                Web3 native teams, and 'Web2' businesses gazing towards innovation.
               </div>
             </div>
           </div>
@@ -489,7 +489,7 @@ const HomePage = () => {
             <p className="text-center tracking-wider">
               Whether you are a Web3 startup, or a "Web2" company in the process
               of migration, tap in to the vast landscape of Web3 and let us help
-              you source your next batch of talented sorcerers 🔮
+              you source your next batch of talented Web3 sorcerers 🔮
             </p>
           </div>
         </div>
