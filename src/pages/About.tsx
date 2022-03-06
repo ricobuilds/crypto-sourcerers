@@ -11,7 +11,7 @@ const About = () => {
       <div className="about flex flex-col px-auto py-12 ">
         <div className="about-header mb-4 font-medium text-center">
           <div className="about-header-title">
-            <h1 className="text-6xl tracking-widest font-bold">Web3Source</h1>
+            <h1 className="text-4xl sm:text-6xl tracking-widest font-bold">Web3Source</h1>
           </div>
           <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
             The #1 gateway for Web3 Jobs & Talent.
