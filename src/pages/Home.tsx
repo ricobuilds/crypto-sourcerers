@@ -7,10 +7,13 @@ const missionIcon = require("../images/rocket-dynamic-color.webp");
 const HomePage = () => {
   return (
     <>
-    <Helmet>
-      <title>Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
+      <Helmet>
+        <title>Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
         <meta name="copyright" content="Web3Source, all rights reserved." />
-        <meta name="description" content="Quick & Easily Post Your Vacancy With One Click. Find Your Perfect Job / Niche In Web3 Today, Source The Best Web3 Talent Now." />
+        <meta
+          name="description"
+          content="Quick & Easily Post Your Vacancy With One Click. Find Your Perfect Job / Niche In Web3 Today, Source The Best Web3 Talent Now."
+        />
         <link rel="canonical" href="https://web3source.co/" />
         <meta
           name="keywords"
@@ -21,8 +24,8 @@ const HomePage = () => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-        </Helmet>
-    {/* main */}
+      </Helmet>
+      {/* main */}
       <section
         id="home"
         className="relative container mx-auto flex py-12 lg:flex-row space-y-6 flex-col items-center"
@@ -132,7 +135,8 @@ const HomePage = () => {
         </div>
         <p className="italic">
           * All data provided is current, and computed with active vacancy
-          postings (Avg Salary is calculated from all active roles right now).
+          postings (Avg Salary is calculated from all active roles right now on
+          the platform).
         </p>
       </section>
       {/* mission */}
@@ -270,9 +274,7 @@ const HomePage = () => {
         <div className="cards grid grid-cols-4">
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3">
-                Web2 Devs
-              </div>
+              <div className="card-title font-semibold mb-3">Web2 Devs</div>
               <div className="card-content text-center mb-6">
                 Those experienced in tech at all levels, and are looking to
                 transition.
@@ -281,9 +283,7 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3">
-                Web3 Devs
-              </div>
+              <div className="card-title font-semibold mb-3">Web3 Devs</div>
               <div className="card-content text-center mb-6">
                 Those experienced in Web3, looking for their next Web3 role.
               </div>

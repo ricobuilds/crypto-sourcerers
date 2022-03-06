@@ -81,23 +81,21 @@ const App = () => {
               >
                 Careers
               </a>
-              <a
-                className="hover:text-gray-400  transition hover:cursor-pointer"
-                href={``}
-              >
-                Learning
-              </a>
+              <Link to={"/learning"}>
+                <span className="hover:text-gray-400  transition hover:cursor-pointer">
+                  Learning
+                </span>
+              </Link>
               <Link to={"/roles"}>
                 <span className="hover:text-gray-400  transition hover:cursor-pointer">
                   Roles
                 </span>
               </Link>
-              <a
-                className="hover:text-gray-400  transition hover:cursor-pointer"
-                href={``}
-              >
-                Startups
-              </a>
+              <Link to={"/startups"}>
+                <span className="hover:text-gray-400  transition hover:cursor-pointer">
+                  Startups
+                </span>
+              </Link>
               <a
                 className="hover:text-gray-400  transition hover:cursor-pointer"
                 href={`/about`}
