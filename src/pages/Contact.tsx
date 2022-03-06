@@ -10,7 +10,7 @@ const Contact = () => {
       </Helmet>
       <div className="flex flex-col items-center justify-center space-y-6 py-12 px-6">
         <div className="contactir max-w-lg space-y-6 mx-auto text-center">
-          <h1 className="text-6xl font-bold">Contact Us</h1>
+          <h1 className="text-4xl sm:text-6xl font-bold">Contact Us</h1>
           <p className=" text-lg text-center">
             {" "}
             Maybe you work in a not-so-known pathway and want it to be included
