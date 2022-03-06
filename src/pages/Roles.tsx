@@ -11,11 +11,10 @@ const Roles = () => {
         <title>
           Roles • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.
         </title>
-        <meta name="canonical" content="https://web3source.co/roles" />
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
-          <div className="max-w-lg w-full p-3">
+          <div className="max-w-lg w-full p-3 border-black border">
             Filter results
             <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
               <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
