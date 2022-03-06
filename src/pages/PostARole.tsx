@@ -24,8 +24,8 @@ const countries = require("../countries.json");
 // }
 
 const PostARole = () => {
-  const [title, setTitle] = useState<string>("");
-  const [desc, setDesc] = useState<string>("");
+  const [title, setTitle] = useState<string>("Preview Title");
+  const [desc, setDesc] = useState<string>("Preview Description");
   const [brand] = useState<string>(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
   );

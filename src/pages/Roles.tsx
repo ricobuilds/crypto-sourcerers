@@ -14,7 +14,7 @@ const Roles = () => {
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
-          <div className="max-w-lg w-full p-3 border-black border">
+          <div className="max-w-lg w-full p-3">
             Filter results
             <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
               <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
@@ -24,7 +24,6 @@ const Roles = () => {
                 className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-300 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            <div className="mt-3">Fetched {numba} results</div>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs shadow-md">
             <span className="text-yellow-500">
@@ -87,6 +86,7 @@ const Roles = () => {
             </p>
           </div>
         </div>
+        <div className="mt-3">Fetched {numba} results</div>
         <div className="grid gap-y-3 justify-items-center w-full">
           <RoleCard />
           <RoleCard />
