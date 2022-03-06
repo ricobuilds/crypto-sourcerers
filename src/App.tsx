@@ -18,6 +18,7 @@ import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
 import PostARole from "./pages/PostARole";
+import Startups from "./pages/Startups";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
@@ -126,7 +127,7 @@ const App = () => {
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
-              <Route path="/startups" />
+              <Route path="/startups" element={<Startups />} />
               <Route path="/postarole" element={<PostARole />} />
               <Route path="/donations" element={<Donations />} />
               <Route path="/insights" element={<Insights />} />
