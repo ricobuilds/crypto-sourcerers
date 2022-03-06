@@ -24,11 +24,11 @@ const Careers = () => {
           <p className="text-sm">
             Here are all the available pathways you can take a look at for gauging suitable Web3 niches
             . Don't fret if you don't see your pathway, you could
-            pave the way if you've found a niche. Do you know of a pathway that is not included? Reach out to us via <code className="text-[#ed194a] font-bold">dev@web3source.co</code> with the role title, brief breakdown, and tools/skills needed, and we'll add it to the list below!
+            pave the way if you've found a niche. Do you know of a pathway that is not included? Reach out to us via <code className="text-[#ed194a] font-bold">dev@web3source.co</code> with the role title, brief breakdown, and a couple tools/skills needed, and we'll add it to the list below!
           </p>
         </div>
         <div className="grid sm:grid-cols-4 gap-0">
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Blockchain Developer</h2>
               <p className="text-sm">
@@ -38,7 +38,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Blockchain Engineer</h2>
               <p className="text-sm">
@@ -48,7 +48,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Web3 Developer</h2>
               <p className="text-sm">
@@ -57,7 +57,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Web3 Engineer</h2>
               <p className="text-sm">
@@ -67,7 +67,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Security Auditor</h2>
               <p className="text-sm">
@@ -77,7 +77,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Community Manager</h2>
               <p className="text-sm">
@@ -86,7 +86,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Marketing Strategist</h2>
               <p className="text-sm">
@@ -96,9 +96,9 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-4 py-12 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
-              <h2 className="text-xl font-bold mb-3">"Metatect"</h2>
+              <h2 className="text-xl font-bold mb-3">Metatect</h2>
               <p className="text-sm">
                 A term I came up with, that refers to archi(tects) in the
                 (Meta)verse. You will be responsible for architecting assets for

@@ -7,7 +7,6 @@ const About = () => {
         <title>
           About • Web3Source • The #1 Gateway for Web3 Jobs & Talent.
         </title>
-        <meta name="canonical" content="https://web3source.co/about" />
       </Helmet>
       <div className="about flex flex-col px-auto py-12 ">
         <div className="about-header mb-4 font-medium text-center">
