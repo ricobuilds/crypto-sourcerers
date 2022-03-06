@@ -255,8 +255,8 @@ const HomePage = () => {
               Insta-Marketing
             </h3>
             <p className="leading-relaxed text-base">
-              Your vacancy posts will be posted instantly upon payment
-              confirmation across our social profiles and newsletter. Get your
+              Your vacancy posts will be live instantly upon payment
+              confirmation, then shared across our social profiles and newsletter. Get your
               vacancies viewed by thousands of eyes across the world.
             </p>
           </div>
