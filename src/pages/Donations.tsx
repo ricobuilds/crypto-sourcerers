@@ -1,16 +1,19 @@
+import {useEffect} from "react"
 import { Helmet } from "react-helmet-async";
 const fantomIcon = require("../images/fantom-ftm-logo.png");
 const solanaIcon = require("../images/solana-sol-logo.png");
 const maticIcon = require("../images/polygon-matic-logo.png");
 
 const Donations = () => {
+  useEffect(()=>  {
+        window.scrollTo(0, 0);
+      },[]);
   return (
     <>
     <Helmet>
       <title>Support Us :) • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
         <meta name="copyright" content="Web3Source, all rights reserved." />
-        <meta name="description" content="Find your niche in the Web3." />
-        <meta name="canonical" content="https://web3source.co/donations" />
+        <meta name="description" content="Donate to support a bootstrapped Web3 initiative by buying us Kinder Bueno White :)" />
         <meta
           name="keywords"
           content="web3 jobs, NFT jobs, blockchain jobs, metaverse jobs, crypto jobs, augmented reality jobs, virtual reality jobs, marketing jobs, community manager jobs, DAO jobs, DeFi jobs"
@@ -22,7 +25,7 @@ const Donations = () => {
         ></meta>
         </Helmet>
     <div className="donations flex flex-col items-center">
-      <h1 className="text-lg font-bold mb-2 pt-12">
+      <h1 className="text-4xl font-bold mb-2 pt-12">
         BuyMeAKinderBuenoWhite :)
       </h1>
       <p className="text-gray-600 mb-6">
@@ -54,8 +57,8 @@ const Donations = () => {
           </span>{" "}
           to the addresses below:
         </p>
-        <p className="flex items-center py-3 ">
-          EVM Address (
+        <div className="py-3 ">
+          <p className="flex items-center">EVM Address (
           <span className="mr-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -139,15 +142,17 @@ const Donations = () => {
               />
             </svg>
           </span>{" "}
-          etc) 0x55b11773Ca4f6173264AcaA9755DbEFDC7046C07
-        </p>
-        <p className="flex items-center py-3">
-          Solana{" "}
+          etc)</p>
+          <p>0x55b11773Ca4f6173264AcaA9755DbEFDC7046C07</p>
+        </div>
+        <div className=" py-3">
+          <p className="flex items-center">Solana{" "}
           <span>
             <img src={solanaIcon} alt="fantom" className="w-5 h-5 mx-1" />
           </span>
-          CqExCTL6fKfiSj3YFK5Jjm8wJBugVpwEMdLcbCN28oD5
-        </p>
+          </p>
+          <p>CqExCTL6fKfiSj3YFK5Jjm8wJBugVpwEMdLcbCN28oD5</p>
+        </div>
       </div>
     </div>
     </>

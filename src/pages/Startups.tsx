@@ -1,5 +1,9 @@
+import {useEffect} from 'react'
 import { Helmet } from "react-helmet-async";
 const Startups = () => {
+  useEffect(()=>  {
+        window.scrollTo(0, 0);
+      },[]);
   return(
     <div className="startups">
       <Helmet>

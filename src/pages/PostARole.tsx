@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 import { RadioGroup } from "@headlessui/react";
@@ -35,6 +35,10 @@ const PostARole = () => {
   );
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
+
+  useEffect(()=>  {
+        window.scrollTo(0, 0);
+      },[]);
 
   return (
     <>

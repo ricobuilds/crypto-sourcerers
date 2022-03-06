@@ -1,9 +1,15 @@
+import {useEffect} from "react"
 import { Helmet } from "react-helmet-async";
 import RoleCard from "../components/RoleCard";
 import { SearchIcon } from "@heroicons/react/outline";
 import { useFilterSearch } from "src/hooks/useFilterSearch";
 
 const Roles = () => {
+
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
+
   const [numba] = useFilterSearch();
   return (
     <>

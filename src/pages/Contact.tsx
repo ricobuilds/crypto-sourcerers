@@ -1,5 +1,9 @@
+import {useEffect} from 'react'
 import { Helmet } from "react-helmet-async";
 const Contact = () => {
+  useEffect(()=>  {
+        window.scrollTo(0, 0);
+      },[]);
   return (
     <>
       <Helmet>
@@ -8,10 +12,10 @@ const Contact = () => {
         </title>
         <meta name="canonical" content="https://web3source.co/contact" />
       </Helmet>
-      <div className="flex flex-col items-center justify-center space-y-6 py-12 px-6">
-        <div className="contactir max-w-lg space-y-6 mx-auto">
+      <div className="flex flex-col items-center justify-center space-y-6 py-4 mb-6">
+        <div className="contactir mx-auto">
           <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className=" text-sm">
+          <p className="text-sm mb-3">
             {" "}
             Maybe you work in a not-so-known pathway and want it to be included
             under Careers, have noticed a bug, thought of a suggestable feature,
@@ -19,7 +23,7 @@ const Contact = () => {
             we welcome any messages and all will be seen by Enric :)
           </p>
 
-          <p className="text-sm">
+          <p className="text-sm mb-3">
             You can reach out to us through{" "}
             <code className="font-semibold">
               <a className="dark:text-[#ed194a]" href="mailto:dev@cryptosourcerers.co">

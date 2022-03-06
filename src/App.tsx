@@ -22,6 +22,7 @@ import Startups from "./pages/Startups";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
+  window.scrollTo(0, 0);
   const theme = localStorage.getItem("isDarkMode");
   let [isToggled, toggle] = useToggleHook(theme !== "true");
 
@@ -52,6 +53,10 @@ const App = () => {
   useEffect(() => {
     hasBanner = localStorage.getItem("isBannerHidden");
   }, [banner]);
+
+  useEffect(()=>  {
+        window.scrollTo(0, 0);
+      },[]);
 
   return (
     <Router>
