@@ -24,8 +24,8 @@ const countries = require("../countries.json");
 // }
 
 const PostARole = () => {
-  const [title, setTitle] = useState<string>("Preview Title");
-  const [desc, setDesc] = useState<string>("Preview Description");
+  const [title, setTitle] = useState<string>("");
+  const [desc, setDesc] = useState<string>("");
   const [brand] = useState<string>(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
   );
@@ -266,7 +266,7 @@ const PostARole = () => {
         <h1 className="text-3xl font-bold mb-6">Post Preview</h1>
         <div className="flex justify-between">
           <div className="details">
-            <h1 className="text-xl font-bold">{title}</h1>
+            <h1 className="text-xl font-bold">{title ? title : 'Preview Title'}</h1>
             <p>Startup name</p>
           </div>
           <div className="flex">
@@ -294,7 +294,7 @@ const PostARole = () => {
           </button>
         </div>
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg "></div>
-        <p className="max-w-3xl w-full whitespace-pre-line">{desc}</p>
+        <p className="max-w-3xl w-full whitespace-pre-line">{desc ? desc : 'Preview Description'}</p>
         <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
         <div className="tags flex gap-x-4">
           <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">Solidity</div>
