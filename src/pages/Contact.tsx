@@ -6,6 +6,7 @@ const Contact = () => {
         <title>
           Contact Us • Web3Source • The #1 gateway for Web3 Jobs & Talent.
         </title>
+        <meta name="canonical" content="https://web3source.co/contact" />
       </Helmet>
       <div className="flex flex-col items-center justify-center space-y-6 py-12 px-6">
         <div className="contactir max-w-lg space-y-6 mx-auto text-center">

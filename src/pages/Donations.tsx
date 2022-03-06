@@ -1,8 +1,26 @@
+import { Helmet } from "react-helmet-async";
 const fantomIcon = require("../images/fantom-ftm-logo.png");
 const solanaIcon = require("../images/solana-sol-logo.png");
 const maticIcon = require("../images/polygon-matic-logo.png");
+
 const Donations = () => {
   return (
+    <>
+    <Helmet>
+      <title>Support Us :) • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
+        <meta name="copyright" content="Web3Source, all rights reserved." />
+        <meta name="description" content="Find your niche in the Web3." />
+        <meta name="canonical" content="https://web3source.co/donations" />
+        <meta
+          name="keywords"
+          content="web3 jobs, NFT jobs, blockchain jobs, metaverse jobs, crypto jobs, augmented reality jobs, virtual reality jobs, marketing jobs, community manager jobs, DAO jobs, DeFi jobs"
+        />
+        <meta name="author" content="0xreeko" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        </Helmet>
     <div className="donations flex flex-col items-center">
       <h1 className="text-lg font-bold mb-2 pt-12">
         BuyMeAKinderBuenoWhite :)
@@ -132,6 +150,7 @@ const Donations = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 export default Donations;

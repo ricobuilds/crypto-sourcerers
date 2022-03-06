@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const heroIcon = require("../images/magic-trick-dynamic-color.webp");
 const bankLocker = require("../images/locker-dynamic-color.webp");
 const missionIcon = require("../images/rocket-dynamic-color.webp");
@@ -6,6 +7,22 @@ const missionIcon = require("../images/rocket-dynamic-color.webp");
 const HomePage = () => {
   return (
     <>
+    <Helmet>
+      <title>Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
+        <meta name="copyright" content="Web3Source, all rights reserved." />
+        <meta name="description" content="Quick & Easily Post Your Vacancy With One Click. Find Your Perfect Job / Niche In Web3 Today, Source The Best Web3 Talent Now." />
+        <link rel="canonical" href="https://web3source.co/" />
+        <meta
+          name="keywords"
+          content="web3 developer jobs, NFT developer jobs, blockchain developer jobs, metaverse developer jobs, crypto developer jobs, augmented reality developer jobs, virtual reality developer jobs, marketing jobs, community manager jobs, DAO developer jobs, DeFi developer jobs"
+        />
+        <meta name="author" content="0xreeko" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        </Helmet>
+    {/* main */}
       <section
         id="home"
         className="relative container mx-auto flex py-12 lg:flex-row space-y-6 flex-col items-center"
@@ -74,7 +91,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full flex justify-center items-center">
+        <div className="lg:w-full flex justify-center items-center">
           <img
             src={heroIcon}
             // srcSet={`${heroIconSM} 300w, ${heroIcon} 768w`}
@@ -82,6 +99,7 @@ const HomePage = () => {
           />
         </div>
       </section>
+      {/* stats */}
       <section className="stats">
         <div className="relative flex flex-wrap justify-around m-4 text-center rounded-md border border-gray-200 dark:border-gray-800 backdrop-blur-lg">
           <p className="absolute -top-4 left-1 text-xl font-bold">
@@ -100,9 +118,9 @@ const HomePage = () => {
             <p className="leading-relaxed">Applications</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
+            <h3 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
               -
-            </h2>
+            </h3>
             <p className="leading-relaxed">Live Roles</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
@@ -117,14 +135,14 @@ const HomePage = () => {
           postings (Avg Salary is calculated from all active roles right now).
         </p>
       </section>
-
+      {/* mission */}
       <section
         id="mission"
         className="relative container mx-auto flex flex-col items-center justify-center py-24"
       >
-        <h1 className="text-3xl font-bold mb-3">Mission</h1>
+        <h2 className="text-3xl font-bold mb-3">Mission</h2>
         <div className="flex flex-col items-center">
-          <div className="text-center max-w-xl space-y-6">
+          <div className="text-center space-y-6">
             <p>
               It’s obvious - the global events over the last two years have
               exposed the inefficiencies of our current paradigm, having an
@@ -155,6 +173,7 @@ const HomePage = () => {
         </div>
         <div className="absolute left-20 sm:left-60 lg:left-96 bottom-20 sm:bottom-32  w-52 h-52 bg-[#ed7119] rounded-full blur-3xl opacity-40"></div>
       </section>
+      {/* features */}
       <section
         id="features"
         className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
@@ -164,7 +183,7 @@ const HomePage = () => {
         </h1> */}
         <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
-        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
+        <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
           <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <svg
               fill="none"
@@ -189,7 +208,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col ">
+        <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col ">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Wide Audience
@@ -217,7 +236,7 @@ const HomePage = () => {
             </svg>
           </div>
         </div>
-        <div className="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+        <div className="flex items-center lg:w-full mx-auto sm:flex-row flex-col">
           <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <svg
               fill="none"
@@ -232,9 +251,9 @@ const HomePage = () => {
             </svg>
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-            <h2 className="text-[#ed194a] text-lg title-font font-medium mb-2">
+            <h3 className="text-[#ed194a] text-lg title-font font-medium mb-2">
               Insta-Marketing
-            </h2>
+            </h3>
             <p className="leading-relaxed text-base">
               Your vacancy posts will be posted instantly upon payment
               confirmation across our social profiles and newsletter. Get your
@@ -243,14 +262,15 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* audience */}
       <section id="audience" className="py-12">
-        <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
+        <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
           Audience
-        </h1>
+        </h2>
         <div className="cards grid grid-cols-4">
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 hover:text-[#ed194a]">
+              <div className="card-title font-semibold mb-3">
                 Web2 Devs
               </div>
               <div className="card-content text-center mb-6">
@@ -261,7 +281,7 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 hover:text-[#ed194a]">
+              <div className="card-title font-semibold mb-3">
                 Web3 Devs
               </div>
               <div className="card-content text-center mb-6">
@@ -274,7 +294,7 @@ const HomePage = () => {
               <div className="card-title font-semibold mb-3 group-focus:text-[#ed194a]">
                 Web3 Enthusiasts
               </div>
-              <div className="card-content text-center mb-6 hover:text-[#ed194a]">
+              <div className="card-content text-center mb-6">
                 Those with skills in tech and other industries and want to make
                 an impact.
               </div>
@@ -290,11 +310,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
+      {/* pricing */}
       <section id="pricing" className="px-5 py-12">
-        <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
+        <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
           Pricing
-        </h1>
+        </h2>
         <p className="text-gray-600 text-center mb-6">
           Following the ethos of cryptocurrency, you can transparently see our
           pricing below and what we offer. Payments accepted will be done in
@@ -303,10 +323,10 @@ const HomePage = () => {
         <div className="pricingInfo flex flex-wrap justify-center items-center w-full gap-x-12 gap-y-4">
           <div className="cards gap-x-12 gap-y-4 flex flex-wrap justify-center sm:justify-start">
             <div className="w-72 h-[500px] p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
-              <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
+              <h3 className="text-sm tracking-widest title-font mb-1 font-medium">
                 VACANCY POSTS
-              </h2>
-              <h1 className="flex text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
+              </h3>
+              <h4 className="flex text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
                 250
                 <span>
                   <svg
@@ -329,7 +349,7 @@ const HomePage = () => {
                     />
                   </svg>
                 </span>
-              </h1>
+              </h4>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">
                   <svg
@@ -474,10 +494,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* FAQs */}
       <section id="faq" className="py-12 mx-auto max-w-7xl">
-        <h1 className="text-3xl font-bold flex justify-center items-center mb-12">
+        <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
           FAQs
-        </h1>
+        </h2>
         <p className="text-gray-600 flex justify-center text-center">
           Gathered from questions asked across platforms like Twitter and
           Discord
@@ -485,9 +506,9 @@ const HomePage = () => {
         <div className="surveyResults divide-y-[1px] divide-slate-800">
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 What are roleseekers and bountyseekers?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 They're terms which we have dediced to go by, to differentiate
                 two types of employment an individual seeks for. A roleseeker
@@ -502,9 +523,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 What is Web3?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Our reponse to this is that, Web3 is the term that describes the
                 digital industrial revolution that we are moving into. The DOT
@@ -519,9 +540,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 Why should I invest in Web3?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Web3 provides a lot of investment initiatives and angles, that
                 allow you, or anyone else, to earn some good returns on your
@@ -540,9 +561,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 What can I do with Web3?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 This is just one example out of many - you can become your own
                 bank and do everything that the banks do, by using DeFi
@@ -563,9 +584,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 How do I get into Web3?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 By learning and participating! Ask questions, connect with
                 others and create your own applications. If you don't have a
@@ -577,9 +598,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 Do I need to learn programming to get into Web3 and/or tech?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Nope! This new phase of tech is where creativity is fully
                 embraced, meaning, that there is room for you to use your skills
@@ -590,9 +611,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 I’m new to programming, what should I learn first?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 If you are looking to work more on UIs (user interfaces), we
                 would recommend learning the basics (HTML, CSS, JS), which would
@@ -604,9 +625,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 What technologies should I learn?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 We'd suggest learning Solidity first as it is more
                 beginner-friendly if you are new, or come from a Javascript-ish
@@ -622,9 +643,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 Where can I find web3 internships and remote work in general?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Well, you have come to the right place! Crypo Sourcerers aims to
                 be such a platform that allows you, the roleseeker, to find
@@ -634,9 +655,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 What is the salary of a Web3 developer?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 The range we have seen for a Web3 developer's salary is around
                 60K USD at minimum to +100K USD max. Heck, if you've got some
@@ -647,9 +668,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 Those salaries???
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Yep xD it signals the great demand for individuals with the
                 knowledge and/or passion to learn Web3 roles. You can for sure
@@ -660,9 +681,9 @@ const HomePage = () => {
           </div>
           <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
             <div className="md:flex-grow">
-              <h2 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
                 I'm a recruiter/founder, why should I use Web3Source?
-              </h2>
+              </h3>
               <p className="leading-relaxed">
                 Well, we want to assist the Web3 transitioning period and beyond
                 by connecting with roleseekers, blockchain ecosystems, and

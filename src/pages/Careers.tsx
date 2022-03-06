@@ -7,6 +7,7 @@ const Careers = () => {
         <title>Careers - The #1 Gateway for Web3 Jobs & Talent.</title>
         <meta name="copyright" content="Web3Source, all rights reserved." />
         <meta name="description" content="Find your niche in the Web3." />
+        <meta name="canonical" content="https://web3source.co/careers" />
         <meta
           name="keywords"
           content="web3 jobs, NFT jobs, blockchain jobs, metaverse jobs, crypto jobs, augmented reality jobs, virtual reality jobs, marketing jobs, community manager jobs, DAO jobs, DeFi jobs"

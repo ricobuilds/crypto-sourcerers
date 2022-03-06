@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 const countries = require("../countries.json");
 // type location = {
@@ -32,6 +33,22 @@ const PostARole = () => {
   const [maxSalary, setMaxSalary] = useState(0);
 
   return (
+    <>
+    <Helmet>
+      <title>Post A Role • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.</title>
+        <meta name="copyright" content="Web3Source, all rights reserved." />
+        <meta name="description" content="Post your vacancy and attract the best talent in the Web3 space!" />
+        <meta name="canonical" content="https://web3source.co" />
+        <meta
+          name="keywords"
+          content="web3 developer jobs, NFT developer jobs, blockchain developer jobs, metaverse developer jobs, crypto developer jobs, augmented reality developer jobs, virtual reality developer jobs, marketing jobs, community manager jobs, DAO developer jobs, DeFi developer jobs"
+        />
+        <meta name="author" content="0xreeko" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        </Helmet>
     <div className="flex flex-col-reverse sm:gap-x-12 sm:flex-row pb-12 justify-between w-full">
       <div className="post w-full min-w-[33%]">
         <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
@@ -289,6 +306,7 @@ const PostARole = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default PostARole;

@@ -11,6 +11,7 @@ const Roles = () => {
         <title>
           Roles • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.
         </title>
+        <meta name="canonical" content="https://web3source.co/roles" />
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
