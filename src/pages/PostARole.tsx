@@ -229,7 +229,7 @@ const PostARole = () => {
                 name=""
                 id=""
                 className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] w-full"
-                placeholder="ex. recommended by X, through Discord/Twitter etc"
+                placeholder="ex. recommended by ..."
               />
             </div>
             <div className="networkSelect">
