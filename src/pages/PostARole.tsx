@@ -152,6 +152,10 @@ const PostARole = () => {
                 />
               </div>
             </div>
+            <span className="flex items-center mb-1">
+              <input type="checkbox" name="" id="" />
+              <p className="ml-1">Ξ Pay In Crypto</p>
+            </span>
             <div className="roleLocation">
               <span className="text-sm text-gray-600">
                 Format: Remote or/and City, Country
