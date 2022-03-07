@@ -90,7 +90,7 @@ const PostARole = () => {
                   onChange={(e) => setDesc(e.target.value)}
                   cols={24}
                   rows={6}
-                  placeholder="In depth, let roleseekers know what you're looking for!"
+                  placeholder="Job Description"
                   className="w-full rounded-md bg-black/20 focus:bg-black/60 border-2 outline-none transition border-gray-800 focus:border-[#ed194a] p-3 tracking-widest"
                 ></textarea>
               </div>
@@ -207,13 +207,7 @@ const PostARole = () => {
 
             <div className="roleBranding">
               <p className="flex items-center mb-2">Upload Branding Logo</p>
-              <input
-                type="file"
-                accept="image/*"
-                name=""
-                id=""
-                // onChange={(e) => setBrand(URL.createObjectURL(e.target.files[0])}
-              />{" "}
+              <input type="file" accept="image/*" name="" id="" />{" "}
               {/*File Upload */}
             </div>
             <div className="postSurvey">
@@ -332,19 +326,21 @@ const PostARole = () => {
             </div>
           </div>
           <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
-          <div className="core-details flex flex-wrap gap-y-3 items-center justify-between">
-            <p className="tracking-widest flex items-center text-sm">
-              <span className="text-[#ed194a]/80 mr-1">{workIcon}</span>{" "}
-              {type ? type : "Unselected"}
-            </p>
-            <p className="tracking-widest flex items-center text-sm">
-              <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>
-              {baseSalary} {maxSalary ? `~ ${maxSalary}` : ""}
-            </p>
-            <p className="tracking-widest flex items-center text-sm">
-              <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
-              London, UK or Remote
-            </p>
+          <div className="core-details flex flex-col gap-y-3 items-center">
+            <div className="left flex justify-between w-full">
+              <p className="tracking-widest flex items-center text-xs">
+                <span className="text-[#ed194a]/80 mr-1">{workIcon}</span>{" "}
+                {type ? type : "Unselected"}
+              </p>
+              <p className="tracking-widest flex items-center text-xs">
+                <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>
+                {baseSalary} {maxSalary ? `~ ${maxSalary}` : ""}
+              </p>
+              <p className="tracking-widest flex items-center text-xs">
+                <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
+                London, UK or Remote
+              </p>
+            </div>
             <button className="p-3 rounded-md bg-[#ed194a] hover:bg-transparent border border-[#ed194a] hover:text-[#ed194a] w-full">
               Apply Now 🪄
             </button>
