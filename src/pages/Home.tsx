@@ -189,7 +189,7 @@ const HomePage = () => {
         <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
           <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
-            <GlobeIcon className="sm:w-16 sm:h-16 w-10 h-10"/>
+            <GlobeIcon className="sm:w-16 sm:h-16 w-10 h-10" />
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h3 className="text-[#ed194a] text-lg title-font font-medium mb-2">
@@ -248,8 +248,9 @@ const HomePage = () => {
             </h3>
             <p className="leading-relaxed text-base">
               Your vacancy posts will be live instantly upon payment
-              confirmation, then shared across our social profiles and newsletter. Get your
-              vacancies viewed by thousands of eyes across the world.
+              confirmation, then shared across our social profiles and
+              newsletter. Get your vacancies viewed by thousands of eyes across
+              the world.
             </p>
           </div>
         </div>
@@ -262,7 +263,9 @@ const HomePage = () => {
         <div className="cards grid sm:grid-cols-4">
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Web2 Devs</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">
+                Web2 Devs
+              </div>
               <div className="card-content text-center mb-6">
                 Those experienced in tech at all levels, and are looking to
                 transition.
@@ -271,7 +274,9 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Web3 Devs</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">
+                Web3 Devs
+              </div>
               <div className="card-content text-center mb-6">
                 Those experienced in Web3, looking for their next Web3 role.
               </div>
@@ -290,9 +295,12 @@ const HomePage = () => {
           </div>
           <div className="audienceCard group">
             <div className="p-6 hover:bg-[#ebebeb]/80 hover:dark:bg-[#1d1d20]/40 border border-gray-800/5 backdrop-blur-lg flex flex-col items-center max-w-xs">
-              <div className="card-title font-semibold mb-3 tracking-widest text-lg">Startups</div>
+              <div className="card-title font-semibold mb-3 tracking-widest text-lg">
+                Startups
+              </div>
               <div className="card-content text-center mb-6">
-                Web3 native teams, and 'Web2' businesses gazing towards innovation.
+                Web3 native teams, and 'Web2' businesses gazing towards
+                innovation.
               </div>
             </div>
           </div>
@@ -635,9 +643,9 @@ const HomePage = () => {
                 Where can I find web3 internships and remote work in general?
               </h3>
               <p className="leading-relaxed">
-                Well, you have come to the right place! Crypo Sourcerers aims to
-                be such a platform that allows you, the roleseeker, to find
-                roles across the GLOBE.
+                You have come to the right place! Crypo Sourcerers aims to be
+                such a platform that allows you, the roleseeker, to find roles
+                across the GLOBE.
               </p>
             </div>
           </div>
@@ -673,8 +681,8 @@ const HomePage = () => {
                 I'm a recruiter/founder, why should I use Web3Source?
               </h3>
               <p className="leading-relaxed">
-                Well, we want to assist the Web3 transitioning period and beyond
-                by connecting with roleseekers, blockchain ecosystems, and
+                We want to assist the Web3 transitioning period and beyond by
+                connecting with roleseekers, blockchain ecosystems, and
                 businesses (Web2 and Web3) worldwide. Web3Source aims to become
                 the world's #1 marketplace for blockchain talent - by using this
                 gateway, you can easily scale and build your regional branches

@@ -1,11 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import {useEffect} from 'react'
+import { useEffect } from "react";
 const punk = require("../images/punk4596.png");
 const About = () => {
-
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
@@ -13,10 +12,10 @@ const About = () => {
           About • Web3Source • The #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
-      <div className="about flex flex-col px-auto py-12 ">
-        <div className="about-header mb-4 font-medium text-center">
+      <div className="about flex flex-col px-auto py-4 ">
+        <div className="about-header mb-4 font-medium">
           <div className="about-header-title">
-            <h1 className="text-4xl sm:text-6xl tracking-widest font-bold">Web3Source</h1>
+            <h1 className="text-4xl tracking-widest font-bold">Web3Source</h1>
           </div>
           <div className="about-header-subtitle text-indigo-800 dark:text-indigo-400">
             The #1 gateway for Web3 Jobs & Talent.
