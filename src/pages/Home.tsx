@@ -185,8 +185,6 @@ const HomePage = () => {
         <h2 className="text-3xl font-bold flex justify-center items-center mb-12">
           Why Web3Source?
         </h2>
-        <div className="absolute left-0 bottom-40  w-52 h-52 bg-[#ed19cd] rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute right-0  w-52 h-52 bg-[#b363f1] rounded-full blur-3xl opacity-40"></div>
         <div className="flex items-center lg:w-full mx-auto border-b pb-10 mb-10 border-gray-200 dark:border-gray-800 sm:flex-row flex-col">
           <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-[#F3F6F9] text-[#ed194a] flex-shrink-0">
             <GlobeIcon className="sm:w-16 sm:h-16 w-10 h-10" />
