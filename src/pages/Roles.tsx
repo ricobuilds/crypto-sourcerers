@@ -1,15 +1,14 @@
-import {useEffect} from "react"
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import RoleCard from "../components/RoleCard";
-import { SearchIcon} from "@heroicons/react/outline";
-import { LocationMarkerIcon} from "@heroicons/react/solid";
-import { useFilterSearch} from "src/hooks/useFilterSearch";
+import { SearchIcon } from "@heroicons/react/outline";
+import { LocationMarkerIcon } from "@heroicons/react/solid";
+import { useFilterSearch } from "src/hooks/useFilterSearch";
 
 const Roles = () => {
-
-  useEffect(()=>  {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
 
   const [numba] = useFilterSearch();
   return (
@@ -20,7 +19,7 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
-        <div className="flex flex-col md:flex-row justify-between items-center w-full divide-x-[1px] divide-gray-200 dark:divide-gray-800">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full sm:divide-x-[1px] sm:divide-gray-200 sm:dark:divide-gray-800">
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-yellow-500">
               <svg
@@ -37,17 +36,15 @@ const Roles = () => {
               </svg>
             </span>
             <p>
-              Get results in a flash by entering keywords (skills, tools etc) ex.
-              rust defi remote
+              Get results in a flash by entering keywords (skills, tools etc)
+              ex. rust defi remote
             </p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-rose-500">
-              <LocationMarkerIcon className="w-6- h-6"/>
-              </span>
-            <p>
-             Find your dream Web3 role that is located in a city near you
-            </p>
+              <LocationMarkerIcon className="w-6- h-6" />
+            </span>
+            <p>Find your dream Web3 role that is located in a city near you</p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-sky-500">
@@ -71,16 +68,16 @@ const Roles = () => {
           </div>
         </div>
         <div className="max-w-lg w-full p-3">
-            Filter results
-            <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
-              <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
-              <input
-                // onChange={(e) => useFilterSearch(e.target.value, res)}
-                placeholder="ex. react hardhat london remote 60000 matic"
-                className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
+          Filter results
+          <div className="searchBar relative flex items-center border-2 border-gray-300 focus-within:border-[#6387f1]">
+            <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
+            <input
+              // onChange={(e) => useFilterSearch(e.target.value, res)}
+              placeholder="ex. react hardhat london remote 60000 matic"
+              className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
           </div>
+        </div>
         <div className="mt-3">Fetched {numba} results</div>
         <div className="grid gap-y-3 justify-items-center w-full">
           <RoleCard />

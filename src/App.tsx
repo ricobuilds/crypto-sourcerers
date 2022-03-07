@@ -74,9 +74,11 @@ const App = () => {
           ) : null}
           <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
-              <div className="logo">
-                {/* <span className="text-[#ed194a]">{logo}</span> */}
+              <div className="relative logo">
                 <img src={logo} alt="logo" className="h-5" />
+                <span className="absolute -right-8 top-0 text-[11px]">
+                  BETA
+                </span>
               </div>
               {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>

@@ -128,9 +128,7 @@ const PostARole = () => {
             </div>
             <div className="roleTags">
               <span className="ml-0.5 mb-1 text-sm text-gray-600">
-                Skills, tools, ecosystems, Pay In Crypto (
-                <span className="font-bold">IF</span> you offer it) - separate
-                each tag by a comma.
+                Skills, tools, ecosystems - separate each tag by a comma.
               </span>
               <input
                 type="text"
@@ -138,7 +136,7 @@ const PostARole = () => {
                 name=""
                 id=""
                 className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
-                placeholder="ex. DeFi, NFT, Solidity, Rust, AVAX, FTM, Pay In Crypto.."
+                placeholder="ex. DeFi, NFT, Solidity, Rust, AVAX, FTM.."
               />
             </div>
             <div className="roleSalary">
