@@ -28,6 +28,7 @@ const networks = require("../networks.json");
 
 const PostARole = () => {
   const [selected, setSelected] = useState(networks[0]);
+  const [type, setType] = useState("");
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
   const [brand] = useState<string>(
@@ -95,19 +96,20 @@ const PostARole = () => {
               </div>
             </div>
             <div className="roleAudience flex flex-col">
-              <span className="mb-1 text-sm text-gray-600">
-                We recommend [Roleseeker] for permanent roles, and
-                [Bountyseeker] for freelance/contract roles (e.g. interships,
-                apprenticeships).
-              </span>
+              <span className="mb-1 text-sm text-gray-600">Role Type</span>
               <div className="flex space-x-6">
-                <select className="rounded-md p-1 text-black " id="">
+                <select
+                  className="rounded-md p-1 text-black "
+                  id=""
+                  value={type}
+                  onChange={(e) => setType(e.target.value)}
+                >
                   <optgroup label="Type">
                     <option value="Full-time">Full-time</option>
                     <option value="Part-time">Part-time</option>
                     <option value="Contract">Contract</option>
                     <option value="Internship">Internship</option>
-                    <option value="Apprenticeship">Apprenticeship</option>
+                    <option value="Freelance">Freelance</option>
                   </optgroup>
                 </select>
               </div>
@@ -331,8 +333,7 @@ const PostARole = () => {
           <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
           <div className="core-details flex flex-wrap gap-y-3 items-center justify-between">
             <p className="tracking-widest flex items-center text-sm">
-              <span className="text-[#ed194a]/80 mr-1">{workIcon}</span>{" "}
-              Permanent
+              <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> {type}
             </p>
             <p className="tracking-widest flex items-center text-sm">
               <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>
