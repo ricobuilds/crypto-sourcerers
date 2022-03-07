@@ -99,12 +99,13 @@ const PostARole = () => {
               <span className="mb-1 text-sm text-gray-600">Role Type</span>
               <div className="flex space-x-6">
                 <select
-                  className="rounded-md p-1 text-black "
+                  className="rounded-md p-1 text-black peer-focus-within: "
                   id=""
                   value={type}
                   onChange={(e) => setType(e.target.value)}
                 >
                   <optgroup label="Type">
+                    <option value="">Unselected</option>
                     <option value="Full-time">Full-time</option>
                     <option value="Part-time">Part-time</option>
                     <option value="Contract">Contract</option>
@@ -176,7 +177,7 @@ const PostARole = () => {
               <input
                 type="text"
                 required
-                placeholder="Enter Twitter username w/o the @ symbol"
+                placeholder="Enter Twitter username w/o the @"
                 className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
               />
             </div>
@@ -333,7 +334,8 @@ const PostARole = () => {
           <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
           <div className="core-details flex flex-wrap gap-y-3 items-center justify-between">
             <p className="tracking-widest flex items-center text-sm">
-              <span className="text-[#ed194a]/80 mr-1">{workIcon}</span> {type}
+              <span className="text-[#ed194a]/80 mr-1">{workIcon}</span>{" "}
+              {type ? type : "Unselected"}
             </p>
             <p className="tracking-widest flex items-center text-sm">
               <span className="text-[#ed194a]/80 mr-1">{dollarIcon}</span>
