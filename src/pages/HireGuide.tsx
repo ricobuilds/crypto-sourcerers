@@ -1,0 +1,10 @@
+const HireGuide = () => {
+  return (
+    <div className="learning mx-auto my-24 py-24 max-w-lg flex items-center justify-center">
+      <p className="text-4xl text-center">
+        Creating the guide - come back soon :)
+      </p>
+    </div>
+  );
+};
+export default HireGuide;

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 import { RadioGroup } from "@headlessui/react";
+import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/outline";
 const countries = require("../countries.json");
 const networks = require("../networks.json");
@@ -63,17 +64,28 @@ const PostARole = () => {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Helmet>
+
       <div className="flex flex-col-reverse sm:gap-x-12 sm:flex-row pb-12 justify-between w-full">
         <div className="post w-full min-w-[33%]">
           <h1 className="text-3xl font-bold mb-6">Post a Role</h1>
           <div className="formDetails space-y-4">
+            <div className="font-bold text-lg">
+              About the Role (
+              <span className="text-xs">
+                <Link className="text-[#1DA1F2] underline" to={"/hireGuide"}>
+                  How to hire in Web3
+                </Link>
+              </span>
+              )
+            </div>
             <div className="roleTitle">
+              <div className="">Role Title</div>
               <input
                 type="text"
                 value={title}
                 required
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Enter role title"
+                placeholder="ex. Web3 Developer.."
                 className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
               />
             </div>
@@ -177,53 +189,83 @@ const PostARole = () => {
                 </optgroup>
               </select>
             </div>
-            <div className="roleSocial">
-              <input
-                type="text"
-                required
-                placeholder="Enter Twitter username w/o the @"
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-              />
-            </div>
-            <div className="roleStartup">
-              <input
-                type="text"
-                required
-                placeholder="Enter Startup name"
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-              />
-            </div>
-            <div className="roleURL">
-              <input
-                type="text"
-                required
-                placeholder="Enter external URL"
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-              />
-            </div>
-            <div className="postDiscount">
-              <input
-                type="text"
-                placeholder="Enter discount code"
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-              />
-            </div>
 
-            <div className="roleBranding">
-              <p className="flex items-center mb-2">Upload Branding Logo</p>
-              <input type="file" accept="image/*" name="" id="" />{" "}
-              {/*File Upload */}
-            </div>
-            <div className="postSurvey">
-              <p className="mb-2">How did you hear about Web3Source?</p>
-              <input
-                type="text"
-                required
-                name=""
-                id=""
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] w-full"
-                placeholder="ex. recommended by ..."
-              />
+            <div className="aboutYou space-y-4">
+              <div className="font-bold text-lg">About You</div>
+              <div className="roleStartup">
+                <div className="mb-2">Startup Name</div>
+                <input
+                  type="text"
+                  required
+                  placeholder="ex. Web3Source"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+                />
+              </div>
+              <div className="roleTagline">
+                <div className="mb-2">Startup Tagline</div>
+                <div className="">
+                  <textarea
+                    name=""
+                    id=""
+                    required
+                    cols={24}
+                    rows={3}
+                    placeholder="Tagline max (xx chars)"
+                    className="w-full rounded-md bg-black/20 focus:bg-black/60 border-2 outline-none transition border-gray-800 focus:border-[#ed194a] p-3 tracking-widest"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="roleSocial">
+                <div className="mb-2">Twitter username (without @)</div>
+                <input
+                  type="text"
+                  required
+                  placeholder="ex. web3source"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+                />
+              </div>
+              <div className="startupSite">
+                <div className="mb-2">Startup Site</div>
+                <input
+                  type="text"
+                  required
+                  placeholder="ex. https://startupName.com/"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+                />
+              </div>
+              <div className="applyURL">
+                <div className="mb-2">Apply Link</div>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter external URL/email"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+                />
+              </div>
+              <div className="postDiscount">
+                <div className="mb-2">Discount Code (optional)</div>
+                <input
+                  type="text"
+                  placeholder="Enter discount code"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+                />
+              </div>
+              <div className="roleBranding">
+                <p className="flex items-center mb-2">Upload Branding Logo</p>
+                <input type="file" accept="image/*" name="" id="" />{" "}
+                {/*File Upload */}
+              </div>
+              <div className="postSurvey">
+                <p className="mb-2">How did you hear about Web3Source?</p>
+                <input
+                  type="text"
+                  required
+                  name=""
+                  id=""
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] w-full"
+                  placeholder="ex. recommended by ..."
+                />
+              </div>
             </div>
             <div className="networkSelect">
               <div className="mb-2">Select a network</div>
@@ -287,7 +329,7 @@ const PostARole = () => {
             </div>
             <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full hover:bg-transparent border border-[#ed194a] text-white hover:text-[#ed194a]">
               <p className="flex items-center">
-                Post a role 250{" "}
+                Post Role 250{" "}
                 <span className="mx-0.5">
                   <svg
                     data-name="86977684-12db-4850-8f30-233a7c267d11"

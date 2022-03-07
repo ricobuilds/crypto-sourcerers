@@ -19,6 +19,7 @@ import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
 import PostARole from "./pages/PostARole";
 import Startups from "./pages/Startups";
+import HireGuide from "./pages/HireGuide";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
@@ -54,9 +55,9 @@ const App = () => {
     hasBanner = localStorage.getItem("isBannerHidden");
   }, [banner]);
 
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Router>
@@ -130,6 +131,7 @@ const App = () => {
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
+              <Route path="/hireGuide" element={<HireGuide />} />
               <Route path="/startups" element={<Startups />} />
               <Route path="/postarole" element={<PostARole />} />
               <Route path="/donations" element={<Donations />} />
