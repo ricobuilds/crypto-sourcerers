@@ -1,9 +1,9 @@
-import {useEffect} from 'react'
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 const Contact = () => {
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
@@ -26,28 +26,36 @@ const Contact = () => {
           <p className="text-sm mb-3">
             You can reach out to us through{" "}
             <code className="font-semibold">
-              <a className="dark:text-[#ed194a]" href="mailto:dev@cryptosourcerers.co">
-                dev@<span className="text-[#ed194a]">web3Source</span>.co
+              <a
+                className="text-[#ed194a]"
+                href="mailto:dev@cryptosourcerers.co"
+              >
+                dev@<span className="">web3Source</span>.co
               </a>
             </code>
           </p>
           <p className="flex space-x-0.5">
-            <div>Follow us on {" "}</div>
+            <div>Follow us on </div>
             <div>
-            <a className="flex items-center" href="https://www.twitter.com/web3Source" target={"_blank"}>
-              <span className="text-sky-800 dark:text-sky-400 font-medium">
-                {" "}Twitter
-              </span>
+              <a
+                className="flex items-center"
+                href="https://www.twitter.com/web3Source"
+                target={"_blank"}
+              >
+                <span className="text-sky-800 dark:text-sky-400 font-medium">
+                  {" "}
+                  Twitter
+                </span>
                 <svg
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5 fill-sky-400 transition hover:fill-sky-500"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                      </svg>
-            </a>
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  className="w-5 h-5 fill-sky-400 transition hover:fill-sky-500"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
             </div>
           </p>
         </div>

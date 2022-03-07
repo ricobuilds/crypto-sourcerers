@@ -4,7 +4,6 @@ import { dollarIcon, locationIcon, workIcon } from "../components/Icons";
 import { RadioGroup } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/outline";
-const countries = require("../countries.json");
 const networks = require("../networks.json");
 // type location = {
 //   remote: boolean;
@@ -73,7 +72,7 @@ const PostARole = () => {
               About the Role (
               <span className="text-xs">
                 <Link className="text-[#1DA1F2] underline" to={"/hireGuide"}>
-                  How to hire in Web3
+                  How to hire in Web3 & Web3Source
                 </Link>
               </span>
               )
@@ -169,25 +168,24 @@ const PostARole = () => {
               <p className="ml-1">Ξ Pay In Crypto</p>
             </span>
             <div className="roleLocation">
-              <span className="text-sm text-gray-600">
-                Format: Remote or/and City, Country
-              </span>
-              {/* <input
-              type="text"
-              placeholder="e.x. Remote OR Remote/London, UK OR London, UK"
-              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-            /> */}
-              <select
-                name=""
-                id=""
-                className="w-full rounded-md mt-1 p-1 text-black"
-              >
-                <optgroup label="All countries">
-                  {countries.map((item: { code: string; name: string }) => (
-                    <option value={item.code}>{item.name}</option>
-                  ))}
-                </optgroup>
-              </select>
+              <div className="mb-2">
+                Role Location{" "}
+                <span className="text-sm text-gray-600">
+                  Format: ex. Dallas OR Europe. Leave as if for global roles.
+                </span>
+              </div>
+              <div className="flex flex-wrap space-x-4">
+                <input
+                  type="text"
+                  value={"Global"}
+                  placeholder="e.x. city OR geography"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+                />
+                <span className="flex items-center mb-1">
+                  <input type="checkbox" name="" id="" />
+                  <p className="ml-1">🌍 Remote</p>
+                </span>
+              </div>
             </div>
 
             <div className="aboutYou space-y-4">
