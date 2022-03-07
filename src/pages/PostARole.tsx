@@ -36,9 +36,9 @@ const PostARole = () => {
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
 
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -101,18 +101,10 @@ const PostARole = () => {
                 apprenticeships).
               </span>
               <div className="flex space-x-6">
-                <select
-                  className="rounded-md p-1 text-black audience"
-                  id="audience"
-                >
-                  <optgroup label="Audience">
-                    <option value="roleseekers">Roleseeker</option>
-                    <option value="bountyseekers">Bountyseeker</option>
-                  </optgroup>
-                </select>
                 <select className="rounded-md p-1 text-black " id="">
-                  <optgroup label="Types">
-                    <option value="Permanent">Permanent</option>
+                  <optgroup label="Type">
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
                     <option value="Contract">Contract</option>
                     <option value="Internship">Internship</option>
                     <option value="Apprenticeship">Apprenticeship</option>
