@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import {useEffect} from 'react'
+import { useEffect } from "react";
 
 const Careers = () => {
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Helmet>
@@ -26,9 +26,17 @@ const Careers = () => {
         <div className="header">
           <h1 className="text-4xl tracking-widest font-bold">Careers </h1>
           <p className="text-sm">
-            Here are all the available pathways you can take a look at for gauging suitable Web3 niches
-            . Don't fret if you don't see your pathway, you could
-            pave the way if you've found a niche. Do you know of a pathway that is not included? Reach out to us via <code className="text-[#ed194a] font-bold">dev@web3source.co</code> with the role title, brief breakdown, and a couple tools/skills needed, and we'll add it to the list below!
+            Here are all the available pathways you can take a look at for
+            gauging suitable Web3 niches . Don't fret if you don't see your
+            pathway, you could pave the way if you've found a niche. Do you know
+            of a pathway that is not included? Reach out to us via{" "}
+            <a href="mailto:dev@web3source.co">
+              <code className="text-[#ed194a] font-bold">
+                dev@web3Source.co
+              </code>
+            </a>{" "}
+            with the role title, brief breakdown, and a couple tools/skills
+            needed, and we'll add it to the list below!
           </p>
         </div>
         <div className="grid sm:grid-cols-4 gap-0">

@@ -25,14 +25,11 @@ const Contact = () => {
 
           <p className="text-sm mb-3">
             You can reach out to us through{" "}
-            <code className="font-semibold">
-              <a
-                className="text-[#ed194a]"
-                href="mailto:dev@cryptosourcerers.co"
-              >
-                dev@<span className="">web3Source</span>.co
-              </a>
-            </code>
+            <a href="mailto:dev@web3source.co">
+              <code className="text-[#ed194a] font-bold">
+                dev@web3Source.co
+              </code>
+            </a>
           </p>
           <p className="flex space-x-0.5">
             <div>Follow us on </div>
