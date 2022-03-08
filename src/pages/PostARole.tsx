@@ -166,12 +166,11 @@ const PostARole = () => {
               <p className="ml-1">Ξ Pay In Crypto</p>
             </span>
             <div className="roleLocation">
-              <div className="mb-2">
-                Role Location{" "}
-                <span className="text-sm text-gray-600">
-                  Format: ex. Dallas OR Europe. Leave as if for global roles.
-                </span>
-              </div>
+              <div className="mb-2">Role Location </div>
+              <span className="text-sm text-gray-600">
+                Format: ex. city OR geo Region. Leave as 'Global' for fully
+                remote roles.
+              </span>
               <div className="flex flex-wrap space-x-4">
                 <input
                   type="text"
@@ -356,7 +355,11 @@ const PostARole = () => {
           <div className="flex justify-between">
             <div className="details">
               <h1 className="text-xl font-bold">
-                {title ? title : "Preview Title"}
+                {!title
+                  ? "Preview Title"
+                  : title.length > 34
+                  ? "MAX CHARACTER OVERFLOW::"
+                  : title}
               </h1>
               <p>Startup name</p>
             </div>
@@ -380,7 +383,7 @@ const PostARole = () => {
               </p>
               <p className="tracking-widest flex items-center text-xs">
                 <span className="text-[#ed194a]/80 mr-1">{locationIcon}</span>
-                London, UK or Remote
+                Remote, Spain
               </p>
             </div>
             <button className="p-3 rounded-md bg-[#ed194a] hover:bg-transparent border border-[#ed194a] hover:text-[#ed194a] w-full">
