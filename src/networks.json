@@ -2,31 +2,31 @@
   {
     "name": "Ethereum",
     "abv": "ETH",
-    "chainId": "0x",
+    "chainId": 1,
     "bgStyle": "[#333333]"
   },
   {
     "name": "Polygon",
     "abv": "MATIC",
-    "chainId": "0x",
+    "chainId": 137,
     "bgStyle": "[#8247e5]"
   },
   {
     "name": "BNB Chain",
     "abv": "BSC",
-    "chainId": "0x",
+    "chainId": 56,
     "bgStyle": "[#efb90c]"
   },
   {
     "name": "Avalanche",
     "abv": "AVAX",
-    "chainId": "0x",
+    "chainId": 43114,
     "bgStyle": "[#E84142]"
   },
   {
     "name": "Fantom",
     "abv": "FTM",
-    "chainId": "0x",
+    "chainId": 250,
     "bgStyle": "[#14b5ec]"
   }
 ]

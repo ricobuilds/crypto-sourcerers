@@ -13,7 +13,7 @@ import Contact from "./pages/Contact";
 import Roles from "./pages/Roles";
 import Insights from "./pages/Insights";
 import Careers from "./pages/Careers";
-import Login from "./pages/Login";
+import Login from "./pages/recruiters/Login";
 import Learning from "./components/Learning";
 import Donations from "./pages/Donations";
 import MyDropdown from "./components/DDM";
