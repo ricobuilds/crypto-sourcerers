@@ -20,6 +20,7 @@ import MyDropdown from "./components/DDM";
 import PostARole from "./pages/PostARole";
 import Startups from "./pages/Startups";
 import HireGuide from "./pages/HireGuide";
+import Inserter from "./pages/Inserter";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
@@ -132,6 +133,7 @@ const App = () => {
               <Route path="/careers" element={<Careers />} />
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
+              <Route path="/inserter" element={<Inserter />} />
               <Route path="/hiring-guide" element={<HireGuide />} />
               <Route path="/startups" element={<Startups />} />
               <Route path="/postarole" element={<PostARole />} />

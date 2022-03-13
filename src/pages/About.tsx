@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 const punk = require("../images/punk4596.png");
 const About = () => {
@@ -11,6 +12,21 @@ const About = () => {
         <title>
           About • Web3Source • The #1 Gateway for Web3 Jobs & Talent.
         </title>
+        <meta name="copyright" content="Web3Source, all rights reserved." />
+        <meta
+          name="description"
+          content="We aim to assist the Web3 ecosystem as a whole as we progress into a digital era. Here, you can learn our 'why'."
+        />
+        <link rel="canonical" href="https://web3source.co/" />
+        <meta
+          name="keywords"
+          content="web3 developer jobs, NFT developer jobs, blockchain developer jobs, metaverse developer jobs, crypto developer jobs, augmented reality developer jobs, virtual reality developer jobs, marketing jobs, community manager jobs, DAO developer jobs, DeFi developer jobs"
+        />
+        <meta name="author" content="0xreeko" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
       </Helmet>
       <div className="about flex flex-col px-auto py-4 ">
         <div className="about-header mb-4 font-medium">
@@ -80,6 +96,18 @@ const About = () => {
               Welcome, to the cryptosphere. [drops mic]
             </span>
           </p>
+        </div>
+        <div
+          id="contactRedirect"
+          className="py-12 flex justify-center items-center space-x-6"
+        >
+          {/* Contact */}
+          <p>Want to reach out? </p>
+          <Link to={"/contact"}>
+            <button className="py-3 px-9 rounded-md bg-[#ed194a] text-white ">
+              Contact Us
+            </button>
+          </Link>
         </div>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-6">
