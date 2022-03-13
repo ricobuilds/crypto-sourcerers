@@ -83,20 +83,19 @@ const App = () => {
               {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
-              <a
-                className="hover:text-gray-400  transition hover:cursor-pointer"
-                href={`/careers`}
-              >
-                Careers
-              </a>
-              <Link to={"/learning"}>
-                <span className="hover:text-gray-400  transition hover:cursor-pointer">
-                  Learning
-                </span>
-              </Link>
               <Link to={"/roles"}>
                 <span className="hover:text-gray-400  transition hover:cursor-pointer">
                   Roles
+                </span>
+              </Link>
+              <Link to={`/careers`}>
+                <span className="hover:text-gray-400  transition hover:cursor-pointer">
+                  Careers
+                </span>
+              </Link>
+              <Link to={"/learning"}>
+                <span className="hover:text-gray-400  transition hover:cursor-pointer">
+                  Learning
                 </span>
               </Link>
               <Link to={"/startups"}>
