@@ -12,10 +12,30 @@ const Login = () => {
 
   let warning = "focus:ring-2 focus:ring-red-500";
 
-  const m = new Magic(key);
+  // const m = new Magic(key);
 
   let handleLogin = async () => {
-    await m.auth.loginWithMagicLink({ email: email, showUI: true });
+    try {
+      if (email && condition === false && !email.includes(name)) {
+        let _e = email.split("@");
+        let _d = _e[1];
+        fetch(`https://${_d}`, {
+          mode: "no-cors",
+        })
+          .then((res) => res.status === 200)
+          .then(() => console.log("passed!"))
+          .catch((e) => console.log(`${e}`));
+        try {
+          // await m.auth.loginWithMagicLink({ email: email, showUI: true });
+          console.log("loggedIN");
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    } catch (e) {
+      console.log("email, conditions or project-domain mismatch!");
+      console.log(e);
+    }
   };
 
   let checkCompany = (param: string) => {
@@ -24,13 +44,6 @@ const Login = () => {
     if (!domains.includes(_d) && _d.includes(".")) {
       setEmail(param);
       setCondition(false);
-      if (email && condition === false) {
-        let _u = `https://${_d}`;
-        fetch(_u)
-          .then((res) => res.status === 200)
-          .then(() => console.log("passed!"))
-          .catch((e) => console.log(e));
-      }
       return "yay a company email!";
     } else {
       setCondition(true);
