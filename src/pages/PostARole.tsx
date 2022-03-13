@@ -71,7 +71,7 @@ const PostARole = () => {
             <div className="font-bold text-lg">
               About the Role (
               <span className="text-xs">
-                <Link className="text-[#1DA1F2] underline" to={"/hireGuide"}>
+                <Link className="text-[#1DA1F2] underline" to={"/hiring-guide"}>
                   How to hire in Web3 & Web3Source
                 </Link>
               </span>

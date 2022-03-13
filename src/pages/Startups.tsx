@@ -1,10 +1,11 @@
-import {useEffect} from 'react'
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import StartupCard from "../components/StartupCard";
 const Startups = () => {
-  useEffect(()=>  {
-        window.scrollTo(0, 0);
-      },[]);
-  return(
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
     <div className="startups">
       <Helmet>
         <title>Startups - The #1 Gateway for Web3 Jobs & Talent.</title>
@@ -23,19 +24,21 @@ const Startups = () => {
       <div className="careers flex flex-col max-w-7xl mx-auto lg:px-auto py-4 space-y-4 mb-6">
         <div className="header">
           <h1 className="text-4xl tracking-widest font-bold">Startups</h1>
-          <p className="text-sm">
-            Find your home in the Web3.
-          </p>
+          <p className="text-sm">Find your home in the Web3.</p>
         </div>
       </div>
-      <div className="grid grid-cols-4 w-full">
-        <span>heya</span>
-        <span>heya</span>
-        <span>heya</span>
-        <span>heya</span>
-        <span>heya</span>
-        <span>heya</span>
+      <div className="grid grid-cols-4 w-full mb-12">
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
+        <StartupCard />
       </div>
-      </div>
-  )
-}; export default Startups;
+    </div>
+  );
+};
+export default Startups;
