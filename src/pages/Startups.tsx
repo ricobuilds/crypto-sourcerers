@@ -27,7 +27,7 @@ const Startups = () => {
           <p className="text-sm">Find your home in the Web3.</p>
         </div>
       </div>
-      <div className="grid grid-cols-4 w-full mb-12">
+      <div className="grid sm:grid-cols-4 w-full mb-12">
         <StartupCard />
         <StartupCard />
         <StartupCard />
