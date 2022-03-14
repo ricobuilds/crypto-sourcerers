@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Moralis } from "moralis";
 
 const Inserter = () => {
   const [type, setType] = useState("");
@@ -6,6 +7,24 @@ const Inserter = () => {
   const [desc, setDesc] = useState<string>("");
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
+
+  //
+
+  const Vacancy = Moralis.Object.extend("Vacancy");
+  const vacancy = new Vacancy();
+
+  vacancy.save({
+    startupId: "avax.network",
+    title: "test",
+    description: "this is a test vacancy",
+    type: "string",
+    skills: ["Javascript, React"],
+    baseSalary: 20000,
+    maxSalary: null,
+    location: [{ area: "London", remote: true }],
+    applyLink: "https://enrictrillo.com",
+  });
+
   return (
     <div className="inserter">
       <h1 className="text-4xl tracking-widest font-bold">Insert Role Form</h1>
@@ -119,22 +138,6 @@ const Inserter = () => {
 
         <div className="aboutYou space-y-4">
           <div className="font-bold text-lg">About You</div>
-          <div className="roleSocial">
-            <div className="mb-2">Twitter username (without @)</div>
-            <input
-              type="text"
-              required
-              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-            />
-          </div>
-          <div className="startupSite">
-            <div className="mb-2">Startup URL</div>
-            <input
-              type="text"
-              required
-              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-            />
-          </div>
           <div className="applyURL">
             <div className="mb-2">External Apply URL/Email</div>
             <input
@@ -142,11 +145,6 @@ const Inserter = () => {
               required
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
             />
-          </div>
-          <div className="roleBranding">
-            <p className="flex items-center mb-2">Upload Branding Logo</p>
-            <input type="file" accept="image/*" name="" id="" />{" "}
-            {/*File Upload */}
           </div>
         </div>
       </div>
