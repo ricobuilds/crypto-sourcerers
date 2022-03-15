@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { GlobeIcon } from "@heroicons/react/solid";
+import { Moralis } from "moralis";
 const heroIcon = require("../images/magic-trick-dynamic-color.webp");
 const bankLocker = require("../images/locker-dynamic-color.webp");
 const missionIcon = require("../images/rocket-dynamic-color.webp");
 
 const HomePage = () => {
+  const [liveRoles, setLiveRoles] = useState<string | number>("-");
+  (async () => {
+    const _q = new Moralis.Query("Vacancy");
+    let res = await _q.find();
+    setLiveRoles(res.length);
+  })();
+
   return (
     <>
       <Helmet>
@@ -123,7 +132,7 @@ const HomePage = () => {
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h3 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              -
+              {liveRoles}
             </h3>
             <p className="leading-relaxed">Live Roles</p>
           </div>
@@ -670,6 +679,37 @@ const HomePage = () => {
                 knowledge and/or passion to learn Web3 roles. You can for sure
                 earn that much if you can demonstrate how you can mesh your
                 current skills with Web3 and provide value to the ecosystem ;)
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Why can I only pay in crypto? 🐟!
+              </h3>
+              <p className="leading-relaxed">
+                Althought cryptocurrency does indeed have a negative cloud
+                around it as of now, we have taken the decision to be the{" "}
+                <b className="text-[#ed194a]">first</b> Web3 job board that
+                fully embraces crypto payments only, per our knowledge. We
+              </p>
+            </div>
+          </div>
+          <div className="py-8 flex flex-wrap justify-center text-center md:flex-nowrap">
+            <div className="md:flex-grow">
+              <h3 className="text-2xl font-medium text-gray-600 dark:text-gray-100 title-font mb-2">
+                Any plans?
+              </h3>
+              <p className="leading-relaxed">
+                Boy there sure are a lot. As stated previously, we want to help
+                promote growth within the Web3 space, and the ways we can think
+                of right now is by: contributing towards hackathons, connecting
+                with individuals and teams to create workshops that teach the
+                public more about crypto & Outsiders (non Web3 developers) the
+                roles to transfer their skills, and granting initiatives that
+                promote more growth in the space; a chemical chain reaction but
+                in Web3 haha- think of it like a never-ending relay at the
+                Olympics.
               </p>
             </div>
           </div>
