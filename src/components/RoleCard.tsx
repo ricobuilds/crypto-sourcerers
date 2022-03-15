@@ -4,7 +4,10 @@ const punk = require("../images/punk4596.png");
 // tis for mapping over every available job.
 const RoleCard = (props: any) => {
   return (
-    <div className="roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-white hover:bg-[#dedee5]/80 dark:bg-[#111115]/80 transition hover:dark:bg-[#1d1d23]/80 backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md">
+    <div
+      key={props.id}
+      className="roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-white hover:bg-[#dedee5]/80 dark:bg-[#111115]/80 transition hover:dark:bg-[#1d1d23]/80 backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md"
+    >
       <div className="flex flex-col md:flex-row items-center">
         <img
           src={punk}
