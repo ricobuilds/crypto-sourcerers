@@ -2,28 +2,57 @@ import { useState } from "react";
 import { Moralis } from "moralis";
 
 const Inserter = () => {
-  const [type, setType] = useState("");
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
+  const [type, setType] = useState("");
+  const [cryptoOpt, setCryptoOpt] = useState<boolean>(true);
+  const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
-
-  //
+  const [area, setArea] = useState("Global");
+  const [applyLink, setApplyLink] = useState("");
 
   const Vacancy = Moralis.Object.extend("Vacancy");
   const vacancy = new Vacancy();
 
-  vacancy.save({
-    startupId: "avax.network",
-    title: "test",
-    description: "this is a test vacancy",
-    type: "string",
-    skills: ["Javascript, React"],
-    baseSalary: 20000,
-    maxSalary: null,
-    location: [{ area: "London", remote: true }],
-    applyLink: "https://enrictrillo.com",
-  });
+  const handlePost = () => {
+    try {
+      if (
+        type != "" &&
+        title &&
+        desc &&
+        cryptoOpt &&
+        baseSalary &&
+        applyLink &&
+        area
+      ) {
+        vacancy
+          .save({
+            startupId: "avax.networky",
+            title: title,
+            description: desc,
+            type: type,
+            skills: [["Javascript"], ["React"]],
+            baseSalary: baseSalary,
+            maxSalary: maxSalary > baseSalary ? maxSalary : 0,
+            location: [{ area: area, remote: remote }],
+            applyLink: applyLink,
+          })
+          .then(
+            (success: any) => {
+              console.log(success, "post success");
+            },
+            (error: any) => {
+              console.log(error, "post error");
+            }
+          );
+      } else {
+        alert("There's a missing parameter!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="inserter">
@@ -113,40 +142,58 @@ const Inserter = () => {
           </div>
         </div>
         <span className="flex items-center mb-1">
-          <input type="checkbox" name="" id="" />
-          <p className="ml-1">Ξ Pay In Crypto</p>
+          <input
+            type="checkbox"
+            name=""
+            id=""
+            checked={cryptoOpt}
+            onChange={() => setCryptoOpt(!cryptoOpt)}
+          />
+          <p className="ml-1">Ξ Option To Pay In Crypto</p>
         </span>
         <div className="roleLocation">
           <div className="mb-2">Role Location </div>
           <span className="text-sm text-gray-600">
-            Format: ex. city OR geo Region. Leave as 'Global' for fully remote
-            roles.
+            Format: ex. city OR geo Region. Leave as 'Global' + ✅ Remote, for
+            fully remote roles.
           </span>
           <div className="flex flex-wrap space-x-4">
             <input
               type="text"
-              value={"Global"}
+              value={area}
+              onChange={(e) => setArea(e.target.value)}
               placeholder="e.x. city OR geography"
               className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
             />
             <span className="flex items-center mb-1">
-              <input type="checkbox" name="" id="" checked={true} />
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                checked={remote}
+                onChange={() => setRemote(!remote)}
+              />
               <p className="ml-1">🌍 Remote</p>
             </span>
           </div>
         </div>
-
-        <div className="aboutYou space-y-4">
-          <div className="font-bold text-lg">About You</div>
-          <div className="applyURL">
-            <div className="mb-2">External Apply URL/Email</div>
-            <input
-              type="text"
-              required
-              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
-            />
-          </div>
+        <div className="applyURL">
+          <div className="mb-2">External Apply URL/Email</div>
+          <input
+            type="text"
+            required
+            value={applyLink}
+            onChange={(e) => setApplyLink(e.target.value)}
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+          />
         </div>
+        <button
+          className="bg-[#ed194a] w-full p-1 rounded-md"
+          onClick={() => handlePost()}
+        >
+          {" "}
+          Post Role
+        </button>
       </div>
     </div>
   );

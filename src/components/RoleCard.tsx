@@ -2,7 +2,7 @@ import Tag from "./Tag";
 const punk = require("../images/punk4596.png");
 
 // tis for mapping over every available job.
-const RoleCard = () => {
+const RoleCard = (props: any) => {
   return (
     <div className="roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-white hover:bg-[#dedee5]/80 dark:bg-[#111115]/80 transition hover:dark:bg-[#1d1d23]/80 backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md">
       <div className="flex flex-col md:flex-row items-center">
@@ -13,27 +13,53 @@ const RoleCard = () => {
         />
         <div className="left space-y-3">
           <div className="roleTitle-Tags flex items-center space-x-3">
-            <h2 className="font-bold">Role title @ startupName</h2>
+            <h2 className="font-bold">
+              {props.title} @ {props.startupId}
+            </h2>
           </div>
 
           <div className="coreDetails">
             <div className="flex flex-wrap items-center gap-3 text-gray-600 text-sm">
-              <p>{"Remote, Anywhere"}</p>
+              <p>
+                {props.location[0].area == "Global" &&
+                props.location[0].remote === true
+                  ? "Global"
+                  : `${props.location[0].area} ${
+                      props.location[0].remote === true ? "- Remote" : ""
+                    } `}
+              </p>
               {"· "}
               {/* {maxSalary ? `~ ${maxSalary}` : ""} */}
-              <p>{"50,000"}</p>
+              <p>{`${props.base
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ${
+                props.max > props.base
+                  ? ` - ${props.max
+                      .toString()
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
+                  : ""
+              }`}</p>
               {"· "}
-              <p>{"Permanent"}</p>
+              <p>{props.type}</p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {["Solidity", "Hardhat", "VueJS", "Moralis", "Ethers.JS"].map(
-              (item, idx) => (
-                <Tag skill={item} id={idx} />
-              )
-            )}
-          </div>
         </div>
+      </div>
+      <div className="flex flex-wrap gap-3 max-w-md">
+        {[
+          "Solidity",
+          "Hardhat",
+          "VueJS",
+          "Moralis",
+          "Ethers.JS",
+          "MATIC",
+          "MATIC",
+          "MATIC",
+          "MATIC",
+          "MATIC",
+        ].map((item, idx) => (
+          <Tag skill={item} id={idx} />
+        ))}
       </div>
       <div className="right flex flex-col space-y-2 items-center">
         <span className="text-gray-600 text-sm">Posted: 4h ago</span>

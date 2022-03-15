@@ -1,16 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Moralis } from "moralis";
 import { Helmet } from "react-helmet-async";
 import RoleCard from "../components/RoleCard";
 import { SearchIcon } from "@heroicons/react/outline";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
-import { useFilterSearch } from "src/hooks/useFilterSearch";
 
 const Roles = () => {
+  const [results, setResults]: any = useState([]);
+
+  async function getVacancies() {
+    const query = new Moralis.Query("Vacancy");
+    let set = await query.find();
+    setResults(set);
+    console.log(results);
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
+    getVacancies();
   }, []);
 
-  const [numba] = useFilterSearch();
   return (
     <>
       <Helmet>
@@ -78,12 +86,19 @@ const Roles = () => {
             />
           </div>
         </div>
-        <div className="mt-3">Fetched {numba} results</div>
+        <div className="mt-3">Fetched {results.length} results</div>
         <div className="grid gap-y-3 justify-items-center w-full">
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
-          <RoleCard />
+          {results.map((res: any, idx: number) => (
+            <RoleCard
+              key={idx}
+              title={res.attributes.title}
+              startupId={res.attributes.startupId}
+              location={res.attributes.location}
+              base={res.attributes.baseSalary}
+              max={res.attributes.maxSalary}
+              type={res.attributes.type}
+            />
+          ))}
         </div>
       </div>
     </>
