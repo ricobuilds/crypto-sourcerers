@@ -14,13 +14,11 @@ const RoleCard = (props: any) => {
           alt="brand-logo"
           className="h-12 w-auto rounded-full border-2 border-[#ed194a] md:mr-3"
         />
-        <div className="left space-y-3">
-          <div className="roleTitle-Tags flex items-center space-x-3">
-            <h2 className="font-bold">
-              {props.title} @ {props.startupId}
-            </h2>
+        <div className="left space-y-1">
+          <div className="roleTitle-Tags flex flex-col items-center   sm:items-start">
+            <h2 className="font-bold">{props.title}</h2>
+            <div className="text-sm">{props.startupId} </div>
           </div>
-
           <div className="coreDetails">
             <div className="flex flex-wrap items-center gap-3 text-gray-600 text-sm">
               <p>
