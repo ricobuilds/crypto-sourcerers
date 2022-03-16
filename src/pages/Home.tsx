@@ -9,10 +9,15 @@ const missionIcon = require("../images/rocket-dynamic-color.webp");
 
 const HomePage = () => {
   const [liveRoles, setLiveRoles] = useState<string | number>("-");
+  const [avgSalary, setAvgSalary] = useState<string | number>("-");
   (async () => {
     const _q = new Moralis.Query("Vacancy");
     let res = await _q.find();
     setLiveRoles(res.length);
+    let _r =
+      res.reduce((prev, current) => prev + current.attributes.baseSalary, 0) /
+      res.length;
+    setAvgSalary(_r);
   })();
 
   return (
@@ -138,7 +143,7 @@ const HomePage = () => {
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
             <h2 className="title-font font-medium sm:text-4xl text-3xl text-[#ed194a]">
-              -
+              {avgSalary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </h2>
             <p className="leading-relaxed">Avg. Salary ($)</p>
           </div>

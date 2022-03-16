@@ -5,12 +5,15 @@ const Inserter = () => {
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
   const [type, setType] = useState("");
+  const [skills, setSkills] = useState("");
+  const [ecosystem, setEcosystem] = useState("");
   const [cryptoOpt, setCryptoOpt] = useState<boolean>(true);
   const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
   const [area, setArea] = useState("Global");
   const [applyLink, setApplyLink] = useState("");
+  const [startupName, setStartupName] = useState("");
 
   const Vacancy = Moralis.Object.extend("Vacancy");
   const vacancy = new Vacancy();
@@ -24,19 +27,23 @@ const Inserter = () => {
         cryptoOpt &&
         baseSalary &&
         applyLink &&
-        area
+        area &&
+        skills &&
+        ecosystem
       ) {
+        let _i = skills.split(", ");
         vacancy
           .save({
-            startupId: "avax.networky",
+            startupId: startupName,
             title: title,
             description: desc,
             type: type,
-            skills: [["Javascript"], ["React"]],
+            skills: _i,
             baseSalary: baseSalary,
             maxSalary: maxSalary > baseSalary ? maxSalary : 0,
-            location: [{ area: area, remote: remote }],
+            location: [area, remote],
             applyLink: applyLink,
+            ecosystem: ecosystem,
           })
           .then(
             (success: any) => {
@@ -109,13 +116,17 @@ const Inserter = () => {
         </div>
         <div className="roleTags">
           <span className="ml-0.5 mb-1 text-sm text-gray-600">
-            Skills, tools, ecosystems - separate each tag by a comma.
+            Skills & tools - separate each tag by a comma.
           </span>
           <input
             type="text"
             required
             name=""
             id=""
+            value={skills}
+            onChange={(e) => {
+              setSkills(e.target.value);
+            }}
             className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
           />
         </div>
@@ -178,6 +189,16 @@ const Inserter = () => {
           </div>
         </div>
         <div className="applyURL">
+          <div className="mb-2">Startup Name</div>
+          <input
+            type="text"
+            required
+            value={startupName}
+            onChange={(e) => setStartupName(e.target.value)}
+            className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
+          />
+        </div>
+        <div className="applyURL">
           <div className="mb-2">External Apply URL/Email</div>
           <input
             type="text"
@@ -186,6 +207,35 @@ const Inserter = () => {
             onChange={(e) => setApplyLink(e.target.value)}
             className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
+        </div>
+        <div className="roleStartup flex flex-col">
+          <div className="flex space-x-6">
+            <select
+              className="rounded-md p-1 text-black"
+              id="ecosystems"
+              value={ecosystem}
+              onChange={(e) => setEcosystem(e.target.value)}
+            >
+              <optgroup label="ecosystems">
+                <option value="">Select Ecosystem</option>
+                <option value="Aurora">Aurora</option>
+                <option value="Avalanche">Avalanche</option>
+                <option value="Binance Smart Chain">Binance Smart Chain</option>
+                <option value="Cardano">Cardano</option>
+                <option value="Celo">Celo</option>
+                <option value="Cronos">Cronos</option>
+                <option value="Ethereum">Ethereum</option>
+                <option value="Fantom">Fantom</option>
+                <option value="Harmony ONE">Harmony ONE</option>
+                <option value="Moonriver">Moonriver</option>
+                <option value="Near">Near</option>
+                <option value="Polkadot">Polkadot</option>
+                <option value="Polygon">Polygon</option>
+                <option value="Solana">Solana</option>
+                <option value="">ZapperFi</option>
+              </optgroup>
+            </select>
+          </div>
         </div>
         <button
           className="bg-[#ed194a] w-full p-1 rounded-md"

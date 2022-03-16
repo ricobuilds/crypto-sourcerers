@@ -10,10 +10,7 @@ const Roles = () => {
   const [results, setResults]: any = useState([]);
   const [filtered, setFiltered]: typeof Vacancy = useState();
   const [loadState, setLoadState] = useState("init");
-  // const [param, setParam] = useState("");
 
-  const [type, setType] = useState("");
-  const [location, setLocation] = useState("");
   const [remote, setRemote] = useState(false);
 
   // async function getVacancies() {
@@ -69,27 +66,19 @@ const Roles = () => {
   */
 
   const reset = () => {
-    setType("");
-    setLocation("");
     setRemote(false);
-    console.log("global reset");
+    console.log("the global reset");
   };
   useEffect(() => {
     (async () => {
       setLoadState("loading");
 
       let _r = await query.find();
-      if (type.length > 0 || location.length > 0 || remote) {
+      if (remote) {
         setResults(_r);
         let _c = results.filter((res: any) => {
-          // let _s = param.split(" ");
-          return (
-            res.attributes.type == type ||
-            res.attributes.location[0].remote == `${remote}` ||
-            res.attributes.location[0].area == location
-          );
+          return res.attributes.location[1] === remote;
         });
-        // console.log(_c);
         setFiltered(_c);
         setLoadState("fin");
       } else {
@@ -97,7 +86,7 @@ const Roles = () => {
         setLoadState("fin");
       }
     })();
-  }, [type, remote, location]);
+  }, [remote]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -133,7 +122,10 @@ const Roles = () => {
             <span className="text-rose-500">
               <LocationMarkerIcon className="w-6- h-6" />
             </span>
-            <p>Find your dream Web3 role that is located in a city near you</p>
+            <p>
+              Find your dream Web3 role that is remote, or located in a city
+              near you!
+            </p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-sky-500">
@@ -151,119 +143,22 @@ const Roles = () => {
               </svg>
             </span>
             <p>
-              Narrow down by selecting the ticker of an ecosystem - ex. FTM,
-              AVAX, MATIC 👀
+              Narrow down your search by selecting an ecosystem - ex. FTM, AVAX,
+              MATIC 👀
             </p>
           </div>
         </div>
-        <div className=" w-full p-3">
+        <div className=" w-full p-3 flex flex-col items-center">
           Filter results
-          <div className="easySearch relative flex flex-wrap items-center justify-between">
+          <div className="easySearch relative flex flex-wrap items-center space-x-6">
             {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               onChange={(e) => setParam(e.target.value)}
               placeholder="ex. react hardhat london remote matic"
               className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             /> */}
-            <div className="roleStartup flex flex-col">
-              <div className="flex space-x-6">
-                <select
-                  className="rounded-md p-1 text-black peer-focus-within: "
-                  id=""
-                >
-                  <optgroup label="Startups">
-                    <option value="">Select Startup</option>
-                    <option value="Full-time">Aave</option>
-                    <option value="Part-time">Binance</option>
-                    <option value="Contract">Crypto.com</option>
-                    <option value="Internship">Delta</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">Eminado</option>
-                    <option value="Freelance">ZapperFi</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div className="roleType flex flex-col">
-              <div className="flex space-x-6">
-                <select
-                  className="rounded-md p-1 text-black peer-focus-within: "
-                  id=""
-                  value={type}
-                  onChange={(e) => setType(e.target.value)}
-                >
-                  <optgroup label="Type">
-                    <option value="">Role Type</option>
-                    <option value="Full-time">Full-time</option>
-                    <option value="Part-time">Part-time</option>
-                    <option value="Contract">Contract</option>
-                    <option value="Internship">Internship</option>
-                    <option value="Freelance">Freelance</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div className="roleSalary flex items-center">
-              <span>Min</span>
-              <input
-                type="range"
-                name=""
-                id=""
-                min={0}
-                max={1000000}
-                className={"mx-0.5"}
-              />
-              <span>Max</span>
-            </div>
             <div className="roleLocation flex items-center">
               <div className="flex flex-wrap space-x-4">
-                <input
-                  type="text"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  placeholder="e.x. city OR country"
-                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
-                />
                 <span className="flex items-center mb-1">
                   <input
                     type="checkbox"
@@ -286,11 +181,11 @@ const Roles = () => {
             </span>
           </div>
         </div>
-        {loadState == "fin" ? (
+        {loadState === "fin" ? (
           <>
             <div className="mt-3">Fetched {filtered.length} results</div>
             <div className="grid gap-y-3 justify-items-center w-full">
-              {filtered.map((res: any, idx: any) => (
+              {filtered.map((res: any) => (
                 <RoleCard
                   id={res.id}
                   title={res.attributes.title}
@@ -299,6 +194,7 @@ const Roles = () => {
                   base={res.attributes.baseSalary}
                   max={res.attributes.maxSalary}
                   type={res.attributes.type}
+                  skills={res.attributes.skills}
                 />
               ))}
             </div>

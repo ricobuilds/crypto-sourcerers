@@ -22,11 +22,10 @@ const RoleCard = (props: any) => {
           <div className="coreDetails">
             <div className="flex flex-wrap items-center gap-3 text-gray-600 text-sm">
               <p>
-                {props.location[0].area == "Global" &&
-                props.location[0].remote === true
+                {props.location[0] == "Global" && props.location[1] === true
                   ? "Global"
-                  : `${props.location[0].area} ${
-                      props.location[0].remote === true ? "- Remote" : ""
+                  : `${props.location[0]} ${
+                      props.location[1] === true ? "- Remote" : ``
                     } `}
               </p>
               {"· "}
@@ -47,25 +46,14 @@ const RoleCard = (props: any) => {
         </div>
       </div>
       <div className="flex flex-wrap gap-3 max-w-md">
-        {[
-          "Solidity",
-          "Hardhat",
-          "VueJS",
-          "Moralis",
-          "Ethers.JS",
-          "MATIC",
-          "MATIC",
-          "MATIC",
-          "MATIC",
-          "MATIC",
-        ].map((item, idx) => (
+        {props.skills.map((item: any, idx: any) => (
           <Tag skill={item} id={idx} />
         ))}
       </div>
       <div className="right flex flex-col space-y-2 items-center">
         <span className="text-gray-600 text-sm">Posted: 4h ago</span>
         <button className="bg-transparent p-1 rounded-md text-[#ed194a] border border-[#ed194a] transition hover:bg-[#ed194a] hover:text-white">
-          APPLY NOW
+          Apply Now
         </button>
       </div>
     </div>
