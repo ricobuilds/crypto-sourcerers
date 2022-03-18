@@ -22,6 +22,7 @@ import Startups from "./pages/Startups";
 import HireGuide from "./pages/HireGuide";
 import Inserter from "./pages/Inserter";
 import Startup from "./pages/Startup";
+import NoMatch from "./pages/NoMatch";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
@@ -145,6 +146,7 @@ const App = () => {
               <Route path="/roles" element={<Roles />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
+              <Route path="*" element={<NoMatch />} />
             </Routes>
           </Content>
 
