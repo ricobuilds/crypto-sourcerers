@@ -76,10 +76,11 @@ const Roles = () => {
       let _r = await query.find();
       if (remote) {
         setResults(_r);
-        let _c = results.filter((res: any) => {
-          return res.attributes.location[1] === remote;
-        });
-        setFiltered(_c);
+        await setFiltered(
+          results.filter((res: any) => {
+            return res.attributes.location[1] === remote;
+          })
+        );
         setLoadState("fin");
       } else {
         setFiltered(_r);
