@@ -31,11 +31,23 @@ const PostARole = () => {
   const [type, setType] = useState("");
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
+  const [tags, setTags] = useState([""]);
   const [brand] = useState<string>(
     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
   );
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
+
+  const handleTags = (param: string) => {
+    if (param.includes(", ")) {
+      let _ts = param.split(",");
+      setTags(_ts);
+    } else {
+      let _th = [];
+      _th.push(param);
+      setTags(_th);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -135,6 +147,8 @@ const PostARole = () => {
                 required
                 name=""
                 id=""
+                value={tags}
+                onChange={(e) => handleTags(e.target.value)}
                 className="p-1 pl-3 outline-none bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] rounded-md tracking-widest w-full"
                 placeholder="ex. DeFi, NFT, Solidity, Rust, AVAX, FTM.."
               />
@@ -396,14 +410,16 @@ const PostARole = () => {
           </p>
           <div className="h-0.5 bg-gray-800/30 rounded-r-lg rounded-l-lg"></div>
           <div className="tags flex gap-x-4">
-            <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">
-              Solidity
-            </div>
-            <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">DeFi</div>
-            <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">NFT</div>
-            <div className="bg-[#ed194a]/30 p-1 rounded-sm text-sm">
-              Metaverse
-            </div>
+            {tags &&
+              tags.map((i: string) =>
+                i.length == 0 ? (
+                  ""
+                ) : (
+                  <div className="bg-[#ed194a]/60 p-1 rounded-sm text-sm">
+                    {i.length == 0 ? 0 : i}
+                  </div>
+                )
+              )}
           </div>
         </div>
       </div>
