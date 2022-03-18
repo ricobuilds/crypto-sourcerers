@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { GlobeIcon } from "@heroicons/react/solid";
+import { GlobeIcon, LocationMarkerIcon } from "@heroicons/react/solid";
 import { Moralis } from "moralis";
 const heroIcon = require("../images/magic-trick-dynamic-color.webp");
 const bankLocker = require("../images/locker-dynamic-color.webp");
@@ -191,9 +191,63 @@ const HomePage = () => {
           />
         </div>
       </section>
-      {/* features */}
       <section
         id="features"
+        className="w-full border-black py-12 px-0 backdrop-blur-lg"
+      >
+        <div className="flex flex-col md:flex-row justify-between items-center w-full sm:divide-x-[1px] sm:divide-gray-200 sm:dark:divide-gray-800">
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
+            <span className="text-yellow-500">
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+            {/* <p>
+              Get results in a flash by entering keywords (skills, tools etc)
+              ex. rust defi remote
+            </p> */}
+            <p>Selecting your desired parameters and get results in a jiffy</p>
+          </div>
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
+            <span className="text-rose-500">
+              <LocationMarkerIcon className="w-6- h-6" />
+            </span>
+            <p>Find your dream Web3 role that is located in a city near you</p>
+          </div>
+          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
+            <span className="text-sky-500">
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+            <p>
+              Narrow down by selecting your desired ecosystem - FTM, AVAX, MATIC
+              👀
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* features */}
+      <section
+        id="benefits"
         className="relative w-full border-black py-24 px-0 backdrop-blur-lg"
       >
         <h2 className="text-3xl font-bold flex justify-center items-center mb-12">

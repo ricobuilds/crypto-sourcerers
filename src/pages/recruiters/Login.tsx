@@ -51,10 +51,10 @@ const Login = () => {
     }
   };
   return (
-    <div className="my-[25%]">
+    <div className="">
+        <h1 className="text-lg font-bold">Sign In With Business Email</h1>
       <div className="login p-3 bg-white/80 dark:bg-black/80 backdrop-blur-lg rounded-md flex flex-col max-w-md mx-auto my-auto py-auto">
         <div className="abc"></div>
-        <h1 className="text-lg font-bold">Sign In With Business Email</h1>
         <div className="relative flex items-center mb-3">
           <UserIcon className="w-6 h-6 absolute ml-3 text-slate-400 pointer-events-none" />
           <input

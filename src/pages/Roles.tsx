@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Moralis } from "moralis";
 import { Helmet } from "react-helmet-async";
+import { ViewGridIcon, ViewListIcon } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
-import { LocationMarkerIcon } from "@heroicons/react/solid";
 
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
@@ -12,6 +12,7 @@ const Roles = () => {
   const [loadState, setLoadState] = useState("init");
 
   const [remote, setRemote] = useState(false);
+  const [viewStyle, setViewStyle] = useState("list");
 
   // async function getVacancies() {
   //   let set = await query.find();
@@ -69,6 +70,15 @@ const Roles = () => {
     setRemote(false);
     console.log("the global reset");
   };
+
+  const handleView = (param: string) => {
+    if (viewStyle !== param) {
+      setViewStyle(param);
+    } else {
+      return;
+    }
+  };
+
   useEffect(() => {
     (async () => {
       setLoadState("loading");
@@ -100,66 +110,36 @@ const Roles = () => {
           Roles • Web3Source • World's #1 Gateway for Web3 Jobs & Talent.
         </title>
       </Helmet>
-      <div className="flex flex-col gap-y-4 pb-12 md:py-12 w-full">
-        <div className="flex flex-col md:flex-row justify-between items-center w-full sm:divide-x-[1px] sm:divide-gray-200 sm:dark:divide-gray-800">
-          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
-            <span className="text-yellow-500">
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-            <p>Get results in a flash by selecting your desired parameters</p>
-          </div>
-          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
-            <span className="text-rose-500">
-              <LocationMarkerIcon className="w-6- h-6" />
-            </span>
-            <p>
-              Find your dream Web3 role that is remote, or located in a city
-              near you!
-            </p>
-          </div>
-          <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
-            <span className="text-sky-500">
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-            <p>
-              Narrow down your search by selecting an ecosystem - ex. FTM, AVAX,
-              MATIC 👀
-            </p>
-          </div>
-        </div>
-        <div className=" w-full p-3 flex flex-col items-center">
-          Filter results
-          <div className="easySearch relative flex flex-wrap items-center space-x-6">
+      <div className="flex flex-col gap-y-4 pb-12 w-full">
+        <div className=" w-full flex flex-col items-center space-y-3 p-3">
+          <div className="easySearch relative flex flex-col sm:flex-row sm:items-center sm:space-x-6">
             {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
+              // onChange={(e) => useFilterSearch(e.target.value, res)}
+              placeholder="ex. react hardhat london remote 60000 matic"
               onChange={(e) => setParam(e.target.value)}
               placeholder="ex. react hardhat london remote matic"
               className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
             /> */}
+
+            <div className="roleTitle flex items-center">
+              <div className="flex flex-wrap space-x-4">
+                <input
+                  type="text"
+                  placeholder="Role Title"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+                />
+              </div>
+            </div>
+
             <div className="roleLocation flex items-center">
               <div className="flex flex-wrap space-x-4">
+                <input
+                  type="text"
+                  placeholder="Enter location"
+                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+                />
                 <span className="flex items-center mb-1">
                   <input
                     type="checkbox"
@@ -171,6 +151,30 @@ const Roles = () => {
                   <p className="ml-1">🌍 Remote</p>
                 </span>
               </div>
+            </div>
+            <div className="roleSalary flex items-center">
+              <span>$0</span>
+              <input
+                type="range"
+                name=""
+                id=""
+                min={0}
+                max={1000000}
+                className={"mx-0.5"}
+              />
+              <span>$500,000</span>
+            </div>
+            <div className="paysInCrypto">
+              <span className="flex items-center mb-1">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  checked={remote}
+                  onChange={() => setRemote(!remote)}
+                />
+                <p className="ml-1">💰 Pays in Crypto</p>
+              </span>
             </div>
           </div>
           <div className="">
@@ -184,20 +188,104 @@ const Roles = () => {
         </div>
         {loadState === "fin" ? (
           <>
-            <div className="mt-3">Fetched {filtered.length} results</div>
-            <div className="grid gap-y-3 justify-items-center w-full">
-              {filtered.map((res: any) => (
-                <RoleCard
-                  id={res.id}
-                  title={res.attributes.title}
-                  startupId={res.attributes.startupId}
-                  location={res.attributes.location}
-                  base={res.attributes.baseSalary}
-                  max={res.attributes.maxSalary}
-                  type={res.attributes.type}
-                  skills={res.attributes.skills}
-                />
-              ))}
+            <div className="mt-3 flex justify-between">
+              <div>Fetched {filtered.length} results</div>
+              <div className="flex items-center space-x-3">
+                <span>View options</span>
+                <div className="flex">
+                  <ViewGridIcon
+                    onClick={() => handleView("grid")}
+                    className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
+                      viewStyle === "grid" ? "text-[#ed194a]" : "text-gray-600"
+                    }`}
+                  />
+                  <ViewListIcon
+                    onClick={() => handleView("list")}
+                    className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
+                      viewStyle === "list" ? "text-[#ed194a]" : "text-gray-600"
+                    }`}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="bgb flex flex-col sm:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
+              <div className="w-52 flex flex-col space-y-6 static">
+                <div className="type">
+                  <h2 className="font-bold">Type</h2>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Full-Time</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Part-Time</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Internship</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Contract</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Freelance</span>
+                  </div>
+                </div>
+                <div className="ecosystem">
+                  <h2 className="font-bold">Ecosystem</h2>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Solana</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Ethereum</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Polygon</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>BNB Smart Chain</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Fantom</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Avalanche</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Harmony One</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                className={
+                  viewStyle !== "grid"
+                    ? "grid gap-y-6 justify-items-center w-full"
+                    : "grid grid-cols-2 gap-6"
+                }
+              >
+                {filtered.map((res: any) => (
+                  <RoleCard
+                    id={res.id}
+                    title={res.attributes.title}
+                    startupId={res.attributes.startupId}
+                    location={res.attributes.location}
+                    base={res.attributes.baseSalary}
+                    max={res.attributes.maxSalary}
+                    type={res.attributes.type}
+                    skills={res.attributes.skills}
+                    view={viewStyle}
+                  />
+                ))}
+              </div>
             </div>
           </>
         ) : (

@@ -177,7 +177,7 @@ const PostARole = () => {
             </div>
             <span className="flex items-center mb-1">
               <input type="checkbox" name="" id="" />
-              <p className="ml-1">Ξ Pay In Crypto</p>
+              <p className="ml-1">Ξ Pays In Crypto</p>
             </span>
             <div className="roleLocation">
               <div className="mb-2">Role Location </div>
