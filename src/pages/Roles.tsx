@@ -3,6 +3,7 @@ import { Moralis } from "moralis";
 import { Helmet } from "react-helmet-async";
 import { ViewGridIcon, ViewListIcon } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
+import { Filter } from "src/context/interfaces";
 
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
@@ -13,6 +14,27 @@ const Roles = () => {
 
   const [remote, setRemote] = useState(false);
   const [viewStyle, setViewStyle] = useState("list");
+
+  // interface IFilter {
+  //   title: string,
+  //   skills:string[],
+  //   description: string,
+  //   salary:[number, number],
+  //   location: [string, boolean],
+  //   experience: number,
+  //   ecosystem: string[]
+  // }
+
+  let [filters, setFilters] = useState<Filter>({
+    title: "",
+    skills: [""],
+    description: "",
+    type: "",
+    salary: [0, 0, false],
+    location: ["Global", true],
+    experience: 0,
+    ecosystem: [""],
+  });
 
   // async function getVacancies() {
   //   let set = await query.find();
@@ -71,13 +93,9 @@ const Roles = () => {
     console.log("the global reset");
   };
 
-  const handleView = (param: string) => {
-    if (viewStyle !== param) {
-      setViewStyle(param);
-    } else {
-      return;
-    }
-  };
+  useEffect(() => {
+    console.log(viewStyle);
+  }, [viewStyle]);
 
   useEffect(() => {
     (async () => {
@@ -194,13 +212,13 @@ const Roles = () => {
                 <span>View options</span>
                 <div className="flex">
                   <ViewGridIcon
-                    onClick={() => handleView("grid")}
+                    onClick={() => setViewStyle("grid")}
                     className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
                       viewStyle === "grid" ? "text-[#ed194a]" : "text-gray-600"
                     }`}
                   />
                   <ViewListIcon
-                    onClick={() => handleView("list")}
+                    onClick={() => setViewStyle("list")}
                     className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
                       viewStyle === "list" ? "text-[#ed194a]" : "text-gray-600"
                     }`}
@@ -269,7 +287,7 @@ const Roles = () => {
                 className={
                   viewStyle !== "grid"
                     ? "grid gap-y-6 justify-items-center w-full"
-                    : "grid grid-cols-2 gap-6"
+                    : "grid grid-cols-2 gap-6 justify-items-center w-full"
                 }
               >
                 {filtered.map((res: any) => (

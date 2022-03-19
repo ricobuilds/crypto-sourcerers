@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Moralis } from "moralis";
+import { Filter } from "src/context/interfaces";
 
 const Inserter = () => {
   const [title, setTitle] = useState<string>("");
@@ -14,6 +15,7 @@ const Inserter = () => {
   const [area, setArea] = useState("Global");
   const [applyLink, setApplyLink] = useState("");
   const [startupName, setStartupName] = useState("");
+  const [tags, setTags] = useState<Filter>();
 
   const Vacancy = Moralis.Object.extend("Vacancy");
   const vacancy = new Vacancy();
@@ -32,6 +34,16 @@ const Inserter = () => {
         ecosystem
       ) {
         let _i = skills.split(", ");
+        setTags({
+          title: startupName,
+          description: desc,
+          type: type,
+          skills: _i,
+          location: [area, remote],
+          salary: [baseSalary, maxSalary, cryptoOpt],
+          ecosystem: [""],
+          experience: 0,
+        });
         vacancy
           .save({
             startupId: startupName,
@@ -44,6 +56,7 @@ const Inserter = () => {
             location: [area, remote],
             applyLink: applyLink,
             ecosystem: ecosystem,
+            tags: tags,
           })
           .then(
             (success: any) => {
