@@ -267,7 +267,7 @@ const Roles = () => {
                   </div>
                   <div className="space-x-2 flex items-center">
                     <input type="checkbox" name="" id="" />
-                    <span>BNB Smart Chain</span>
+                    <span>BNB</span>
                   </div>
                   <div className="space-x-2 flex items-center">
                     <input type="checkbox" name="" id="" />
@@ -281,12 +281,40 @@ const Roles = () => {
                     <input type="checkbox" name="" id="" />
                     <span>Harmony One</span>
                   </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Polkadot</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Cosmos</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Terra</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Near</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Hedera</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>Zilliqa</span>
+                  </div>
+                  <div className="space-x-2 flex items-center">
+                    <input type="checkbox" name="" id="" />
+                    <span>IOTA</span>
+                  </div>
                 </div>
               </div>
               <div
                 className={
                   viewStyle !== "grid"
-                    ? "grid gap-y-6 justify-items-center w-full"
+                    ? "grid gap-y-4 justify-items-center w-full"
                     : "grid grid-cols-2 gap-6 justify-items-center w-full"
                 }
               >

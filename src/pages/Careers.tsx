@@ -40,7 +40,7 @@ const Careers = () => {
           </p>
         </div>
         <div className="grid sm:grid-cols-4 gap-0">
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Blockchain Developer</h2>
               <p className="text-sm">
@@ -50,7 +50,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Blockchain Engineer</h2>
               <p className="text-sm">
@@ -60,7 +60,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Web3 Developer</h2>
               <p className="text-sm">
@@ -69,7 +69,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Web3 Engineer</h2>
               <p className="text-sm">
@@ -79,7 +79,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20] flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Security Auditor</h2>
               <p className="text-sm">
@@ -89,7 +89,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Community Manager</h2>
               <p className="text-sm">
@@ -98,7 +98,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Marketing Strategist</h2>
               <p className="text-sm">
@@ -108,7 +108,7 @@ const Careers = () => {
               </p>
             </div>
           </div>
-          <div className="p-3 py-6 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80 flex border border-gray-800/5 space-x-3">
+          <div className="p-3 py-6 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80 flex border border-gray-800/5 space-x-3">
             <div className="right flex flex-col w-full">
               <h2 className="text-xl font-bold mb-3">Metatect</h2>
               <p className="text-sm">

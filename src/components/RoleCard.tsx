@@ -8,8 +8,8 @@ const RoleCard = (props: any) => {
       key={props.id}
       className={
         props.view !== "grid"
-          ? "roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-white hover:bg-[#dedee5]/80 dark:bg-[#201a1b]/80 transition hover:dark:bg-[#1d1d23]/80 backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md"
-          : "roleCard relative flex flex-col justify-between gap-y-6 border-l-2 border-[#ed194a] p-4 bg-white hover:bg-[#dedee5]/80 dark:bg-[#201a1b]/80 transition hover:dark:bg-[#1d1d23]/80 backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md"
+          ? "roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-[#f7f9fb] hover:bg-[#dedee5]/80 dark:bg-[#1c1b1c] transition hover:dark:bg-[#1d1d23] backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md"
+          : "roleCard relative flex flex-col justify-between gap-y-6 border-l-2 border-[#ed194a] p-4 bg-[#f7f9fb] hover:bg-[#dedee5]/80 dark:bg-[#1c1b1c]/80 transition hover:dark:bg-[#1d1d23] backdrop-blur-lg min-w-xl w-full md:min-h-[100px] rounded-md"
       }
     >
       <div

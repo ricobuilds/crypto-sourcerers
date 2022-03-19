@@ -70,7 +70,7 @@ const App = () => {
         } selection:bg-[#ed194a] selection:text-white`}
       >
         <div
-          className={`font-lato w-full h-full overflow-hidden bg-[#F3F6F9] bg-gradient-to-tr dark:from-[#060508] dark:to-[#1a1a1c] dark:text-white `}
+          className={`font-lato w-full h-full overflow-hidden bg-[#ffffff] bg-gradient-to-tr dark:from-[#060508] dark:to-[#1a1a1c] dark:text-white `}
         >
           {banner === "false" ? (
             <WarningBanner handleBanner={handleBanner} />

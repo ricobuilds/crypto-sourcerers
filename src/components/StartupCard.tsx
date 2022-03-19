@@ -1,7 +1,7 @@
 const StartupCard = () => {
   let emps = 339;
   return (
-    <div className="startup p-3 border-[1px] border-gray-300 dark:border-gray-800/30 hover:bg-[#dedee5]/80 hover:dark:bg-[#1d1d23]/80">
+    <div className="startup p-3 border-[1px] border-gray-300 dark:border-gray-800/30 hover:bg-[#f7f9fb]/80 hover:dark:bg-[#1a1a20]/80">
       <div className="mb-3 flex justify-between">
         <img src="" alt="" className="rounded-full w-10 h-10" />
         <div className="socials flex space-x-3 items-center">
