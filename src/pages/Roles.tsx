@@ -251,63 +251,142 @@ const Roles = () => {
                     <span>Freelance</span>
                   </div>
                 </div>
-                <div className="ecosystem">
+                <div className="ecosystem space-y-2">
                   <h2 className="font-bold">Ecosystem</h2>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Solana</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Solana</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Ethereum</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Ethereum</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Polygon</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Polygon</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>BNB</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>BNB</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Fantom</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Fantom</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Avalanche</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Avalanche</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Harmony One</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Harmony One</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Polkadot</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Polkadot</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Cosmos</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Cosmos</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Terra</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Cardano</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Near</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Terra</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Hedera</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Near</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Zilliqa</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Hedera</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>IOTA</span>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>Zilliqa</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="space-x-2 flex items-center">
+                      <input type="checkbox" name="" id="" />
+                      <span>IOTA</span>
+                    </div>
+                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
+                      0
+                    </div>
                   </div>
                 </div>
               </div>
