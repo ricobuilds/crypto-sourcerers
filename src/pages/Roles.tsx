@@ -7,7 +7,6 @@ import {
   ViewGridIcon,
   ViewListIcon,
   RefreshIcon,
-  XIcon,
 } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
 // import { Filter } from "src/context/interfaces";
@@ -100,6 +99,7 @@ const Roles = () => {
   */
 
   const reset = () => {
+    setTitle("");
     setRemote(false);
     console.log("the global reset");
   };
@@ -165,12 +165,7 @@ const Roles = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="What role title are you looking for next?"
-              className="p-1 pl-10 pr-10 w-[100%] outline-none rounded-full bg-black/5  transition border border-gray-800 focus:border-[#6387f1]"
-            />
-            <XIcon
-              className={`w-5 h-5 absolute right-0 mr-3 text-gray-600 dark:text-gray-300 pointer-events-none ${
-                title !== "" ? "flex" : "hidden"
-              }`}
+              className="p-1 pl-10 w-[100%] outline-none rounded-full bg-black/5  transition border border-gray-800 focus:border-[#6387f1]"
             />
           </div>
 
@@ -231,7 +226,7 @@ const Roles = () => {
             <div className="mt-3 flex justify-between">
               <div>Fetched {filtered.length} results</div>
               <div className="flex items-center space-x-3">
-                <span>View options</span>
+                <span>View Options</span>
                 <div className="flex">
                   <ViewGridIcon
                     onClick={() => setViewStyle("grid")}
