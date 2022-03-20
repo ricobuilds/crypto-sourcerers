@@ -3,10 +3,11 @@ interface IFilter {
   skills: string[];
   description: string;
   type: string;
-  salary: [number, number, boolean];
+  salary: [number, number];
   location: [string, boolean];
   experience: number;
   ecosystem: string[];
+  benefits: [boolean];
 }
 
 export { IFilter as Filter };

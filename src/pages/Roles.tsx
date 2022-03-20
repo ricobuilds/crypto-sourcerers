@@ -7,6 +7,7 @@ import {
   ViewGridIcon,
   ViewListIcon,
   RefreshIcon,
+  XIcon,
 } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
 // import { Filter } from "src/context/interfaces";
@@ -19,6 +20,7 @@ const Roles = () => {
   const [filtered, setFiltered]: typeof Vacancy = useState();
   const [loadState, setLoadState] = useState("init");
 
+  const [title, setTitle] = useState("");
   const [remote, setRemote] = useState(false);
   const [cryptoOpt, setCryptoOpt] = useState(false);
   // const [enabled, setEnabled] = useState(false);
@@ -156,12 +158,19 @@ const Roles = () => {
                 className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div> */}
-          <div className="roleTitle relative flex items-center w-full max-w-lg">
+          <div className="roleTitle relative flex items-center justify-between w-full max-w-lg">
             <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               type="text"
-              placeholder="Role Title"
-              className="p-1 pl-10 w-[100%] outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#6387f1] tracking-widest"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="What role title are you looking for next?"
+              className="p-1 pl-10 pr-10 w-[100%] outline-none rounded-full bg-black/5  transition border border-gray-800 focus:border-[#6387f1]"
+            />
+            <XIcon
+              className={`w-5 h-5 absolute right-0 mr-3 text-gray-600 dark:text-gray-300 pointer-events-none ${
+                title !== "" ? "flex" : "hidden"
+              }`}
             />
           </div>
 

@@ -40,9 +40,10 @@ const Inserter = () => {
           type: type,
           skills: _i,
           location: [area, remote],
-          salary: [baseSalary, maxSalary, cryptoOpt],
+          salary: [baseSalary, maxSalary],
           ecosystem: [""],
           experience: 0,
+          benefits: [cryptoOpt],
         });
         vacancy
           .save({
