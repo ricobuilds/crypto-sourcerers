@@ -20,6 +20,7 @@ const Roles = () => {
   const [loadState, setLoadState] = useState("init");
 
   const [remote, setRemote] = useState(false);
+  const [cryptoOpt, setCryptoOpt] = useState(false);
   // const [enabled, setEnabled] = useState(false);
   const [viewStyle, setViewStyle] = useState("list");
 
@@ -137,7 +138,7 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 w-full">
-        <div className="w-full flex flex-col sm:flex-row items-center p-3 gap-x-4">
+        <div className="w-full flex flex-col sm:flex-row items-center p-3 gap-x-9">
           {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               // onChange={(e) => useFilterSearch(e.target.value, res)}
@@ -155,35 +156,35 @@ const Roles = () => {
                 className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div> */}
-          <div className="roleTitle relative flex items-center">
+          <div className="roleTitle relative flex items-center w-full max-w-lg">
             <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               type="text"
               placeholder="Role Title"
-              className="p-1 pl-10 w-full outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+              className="p-1 pl-10 w-[100%] outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#6387f1] tracking-widest"
             />
           </div>
 
           <div className="roleLocation flex items-center space-x-3">
             {/* <input
-              type="text"
-              placeholder="Enter location"
-              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
-            /> */}
+                type="text"
+                placeholder="Enter location"
+                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+              /> */}
             <span className="flex items-center">
               <Switch
                 checked={remote}
                 onChange={() => setRemote(!remote)}
-                className={`w-9 h-6 ${
-                  remote ? "bg-indigo-500" : "bg-indigo-400/60"
+                className={`w-10 h-6 ${
+                  remote ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
                 }
-          relative inline-flex flex-shrink-0 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+            relative inline-flex flex-shrink-0 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
               >
                 <span className="sr-only">Use setting</span>
                 <span
                   aria-hidden="true"
-                  className={`${remote ? "translate-x-3" : "translate-x-0"}
-            pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+                  className={`${remote ? "translate-x-4" : "translate-x-0"}
+              pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
                 />
               </Switch>
               <p className="ml-1">🌍 Remote</p>
@@ -203,17 +204,25 @@ const Roles = () => {
           </div>
           <div className="paysInCrypto">
             <span className="flex items-center">
-              <input
-                type="checkbox"
-                name=""
-                id=""
-                checked={remote}
-                onChange={() => setRemote(!remote)}
-              />
+              <Switch
+                checked={cryptoOpt}
+                onChange={() => setCryptoOpt(!cryptoOpt)}
+                className={`w-10 h-6 ${
+                  cryptoOpt ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
+                }
+            relative inline-flex flex-shrink-0 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${cryptoOpt ? "translate-x-4" : "translate-x-0"}
+              pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+                />
+              </Switch>
               <p className="ml-1">💰 Pays in Crypto</p>
             </span>
           </div>
-          <div className="text-[#ed194a] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#ed194a]/70">
+          <div className="text-[#6387f1] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#6387f1]/70 dark:text-white">
             <RefreshIcon className="w-5 h-5 rotate-[125deg]" />
             <p className="" onClick={reset}>
               Reset
@@ -243,19 +252,19 @@ const Roles = () => {
               </div>
             </div>
             <div className="bgb flex flex-col sm:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
-              <div className="w-52 flex flex-col space-y-6 static">
+              <div className="w-52 flex flex-col static">
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 rounded-lg hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         <span>Role Type</span>
                         <ChevronUpIcon
                           className={`${
                             open ? "transform rotate-180" : ""
-                          } w-5 h-5 text-purple-500`}
+                          } w-5 h-5 text-[#6387f1]`}
                         />
                       </Disclosure.Button>
-                      <Disclosure.Panel className="px-4 pt-2 pb-2 text-sm text-gray-500">
+                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                         <div className="type">
                           <div className="space-x-2 flex items-center">
                             <input type="checkbox" name="" id="" />
@@ -285,13 +294,13 @@ const Roles = () => {
                 <Disclosure as="div" className="mt-2">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 rounded-lg hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         <span>Ecosystems</span>
 
                         <ChevronUpIcon
                           className={`${
                             open ? "transform rotate-180" : ""
-                          } w-5 h-5 text-purple-500`}
+                          } w-5 h-5 text-[#6387f1]`}
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
@@ -301,7 +310,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Solana</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 ">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
                               0
                             </div>
                           </div>
@@ -310,7 +319,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Ethereum</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -319,7 +328,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Polygon</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -328,7 +337,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>BNB</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -337,7 +346,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Fantom</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -346,7 +355,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Avalanche</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -355,7 +364,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Harmony One</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -364,7 +373,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Polkadot</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -373,7 +382,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Cosmos</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -382,7 +391,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Cardano</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -391,7 +400,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Terra</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -400,7 +409,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Near</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -409,7 +418,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Hedera</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -418,7 +427,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Zilliqa</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
@@ -427,7 +436,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>IOTA</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white">
                               0
                             </div>
                           </div>
