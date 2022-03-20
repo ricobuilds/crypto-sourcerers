@@ -263,7 +263,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Full-Time</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -272,7 +272,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Part-Time</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -281,7 +281,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Intership</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -290,7 +290,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Contract</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -299,7 +299,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Freelance</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -327,7 +327,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Solana</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white ">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -336,7 +336,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Ethereum</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -345,7 +345,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Polygon</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -354,7 +354,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>BNB</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -363,7 +363,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Fantom</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -372,7 +372,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Avalanche</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -381,7 +381,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Harmony One</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -390,7 +390,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Polkadot</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -399,7 +399,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Cosmos</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -408,7 +408,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Cardano</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -417,7 +417,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Terra</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -426,7 +426,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Near</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -435,7 +435,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Hedera</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -444,7 +444,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>Zilliqa</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
@@ -453,7 +453,7 @@ const Roles = () => {
                               <input type="checkbox" name="" id="" />
                               <span>IOTA</span>
                             </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 dark:text-white">
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
                               0
                             </div>
                           </div>
