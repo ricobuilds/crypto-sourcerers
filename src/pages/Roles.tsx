@@ -230,14 +230,18 @@ const Roles = () => {
                 <div className="flex">
                   <ViewGridIcon
                     onClick={() => setViewStyle("grid")}
-                    className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
-                      viewStyle === "grid" ? "text-[#ed194a]" : "text-gray-600"
+                    className={`w-5 h-5 cursor-pointer transition ${
+                      viewStyle === "grid"
+                        ? "text-[#ed194a]"
+                        : "text-gray-600 hover:text-[#ed194a]/60"
                     }`}
                   />
                   <ViewListIcon
                     onClick={() => setViewStyle("list")}
-                    className={`w-5 h-5 transition hover:text-[#ed194a]/60 ${
-                      viewStyle === "list" ? "text-[#ed194a]" : "text-gray-600"
+                    className={`w-5 h-5 cursor-pointer transition ${
+                      viewStyle === "list"
+                        ? "text-[#ed194a]"
+                        : "text-gray-600 hover:text-[#ed194a]/60"
                     }`}
                   />
                 </div>
