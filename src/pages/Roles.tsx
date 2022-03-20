@@ -138,7 +138,7 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 w-full">
-        <div className="w-full flex flex-col sm:flex-row items-center p-3 gap-x-9">
+        <div className="w-full flex flex-col sm:flex-row items-center py-3 gap-x-9">
           {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               // onChange={(e) => useFilterSearch(e.target.value, res)}
@@ -189,18 +189,6 @@ const Roles = () => {
               </Switch>
               <p className="ml-1">🌍 Remote</p>
             </span>
-          </div>
-          <div className="roleSalary flex items-center">
-            <span>$0</span>
-            <input
-              type="range"
-              name=""
-              id=""
-              min={0}
-              max={1000000}
-              className={"mx-0.5"}
-            />
-            <span>$500,000</span>
           </div>
           <div className="paysInCrypto">
             <span className="flex items-center">
