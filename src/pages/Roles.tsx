@@ -140,6 +140,9 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 w-full">
+        <div className="h-24 bg-[#ed194a]/60 w-full flex justify-center items-center">
+          <p className="text-white">Promotional Banner</p>
+        </div>
         <div className="w-full flex flex-col sm:flex-row items-center py-3 gap-x-9">
           {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
@@ -164,7 +167,7 @@ const Roles = () => {
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="What role title are you looking for next?"
+              placeholder="What role title are you looking for next...?"
               className="p-1 pl-10 w-[100%] outline-none rounded-full bg-black/5  transition border border-gray-800 focus:border-[#6387f1]"
             />
           </div>
