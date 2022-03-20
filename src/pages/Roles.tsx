@@ -222,7 +222,7 @@ const Roles = () => {
               <p className="ml-1">💰 Pays in Crypto</p>
             </span>
           </div>
-          <div className="text-[#6387f1] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#6387f1]/70 dark:text-white">
+          <div className="text-[#6387f1] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#6387f1]/70">
             <RefreshIcon className="w-5 h-5 rotate-[125deg]" />
             <p className="" onClick={reset}>
               Reset
@@ -256,7 +256,7 @@ const Roles = () => {
                 <Disclosure>
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 rounded-lg hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         <span>Role Type</span>
                         <ChevronUpIcon
                           className={`${
@@ -265,26 +265,51 @@ const Roles = () => {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                        <div className="type">
-                          <div className="space-x-2 flex items-center">
-                            <input type="checkbox" name="" id="" />
-                            <span>Full-Time</span>
+                        <div className="type space-y-2">
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Full-Time</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
+                              0
+                            </div>
                           </div>
-                          <div className="space-x-2 flex items-center">
-                            <input type="checkbox" name="" id="" />
-                            <span>Part-Time</span>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Part-Time</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
+                              0
+                            </div>
                           </div>
-                          <div className="space-x-2 flex items-center">
-                            <input type="checkbox" name="" id="" />
-                            <span>Internship</span>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Intership</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
+                              0
+                            </div>
                           </div>
-                          <div className="space-x-2 flex items-center">
-                            <input type="checkbox" name="" id="" />
-                            <span>Contract</span>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Contract</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
+                              0
+                            </div>
                           </div>
-                          <div className="space-x-2 flex items-center">
-                            <input type="checkbox" name="" id="" />
-                            <span>Freelance</span>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Freelance</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#6387f1]/70 dark:text-white ">
+                              0
+                            </div>
                           </div>
                         </div>
                       </Disclosure.Panel>
@@ -294,7 +319,7 @@ const Roles = () => {
                 <Disclosure as="div" className="mt-2">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 rounded-lg hover:bg-indigo-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#6387f1] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         <span>Ecosystems</span>
 
                         <ChevronUpIcon
