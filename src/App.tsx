@@ -83,7 +83,6 @@ const App = () => {
                   BETA
                 </span>
               </div>
-              {/* <img src={Logo} alt="logo" className="h-5" /> */}
             </Link>
             <div className="navs space-x-6 lg:space-x-12 font-medium hidden md:inline-block">
               <Link to={"/roles"}>
