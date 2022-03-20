@@ -193,7 +193,7 @@ const HomePage = () => {
       </section>
       <section
         id="features"
-        className="w-full border-black py-12 px-0 backdrop-blur-lg"
+        className="w-full border-black py-6  px-0 backdrop-blur-lg"
       >
         <div className="flex flex-col md:flex-row justify-between items-center w-full sm:divide-x-[1px] sm:divide-gray-200 sm:dark:divide-gray-800">
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
@@ -215,13 +215,16 @@ const HomePage = () => {
               Get results in a flash by entering keywords (skills, tools etc)
               ex. rust defi remote
             </p> */}
-            <p>Selecting your desired parameters and get results in a jiffy</p>
+            <p>Selecting your desired parameters and get results in a flash</p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-rose-500">
               <LocationMarkerIcon className="w-6- h-6" />
             </span>
-            <p>Find your dream Web3 role that is located in a city near you</p>
+            <p>
+              Find your dream Web3 role that is remote, or located in a city
+              near you
+            </p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-sky-500">
@@ -239,8 +242,8 @@ const HomePage = () => {
               </svg>
             </span>
             <p>
-              Narrow down by selecting your desired ecosystem - FTM, AVAX, MATIC
-              👀
+              Narrow down by selecting your desired ecosystem - Ethereum,
+              Solana, plus more!
             </p>
           </div>
         </div>

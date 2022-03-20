@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import { Moralis } from "moralis";
 import { Helmet } from "react-helmet-async";
-import { ViewGridIcon, ViewListIcon } from "@heroicons/react/solid";
+import {
+  ChevronUpIcon,
+  SearchIcon,
+  ViewGridIcon,
+  ViewListIcon,
+  RefreshIcon,
+} from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
-import { Filter } from "src/context/interfaces";
+// import { Filter } from "src/context/interfaces";
+import { Disclosure, Switch } from "@headlessui/react";
 
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
@@ -13,6 +20,7 @@ const Roles = () => {
   const [loadState, setLoadState] = useState("init");
 
   const [remote, setRemote] = useState(false);
+  // const [enabled, setEnabled] = useState(false);
   const [viewStyle, setViewStyle] = useState("list");
 
   // interface IFilter {
@@ -25,16 +33,16 @@ const Roles = () => {
   //   ecosystem: string[]
   // }
 
-  let [filters, setFilters] = useState<Filter>({
-    title: "",
-    skills: [""],
-    description: "",
-    type: "",
-    salary: [0, 0, false],
-    location: ["Global", true],
-    experience: 0,
-    ecosystem: [""],
-  });
+  // let [filters, setFilters] = useState<Filter>({
+  //   title: "",
+  //   skills: [""],
+  //   description: "",
+  //   type: "",
+  //   salary: [0, 0, false],
+  //   location: ["Global", true],
+  //   experience: 0,
+  //   ecosystem: [""],
+  // });
 
   // async function getVacancies() {
   //   let set = await query.find();
@@ -129,9 +137,8 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 w-full">
-        <div className=" w-full flex flex-col items-center space-y-3 p-3">
-          <div className="easySearch relative flex flex-col sm:flex-row sm:items-center sm:space-x-6">
-            {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
+        <div className="w-full flex flex-col sm:flex-row items-center p-3 gap-x-4">
+          {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
               // onChange={(e) => useFilterSearch(e.target.value, res)}
               placeholder="ex. react hardhat london remote 60000 matic"
@@ -140,68 +147,77 @@ const Roles = () => {
               className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
             /> */}
-
-            <div className="roleTitle flex items-center">
-              <div className="flex flex-wrap space-x-4">
-                <input
-                  type="text"
-                  placeholder="Role Title"
-                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
-                />
-              </div>
-            </div>
-
-            <div className="roleLocation flex items-center">
-              <div className="flex flex-wrap space-x-4">
-                <input
-                  type="text"
-                  placeholder="Enter location"
-                  className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
-                />
-                <span className="flex items-center mb-1">
-                  <input
-                    type="checkbox"
-                    name=""
-                    id=""
-                    checked={remote}
-                    onChange={() => setRemote(!remote)}
-                  />
-                  <p className="ml-1">🌍 Remote</p>
-                </span>
-              </div>
-            </div>
-            <div className="roleSalary flex items-center">
-              <span>$0</span>
+          {/* <div className="relative flex items-center">
+              <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
               <input
-                type="range"
+                // onChange={(e) => useFilterSearch(e.target.value, res)}
+                placeholder="ex. react hardhat london remote 60000 matic"
+                className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              />
+            </div> */}
+          <div className="roleTitle relative flex items-center">
+            <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
+            <input
+              type="text"
+              placeholder="Role Title"
+              className="p-1 pl-10 w-full outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+            />
+          </div>
+
+          <div className="roleLocation flex items-center space-x-3">
+            {/* <input
+              type="text"
+              placeholder="Enter location"
+              className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
+            /> */}
+            <span className="flex items-center">
+              <Switch
+                checked={remote}
+                onChange={() => setRemote(!remote)}
+                className={`w-9 h-6 ${
+                  remote ? "bg-indigo-500" : "bg-indigo-400/60"
+                }
+          relative inline-flex flex-shrink-0 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+              >
+                <span className="sr-only">Use setting</span>
+                <span
+                  aria-hidden="true"
+                  className={`${remote ? "translate-x-3" : "translate-x-0"}
+            pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
+                />
+              </Switch>
+              <p className="ml-1">🌍 Remote</p>
+            </span>
+          </div>
+          <div className="roleSalary flex items-center">
+            <span>$0</span>
+            <input
+              type="range"
+              name=""
+              id=""
+              min={0}
+              max={1000000}
+              className={"mx-0.5"}
+            />
+            <span>$500,000</span>
+          </div>
+          <div className="paysInCrypto">
+            <span className="flex items-center">
+              <input
+                type="checkbox"
                 name=""
                 id=""
-                min={0}
-                max={1000000}
-                className={"mx-0.5"}
+                checked={remote}
+                onChange={() => setRemote(!remote)}
               />
-              <span>$500,000</span>
-            </div>
-            <div className="paysInCrypto">
-              <span className="flex items-center mb-1">
-                <input
-                  type="checkbox"
-                  name=""
-                  id=""
-                  checked={remote}
-                  onChange={() => setRemote(!remote)}
-                />
-                <p className="ml-1">💰 Pays in Crypto</p>
-              </span>
-            </div>
-          </div>
-          <div className="">
-            <span
-              className="text-[#ed194a] text-center transition hover:cursor-pointer hover:text-[#ed194a]/70"
-              onClick={reset}
-            >
-              Reset
+              <p className="ml-1">💰 Pays in Crypto</p>
             </span>
+          </div>
+          <div className="text-[#ed194a] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#ed194a]/70">
+            <RefreshIcon className="w-5 h-5 rotate-[125deg]" />
+            <p className="" onClick={reset}>
+              Reset
+            </p>
           </div>
         </div>
         {loadState === "fin" ? (
@@ -228,167 +244,198 @@ const Roles = () => {
             </div>
             <div className="bgb flex flex-col sm:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
               <div className="w-52 flex flex-col space-y-6 static">
-                <div className="type">
-                  <h2 className="font-bold">Type</h2>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Full-Time</span>
-                  </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Part-Time</span>
-                  </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Internship</span>
-                  </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Contract</span>
-                  </div>
-                  <div className="space-x-2 flex items-center">
-                    <input type="checkbox" name="" id="" />
-                    <span>Freelance</span>
-                  </div>
-                </div>
-                <div className="ecosystem space-y-2">
-                  <h2 className="font-bold">Ecosystem</h2>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Solana</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Ethereum</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Polygon</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>BNB</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Fantom</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Avalanche</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Harmony One</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Polkadot</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Cosmos</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Cardano</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Terra</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Near</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Hedera</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>Zilliqa</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="space-x-2 flex items-center">
-                      <input type="checkbox" name="" id="" />
-                      <span>IOTA</span>
-                    </div>
-                    <div className="px-2 rounded-md bg-[#ed194a]/70 font-bold ">
-                      0
-                    </div>
-                  </div>
-                </div>
+                <Disclosure>
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                        <span>Role Type</span>
+                        <ChevronUpIcon
+                          className={`${
+                            open ? "transform rotate-180" : ""
+                          } w-5 h-5 text-purple-500`}
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className="px-4 pt-2 pb-2 text-sm text-gray-500">
+                        <div className="type">
+                          <div className="space-x-2 flex items-center">
+                            <input type="checkbox" name="" id="" />
+                            <span>Full-Time</span>
+                          </div>
+                          <div className="space-x-2 flex items-center">
+                            <input type="checkbox" name="" id="" />
+                            <span>Part-Time</span>
+                          </div>
+                          <div className="space-x-2 flex items-center">
+                            <input type="checkbox" name="" id="" />
+                            <span>Internship</span>
+                          </div>
+                          <div className="space-x-2 flex items-center">
+                            <input type="checkbox" name="" id="" />
+                            <span>Contract</span>
+                          </div>
+                          <div className="space-x-2 flex items-center">
+                            <input type="checkbox" name="" id="" />
+                            <span>Freelance</span>
+                          </div>
+                        </div>
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+                <Disclosure as="div" className="mt-2">
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-purple-900 bg-purple-100 rounded-lg hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                        <span>Ecosystems</span>
+
+                        <ChevronUpIcon
+                          className={`${
+                            open ? "transform rotate-180" : ""
+                          } w-5 h-5 text-purple-500`}
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                        <div className="ecosystem space-y-2">
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Solana</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 ">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Ethereum</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Polygon</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>BNB</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Fantom</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Avalanche</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Harmony One</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Polkadot</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Cosmos</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Cardano</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Terra</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Near</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Hedera</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>Zilliqa</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input type="checkbox" name="" id="" />
+                              <span>IOTA</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70">
+                              0
+                            </div>
+                          </div>
+                        </div>
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
               </div>
               <div
                 className={
