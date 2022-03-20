@@ -75,7 +75,7 @@ const App = () => {
           {banner === "false" ? (
             <WarningBanner handleBanner={handleBanner} />
           ) : null}
-          <header className=" flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
+          <header className="text-sm flex justify-between items-center h-12 w-full py-3 px-6 md:px-12 lg:px-32 mb-6 border-b border-gray-200 dark:border-gray-800">
             <Link to={"/"}>
               <div className="relative logo">
                 <img src={logo} alt="logo" className="h-5" />
