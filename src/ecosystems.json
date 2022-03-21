@@ -1,0 +1,15 @@
+[
+  {"label": "Avalanche", "value": "avalanche"},
+  {"label": "BNB", "value": "bnb"},
+  {"label": "Cardano", "value": "cardano"},
+  {"label": "Celo", "value": "celo"},
+  {"label": "Cosmos", "value": "cosmos"},
+  {"label": "Ethereum", "value": "ethereum"},
+  {"label": "Fantom", "value": "fantom"},
+  {"label": "Harmony One", "value": "harmonyOne"},
+  {"label": "Near", "value": "near"},
+  {"label": "Polkadot", "value": "polkadot"},
+  {"label": "Polygon", "value": "polygon"},
+  {"label": "Solana", "value": "solana"},
+  {"label": "Terra", "value": "terra"}
+]

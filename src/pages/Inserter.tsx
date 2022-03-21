@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { Moralis } from "moralis";
 import { Filter } from "src/context/interfaces";
+import { Disclosure } from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/solid";
+
+const Options = require("../ecosystems.json");
 
 const Inserter = () => {
   const [title, setTitle] = useState<string>("");
   const [desc, setDesc] = useState<string>("");
   const [type, setType] = useState("");
   const [skills, setSkills] = useState("");
-  const [ecosystem, setEcosystem] = useState("");
+  const [ecosystem, setEcosystem] = useState<string[]>([]);
   const [cryptoOpt, setCryptoOpt] = useState<boolean>(true);
   const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
+  const [exp, setExp] = useState(0);
   const [area, setArea] = useState("Global");
   const [applyLink, setApplyLink] = useState("");
   const [startupName, setStartupName] = useState("");
@@ -19,6 +24,21 @@ const Inserter = () => {
 
   const Vacancy = Moralis.Object.extend("Vacancy");
   const vacancy = new Vacancy();
+
+  const handleEcosystems = (param: string) => {
+    if (!ecosystem.includes(param)) {
+      ecosystem.push(param);
+      let _a = ecosystem;
+      setEcosystem(_a);
+      console.log(ecosystem);
+    } else {
+      // let _ar = ecosystem.filter((r) => r !== param);
+      ecosystem.splice(ecosystem.indexOf(param), 1);
+      let _ar = ecosystem;
+      setEcosystem(_ar);
+      console.log(ecosystem);
+    }
+  };
 
   const handlePost = () => {
     try {
@@ -41,8 +61,8 @@ const Inserter = () => {
           skills: _i,
           location: [area, remote],
           salary: [baseSalary, maxSalary],
-          ecosystem: [""],
-          experience: 0,
+          ecosystem: ecosystem,
+          experience: exp,
           benefits: [cryptoOpt],
         });
         vacancy
@@ -55,6 +75,7 @@ const Inserter = () => {
             baseSalary: baseSalary,
             maxSalary: maxSalary > baseSalary ? maxSalary : 0,
             location: [area, remote],
+            experience: exp,
             applyLink: applyLink,
             ecosystem: ecosystem,
             tags: tags,
@@ -76,7 +97,7 @@ const Inserter = () => {
   };
 
   return (
-    <div className="inserter">
+    <div className="inserter pb-12">
       <h1 className="text-4xl tracking-widest font-bold">Insert Role Form</h1>
       <div className="formDetails space-y-4">
         <div className="roleTitle">
@@ -124,6 +145,27 @@ const Inserter = () => {
                 <option value="Contract">Contract</option>
                 <option value="Internship">Internship</option>
                 <option value="Freelance">Freelance</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <div className="roleExp flex flex-col">
+          <span className="mb-1 text-sm text-gray-600">
+            Required Experience
+          </span>
+          <div className="flex space-x-6">
+            <select
+              className="rounded-md p-1 text-black peer-focus-within: "
+              id=""
+              value={exp}
+              onChange={(e) => setExp(Number(e.target.value))}
+            >
+              <optgroup label="Experience">
+                <option value={0}>Less than 1 year</option>
+                <option value={1}>Min. 1 Year</option>
+                <option value={2}>Min. 2 Years</option>
+                <option value={3}>Min. 3 Years</option>
+                <option value={4}>Min. 4 Years</option>
               </optgroup>
             </select>
           </div>
@@ -222,34 +264,42 @@ const Inserter = () => {
             className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest w-full"
           />
         </div>
-        <div className="roleStartup flex flex-col">
-          <div className="flex space-x-6">
-            <select
-              className="rounded-md p-1 text-black"
-              id="ecosystems"
-              value={ecosystem}
-              onChange={(e) => setEcosystem(e.target.value)}
-            >
-              <optgroup label="ecosystems">
-                <option value="">Select Ecosystem</option>
-                <option value="Aurora">Aurora</option>
-                <option value="Avalanche">Avalanche</option>
-                <option value="Binance Smart Chain">Binance Smart Chain</option>
-                <option value="Cardano">Cardano</option>
-                <option value="Celo">Celo</option>
-                <option value="Cronos">Cronos</option>
-                <option value="Ethereum">Ethereum</option>
-                <option value="Fantom">Fantom</option>
-                <option value="Harmony ONE">Harmony ONE</option>
-                <option value="Moonriver">Moonriver</option>
-                <option value="Near">Near</option>
-                <option value="Polkadot">Polkadot</option>
-                <option value="Polygon">Polygon</option>
-                <option value="Solana">Solana</option>
-                <option value="">ZapperFi</option>
-              </optgroup>
-            </select>
-          </div>
+        <div className="roleExp flex flex-col">
+          <span className="mb-1 text-sm text-gray-600">
+            Required Experience
+          </span>
+          <Disclosure as="div" className="mt-2">
+            {({ open }) => (
+              <>
+                <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                  <span>Ecosystems</span>
+
+                  <ChevronUpIcon
+                    className={`${
+                      open ? "transform rotate-180" : ""
+                    } w-5 h-5 text-[#ed194a]`}
+                  />
+                </Disclosure.Button>
+                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                  <div className="ecosystem space-y-2">
+                    {Options.map((item: { value: string; label: string }) => (
+                      <div className="flex items-center justify-between">
+                        <div className="space-x-2 flex items-center">
+                          <input
+                            type="checkbox"
+                            name={item.label}
+                            value={item.value}
+                            onClick={() => handleEcosystems(item.value)}
+                          />
+                          <span>{item.label}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Disclosure.Panel>
+              </>
+            )}
+          </Disclosure>
         </div>
         <button
           className="bg-[#ed194a] w-full p-1 rounded-md"

@@ -140,9 +140,9 @@ const Roles = () => {
         </title>
       </Helmet>
       <div className="flex flex-col gap-y-4 pb-12 w-full">
-        <div className="h-24 bg-[#ed194a]/60 w-full flex justify-center items-center">
+        {/* <div className="h-24 bg-[#ed194a]/60 w-full flex justify-center items-center">
           <p className="text-white">Promotional Banner</p>
-        </div>
+        </div> */}
         <div className="w-full flex flex-col sm:flex-row items-center py-3 gap-x-9">
           {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
@@ -250,13 +250,13 @@ const Roles = () => {
                 </div>
               </div>
             </div>
-            <div className="bgb flex flex-col sm:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
-              <div className="w-52 flex flex-col static">
-                <Disclosure>
+            <div className="bgb flex flex-col md:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
+              <div className="w-full md:w-52 flex md:flex-col space-x-4 pb-6 md:pb-0 md:space-x-0 static">
+                <Disclosure as="div" className="mt-2">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                        <span>Role Type</span>
+                        <span className="flex">Role Type</span>
                         <ChevronUpIcon
                           className={`${
                             open ? "transform rotate-180" : ""
@@ -474,12 +474,12 @@ const Roles = () => {
                 className={
                   viewStyle !== "grid"
                     ? "grid gap-y-4 justify-items-center w-full"
-                    : "grid grid-cols-2 gap-6 justify-items-center w-full"
+                    : "grid lg:grid-cols-3 gap-6 justify-items-center w-full"
                 }
               >
                 {filtered.map((res: any) => (
                   <RoleCard
-                    id={res.id}
+                    id={res.attributes.objectId}
                     title={res.attributes.title}
                     startupId={res.attributes.startupId}
                     location={res.attributes.location}
@@ -488,6 +488,7 @@ const Roles = () => {
                     type={res.attributes.type}
                     skills={res.attributes.skills}
                     view={viewStyle}
+                    time={res.attributes.createdAt}
                   />
                 ))}
               </div>
