@@ -11,7 +11,7 @@ const Inserter = () => {
   const [desc, setDesc] = useState<string>("");
   const [type, setType] = useState("");
   const [skills, setSkills] = useState("");
-  const [ecosystem, setEcosystem] = useState<string[]>([]);
+  const [ecosystem, setEcosystem] = useState<string[]>([""]);
   const [cryptoOpt, setCryptoOpt] = useState<boolean>(true);
   const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);
@@ -43,10 +43,9 @@ const Inserter = () => {
   const handlePost = () => {
     try {
       if (
-        type != "" &&
+        type !== "" &&
         title &&
         desc &&
-        cryptoOpt &&
         baseSalary &&
         applyLink &&
         area &&
@@ -78,6 +77,7 @@ const Inserter = () => {
             experience: exp,
             applyLink: applyLink,
             ecosystem: ecosystem,
+            benefits: [cryptoOpt],
             tags: tags,
           })
           .then(
@@ -133,7 +133,7 @@ const Inserter = () => {
           <span className="mb-1 text-sm text-gray-600">Role Type</span>
           <div className="flex space-x-6">
             <select
-              className="rounded-md p-1 text-black peer-focus-within: "
+              className="rounded-md p-1 text-black "
               id=""
               value={type}
               onChange={(e) => setType(e.target.value)}

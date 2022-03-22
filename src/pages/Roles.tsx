@@ -12,45 +12,36 @@ import RoleCard from "../components/RoleCard";
 // import { Filter } from "src/context/interfaces";
 import { Disclosure, Switch } from "@headlessui/react";
 
+const Types = require("../types.json");
+const Ecosystems = require("../ecosystems.json");
+
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
   const query = new Moralis.Query(Vacancy);
   const [results, setResults]: any = useState([]);
-  const [filtered, setFiltered]: typeof Vacancy = useState();
+  // const [filtered, setFiltered]: typeof Vacancy = useState();
   const [loadState, setLoadState] = useState("init");
 
   const [title, setTitle] = useState("");
   const [remote, setRemote] = useState(false);
   const [cryptoOpt, setCryptoOpt] = useState(false);
-  // const [enabled, setEnabled] = useState(false);
+  const [type, setType] = useState<string[]>([]);
+  const [ecosystem, setEcosystem] = useState<string[]>([]);
+
   const [viewStyle, setViewStyle] = useState("list");
 
-  // interface IFilter {
-  //   title: string,
-  //   skills:string[],
-  //   description: string,
-  //   salary:[number, number],
-  //   location: [string, boolean],
-  //   experience: number,
-  //   ecosystem: string[]
-  // }
+  let [filters, setFilters] = useState<Object[]>([
+    {
+      title: "",
+      remote: remote,
+      cryptoOpt: cryptoOpt,
+      type: type,
+      ecosystem: ecosystem,
+    },
+  ]); //push and remove data from it
 
-  // let [filters, setFilters] = useState<Filter>({
-  //   title: "",
-  //   skills: [""],
-  //   description: "",
-  //   type: "",
-  //   salary: [0, 0, false],
-  //   location: ["Global", true],
-  //   experience: 0,
-  //   ecosystem: [""],
-  // });
-
-  // async function getVacancies() {
-  //   let set = await query.find();
-  //   setResults(set);
-  //   console.log(results);
-  // }
+  // 1. If the input field empty, display all records
+  // 2. If the input field populated, display relevant records
 
   /*
   // 1. If the input field empty, display all records
@@ -97,36 +88,115 @@ const Roles = () => {
     }
   };
   */
+  // const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //       // title, remote, pay in crypto, type, ecosystem
+  //       res.attributes.tags.title.toLowerCase().includes(title.toLowerCase()) ||
+  //       res.attributes.tags.location[1] === remote ||
+  //       res.attributes.tags.benefits[0] === cryptoOpt ||
+  //       res.attributes.tags.type.some(type) ||
+  //       res.attributes.tags.ecosystem.some(ecosystem)
+  // };
+
+  const handleChange = (n: string, p: any) => {
+    console.log(n, p);
+    // console.log(Object.keys(filters[0]))
+    // setFilters(
+    //   filters.map((item, idx) => {
+    //     if (Object.keys(item)[idx] === n) {
+    //       return { ...item, p };
+    //     } else {
+    //       return item;
+    //     }
+    //   })
+    // );
+  };
+
+  const handleTitle = (p: string) => {
+    let _v = p;
+    setTitle(_v);
+    handleChange("title", title);
+  };
+
+  const handleRemote = () => {
+    setRemote(!remote);
+    handleChange("remote", remote.toString());
+  };
+
+  const handleCryptoOpt = () => {
+    setCryptoOpt(!cryptoOpt);
+    handleChange("cryptoOpt", cryptoOpt.toString());
+  };
+
+  const handleType = (param: string) => {
+    if (!type.includes(param)) {
+      type.push(param);
+      let _a = type;
+      setType(_a);
+      handleChange("type", type);
+      console.log(type);
+    } else {
+      type.splice(type.indexOf(param), 1);
+      let _ar = type;
+      setType(_ar);
+      handleChange("type", type);
+      console.log(type);
+    }
+  };
+
+  const handleEcosystems = (param: string) => {
+    if (!ecosystem.includes(param)) {
+      ecosystem.push(param);
+      let _a = ecosystem;
+      setEcosystem(_a);
+      handleChange("ecosystem", ecosystem);
+      console.log(ecosystem);
+    } else {
+      ecosystem.splice(ecosystem.indexOf(param), 1);
+      let _ar = ecosystem;
+      setEcosystem(_ar);
+      handleChange("ecosystem", ecosystem);
+      console.log(ecosystem);
+    }
+  };
+
+  // const filterData = (value: string) => {
+  //   // sanitise data
+  //   // if/else
+  //   if (!title || !type || !ecosystem) {
+  //     let _r = query.find();
+  //     setResults(_r);
+  //   } else {
+  //     const filteredData = results.filter((item: any) => {
+  //       return filters.some(key => {
+  //         return  item[key].toString().toLowerCase().includes(value.toLowerCase())
+  //       })
+  //     })
+  //     setResults(filteredData)
+  //   }
+  // };
 
   const reset = () => {
     setTitle("");
     setRemote(false);
+    setCryptoOpt(false);
+    setType([]);
+    setEcosystem([]);
+    setFilters([]);
     console.log("the global reset");
   };
 
-  useEffect(() => {
-    console.log(viewStyle);
-  }, [viewStyle]);
+  // useEffect(() => {
+  //   console.log(viewStyle);
+  // }, [viewStyle]);
 
   useEffect(() => {
     (async () => {
       setLoadState("loading");
-
       let _r = await query.find();
-      if (remote) {
-        setResults(_r);
-        await setFiltered(
-          results.filter((res: any) => {
-            return res.attributes.location[1] === remote;
-          })
-        );
-        setLoadState("fin");
-      } else {
-        setFiltered(_r);
-        setLoadState("fin");
-      }
+      setResults(_r);
+      setLoadState("fin");
     })();
-  }, [remote]);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -166,8 +236,8 @@ const Roles = () => {
             <input
               type="text"
               value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="What role title are you looking for next...?"
+              onChange={(e) => handleTitle(e.target.value)}
+              placeholder="What title are you looking for next...?"
               className="p-1 pl-10 w-[100%] outline-none rounded-full bg-black/5  transition border border-gray-800 focus:border-[#6387f1]"
             />
           </div>
@@ -181,7 +251,7 @@ const Roles = () => {
             <span className="flex items-center">
               <Switch
                 checked={remote}
-                onChange={() => setRemote(!remote)}
+                onChange={() => handleRemote()}
                 className={`w-10 h-6 ${
                   remote ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
                 }
@@ -201,7 +271,7 @@ const Roles = () => {
             <span className="flex items-center">
               <Switch
                 checked={cryptoOpt}
-                onChange={() => setCryptoOpt(!cryptoOpt)}
+                onChange={() => handleCryptoOpt()}
                 className={`w-10 h-6 ${
                   cryptoOpt ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
                 }
@@ -224,252 +294,107 @@ const Roles = () => {
             </p>
           </div>
         </div>
-        {loadState === "fin" ? (
-          <>
-            <div className="mt-3 flex justify-between">
-              <div>Fetched {filtered.length} results</div>
-              <div className="flex items-center space-x-3">
-                <span>View Options</span>
-                <div className="flex">
-                  <ViewGridIcon
-                    onClick={() => setViewStyle("grid")}
-                    className={`w-5 h-5 cursor-pointer transition ${
-                      viewStyle === "grid"
-                        ? "text-[#ed194a]"
-                        : "text-gray-600 hover:text-[#ed194a]/60"
-                    }`}
-                  />
-                  <ViewListIcon
-                    onClick={() => setViewStyle("list")}
-                    className={`w-5 h-5 cursor-pointer transition ${
-                      viewStyle === "list"
-                        ? "text-[#ed194a]"
-                        : "text-gray-600 hover:text-[#ed194a]/60"
-                    }`}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="bgb flex flex-col md:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
-              <div className="w-full md:w-52 flex md:flex-col space-x-4 pb-6 md:pb-0 md:space-x-0 static">
-                <Disclosure as="div" className="mt-2">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                        <span className="flex">Role Type</span>
-                        <ChevronUpIcon
-                          className={`${
-                            open ? "transform rotate-180" : ""
-                          } w-5 h-5 text-[#ed194a]`}
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                        <div className="type space-y-2">
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Full-Time</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Part-Time</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Intership</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Contract</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Freelance</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                        </div>
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <Disclosure as="div" className="mt-2">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                        <span>Ecosystems</span>
 
-                        <ChevronUpIcon
-                          className={`${
-                            open ? "transform rotate-180" : ""
-                          } w-5 h-5 text-[#ed194a]`}
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                        <div className="ecosystem space-y-2">
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Solana</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
+        <div className="mt-3 flex justify-between">
+          <div>Fetched {results.length} results</div>
+          <div className="flex items-center space-x-3">
+            <span>View Options</span>
+            <div className="flex">
+              <ViewGridIcon
+                onClick={() => setViewStyle("grid")}
+                className={`w-5 h-5 cursor-pointer transition ${
+                  viewStyle === "grid"
+                    ? "text-[#ed194a]"
+                    : "text-gray-600 hover:text-[#ed194a]/60"
+                }`}
+              />
+              <ViewListIcon
+                onClick={() => setViewStyle("list")}
+                className={`w-5 h-5 cursor-pointer transition ${
+                  viewStyle === "list"
+                    ? "text-[#ed194a]"
+                    : "text-gray-600 hover:text-[#ed194a]/60"
+                }`}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="bgb flex flex-col md:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
+          <div className="w-full md:w-52 flex md:flex-col space-x-4 pb-6 md:pb-0 md:space-x-0 static">
+            <Disclosure as="div" className="mt-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                    <span className="flex">Role Type</span>
+                    <ChevronUpIcon
+                      className={`${
+                        open ? "transform rotate-180" : ""
+                      } w-5 h-5 text-[#ed194a]`}
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                    <div className="type space-y-2">
+                      {Types.map((items: { label: string; value: string }) => (
+                        <div className="flex items-center justify-between">
+                          <div className="space-x-2 flex items-center">
+                            <input
+                              type="checkbox"
+                              name={items.label}
+                              value={items.value}
+                              onChange={(e) => handleType(e.target.value)}
+                            />
+                            <span>{items.label}</span>
                           </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Ethereum</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Polygon</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>BNB</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Fantom</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Avalanche</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Harmony One</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Polkadot</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Cosmos</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Cardano</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Terra</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Near</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Hedera</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>Zilliqa</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input type="checkbox" name="" id="" />
-                              <span>IOTA</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
+                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
+                            0
                           </div>
                         </div>
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-              </div>
+                      ))}
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="mt-2">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                    <span>Ecosystems</span>
+
+                    <ChevronUpIcon
+                      className={`${
+                        open ? "transform rotate-180" : ""
+                      } w-5 h-5 text-[#ed194a]`}
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+                    <div className="ecosystem space-y-2">
+                      {Ecosystems.map(
+                        (items: { label: string; value: string }) => (
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input
+                                type="checkbox"
+                                name=""
+                                id=""
+                                onChange={() => handleEcosystems(items.value)}
+                              />
+                              <span>{items.label}</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
+                              0
+                            </div>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </div>
+          {loadState === "fin" ? (
+            <>
               <div
                 className={
                   viewStyle !== "grid"
@@ -477,9 +402,10 @@ const Roles = () => {
                     : "grid lg:grid-cols-3 gap-6 justify-items-center w-full"
                 }
               >
-                {filtered.map((res: any) => (
+                {results.map((res: any) => (
                   <RoleCard
-                    id={res.attributes.objectId}
+                    key={res.attributes.objectId}
+                    id={res}
                     title={res.attributes.title}
                     startupId={res.attributes.startupId}
                     location={res.attributes.location}
@@ -492,11 +418,11 @@ const Roles = () => {
                   />
                 ))}
               </div>
-            </div>
-          </>
-        ) : (
-          <h1>Loading...</h1>
-        )}
+            </>
+          ) : (
+            <h1>Loading...</h1>
+          )}
+        </div>
       </div>
     </>
   );

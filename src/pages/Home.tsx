@@ -429,7 +429,7 @@ const HomePage = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </span>
-                Posts will be live for 30 days
+                Posts will be live for 45 days
               </p>
               <p className="flex items-center text-gray-600 mb-2">
                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-400 text-white rounded-full flex-shrink-0">

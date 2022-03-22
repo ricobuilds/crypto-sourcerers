@@ -1,0 +1,7 @@
+[
+  {"label": "Full-Time", "value":"Full-Time"},
+  {"label": "Part-Time", "value":"Part-Time"},
+  {"label": "Intership", "value":"Intership"},
+  {"label": "Contract", "value":"Contract"},
+  {"label": "Freelance", "value":"Freelance"}
+]
