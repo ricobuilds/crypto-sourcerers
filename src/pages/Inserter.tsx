@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Moralis } from "moralis";
-import { Filter } from "src/context/interfaces";
+import { Filter } from "../context/interfaces";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 

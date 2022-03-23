@@ -1,7 +1,7 @@
 [
-  {"label": "Full-Time", "value":"Full-Time"},
-  {"label": "Part-Time", "value":"Part-Time"},
-  {"label": "Intership", "value":"Intership"},
-  {"label": "Contract", "value":"Contract"},
-  {"label": "Freelance", "value":"Freelance"}
+  {"id": 1, "label": "Full-Time", "value":"Full-Time", "checked": false},
+  {"id": 2, "label": "Part-Time", "value":"Part-Time", "checked": false},
+  {"id": 3, "label": "Intership", "value":"Intership", "checked": false},
+  {"id": 4, "label": "Contract", "value":"Contract", "checked": false},
+  {"id": 5, "label": "Freelance", "value":"Freelance", "checked": false}
 ]

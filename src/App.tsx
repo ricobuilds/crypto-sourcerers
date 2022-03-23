@@ -23,6 +23,7 @@ import HireGuide from "./pages/HireGuide";
 import Inserter from "./pages/Inserter";
 import Startup from "./pages/Startup";
 import NoMatch from "./pages/NoMatch";
+import Tester from "./pages/Tester";
 const logo = require("./images/w3s-full.png");
 
 const App = () => {
@@ -137,6 +138,7 @@ const App = () => {
           <Content>
             <Routes>
               <Route path="/careers" element={<Careers />} />
+              <Route path="/tester" element={<Tester />} />
               <Route path="/roleseeker-login" element={<Login />} />
               <Route path="/recruiter-login" element={<Login />} />
               <Route path="/about" element={<About />} />

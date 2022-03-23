@@ -9,7 +9,6 @@ import {
   RefreshIcon,
 } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
-// import { Filter } from "src/context/interfaces";
 import { Disclosure, Switch } from "@headlessui/react";
 
 const Types = require("../types.json");
@@ -18,185 +17,136 @@ const Ecosystems = require("../ecosystems.json");
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
   const query = new Moralis.Query(Vacancy);
-  const [results, setResults]: any = useState([]);
-  // const [filtered, setFiltered]: typeof Vacancy = useState();
-  const [loadState, setLoadState] = useState("init");
 
+  const [results, setResults] = useState<typeof Vacancy>([]);
+
+  // filters
   const [title, setTitle] = useState("");
   const [remote, setRemote] = useState(false);
-  const [cryptoOpt, setCryptoOpt] = useState(false);
-  const [type, setType] = useState<string[]>([]);
-  const [ecosystem, setEcosystem] = useState<string[]>([]);
+  const [benefits, setBenefits] = useState(false);
+  const [type, setType] = useState([...Types]);
+  const [ecosystem, setEcosystem] = useState([...Ecosystems]);
 
+  // view
   const [viewStyle, setViewStyle] = useState("list");
+  const [loadState, setLoadState] = useState("init");
 
-  let [filters, setFilters] = useState<Object[]>([
-    {
-      title: "",
-      remote: remote,
-      cryptoOpt: cryptoOpt,
-      type: type,
-      ecosystem: ecosystem,
-    },
-  ]); //push and remove data from it
+  // type counters
+  // let [fc, setFC] = useState(0);
+  let [pc, setPC] = useState(0);
+  // let [ic, setIC] = useState(0);
+  // let [cc, setCC] = useState(0);
+  // let [frc, setFRC] = useState(0);
 
-  // 1. If the input field empty, display all records
-  // 2. If the input field populated, display relevant records
-
-  /*
-  // 1. If the input field empty, display all records
-  // 2. If the input field populated, display relevant records
-
-  // filtered results init
-  const [filteredRes, setFilteredRes] = useState([]);
-
-  const filteredSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const search = e.target.value;
-    if (search !== "") {
-      // filter
-      const filter = results.filter((res: any) => {
-        return (
-          res.attributes.description
-            .toLowerCase()
-            .includes(search.toLowerCase()) ||
-          res.attributes.title.toLowerCase().includes(search.toLowerCase()) ||
-          res.attributes.location[0].area
-            .toLowerCase()
-            .includes(search.toLowerCase()) ||
-          res.attributes.location[0].remote
-            .toLowerCase()
-            .includes(search.toLowerCase())
-        );
-      });
-      setFilteredRes(filter);
-    } else {
-      const filter = results.filter((res: any) => {
-        return (
-          res.attributes.description
-            .toLowerCase()
-            .includes(search.toLowerCase()) ||
-          res.attributes.title.toLowerCase().includes(search.toLowerCase()) ||
-          res.attributes.location[0].area
-            .toLowerCase()
-            .includes(search.toLowerCase()) ||
-          res.attributes.location[0].remote
-            .toLowerCase()
-            .includes(search.toLowerCase())
-        );
-      });
-      setFilteredRes(filter);
-    }
-  };
-  */
-  // const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //       // title, remote, pay in crypto, type, ecosystem
-  //       res.attributes.tags.title.toLowerCase().includes(title.toLowerCase()) ||
-  //       res.attributes.tags.location[1] === remote ||
-  //       res.attributes.tags.benefits[0] === cryptoOpt ||
-  //       res.attributes.tags.type.some(type) ||
-  //       res.attributes.tags.ecosystem.some(ecosystem)
-  // };
-
-  const handleChange = (n: string, p: any) => {
-    console.log(n, p);
-    // console.log(Object.keys(filters[0]))
-    // setFilters(
-    //   filters.map((item, idx) => {
-    //     if (Object.keys(item)[idx] === n) {
-    //       return { ...item, p };
-    //     } else {
-    //       return item;
-    //     }
-    //   })
+  const getData = async () => {
+    setLoadState("loading");
+    const data = await query.find();
+    setResults(data);
+    setLoadState("fin");
+    // const fcCount = results.filter((item: any) =>
+    //   item.attributes.type.match("Full-time")
     // );
+    const pcCount = results.filter((item: any) =>
+      item.attributes.type.match("Part-Time")
+    );
+    // const icCount = results.filter((item: any) =>
+    //   item.attributes.type.match("Intership")
+    // );
+    // const ccCount = results.filter((item: any) =>
+    //   item.attributes.type.match("Contract")
+    // );
+    // const frcCount = results.filter((item: any) =>
+    //   item.attributes.type.match("Freelance")
+    // );
+    // setFC(fcCount.length);
+    setPC(pcCount.length);
+    // setIC(icCount.length);
+    // setCC(ccCount.length);
+    // setFRC(frcCount.length);
+    console.log(pc);
   };
 
   const handleTitle = (p: string) => {
     let _v = p;
     setTitle(_v);
-    handleChange("title", title);
   };
 
-  const handleRemote = () => {
-    setRemote(!remote);
-    handleChange("remote", remote.toString());
-  };
-
-  const handleCryptoOpt = () => {
-    setCryptoOpt(!cryptoOpt);
-    handleChange("cryptoOpt", cryptoOpt.toString());
-  };
-
-  const handleType = (param: string) => {
-    if (!type.includes(param)) {
-      type.push(param);
-      let _a = type;
-      setType(_a);
-      handleChange("type", type);
-      console.log(type);
-    } else {
-      type.splice(type.indexOf(param), 1);
-      let _ar = type;
-      setType(_ar);
-      handleChange("type", type);
-      console.log(type);
+  const changeBoolean = (t: string, p: boolean) => {
+    if (t === "remote") {
+      setRemote(p);
+    }
+    if (t === "benefits") {
+      setBenefits(p);
     }
   };
 
-  const handleEcosystems = (param: string) => {
-    if (!ecosystem.includes(param)) {
-      ecosystem.push(param);
-      let _a = ecosystem;
-      setEcosystem(_a);
-      handleChange("ecosystem", ecosystem);
-      console.log(ecosystem);
-    } else {
-      ecosystem.splice(ecosystem.indexOf(param), 1);
-      let _ar = ecosystem;
-      setEcosystem(_ar);
-      handleChange("ecosystem", ecosystem);
-      console.log(ecosystem);
-    }
+  const changeTypeChecked = (id: number) => {
+    const data = type;
+    const changedData = data.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    console.log(changedData);
+    setType(changedData);
   };
-
-  // const filterData = (value: string) => {
-  //   // sanitise data
-  //   // if/else
-  //   if (!title || !type || !ecosystem) {
-  //     let _r = query.find();
-  //     setResults(_r);
-  //   } else {
-  //     const filteredData = results.filter((item: any) => {
-  //       return filters.some(key => {
-  //         return  item[key].toString().toLowerCase().includes(value.toLowerCase())
-  //       })
-  //     })
-  //     setResults(filteredData)
-  //   }
-  // };
+  const changeEcoChecked = (id: number) => {
+    const data = ecosystem;
+    const changedData = data.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+    setEcosystem(changedData);
+  };
 
   const reset = () => {
     setTitle("");
     setRemote(false);
-    setCryptoOpt(false);
-    setType([]);
-    setEcosystem([]);
-    setFilters([]);
+    setBenefits(false);
+    setType([...Types]);
+    setEcosystem([...Ecosystems]);
+    getData();
     console.log("the global reset");
   };
 
-  // useEffect(() => {
-  //   console.log(viewStyle);
-  // }, [viewStyle]);
+  const applyFilters = () => {
+    let updatedBase = results;
+
+    if (title !== "") {
+      updatedBase = updatedBase.filter((item: any) =>
+        item.attributes.title.toLowerCase().includes(title.toLowerCase())
+      );
+    }
+    if (remote !== null && remote !== undefined) {
+      updatedBase = updatedBase.filter(
+        (item: any) => item.attributes.location[1] === remote
+      );
+    }
+    if (benefits !== null && benefits !== undefined) {
+      updatedBase = updatedBase.filter(
+        (item: any) => item.attributes.benefits[0] === benefits
+      );
+    }
+    const typeChecked = type
+      .filter((item) => item.checked === true)
+      .map((item) => item.label.toLowerCase());
+    if (typeChecked) {
+      updatedBase = updatedBase.filter((item: any) =>
+        typeChecked.includes(item.attributes.type)
+      );
+    }
+    const ecoChecked = ecosystem
+      .filter((item) => item.checked === true)
+      .map((item) => item.label.toLowerCase());
+    if (ecoChecked) {
+      updatedBase = updatedBase.filter((item: any) =>
+        ecoChecked.includes(item.attributes.ecosystem)
+      );
+    }
+    setResults(updatedBase);
+  };
 
   useEffect(() => {
-    (async () => {
-      setLoadState("loading");
-      let _r = await query.find();
-      setResults(_r);
-      setLoadState("fin");
-    })();
-  }, []);
+    getData();
+    applyFilters();
+  }, [title, remote, benefits, type, ecosystem]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -214,23 +164,6 @@ const Roles = () => {
           <p className="text-white">Promotional Banner</p>
         </div> */}
         <div className="w-full flex flex-col sm:flex-row items-center py-3 gap-x-9">
-          {/* <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
-            <input
-              // onChange={(e) => useFilterSearch(e.target.value, res)}
-              placeholder="ex. react hardhat london remote 60000 matic"
-              onChange={(e) => setParam(e.target.value)}
-              placeholder="ex. react hardhat london remote matic"
-              className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-            /> */}
-          {/* <div className="relative flex items-center">
-              <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
-              <input
-                // onChange={(e) => useFilterSearch(e.target.value, res)}
-                placeholder="ex. react hardhat london remote 60000 matic"
-                className="w-full pl-10 placeholder-gray-600 dark:placeholder-gray-200 italic focus:not-italic bg-gray-600 dark:bg-gray-400 bg-opacity-50 focus:bg-white dark:focus:bg-white focus:ring-4 focus:ring-[#6387f1]/20 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div> */}
           <div className="roleTitle relative flex items-center justify-between w-full max-w-lg">
             <SearchIcon className="w-5 h-5 absolute ml-3 text-gray-600 dark:text-gray-300 pointer-events-none" />
             <input
@@ -243,15 +176,10 @@ const Roles = () => {
           </div>
 
           <div className="roleLocation flex items-center space-x-3">
-            {/* <input
-                type="text"
-                placeholder="Enter location"
-                className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
-              /> */}
             <span className="flex items-center">
               <Switch
                 checked={remote}
-                onChange={() => handleRemote()}
+                onChange={() => changeBoolean("remote", !remote)}
                 className={`w-10 h-6 ${
                   remote ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
                 }
@@ -270,17 +198,17 @@ const Roles = () => {
           <div className="paysInCrypto">
             <span className="flex items-center">
               <Switch
-                checked={cryptoOpt}
-                onChange={() => handleCryptoOpt()}
+                checked={benefits}
+                onChange={() => changeBoolean("benefits", !benefits)}
                 className={`w-10 h-6 ${
-                  cryptoOpt ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
+                  benefits ? "bg-[#6387f1]" : "bg-[#6387f1]/20"
                 }
             relative inline-flex flex-shrink-0 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
               >
                 <span className="sr-only">Use setting</span>
                 <span
                   aria-hidden="true"
-                  className={`${cryptoOpt ? "translate-x-4" : "translate-x-0"}
+                  className={`${benefits ? "translate-x-4" : "translate-x-0"}
               pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200`}
                 />
               </Switch>
@@ -334,22 +262,32 @@ const Roles = () => {
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                     <div className="type space-y-2">
-                      {Types.map((items: { label: string; value: string }) => (
-                        <div className="flex items-center justify-between">
-                          <div className="space-x-2 flex items-center">
-                            <input
-                              type="checkbox"
-                              name={items.label}
-                              value={items.value}
-                              onChange={(e) => handleType(e.target.value)}
-                            />
-                            <span>{items.label}</span>
+                      {Types.map(
+                        (items: {
+                          id: number;
+                          label: string;
+                          value: string;
+                        }) => (
+                          <div className="flex items-center justify-between">
+                            <div className="space-x-2 flex items-center">
+                              <input
+                                type="checkbox"
+                                name={items.label}
+                                value={items.value}
+                                onChange={() => changeTypeChecked(items.id)}
+                              />
+                              <span>{items.label}</span>
+                            </div>
+                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
+                              {items.value === "Part-Time" ? (
+                                <p>{pc}</p>
+                              ) : (
+                                <p>{0}</p>
+                              )}
+                            </div>
                           </div>
-                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                            0
-                          </div>
-                        </div>
-                      ))}
+                        )
+                      )}
                     </div>
                   </Disclosure.Panel>
                 </>
@@ -370,14 +308,18 @@ const Roles = () => {
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                     <div className="ecosystem space-y-2">
                       {Ecosystems.map(
-                        (items: { label: string; value: string }) => (
+                        (items: {
+                          id: number;
+                          label: string;
+                          value: string;
+                        }) => (
                           <div className="flex items-center justify-between">
                             <div className="space-x-2 flex items-center">
                               <input
                                 type="checkbox"
                                 name=""
                                 id=""
-                                onChange={() => handleEcosystems(items.value)}
+                                onChange={() => changeEcoChecked(items.id)}
                               />
                               <span>{items.label}</span>
                             </div>
@@ -393,7 +335,9 @@ const Roles = () => {
               )}
             </Disclosure>
           </div>
-          {loadState === "fin" ? (
+          {loadState !== "fin" ? (
+            <h1>Loading...</h1>
+          ) : results.length > 0 ? (
             <>
               <div
                 className={
@@ -420,7 +364,7 @@ const Roles = () => {
               </div>
             </>
           ) : (
-            <h1>Loading...</h1>
+            <p>No results found :(</p>
           )}
         </div>
       </div>
