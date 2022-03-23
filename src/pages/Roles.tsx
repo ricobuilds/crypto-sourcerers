@@ -32,38 +32,12 @@ const Roles = () => {
   const [loadState, setLoadState] = useState("init");
 
   // type counters
-  // let [fc, setFC] = useState(0);
-  let [pc, setPC] = useState(0);
-  // let [ic, setIC] = useState(0);
-  // let [cc, setCC] = useState(0);
-  // let [frc, setFRC] = useState(0);
 
   const getData = async () => {
     setLoadState("loading");
     const data = await query.find();
     setResults(data);
     setLoadState("fin");
-    // const fcCount = results.filter((item: any) =>
-    //   item.attributes.type.match("Full-time")
-    // );
-    const pcCount = results.filter((item: any) =>
-      item.attributes.type.match("Part-Time")
-    );
-    // const icCount = results.filter((item: any) =>
-    //   item.attributes.type.match("Intership")
-    // );
-    // const ccCount = results.filter((item: any) =>
-    //   item.attributes.type.match("Contract")
-    // );
-    // const frcCount = results.filter((item: any) =>
-    //   item.attributes.type.match("Freelance")
-    // );
-    // setFC(fcCount.length);
-    setPC(pcCount.length);
-    // setIC(icCount.length);
-    // setCC(ccCount.length);
-    // setFRC(frcCount.length);
-    console.log(pc);
   };
 
   const handleTitle = (p: string) => {
@@ -93,6 +67,7 @@ const Roles = () => {
     const changedData = data.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
+    console.log(changedData);
     setEcosystem(changedData);
   };
 
@@ -100,30 +75,40 @@ const Roles = () => {
     setTitle("");
     setRemote(false);
     setBenefits(false);
-    setType([...Types]);
-    setEcosystem([...Ecosystems]);
-    getData();
+    // const changedTypes = type.map((item: any) =>
+    //   item.checked === true ? { ...item, checked: !item.checked } : item
+    // );
+    // console.log(changedTypes);
+    setType(
+      type.map((item: any) =>
+        item.checked === true ? { ...item, checked: !item.checked } : item
+      )
+    );
+    const changedEco = ecosystem.map((item: any) =>
+      item.checked === true ? { ...item, checked: !item.checked } : item
+    );
+    setEcosystem([...changedEco]);
     console.log("the global reset");
   };
 
   const applyFilters = () => {
     let updatedBase = results;
 
-    if (title !== "") {
-      updatedBase = updatedBase.filter((item: any) =>
-        item.attributes.title.toLowerCase().includes(title.toLowerCase())
-      );
-    }
-    if (remote !== null && remote !== undefined) {
-      updatedBase = updatedBase.filter(
-        (item: any) => item.attributes.location[1] === remote
-      );
-    }
-    if (benefits !== null && benefits !== undefined) {
-      updatedBase = updatedBase.filter(
-        (item: any) => item.attributes.benefits[0] === benefits
-      );
-    }
+    // if (title !== "") {
+    //   updatedBase = updatedBase.filter((item: any) =>
+    //     item.attributes.title.toLowerCase().includes(title.toLowerCase())
+    //   );
+    // }
+    // if (remote !== null && remote !== undefined) {
+    //   updatedBase = updatedBase.filter(
+    //     (item: any) => item.attributes.location[1] === remote
+    //   );
+    // }
+    // if (benefits !== null && benefits !== undefined) {
+    //   updatedBase = updatedBase.filter(
+    //     (item: any) => item.attributes.benefits[0] === benefits
+    //   );
+    // }
     const typeChecked = type
       .filter((item) => item.checked === true)
       .map((item) => item.label.toLowerCase());
@@ -131,6 +116,7 @@ const Roles = () => {
       updatedBase = updatedBase.filter((item: any) =>
         typeChecked.includes(item.attributes.type)
       );
+      return updatedBase;
     }
     const ecoChecked = ecosystem
       .filter((item) => item.checked === true)
@@ -139,6 +125,7 @@ const Roles = () => {
       updatedBase = updatedBase.filter((item: any) =>
         ecoChecked.includes(item.attributes.ecosystem)
       );
+      return updatedBase;
     }
     setResults(updatedBase);
   };
@@ -262,32 +249,23 @@ const Roles = () => {
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                     <div className="type space-y-2">
-                      {Types.map(
-                        (items: {
-                          id: number;
-                          label: string;
-                          value: string;
-                        }) => (
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input
-                                type="checkbox"
-                                name={items.label}
-                                value={items.value}
-                                onChange={() => changeTypeChecked(items.id)}
-                              />
-                              <span>{items.label}</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              {items.value === "Part-Time" ? (
-                                <p>{pc}</p>
-                              ) : (
-                                <p>{0}</p>
-                              )}
-                            </div>
+                      {type.map((items: any) => (
+                        <div className="flex items-center justify-between">
+                          <div className="space-x-2 flex items-center">
+                            <input
+                              type="checkbox"
+                              name={items.label}
+                              value={items.value}
+                              checked={items.checked}
+                              onChange={() => changeTypeChecked(items.id)}
+                            />
+                            <span>{items.label}</span>
                           </div>
-                        )
-                      )}
+                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
+                            <p>{0}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </Disclosure.Panel>
                 </>
@@ -307,28 +285,24 @@ const Roles = () => {
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
                     <div className="ecosystem space-y-2">
-                      {Ecosystems.map(
-                        (items: {
-                          id: number;
-                          label: string;
-                          value: string;
-                        }) => (
-                          <div className="flex items-center justify-between">
-                            <div className="space-x-2 flex items-center">
-                              <input
-                                type="checkbox"
-                                name=""
-                                id=""
-                                onChange={() => changeEcoChecked(items.id)}
-                              />
-                              <span>{items.label}</span>
-                            </div>
-                            <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                              0
-                            </div>
+                      {ecosystem.map((items: any) => (
+                        <div className="flex items-center justify-between">
+                          <div className="space-x-2 flex items-center">
+                            <input
+                              type="checkbox"
+                              name=""
+                              id={items.id}
+                              value={items.value}
+                              checked={items.checked}
+                              onChange={() => changeEcoChecked(items.id)}
+                            />
+                            <span>{items.label}</span>
                           </div>
-                        )
-                      )}
+                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
+                            0
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </Disclosure.Panel>
                 </>
