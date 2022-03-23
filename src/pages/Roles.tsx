@@ -75,19 +75,16 @@ const Roles = () => {
     setTitle("");
     setRemote(false);
     setBenefits(false);
-    // const changedTypes = type.map((item: any) =>
-    //   item.checked === true ? { ...item, checked: !item.checked } : item
-    // );
-    // console.log(changedTypes);
     setType(
       type.map((item: any) =>
         item.checked === true ? { ...item, checked: !item.checked } : item
       )
     );
-    const changedEco = ecosystem.map((item: any) =>
-      item.checked === true ? { ...item, checked: !item.checked } : item
+    setEcosystem(
+      ecosystem.map((item: any) =>
+        item.checked === true ? { ...item, checked: !item.checked } : item
+      )
     );
-    setEcosystem([...changedEco]);
     console.log("the global reset");
   };
 
@@ -116,7 +113,6 @@ const Roles = () => {
       updatedBase = updatedBase.filter((item: any) =>
         typeChecked.includes(item.attributes.type)
       );
-      return updatedBase;
     }
     const ecoChecked = ecosystem
       .filter((item) => item.checked === true)
@@ -125,7 +121,6 @@ const Roles = () => {
       updatedBase = updatedBase.filter((item: any) =>
         ecoChecked.includes(item.attributes.ecosystem)
       );
-      return updatedBase;
     }
     setResults(updatedBase);
   };
