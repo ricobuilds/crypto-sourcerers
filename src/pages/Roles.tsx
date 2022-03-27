@@ -2,17 +2,13 @@ import { useEffect, useState } from "react";
 import { Moralis } from "moralis";
 import { Helmet } from "react-helmet-async";
 import {
-  ChevronUpIcon,
   SearchIcon,
   ViewGridIcon,
   ViewListIcon,
   RefreshIcon,
 } from "@heroicons/react/solid";
 import RoleCard from "../components/RoleCard";
-import { Disclosure, Switch } from "@headlessui/react";
-
-const Types = require("../types.json");
-const Ecosystems = require("../ecosystems.json");
+import { Switch } from "@headlessui/react";
 
 const Roles = () => {
   const Vacancy = Moralis.Object.extend("Vacancy");
@@ -24,8 +20,6 @@ const Roles = () => {
   const [title, setTitle] = useState("");
   const [remote, setRemote] = useState(false);
   const [benefits, setBenefits] = useState(false);
-  const [type, setType] = useState([...Types]);
-  const [ecosystem, setEcosystem] = useState([...Ecosystems]);
 
   // view
   const [viewStyle, setViewStyle] = useState("list");
@@ -55,99 +49,23 @@ const Roles = () => {
     }
   };
 
-  const changeTypeChecked = (id: number) => {
-    const data = type;
-    const changedData = data.map((item) =>
-      item.id === id ? { ...item, checked: !item.checked } : item
-    );
-    console.log(changedData);
-    setType(changedData);
-  };
-
-  const changeEcoChecked = (id: number) => {
-    const data = ecosystem;
-    const changedData = data.map((item) =>
-      item.id === id ? { ...item, checked: !item.checked } : item
-    );
-    console.log(changedData);
-    setEcosystem(changedData);
-  };
-
   const reset = () => {
     setTitle("");
     setRemote(false);
     setBenefits(false);
-    setType(
-      type.map((item: any) =>
-        item.checked === true ? { ...item, checked: !item.checked } : item
-      )
-    );
-    setEcosystem(
-      ecosystem.map((item: any) =>
-        item.checked === true ? { ...item, checked: !item.checked } : item
-      )
-    );
     getData();
     console.log("the global reset");
   };
-  // const filterType = (p: string) => {
-  //   let input, filter, ul, li, a, i, txtValue;
-  //   input = document.getElementById("typeList");
-  // };
-  // const applyFilters = () => {
-  //   let updatedBase = results;
-
-  //   // if (title !== "") {
-  //   //   updatedBase = updatedBase.filter((item: any) =>
-  //   //     item.attributes.title.toLowerCase().includes(title.toLowerCase())
-  //   //   );
-  //   // }
-  //   // if (remote !== null && remote !== undefined) {
-  //   //   updatedBase = updatedBase.filter(
-  //   //     (item: any) => item.attributes.location[1] === remote
-  //   //   );
-  //   // }
-  //   // if (benefits !== null && benefits !== undefined) {
-  //   //   updatedBase = updatedBase.filter(
-  //   //     (item: any) => item.attributes.benefits[0] === benefits
-  //   //   );
-  //   // }
-  //   const typeChecked = type
-  //     .filter((item) => item.checked === true)
-  //     .map((item) => item);
-  //   if (typeChecked) {
-  //     updatedBase = updatedBase.filter((item: any) =>
-  //       typeChecked.includes(item.attributes.type)
-  //     );
-  //   }
-  //   const ecoChecked = ecosystem
-  //     .filter((item) => item.checked === true)
-  //     .map((item) => item.label.toLowerCase());
-  //   if (ecoChecked) {
-  //     updatedBase = updatedBase.filter((item: any) =>
-  //       ecoChecked.includes(item.attributes.ecosystem)
-  //     );
-  //   }
-  //   setResults(updatedBase);
-  // };
 
   const applyFilters = () => {
     let data = results;
     const isTitle = title.length > 0;
     const isRemote = remote === true;
     const isBenefits = benefits === true;
-    const isType =
-      type.filter((item) => item.checked === true).length > 0 ? true : false;
-    const isEco =
-      ecosystem.filter((item) => item.checked === true).length > 0
-        ? true
-        : false;
 
     console.log("title:", isTitle);
     console.log("remote:", isRemote);
     console.log("benefits:", isBenefits);
-    console.log("type:", isType);
-    console.log("eco:", isEco);
 
     if (isTitle && isTitle === true) {
       setResults(
@@ -167,122 +85,6 @@ const Roles = () => {
         data.filter((item: any) => item.attributes.benefits[0] === benefits)
       );
     }
-
-    if (isType && isType === true) {
-      // setResults(
-      //   data.filter((item: any) => type.includes(item.attributes.type))
-      // );
-      // beautyProducts = temp1
-      //   .map(({ categories, ...others }) => {
-      //     const filteredCategories = categories.filter((cat) => cat.id === 43);
-      //     return {
-      //       filteredCategories,
-      //       ...others,
-      //     };
-      //   })
-      //   .filter((product) => product.categories.length > 0);
-
-      const typeChecked = type
-        .filter((item) => item.checked === true)
-        .map((item) => item.value);
-
-      // const typeArray = type.filter((item: any) => item.checked === true);
-      // const dbArray = data.map((item: any) => item);
-      // // const typeChecked = Object.values(dbArray).filter((v) => type);
-      // const typeChecked = typeArray.length > 0 && dbArray.length > 0 ? true : false;
-
-      if (typeChecked.length > 0) {
-        // selectedCart.forEach((selected) =>
-        //   setCart(cart.filter((entry) => entry.name !== selected))
-        // );
-        // console.log(typeChecked);
-        // const filt = data.map((item: any) => {
-        //   console.log(
-        //     typeChecked.filter((i: any) =>
-        //       item.attributes.type.toLowerCase().includes(i.value.toLowerCase())
-        //     )
-        //   );
-        // });
-
-        // let v = data.filter((item: any) =>
-        //   typeChecked.includes(item.attributes.type)
-        // );
-        // console.log(v);
-        // for (let i = 0; i < typeChecked.length; i++) {
-        //   const el = typeChecked[i];
-        //   console.log(el.value);
-        //   data = data.filter((item: any) =>
-        //     item.attributes.type.toLowerCase().includes(el.value)
-        //   );
-        // }
-        // data.forEach((el: any) => {
-        //   console.log(
-        //     type.filter(
-        //       (i) =>
-        //         i.checked === true &&
-        //         el.attributes.type.toLowerCase().includes(i.value.toLowerCase())
-        //     )
-        //   );
-        // });
-        // type.map((el: any) => {
-        //   console.log(
-        //     data.map(
-        //       (i: any) =>
-        //         el.checked === true &&
-        //         i.attributes.type.toLowerCase().includes(el.value.toLowerCase())
-        //     )
-        //   );
-        // });
-        console.log(typeChecked);
-        // let res = typeChecked.filter((el: string) => {
-        //   data.forEach((i: any) =>
-        //     el.toLowerCase().includes(i.attributes.type.toLowerCase())
-        //   );
-        // });
-
-        // setResults(
-        //   type
-        //     .filter((el: any) =>
-        //       data.map(
-        //         (i: any) =>
-        //           el.checked === true &&
-        //           el.value
-        //             .toLowerCase()
-        //             .includes(i.attributes.type.toLowerCase())
-        //       )
-        //     )
-        //     .flat()
-        // );
-        let frp = type
-          .filter((item: any) => item.checked === true)
-          .map((i: any) =>
-            data.find(
-              (el: any) =>
-                el.attributes.type
-                  .toLowerCase()
-                  .match(i.value.toLowerCase()) !== undefined
-            )
-          );
-        console.log(frp);
-        setResults(frp);
-        // setResults(typeChecked);
-        // console.log(
-        //   data.filter((item: any) => item.attributes.type.includes(typeChecked))
-        //   );
-        // console.log(
-        //   data.filter((item: any) => typeChecked.includes(item.attributes.type))
-        // );
-      }
-      // console.log(type);
-      // console.log(type.filter((item: any) => item.checked === true));
-    }
-    if (isEco && isEco === true) {
-      setResults(
-        data.filter((item: any) =>
-          ecosystem.includes(item.attributes.ecosystem)
-        )
-      );
-    }
   };
 
   useEffect(() => {
@@ -290,23 +92,11 @@ const Roles = () => {
     const isTitle = title.length > 0;
     const isRemote = remote === true;
     const isBenefits = benefits === true;
-    const isType =
-      type.filter((item) => item.checked === true).length > 0 ? true : false;
-    const isEco =
-      ecosystem.filter((item) => item.checked === true).length > 0
-        ? true
-        : false;
 
-    if (
-      isTitle !== true &&
-      isRemote !== true &&
-      isBenefits !== true &&
-      isType !== true &&
-      isEco !== true
-    ) {
+    if (isTitle !== true && isRemote !== true && isBenefits !== true) {
       getData();
     }
-  }, [title, remote, benefits, type, ecosystem]);
+  }, [title, remote, benefits]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -409,80 +199,6 @@ const Roles = () => {
           </div>
         </div>
         <div className="bgb flex flex-col md:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
-          <div className="w-full md:w-52 flex md:flex-col space-x-4 pb-6 md:pb-0 md:space-x-0 static">
-            <Disclosure as="div" className="mt-2" id="typeList">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                    <span className="flex">Role Type</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-[#ed194a]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                    <div className="type space-y-2">
-                      {type.map((items: any) => (
-                        <div className="flex items-center justify-between">
-                          <div className="space-x-2 flex items-center">
-                            <input
-                              type="checkbox"
-                              name={items.label}
-                              value={items.value}
-                              checked={items.checked}
-                              onChange={() => changeTypeChecked(items.id)}
-                            />
-                            <span>{items.label}</span>
-                          </div>
-                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                            <p>{0}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                    <span>Ecosystems</span>
-
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-[#ed194a]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                    <div className="ecosystem space-y-2">
-                      {ecosystem.map((items: any) => (
-                        <div className="flex items-center justify-between">
-                          <div className="space-x-2 flex items-center">
-                            <input
-                              type="checkbox"
-                              name=""
-                              id={items.id}
-                              value={items.value}
-                              checked={items.checked}
-                              onChange={() => changeEcoChecked(items.id)}
-                            />
-                            <span>{items.label}</span>
-                          </div>
-                          <div className="px-2 rounded-md bg-[#ed194a]/70 text-white">
-                            0
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-          </div>
           {loadState !== "fin" ? (
             <h1>Loading...</h1>
           ) : results.length > 0 ? (
