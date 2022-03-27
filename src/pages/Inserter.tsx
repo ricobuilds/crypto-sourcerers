@@ -11,7 +11,7 @@ const Inserter = () => {
   const [desc, setDesc] = useState<string>("");
   const [type, setType] = useState("");
   const [skills, setSkills] = useState("");
-  const [ecosystem, setEcosystem] = useState<string[]>([""]);
+  const [ecosystem, setEcosystem] = useState<string[]>([]);
   const [cryptoOpt, setCryptoOpt] = useState<boolean>(true);
   const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);

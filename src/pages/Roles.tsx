@@ -37,6 +37,7 @@ const Roles = () => {
     setLoadState("loading");
     const data = await query.find();
     setResults(data);
+    console.log(data);
     setLoadState("fin");
   };
 
@@ -62,6 +63,7 @@ const Roles = () => {
     console.log(changedData);
     setType(changedData);
   };
+
   const changeEcoChecked = (id: number) => {
     const data = ecosystem;
     const changedData = data.map((item) =>
@@ -85,49 +87,225 @@ const Roles = () => {
         item.checked === true ? { ...item, checked: !item.checked } : item
       )
     );
+    getData();
     console.log("the global reset");
   };
+  // const filterType = (p: string) => {
+  //   let input, filter, ul, li, a, i, txtValue;
+  //   input = document.getElementById("typeList");
+  // };
+  // const applyFilters = () => {
+  //   let updatedBase = results;
+
+  //   // if (title !== "") {
+  //   //   updatedBase = updatedBase.filter((item: any) =>
+  //   //     item.attributes.title.toLowerCase().includes(title.toLowerCase())
+  //   //   );
+  //   // }
+  //   // if (remote !== null && remote !== undefined) {
+  //   //   updatedBase = updatedBase.filter(
+  //   //     (item: any) => item.attributes.location[1] === remote
+  //   //   );
+  //   // }
+  //   // if (benefits !== null && benefits !== undefined) {
+  //   //   updatedBase = updatedBase.filter(
+  //   //     (item: any) => item.attributes.benefits[0] === benefits
+  //   //   );
+  //   // }
+  //   const typeChecked = type
+  //     .filter((item) => item.checked === true)
+  //     .map((item) => item);
+  //   if (typeChecked) {
+  //     updatedBase = updatedBase.filter((item: any) =>
+  //       typeChecked.includes(item.attributes.type)
+  //     );
+  //   }
+  //   const ecoChecked = ecosystem
+  //     .filter((item) => item.checked === true)
+  //     .map((item) => item.label.toLowerCase());
+  //   if (ecoChecked) {
+  //     updatedBase = updatedBase.filter((item: any) =>
+  //       ecoChecked.includes(item.attributes.ecosystem)
+  //     );
+  //   }
+  //   setResults(updatedBase);
+  // };
 
   const applyFilters = () => {
-    let updatedBase = results;
+    let data = results;
+    const isTitle = title.length > 0;
+    const isRemote = remote === true;
+    const isBenefits = benefits === true;
+    const isType =
+      type.filter((item) => item.checked === true).length > 0 ? true : false;
+    const isEco =
+      ecosystem.filter((item) => item.checked === true).length > 0
+        ? true
+        : false;
 
-    // if (title !== "") {
-    //   updatedBase = updatedBase.filter((item: any) =>
-    //     item.attributes.title.toLowerCase().includes(title.toLowerCase())
-    //   );
-    // }
-    // if (remote !== null && remote !== undefined) {
-    //   updatedBase = updatedBase.filter(
-    //     (item: any) => item.attributes.location[1] === remote
-    //   );
-    // }
-    // if (benefits !== null && benefits !== undefined) {
-    //   updatedBase = updatedBase.filter(
-    //     (item: any) => item.attributes.benefits[0] === benefits
-    //   );
-    // }
-    const typeChecked = type
-      .filter((item) => item.checked === true)
-      .map((item) => item.label.toLowerCase());
-    if (typeChecked) {
-      updatedBase = updatedBase.filter((item: any) =>
-        typeChecked.includes(item.attributes.type)
+    console.log("title:", isTitle);
+    console.log("remote:", isRemote);
+    console.log("benefits:", isBenefits);
+    console.log("type:", isType);
+    console.log("eco:", isEco);
+
+    if (isTitle && isTitle === true) {
+      setResults(
+        data.filter((item: any) =>
+          item.attributes.title.toLowerCase().includes(title.toLowerCase())
+        )
       );
     }
-    const ecoChecked = ecosystem
-      .filter((item) => item.checked === true)
-      .map((item) => item.label.toLowerCase());
-    if (ecoChecked) {
-      updatedBase = updatedBase.filter((item: any) =>
-        ecoChecked.includes(item.attributes.ecosystem)
+
+    if (isRemote && isRemote === true) {
+      setResults(
+        data.filter((item: any) => item.attributes.location[1] === remote)
       );
     }
-    setResults(updatedBase);
+    if (isBenefits && isBenefits === true) {
+      setResults(
+        data.filter((item: any) => item.attributes.benefits[0] === benefits)
+      );
+    }
+
+    if (isType && isType === true) {
+      // setResults(
+      //   data.filter((item: any) => type.includes(item.attributes.type))
+      // );
+      // beautyProducts = temp1
+      //   .map(({ categories, ...others }) => {
+      //     const filteredCategories = categories.filter((cat) => cat.id === 43);
+      //     return {
+      //       filteredCategories,
+      //       ...others,
+      //     };
+      //   })
+      //   .filter((product) => product.categories.length > 0);
+
+      const typeChecked = type
+        .filter((item) => item.checked === true)
+        .map((item) => item.value);
+
+      // const typeArray = type.filter((item: any) => item.checked === true);
+      // const dbArray = data.map((item: any) => item);
+      // // const typeChecked = Object.values(dbArray).filter((v) => type);
+      // const typeChecked = typeArray.length > 0 && dbArray.length > 0 ? true : false;
+
+      if (typeChecked.length > 0) {
+        // selectedCart.forEach((selected) =>
+        //   setCart(cart.filter((entry) => entry.name !== selected))
+        // );
+        // console.log(typeChecked);
+        // const filt = data.map((item: any) => {
+        //   console.log(
+        //     typeChecked.filter((i: any) =>
+        //       item.attributes.type.toLowerCase().includes(i.value.toLowerCase())
+        //     )
+        //   );
+        // });
+
+        // let v = data.filter((item: any) =>
+        //   typeChecked.includes(item.attributes.type)
+        // );
+        // console.log(v);
+        // for (let i = 0; i < typeChecked.length; i++) {
+        //   const el = typeChecked[i];
+        //   console.log(el.value);
+        //   data = data.filter((item: any) =>
+        //     item.attributes.type.toLowerCase().includes(el.value)
+        //   );
+        // }
+        // data.forEach((el: any) => {
+        //   console.log(
+        //     type.filter(
+        //       (i) =>
+        //         i.checked === true &&
+        //         el.attributes.type.toLowerCase().includes(i.value.toLowerCase())
+        //     )
+        //   );
+        // });
+        // type.map((el: any) => {
+        //   console.log(
+        //     data.map(
+        //       (i: any) =>
+        //         el.checked === true &&
+        //         i.attributes.type.toLowerCase().includes(el.value.toLowerCase())
+        //     )
+        //   );
+        // });
+        console.log(typeChecked);
+        // let res = typeChecked.filter((el: string) => {
+        //   data.forEach((i: any) =>
+        //     el.toLowerCase().includes(i.attributes.type.toLowerCase())
+        //   );
+        // });
+
+        // setResults(
+        //   type
+        //     .filter((el: any) =>
+        //       data.map(
+        //         (i: any) =>
+        //           el.checked === true &&
+        //           el.value
+        //             .toLowerCase()
+        //             .includes(i.attributes.type.toLowerCase())
+        //       )
+        //     )
+        //     .flat()
+        // );
+        let frp = type
+          .filter((item: any) => item.checked === true)
+          .map((i: any) =>
+            data.find(
+              (el: any) =>
+                el.attributes.type
+                  .toLowerCase()
+                  .match(i.value.toLowerCase()) !== undefined
+            )
+          );
+        console.log(frp);
+        setResults(frp);
+        // setResults(typeChecked);
+        // console.log(
+        //   data.filter((item: any) => item.attributes.type.includes(typeChecked))
+        //   );
+        // console.log(
+        //   data.filter((item: any) => typeChecked.includes(item.attributes.type))
+        // );
+      }
+      // console.log(type);
+      // console.log(type.filter((item: any) => item.checked === true));
+    }
+    if (isEco && isEco === true) {
+      setResults(
+        data.filter((item: any) =>
+          ecosystem.includes(item.attributes.ecosystem)
+        )
+      );
+    }
   };
 
   useEffect(() => {
-    getData();
     applyFilters();
+    const isTitle = title.length > 0;
+    const isRemote = remote === true;
+    const isBenefits = benefits === true;
+    const isType =
+      type.filter((item) => item.checked === true).length > 0 ? true : false;
+    const isEco =
+      ecosystem.filter((item) => item.checked === true).length > 0
+        ? true
+        : false;
+
+    if (
+      isTitle !== true &&
+      isRemote !== true &&
+      isBenefits !== true &&
+      isType !== true &&
+      isEco !== true
+    ) {
+      getData();
+    }
   }, [title, remote, benefits, type, ecosystem]);
 
   useEffect(() => {
@@ -197,11 +375,12 @@ const Roles = () => {
               <p className="ml-1">💰 Pays in Crypto</p>
             </span>
           </div>
-          <div className="text-[#6387f1] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#6387f1]/70">
+          <div
+            onClick={reset}
+            className="text-[#6387f1] flex items-center space-x-2 transition hover:cursor-pointer hover:text-[#6387f1]/70"
+          >
             <RefreshIcon className="w-5 h-5 rotate-[125deg]" />
-            <p className="" onClick={reset}>
-              Reset
-            </p>
+            <p>Reset</p>
           </div>
         </div>
 
@@ -231,7 +410,7 @@ const Roles = () => {
         </div>
         <div className="bgb flex flex-col md:flex-row space-y-9 sm:space-y-0 sm:space-x-6">
           <div className="w-full md:w-52 flex md:flex-col space-x-4 pb-6 md:pb-0 md:space-x-0 static">
-            <Disclosure as="div" className="mt-2">
+            <Disclosure as="div" className="mt-2" id="typeList">
               {({ open }) => (
                 <>
                   <Disclosure.Button className="flex justify-between w-full px-4 py-2 text-sm font-bold text-left text-[#ed194a] bg-indigo-100 dark:bg-indigo-100/5 rounded-lg transition hover:bg-indigo-200 dark:hover:bg-indigo-200/20 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
@@ -309,9 +488,10 @@ const Roles = () => {
           ) : results.length > 0 ? (
             <>
               <div
+                id="roleList"
                 className={
                   viewStyle !== "grid"
-                    ? "grid gap-y-4 justify-items-center w-full"
+                    ? "flex flex-col w-full gap-y-6"
                     : "grid lg:grid-cols-3 gap-6 justify-items-center w-full"
                 }
               >
