@@ -30,7 +30,10 @@ const Roles = () => {
   const getData = async () => {
     setLoadState("loading");
     const data = await query.find();
-    setResults(data);
+    data.forEach((a) => console.log(a.attributes));
+    setResults(
+      data.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+    );
     console.log(data);
     setLoadState("fin");
   };

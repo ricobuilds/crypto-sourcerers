@@ -10,7 +10,7 @@ const RoleCard = (props: any) => {
       className={
         props.view !== "grid"
           ? "roleCard relative flex flex-col md:flex-row justify-between items-center gap-y-6 border-l-2 border-[#ed194a] p-4 bg-[#f7f9fb] hover:bg-[#dedee5]/80 dark:bg-[#1c1b1c] transition hover:dark:bg-[#1d1d23] backdrop-blur-lg min-w-xl w-full md:max-h-[100px] rounded-md"
-          : "roleCard relative flex flex-col justify-between gap-y-6 border-l-2 border-[#ed194a] p-4 bg-[#f7f9fb] hover:bg-[#dedee5]/80 dark:bg-[#1c1b1c]/80 transition hover:dark:bg-[#1d1d23] backdrop-blur-lg min-w-xs w-full h-fit rounded-md"
+          : "roleCard relative flex flex-col justify-between gap-y-4 border-l-2 border-[#ed194a] p-4 bg-[#f7f9fb] hover:bg-[#dedee5]/80 dark:bg-[#1c1b1c]/80 transition hover:dark:bg-[#1d1d23] backdrop-blur-lg min-w-xs w-full h-fit rounded-md"
       }
     >
       <div
@@ -25,7 +25,7 @@ const RoleCard = (props: any) => {
           alt="brand-logo"
           className="h-12 w-auto rounded-full border-2 border-[#ed194a] md:mr-3"
         />
-        <div className="left space-y-1">
+        <div className="left space-y-0">
           <div
             className={`roleTitle-Tags flex flex-col items-center ${
               props.viewStyle === "grid" ? "" : "sm:items-start"
@@ -35,27 +35,31 @@ const RoleCard = (props: any) => {
             <div className="text-sm">{props.startupId} </div>
           </div>
           <div className="coreDetails">
-            <div className="flex flex-wrap items-center gap-3 text-gray-600 text-sm">
+            <div className="flex flex-wrap items-center text-gray-600 text-sm">
               <p>
-                {props.location[0] == "Global" && props.location[1] === true
-                  ? "Global"
-                  : `${props.location[0]} ${
-                      props.location[1] === true ? "- Remote" : ``
-                    } `}
+                <span className="mr-0.5">
+                  {props.location[0] == "Global" && props.location[1] === true
+                    ? "Global"
+                    : `${props.location[0]} ${
+                        props.location[1] === true ? "- Remote" : ``
+                      } `}
+                </span>
+                {"· "}
+                {/* {maxSalary ? `~ ${maxSalary}` : ""} */}
+                <span className="ml-0.5">
+                  {`${props.base
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ${
+                    props.max > props.base
+                      ? ` - ${props.max
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
+                      : ""
+                  }`}
+                </span>
+                {"· "}
+                <span className="mx-0.5">{props.type}</span>
               </p>
-              {"· "}
-              {/* {maxSalary ? `~ ${maxSalary}` : ""} */}
-              <p>{`${props.base
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} ${
-                props.max > props.base
-                  ? ` - ${props.max
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
-                  : ""
-              }`}</p>
-              {"· "}
-              <p>{props.type}</p>
             </div>
           </div>
         </div>
