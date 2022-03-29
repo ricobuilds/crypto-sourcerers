@@ -5,7 +5,6 @@ interface IFilter {
   type: string;
   salary: [number, number];
   location: [string, boolean];
-  experience: number;
   ecosystem: string[];
   benefits: [boolean];
 }

@@ -16,7 +16,6 @@ const Inserter = () => {
   const [remote, setRemote] = useState<boolean>(true);
   const [baseSalary, setBaseSalary] = useState(0);
   const [maxSalary, setMaxSalary] = useState(0);
-  const [exp, setExp] = useState(0);
   const [area, setArea] = useState("Global");
   const [applyLink, setApplyLink] = useState("");
   const [startupName, setStartupName] = useState("");
@@ -61,7 +60,6 @@ const Inserter = () => {
           location: [area, remote],
           salary: [baseSalary, maxSalary],
           ecosystem: ecosystem,
-          experience: exp,
           benefits: [cryptoOpt],
         });
         vacancy
@@ -74,7 +72,6 @@ const Inserter = () => {
             baseSalary: baseSalary,
             maxSalary: maxSalary > baseSalary ? maxSalary : 0,
             location: [area, remote],
-            experience: exp,
             applyLink: applyLink,
             ecosystem: ecosystem,
             benefits: [cryptoOpt],
@@ -149,7 +146,7 @@ const Inserter = () => {
             </select>
           </div>
         </div>
-        <div className="roleExp flex flex-col">
+        {/* <div className="roleExp flex flex-col">
           <span className="mb-1 text-sm text-gray-600">
             Required Experience
           </span>
@@ -169,7 +166,7 @@ const Inserter = () => {
               </optgroup>
             </select>
           </div>
-        </div>
+        </div> */}
         <div className="roleTags">
           <span className="ml-0.5 mb-1 text-sm text-gray-600">
             Skills & tools - separate each tag by a comma.
