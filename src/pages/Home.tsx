@@ -215,7 +215,7 @@ const HomePage = () => {
               Get results in a flash by entering keywords (skills, tools etc)
               ex. rust defi remote
             </p> */}
-            <p>Selecting your desired parameters and get results in a flash</p>
+            <p>Select your desired parameters and get results in a flash</p>
           </div>
           <div className="tips flex flex-col text-center items-center p-3 max-w-xs">
             <span className="text-rose-500">
@@ -265,7 +265,7 @@ const HomePage = () => {
               Borderless Access
             </h3>
             <p className="leading-relaxed text-base">
-              Tap in, and access a global pool of talented roleseekers and
+              Tap in and access a global pool of talented roleseekers and
               bountyseekers, that are actively looking to contribute in Web3.
             </p>
           </div>
@@ -392,7 +392,7 @@ const HomePage = () => {
                 VACANCY POSTS
               </h3>
               <h4 className="flex text-5xl text-gray-900 dark:text-gray-200 pb-4 mb-4 border-b border-gray-200 leading-none">
-                250
+                135
                 <span>
                   <svg
                     data-name="86977684-12db-4850-8f30-233a7c267d11"
@@ -530,7 +530,7 @@ const HomePage = () => {
               </p>
 
               <button className="flex items-center mt-auto text-white bg-[#ed194a]/40 border-0 py-2 px-4 w-full focus:outline-none hover:bg-[#ed194a] rounded">
-                Coming Soon
+                Post a role today!
                 <svg
                   fill="none"
                   stroke="currentColor"

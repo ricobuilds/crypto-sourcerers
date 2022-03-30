@@ -90,7 +90,7 @@ const PostARole = () => {
               )
             </div>
             <div className="roleTitle">
-              <div className="">Role Title</div>
+              <div className="">Title</div>
               <input
                 type="text"
                 value={title}
@@ -101,6 +101,7 @@ const PostARole = () => {
               />
             </div>
             <div className="roleDescription">
+              <div className="">Description</div>
               <span className="ml-0.5 text-sm text-gray-600">
                 Supports markdown format
               </span>
@@ -119,7 +120,8 @@ const PostARole = () => {
               </div>
             </div>
             <div className="roleAudience flex flex-col">
-              <span className="mb-1 text-sm text-gray-600">Role Type</span>
+              <div className="">Type</div>
+              {/* <span className="mb- 1 text-sm text-gray-600">Type</span> */}
               <div className="flex space-x-6">
                 <select
                   className="rounded-md p-1 text-black peer-focus-within: "
@@ -139,8 +141,9 @@ const PostARole = () => {
               </div>
             </div>
             <div className="roleTags">
+              <div className="">Skills & Tools</div>
               <span className="ml-0.5 mb-1 text-sm text-gray-600">
-                Skills, tools, ecosystems - separate each tag by a comma.
+                Separate each tag by a comma.
               </span>
               <input
                 type="text"
@@ -154,6 +157,7 @@ const PostARole = () => {
               />
             </div>
             <div className="roleSalary">
+              <div className="">Salary & Compensation</div>
               <span className="ml-0.5 mb-1 text-gray-600 text-sm">
                 In USD - We suggest to be as transparent as possible :)
               </span>
@@ -180,7 +184,7 @@ const PostARole = () => {
               <p className="ml-1">Ξ Pays In Crypto</p>
             </span>
             <div className="roleLocation">
-              <div className="mb-2">Role Location </div>
+              <div className="mb-2">Location </div>
               <span className="text-sm text-gray-600">
                 Format: ex. city OR geo Region. Leave as 'Global' for fully
                 remote roles.
@@ -193,7 +197,7 @@ const PostARole = () => {
                   className="p-1 pl-3 outline-none rounded-md bg-black/20 focus:bg-black/60 transition border-2 border-gray-800 focus:border-[#ed194a] tracking-widest"
                 />
                 <span className="flex items-center mb-1">
-                  <input type="checkbox" name="" id="" />
+                  <input type="checkbox" name="" id="" checked={true} />
                   <p className="ml-1">🌍 Remote</p>
                 </span>
               </div>
@@ -338,7 +342,7 @@ const PostARole = () => {
             </div>
             <button className="bg-[#ed194a] flex justify-center p-3 rounded-md w-full hover:bg-transparent border border-[#ed194a] text-white hover:text-[#ed194a]">
               <p className="flex items-center">
-                Post Role 250{" "}
+                Post Role 135{" "}
                 <span className="mx-0.5">
                   <svg
                     data-name="86977684-12db-4850-8f30-233a7c267d11"

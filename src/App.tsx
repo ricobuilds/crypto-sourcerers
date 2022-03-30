@@ -123,12 +123,12 @@ const App = () => {
               >
                 {themeIcon}
               </div>
-              <Link to={"/roleseeker-login"}>
+              {/* <Link to={"/roleseeker-login"}>
                 <button className="cta py-1 px-3 rounded text-[#ed194a] font-bold border-[1px] border-transparent transition hover:border-[#ed194a]">
                   Roleseekers
                 </button>
-              </Link>
-              <Link to={"/recruiter-login"}>
+              </Link> */}
+              <Link to={"/postarole"}>
                 <button className="cta py-1 px-3 rounded text-white font-bold bg-gradient-to-tr from-[#ed194a] to-pink-500">
                   Recruiters
                 </button>
@@ -139,8 +139,7 @@ const App = () => {
             <Routes>
               <Route path="/careers" element={<Careers />} />
               <Route path="/tester" element={<Tester />} />
-              <Route path="/roleseeker-login" element={<Login />} />
-              <Route path="/recruiter-login" element={<Login />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
               <Route path="/inserter" element={<Inserter />} />
               <Route path="/hiring-guide" element={<HireGuide />} />
